@@ -1,0 +1,13 @@
+\documentclass[12pt,a4paper]{standalone}
+\usepackage{graphicx,wrapfig,tikz}
+\usetikzlibrary{calc,hobby} % To draw the smooth curve
+\usetikzlibrary{arrows,arrows.meta,bending} %new code
+
+ \begin{document}
+\begin{tikzpicture} 
+\coordinate (a1) at (-18.5,-4) {} {};
+%\draw [red] plot [smooth cycle] coordinates {(a1) ++(1:0.2)  ++(12:2)  ++(0.1:-0.5)  ++(1:5)};
+\draw[thick] plot [smooth,tension=0.01,cycle] coordinates {(a1) ++(180:25) ++(12:22)  ++(0:13)};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,125 @@
+%\documentclass{ut-thesis}
+\documentclass{thesis}
+
+%**************************** General libraries *******************************
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage[utf8]{inputenc} 
+\usepackage{amssymb}
+\usepackage{ntheorem}
+\usepackage{tensor}
+%\usepackage{physics}
+\usepackage[italicdiff]{physics}
+\usepackage{calc}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{tcolorbox}
+\usepackage{chngcntr}
+\usepackage{titlesec}
+\usepackage {graphicx,float} 
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{etoolbox} %ifthen
+\usepackage[outline]{contour} % glow around text
+
+%**************************** Bibliography management *******************************
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{sample.bib} %Import the bibliography file
+
+
+
+%**************************** Tikz libraries *******************************
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=./Externalized_figures/]
+%\tikzset{external/mode=graphics if exists}
+%\tikzexternalize
+
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{shapes,arrows,arrows.meta,spy}
+\usetikzlibrary{calc}% needed for BB
+\usepackage{pgfplots}
+\usetikzlibrary{math} % for \tikzmath
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
+\usetikzlibrary{decorations.pathreplacing} % for curly braces
+\usetikzlibrary {decorations.markings,shapes.arrows}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide}
+\usepackage{tikz-3dplot}
+
+%\usepackage[margin=0cm,nohead]{geometry}
+%\usepackage[active,tightpage]{preview}
+%\usepackage[pdf]{pstricks}
+
+%**************************** custom macro's *******************************
+\newsavebox\CBox
+\newcommand\hcancel[2][0.5pt]{%
+  \ifmmode\sbox\CBox{$#2$}\else\sbox\CBox{#2}\fi%
+  \makebox[0pt][l]{\usebox\CBox}%  
+  \rule[0.5\ht\CBox-#1/2]{\wd\CBox}{#1}}
+%\newcommand{\edal}{\end{align}}
+%\newcommand{\bgal}{\begin{align}\end{align}}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\questeq}{\overset{?}{=}}
+%\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\renewcommand\thelemma{\unskip}
+\newcommand{\christ}[3]{\ensuremath{\Gamma^{#1}_{#2#3}}}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\kwart}{\ensuremath{\frac{1}{4}}}
+\newcommand\del{\overline{\boldsymbol{{\triangledown}}}}
+\newcommand\maal{\boldsymbol{\times}}
+\newcommand\spatie{\quad\quad\quad\quad}
+\newcommand\RAr{\quad\Rightarrow\quad}
+%\newcommand{\myabsdv}[3]{{\frac{\delta^2 \ensuremath{{#1}}}{{\delta %%\ensuremath{{#2}}}{\delta\ensuremath{{#3}}}}}}
+\newcommand\myabsdv[3][1]{{\frac{{\delta^{2}}{#1}}{\delta {#2} \delta {#3}}}}
+
+%**************************** layout setings *******************************
+\counterwithin*{equation}{chapter}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\renewcommand{\theequation}{\arabic{equation}}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{50pt}{*2}
+\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
+
+
+%**************************** Where to find images *****************************
+%\graphicspath{ {./images/} }
+
+
+%**************************** Document itself *******************************
+\author{Bernard Carrette}
+%\gradyear{1979}
+\title{Undergraduate Topology\\Robert H. Kasriel (Dover Publication)\\ Solutions to exercises\\Part \RomanNumeralCaps{1}\\
+Chapters \RomanNumeralCaps{1} to \RomanNumeralCaps{4}}
+\begin{document}
+\maketitle
+\begin{figure}%                 use [hb] only if necceccary!
+  \centering
+  \includegraphics[width=10cm]{./images/zebook.jpg}
+  \caption{}
+  \label{fig:test}
+\end{figure}
+
+\section*{Remarks and warnings}
+You're welcome to use these notes, but they may contain errors, so proceed with caution : I graduated in 1979, went straight in the industry (where I didn't have to use fancy maths), and picked mathematics and physics again after I retired, so my mathematics got rusty  for sure. If you do find an error, typo's , I'd be happy to receive bug reports, suggestions, and the like, through Github.
+\newpage
+
+\begin{comment}
+\section*{References: I used following books}
+\textbf{D. Beklémichev}, \textit{Cours de Géométrie analytique et d'Algèbre Linéaire}, 1988, Editions Mir-Moscou\\
+\textbf{L. Pontriaguine}, \textit{Equations différentielles ordinaires}, 1969, Editions Mir-Moscou\\
+\textbf{S.M. Selby (Ed.)}, \textit{CRC Standard Mathematical Tables $22^{nd}$ edition}, 1974, CRC Press, Cleveland \\
+\end{comment}
+
+\tableofcontents
+\listoffigures
+\include{chapter1}
+
+\printbibliography %Prints bibliography
+\end{document}

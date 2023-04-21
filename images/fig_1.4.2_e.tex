@@ -1,0 +1,49 @@
+\begin{tikzpicture}
+\begin{axis}[
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+
+\addplot [domain=-3:3, thick, black, smooth,,pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50]{sqrt(9-x^2)};
+\addplot [domain=-3:3, thick, black, smooth,,pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50]{-sqrt(9-x^2)};
+\addplot [domain=0:3, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50]{sqrt(9-x^2)};
+\addplot [domain=-0:3, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50]{-sqrt(9-x^2)};
+\addplot [domain=-5:5, thick, black, smooth]{3-x};
+% Draw semicircle
+\fill[pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50]  (axis cs:3,0) arc (0:-90:300) |- cycle;
+\fill[pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50]  (axis cs:0,3)--(axis cs:5,-2)--(axis cs:5,6)--(axis cs:0,6);
+\end{axis};
+\end{tikzpicture}

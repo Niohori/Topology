@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=4.5,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+
+\addplot [domain=-4:4, thick, black, smooth]{sqrt(16-x^2)};
+\addplot [domain=-4:4, thick, black, smooth]{-sqrt(16-x^2)};
+\addplot [domain=-4:-1, thick, black, smooth,<-,>=latex]{sqrt(x^2-1)};
+\addplot [domain=-4:-1, thick, black, smooth,,<-,>=latex]{-sqrt(x^2-1)};    
+\addplot [domain=1:4, thick, black, smooth,->,>=latex]{sqrt(x^2-1)};
+\addplot [domain=1:4, thick, black, smooth,->,>=latex]{-sqrt(x^2-1)};
+\coordinate (A) at (axis cs:2.91547,2.7386) {};
+\coordinate (B) at (axis cs:+2.91547,-2.7386) {};
+\coordinate (C) at (axis cs:-2.91547,2.7386) {};
+\coordinate (D) at (axis cs:-2.91547,-2.7386) {};
+\draw [fill=white] (A) circle [radius=10.05];
+\draw [fill= white] (B) circle [radius=10.05];
+\draw [fill= white] (C) circle [radius=10.05];
+\draw [fill= white] (D) circle [radius=10.05];
+\node[anchor=south ] at (A) {A};
+\node[anchor=north ] at (B) {B};
+\node[anchor=south ] at (C) {D};
+\node[anchor=north ] at (D) {C};
+
+\end{axis};
+\coordinate (S) at (3,5.5) {};
+\node[anchor=north west] at (S) {$G_1\cap G_2\equiv \{A,B,C,D\}$};
+%\path (current axis.south west) +(-0.5cm,-0.5cm) (current axis.north east) +(0.5cm,0.5cm);
+
+
+\end{tikzpicture}

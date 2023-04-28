@@ -1,0 +1,51 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+
+
+
+
+
+ \coordinate (At) at (axis cs:-5,8) {};
+\coordinate (Bt) at (axis cs:-3,6) {};
+\coordinate (Ct) at (axis cs:9,-6) {};
+\coordinate (Dt) at (axis cs:-9,-6) {};
+
+\addplot [domain=-3:3, thick, black, smooth,fill=white]{sqrt(9-x^2)};
+\addplot [domain=-3:3, thick, black, smooth,fill=white]{-sqrt(9-x^2)};
+\addplot [domain=-5:5, thick, black, smooth]{3-x};
+
+\coordinate (A) at (axis cs:6,-3) {};
+\coordinate (B) at (axis cs:-4,7) {};
+\coordinate (C) at (axis cs:-4,9) {};
+\coordinate (D) at (axis cs:6,9) {};
+
+        
+        \path[ pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50] (axis cs:0,-6) --(axis cs:6,-6)--(axis cs:6,6)--(axis cs:0,6)--(axis cs:0,6);
+\addplot [domain=-3:3, thick, black, smooth,fill=white]{sqrt(9-x^2)};
+\addplot [domain=-3:3, thick, black, smooth,fill=white]{-sqrt(9-x^2)};
+\addplot [domain=-5:5, thick, black, smooth]{3-x};
+\draw [](axis cs:-4,0)--(axis cs:4,0);
+\draw [](axis cs:0,4)--(axis cs:0,-4);
+        \path[ pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50] (axis cs:0,-6) --(axis cs:-6,-6)--(axis cs:-6,6)--(axis cs:0,6)--(axis cs:0,6);
+\end{axis};
+\end{tikzpicture}

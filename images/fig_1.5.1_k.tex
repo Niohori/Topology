@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+
+
+\addplot [domain=-3:3, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50]{sqrt(9-x^2)};
+\addplot [domain=-3:3, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50]{-sqrt(9-x^2)};
+\end{axis}
+\end{tikzpicture}

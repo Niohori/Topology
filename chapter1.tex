@@ -241,3 +241,172 @@ We define the sets $A,\, B,\,C$ as follows: $A=\{(x,y):x^2+y^2\le 9\}$, $ B=\{(x
 \label{fig:fig_p8b}
 \end{figure}
 $$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Let $A,\, B,\,C$ as follows: $A=\{(x,y):x+y\le 5\}$, $ B=\{(x,y):x+y\ge 3\}$, $C=\{(x,y):x\ge 3\}$, and $D=\{(x,y):y\ge 3\}$.\\Draw a sketch for each of the following sets:
+\begin{align*}
+\begin{array}{ll}
+(a)&(A\cap B)\cap C\\
+(b)&[(A\cap B)\cap C]\cap D
+\end{array}
+\end{align*}
+\end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.4.3_0.tex}
+\caption{The 4 sets $A,\,B,\, C,\, D$}
+\label{fig:fig_p8b}
+\end{figure}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$(A\cap B)\cap C$ ]{\input{./images/fig_1.4.3_a.tex}}
+    \subfloat[$( (A\cap B)\cap C)\cap D =\emptyset$]{\input{./images/fig_1.4.3_b.tex}}\\
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\blacklozenge$$
+\section{Complementation}
+\subsection{}
+\begin{tcolorbox}
+Sketch each of the following sets: (the sets $A,\, B,\, C$ are defined as in exercise $3$page $8$)
+\begin{align*}
+\begin{array}{ll}
+(a)&\sim(A\cap B)\\
+(b)&(\sim A)\cup (B)\\
+(c)&\sim(A\cup B)\\
+(d)&(\sim A)\cap (B)\\
+(e)&C - A\\
+(f)&\sim(A\cap C)\\
+(g)&(\sim A)\cup(\sim B)\\
+(h)&(\sim A)\cap (A)\\
+(i)&C-(A \cup B)\\
+(j)&(C-A)\cap (C-B)\\
+(k)&\sim(\sim A)\\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.5.1_0.tex}
+\caption{The 3 sets $A,\,B,\, C$}
+\label{fig:fig_p8b}
+\end{figure}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$\sim(A\cap B)$ ]{\input{./images/fig_1.5.1_a.tex}}
+    \subfloat[$(\sim A)\cup (B)$]{\input{./images/fig_1.5.1_b.tex}}\\
+    \subfloat[$\sim(A\cup B)$]{\input{./images/fig_1.5.1_c.tex}}
+    \subfloat[$(\sim A)\cap (B)$]{\input{./images/fig_1.5.1_d.tex}}\\
+    \subfloat[$C-A$]{\input{./images/fig_1.5.1_e.tex}}
+    \subfloat[$ \sim(A\cap C)$]{\input{./images/fig_1.5.1_f.tex}}\\
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$(\sim A)\cup(\sim B)$ ]{\input{./images/fig_1.5.1_g.tex}}
+    \subfloat[$(\sim A)\cap (A)= \emptyset$]{\input{./images/fig_1.5.1_h.tex}}\\
+    \subfloat[$C-(A \cup B) $]{\input{./images/fig_1.5.1_i.tex}}
+    \subfloat[$(C-A)\cap (C-B)$]{\input{./images/fig_1.5.1_j.tex}}\\
+    \subfloat[$\sim(\sim A)$]{\input{./images/fig_1.5.1_k.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+On the basis of the sketches made in the previous exeercise, formulate a proposition about relation that exist concerning complementation, union, and intersection. Try out your conjecture on other examples. In subsequent exercises you will be asked to try to prove such conjectures.
+\end{tcolorbox}
+\begin{align*}
+\begin{array}{ll}
+ 1.4.2\, (a)\text{ and } (d) &A\cup(B\cup C)= (A\cup B)\cup C)\\
+ 1.4.2\, (b)\text{ and } (c)& A\cap(B\cup C)= (A\cap B)\cup (A\cap C)\\
+ 1.4.2(e)\,\text{ and }(f) &A\cup (B\cap C)= (A\cup B)\cap (A\cup C)\\
+  1.5.1(a)\,\text{ and }(g) &\sim(A\cap B)=(\sim A)\cup(\sim B)\\
+  1.5.1(h)&(\sim A)\cap A=\emptyset\\
+  1.5.1(i)\,\text{ and }(j) &C-(A\cup B) = (C-A)\cap (C-B)\\
+    1.5.1(k)&\sim (\sim A)=A\\
+\end{array}
+\end{align*}
+$$\blacklozenge$$
+\newpage
+
+ \section{Set identities and other set relations}
+\subsection{}
+\begin{tcolorbox}
+Prove that if $A\subset B$, then:
+\begin{align*}
+\begin{array}{ll}
+(a)&A\cap C \subset B \cap C\\
+(b)& \sim B \subset \, \sim A\\
+(c) &A \cap B = A\\
+(d) &A \cup C \subset B\cup C\\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+\textbf{a)}$\quad A\cap C \subset B \cap C $\\\\
+Given is $x\in B$ if $x \in A$. Suppose $x \in A\cap C$, then $x \in A$ (given) and $x \in C$ but $x \in B$ (given) and as $x \in C$ follows that $x \in B\cap C$. And we conclude that $A\cap C \subset B\cap C$. \\\\
+$$\lozenge$$
+\textbf{b)}$\quad \sim B \subset \, \sim A$\\\\
+Given is $x\in B$ if $x \in A$. If $x\not\in B$ then $x\in \, \sim B$. As $A\subset B$, $x$ will not be in $A$ but $x\in \sim A$. So $x\in \, \sim B \Rightarrow \quad x\in \, \sim A$ and thus $\sim B \subset \, \sim A$. \\\\
+$$\lozenge$$
+
+\textbf{c)}$\quad A \cap B = A$\\\\
+Given is $x\in B$ if $x \in A$. Suppose $x \in A\cap B$, then $x \in A$ and thus $A\cap B \subset A$. Suppose $x \in A$, then $x \in B$ as $A\subset B$ and thus $x\in A\cap B$ from which we conclude $A \subset A\cap B$.
+$$\lozenge$$
+\textbf{d)}$\quad A \cup C \subset B\cup C$\\\\
+Given is $x\in B$ if $x \in A$. Suppose $x \in A\cup C$, then $x \in A$ or $x\in C$. But $x\in B$ (given), so $x\in B$ or $x\in C$ and thus $x\in B\cup C$, from which we conclude $A\cup C \subset B\cup C$.
+$$\blacklozenge$$
+\newpage
+\subsection{}
+\begin{tcolorbox}
+Verify that each of the following is an an identity:
+\begin{align*}
+\begin{array}{ll}
+(a)&A\cup \emptyset = A\\
+(b)& A\cap \emptyset = \emptyset\\
+(c) &A \cap A = A\\
+(d) &A \cup A =A\\
+(e)&(A\cup B)\cup C= A\cup(B\cup C) \\
+(f)& (A\cap B)\cap C= A\cap(B\cap C)\\
+(g) &A\cup (B\cap C)= (A\cup B)\cap (A\cup C)\\
+(h) &X-(A\cup B) = (X-A)\cap (X-B)\\
+(i)&A\, \cap \, \sim A = \emptyset\\
+(j)& A\, \cup \, \sim A = U\\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+\textbf{a)}$\quad A\cup \emptyset = A $\\\\
+This is a consequence of remark 3.3 page 7: the empty set $\emptyset$ is a subset of every set. So, $\emptyset\subset A$ giving the asked identity. \\\\
+$$\lozenge$$
+\textbf{b)}$\quad A\cap \emptyset = \emptyset$\\\\
+If $x\in A\cap \emptyset$ then $x\in \, A$ and $x$ must also be in $\emptyset$ which is impossible by definition. So there is no element $x \in \emptyset$ which can satisfy $x\in A\cap \emptyset$ giving the proposed identity. \\\\
+$$\lozenge$$
+\textbf{c)}$\quad A \cap A =A$\\\\
+ Suppose $x \in A\cap A$, then $x \in A$ and $x\in A$ and thus $x\in A$, giving  $ A \cap A \subset A$. Suppose $x \in A$, then obviously  $x \in A$ and $x \in A$, giving $A\subset A\cap A$. Hence $A \cap A =A$
+$$\lozenge$$
+\textbf{d)}$\quad A \cup A =A$\\\\
+Suppose $x \in A\cup A$, then $x \in A$ or $x\in A$ and thus $x\in A$, giving  $ A \cup A \subset A$. Suppose $x \in A$, then obviously  $x \in A$ or $x \in A$, giving $A\subset A\cup A$. Hence $A \cup A =A$
+$$\lozenge$$
+\textbf{e)}$\quad (A\cup B)\cup C= A\cup(B\cup C) $\\\\
+ Suppose $x \in (A\cup B)\cup C$, then $x \in (A\cup B)$ or $x\in C$ and thus $x\in A$ or $x\in B$ or $x\in C$. So  $x\in B$ or  $x\in C$  can be written as $x\in (B\cup C)$. So $x\in A$ or $x\in (B\cup C)$, giving $(A\cup B)\cup C\subset A\cup(B\cup C)$. The same reasoning yields for $x\in A\cup(B\cup C)$ giving the identity.
+$$\lozenge$$
+\textbf{f)}$\quad (A\cap B)\cap C= A\cap(B\cap C)$\\\\
+ Suppose $x \in (A\cap B)\cap C$, then $x \in (A\cup B)$ and $x\in C$ and thus $x\in A$ and $x\in B$ and $x\in C$. So  $x\in B$ and  $x\in C$  can be written as $x\in (B\cap C)$. So $x\in A$ and $x\in (B\cup C)$, giving $(A\cap B)\cap C\subset A\cap(B\cap C)$. The same reasoning yields for $x\in A\cap(B\cap C)$ giving the identity.
+$$\lozenge$$
+\textbf{g)}$\quad A\cup (B\cap C)= (A\cup B)\cap (A\cup C)$\\\\
+ Suppose $x \in A\cup (B\cap C)$, then $x \in A$ or $x\in (B\cap C)$.  Take the case $x\in A$, then  $x\in A\cup B$ and  $x\in A\cup C$ which implies $x\in (A\cup B)\cap (A\cup C)$, giving $A\cup (B\cap C)\subset (A\cup B)\cap (A\cup C)$. The other case:  if $x\in B\cap C$ then $x\in B$ and $x\in C$. So, $x \in A\cup B$ and $x\in A\cup C$ giving also $A\cup (B\cap C)\subset (A\cup B)\cap (A\cup C)$.\\
+ On the other hand,  be $x \in (A\cup B)\cap (A\cup C)$ then $x \in (A\cup B)$  and $x \in (A\cup C)$. Let's first take the case $x\in A$ then obviously $x\in A\cup (B\cap C)$ even if $x\not\in  B\cap C$. Alternatively, be $x\not \in A$ then we must have $x \in B$ and $x\in C$ which implies $x\in B\cap C$, giving again $x\in A\cup (B\cap C)$.
+$$\lozenge$$
+\textbf{h)}$\quad X-(A\cup B) = (X-A)\cap (X-B)$\\\\
+ Suppose $x\in X-(A\cup B)$, then $x \not\in A$ and $x \not\in B$ which implies $x \in X-A$ and $x \in X-B$ and thus $x \in X-A\cap X-B$ giving $X-(A\cup B) \subset (X-A)\cap (X-B)$.\\
+ The other way around. Suppose $x\in(X-A)\cap (X-B)$. Then $x\in(X-A)$ and $x\in(X-B)$ which implies  $x\not \in A$ and $x\not \in B$ giving $x\not \in A \cup B$ which in turn implies $x\in X-(A\cup B)$ giving $(X-A)\cap (X-B)\subset  X-(A\cup B)$.\\Conclusion: $ X-(A\cup B) = (X-A)\cap (X-B)$
+$$\lozenge$$
+\textbf{i)}$\quad A\, \cap \, \sim A = \emptyset$\\\\
+ Suppose $x\in A\, \cap \, \sim A$, then $x \in A$ and $x \not\in A$ which is a contradiction, so the only element which is always an element of any set is the empty set, so $ A\, \cap \, \sim A \subset \emptyset$. Suppose on the contrary that $x\in\emptyset$. This implies that $x$ correspond to the empty set and as the empty set is an element of any set, we have  $\emptyset \subset A\, \cap \, \sim A  $
+$$\lozenge$$
+\textbf{j)}$\quad A\, \cup \, \sim A = U$\\\\
+ Suppose $x\in A\, \cup \, \sim A$, then $x \in A$ or $x \not\in A$. So, in any case $x\in U$ and thus $A\, \cup \, \sim A \subset U$.\\
+ On the opposite way  suppose that $x\in U$. Then obviously $x\in A$ or $x\in \sim A$ and thus $U\subset A\, \cup \, \sim A$.
+$$\blacklozenge$$

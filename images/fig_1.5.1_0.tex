@@ -1,0 +1,65 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+
+\addplot [domain=-3:3, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50]{sqrt(9-x^2)};
+\addplot [domain=-3:3, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50]{-sqrt(9-x^2)};
+\addplot [domain=-5:5, thick, black, smooth,<-,>=latex]{3-x};
+
+\coordinate (A) at (axis cs:5,-2) {};
+\coordinate (B) at (axis cs:-4,7) {};
+\coordinate (C) at (axis cs:-4,9) {};
+\coordinate (D) at (axis cs:5,9) {};
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50](A)--(B)--(C)--(D);
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=0
+                 ]},
+        pattern color=gray!50] (axis cs:0,-6) --(axis cs:3,-6)--(axis cs:3,6)--(axis cs:0,6)--(axis cs:0,6);
+%\node[anchor=south ] at (A) {A};
+\begin{scope}
+\coordinate (S) at (axis cs:-1.5,1.5) {};
+\coordinate (St) at (axis cs:-3.3,3.5) {};
+\draw [fill= white] (S) circle [radius=10.05];
+\node[above] at (St) {$A$};
+\draw[-{Latex[length=2mm]}] (St) .. controls ([xshift=-1cm] S) and ( S) .. (S);
+
+\coordinate (P) at (axis cs:2,-4) {};
+\coordinate (Pt) at (axis cs:4,-3.5) {};
+\draw [fill= white] (P) circle [radius=10.05];
+\node[above] at (Pt) {$C$};
+\draw[-{Latex[length=2mm]}] (Pt) .. controls ([xshift=-0.5cm] Pt) and ( P) .. (P);
+
+
+\coordinate (T) at (axis cs:4,1.5) {};
+\coordinate (Tt) at (axis cs:5.5,3.5) {};
+\draw [fill= white] (T) circle [radius=10.05];
+\node[above] at (Tt) {$B$};
+\draw[-{Latex[length=2mm]}] (Tt) .. controls ([xshift=1cm] T) and ( T) .. (T);
+
+\end{scope}
+\end{axis};
+\end{tikzpicture}

@@ -1,0 +1,92 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+
+\addplot [domain=-5:6, thick, black]{3-x};
+\addplot [domain=-5:6, thick, black]{5-x};
+\draw[thick] (axis cs:3,6)--(axis cs:3,-6){};
+\addplot [domain=-6:6, thick, black]{3};
+
+\coordinate (A) at (axis cs:6,-3) {};
+\coordinate (B) at (axis cs:-6,9) {};
+\coordinate (C) at (axis cs:-6,6) {};
+\coordinate (D) at (axis cs:6,9) {};
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50](A)--(B)--(C)--(D);
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=0
+                 ]},
+        pattern color=gray!50] (axis cs:3,-6) --(axis cs:3,6)--(axis cs:6,6)--(axis cs:6,-6)--(axis cs:3,-6);
+
+
+\coordinate (Ab) at (axis cs:6,-1) {};
+\coordinate (Bb) at (axis cs:-6,11) {};
+\coordinate (Cb) at (axis cs:-6,-6) {};
+\coordinate (Db) at (axis cs:6,-6) {};
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=75
+                 ]},
+        pattern color=gray!50](Ab)--(Bb)--(Cb)--(Db);
+        
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=0
+                 ]},
+        pattern color=gray!50] (axis cs:3,-6) --(axis cs:3,6)--(axis cs:6,6)--(axis cs:6,-6)--(axis cs:3,-6);
+
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=0
+                 ]},
+        pattern color=gray!50] (axis cs:-6,3) --(axis cs:6,3)--(axis cs:6,6)--(axis cs:-6,6)--(axis cs:-6,3);
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=90
+                 ]},
+        pattern color=gray!50] (axis cs:3,6) --(axis cs:3,-6)--(axis cs:6,-6)--(axis cs:6,6)--(axis cs:3,6);
+%\node[anchor=south ] at (A) {A};
+\begin{scope}
+\coordinate (S) at (axis cs:1.5,1.5) {};
+\coordinate (St) at (axis cs:4,4) {};
+\draw [fill= white] (S) circle [radius=1.05];
+\node[right] at (St) {$B$};
+\draw[-{Latex[length=2mm]}] (S) --(St);
+
+\coordinate (Sd) at (axis cs:-3,3) {};
+\coordinate (Std) at (axis cs:-3,4) {};
+\draw [fill= white] (Sd) circle [radius=1.05];
+\node[above] at (Std) {$D$};
+\draw[-{Latex[length=2mm]}] (Sd) --(Std);
+
+\coordinate (P) at (axis cs:3,-4) {};
+\coordinate (Pt) at (axis cs:4,-4) {};
+\draw [fill= white] (P) circle [radius=1.05];
+\node[right] at (Pt) {$C$};
+\draw[-{Latex[length=2mm]}] (P) --(Pt);
+
+
+\coordinate (T) at (axis cs:2.7,2.3) {};
+\coordinate (Tt) at (axis cs:-2.7,-3) {};
+\draw [fill= white] (T) circle [radius=1.05];
+\node[below] at (Tt) {$A$};
+\draw[-{Latex[length=2mm]}] (T) --(Tt);
+
+\end{scope}
+\end{axis};
+\end{tikzpicture}

@@ -532,3 +532,62 @@ If $A-(B\cap C)=(A-B)\cap (A-C)$.
 
 Suppose $x\in A-(B\cap C)$, then $x\in A \wedge x\not\in \,B\cap C$. As $x$ can not be simultaneously in $B$ and $C$, then also $x$ must be simultaneously in $A-B$ and $A-C$ as the "complementation of $A$ with $B$ and $C$ will not "subtract" $x$ out of $A$,  and considering that $x\in A$ we have $A-(B\cap C)\subset(A-B)\cap (A-C)$\\
 Suppose $x\in (A-B)\cap (A-C)$, then $x$ must be an element of $A$ but not an element of $B$ and $C$. This means that $x\not\in B\cap C$ and thus the complementation of $A$ by $B\cap C$ has no effect on $x$. Thus, $(A-B)\cap (A-C)= A \subset A-(B\cap C)$.
+$$\blacklozenge$$
+\newpage
+ \section{Collections of Sets}
+\subsection{}
+\begin{tcolorbox}
+Suppose that $A,\, B$ and $C$ are the following subsets of the plane:\\
+$A=\{(x,y):x^2+y^2\le 16\},\, B= \{(x,y):x\ge 0 \text{ and } y \le 0\},\, C=\{(x,y): y \le x\}$. If $\mathscr{K}$ is the collection of sets $\{A,\, B,\, C\}$, sketch each of the following sets:
+
+\begin{align*}
+\begin{array}{ll}
+(a)&\bigcap \mathscr{K}\\
+(b)&\bigcup \mathscr{K}\\
+(c)&\bigcup \mathscr{K}-\bigcap \mathscr{K}\\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+    \subfloat[The sets $A,\, B , \, C$]{\input{./images/fig_1.8.1_0.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+\textbf{a)} $\bigcap \mathscr{K}$
+\begin{figure}[H]%
+    \centering
+    \subfloat[$\bigcap \mathscr{K}$]{\input{./images/fig_1.8.1_a.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\lozenge$$
+\textbf{b)} $\bigcup \mathscr{K}$
+\begin{figure}[H]%
+    \centering
+    \subfloat[$\bigcup \mathscr{K}$]{\input{./images/fig_1.8.1_b.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\lozenge$$
+\textbf{c)} $\bigcup \mathscr{K}-\bigcap \mathscr{K}$
+\begin{figure}[H]%
+    \centering
+    \subfloat[$\bigcup \mathscr{K}-\bigcap \mathscr{K}$]{\input{./images/fig_1.8.1_c.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\blacklozenge$$
+\newpage
+\subsection{}
+\begin{tcolorbox}
+Recall that $\mathbb{P}$ is the symbol for the set of positive integers. Suppose that for each $n\in \mathbb{P}$, we let $A_n=\{x\in \mathbb{R}: x\ge n\}$. Describe the sets $\bigcup\{A_n:n\in\mathbb{P}\}$ and $\bigcap\{A_n:n\in\mathbb{P}\}$.
+\end{tcolorbox}
+
+\textbf{$S=\bigcup\{A_n:n\in\mathbb{P}\}$} \\
+$$S=[1,+\infty)$$
+$$\lozenge$$
+\textbf{   $\quad S=\bigcap\{A_n:n\in\mathbb{P}\}$} \\
+$$S=\emptyset$$
+This can be understood by the fact that for every $x\in\mathbb{R}$, you can find a $n\in\mathbb{P}$ so that $x\not\in A_n$. So, no $x$ can be an element of $S$.
+$$\blacklozenge$$

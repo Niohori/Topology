@@ -1,0 +1,69 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+]
+\addplot [domain=-4:4, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50]{sqrt(16-x^2)};
+\addplot [domain=-4:4, thick, black, smooth,pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50]{-sqrt(16-x^2)};
+\addplot [domain=-6:6, thick, black]{x};
+
+
+\coordinate (A) at (axis cs:0,0) {};
+\coordinate (B) at (axis cs:6,0) {};
+\coordinate (C) at (axis cs:6,-6) {};
+\coordinate (D) at (axis cs:0,-6) {};
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=90
+                 ]},
+        pattern color=gray!50](A)--(B)--(C)--(D);
+
+\coordinate (Ab) at (axis cs:-6,-6) {};
+\coordinate (Bb) at (axis cs:6,6) {};
+\coordinate (Cb) at (axis cs:6,-6) {};
+\coordinate (Db) at (axis cs:-6,-6) {};
+
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50](Ab)--(Bb)--(Cb)--(Db);
+
+\begin{scope}
+
+\coordinate (St) at (axis cs:4,-4.5) {};
+\draw [fill= white] (St) circle [radius=10.05];
+\node[right] at (St) {$B$};
+
+
+
+\coordinate (Std) at (axis cs:-3,-4.5) {};
+\draw [fill= white] (Std) circle [radius=10.05];
+\node[above] at (Std) {$C$};
+
+
+\coordinate (T) at (axis cs:-2,2.3) {};
+\draw [fill= white] (T) circle [radius=10.05];
+\node[below] at (T) {$A$};
+
+
+\end{scope}
+\end{axis};
+\end{tikzpicture}

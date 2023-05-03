@@ -531,7 +531,7 @@ If $A-(B\cap C)=(A-B)\cap (A-C)$.
 \textbf{TRUE.}\\
 
 Suppose $x\in A-(B\cap C)$, then $x\in A \wedge x\not\in \,B\cap C$. As $x$ can not be simultaneously in $B$ and $C$, then also $x$ must be simultaneously in $A-B$ and $A-C$ as the "complementation of $A$ with $B$ and $C$ will not "subtract" $x$ out of $A$,  and considering that $x\in A$ we have $A-(B\cap C)\subset(A-B)\cap (A-C)$\\
-Suppose $x\in (A-B)\cap (A-C)$, then $x$ must be an element of $A$ but not an element of $B$ and $C$. This means that $x\not\in B\cap C$ and thus the complementation of $A$ by $B\cap C$ has no effect on $x$. Thus, $(A-B)\cap (A-C)= A \subset A-(B\cap C)$.
+Suppose $x\in (A-B)\cap (A-C)$, then $x$ must be an element of $A$ but not an element of $B$ and $C$. This means that $x\not\in B\cap C$ and thus the complementation of $A$ by $B\cap C$ has no effect on $x$. Thus, $\underbrace{(A-B)\cap (A-C)}_{= A} \subset A-(B\cap C)$.
 $$\blacklozenge$$
 \newpage
  \section{Collections of Sets}
@@ -591,3 +591,121 @@ $$\lozenge$$
 $$S=\emptyset$$
 This can be understood by the fact that for every $x\in\mathbb{R}$, you can find a $n\in\mathbb{P}$ so that $x\not\in A_n$. So, no $x$ can be an element of $S$.
 $$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that for each $n\in \mathbb{P}$, $K_n$ is a non-empty set such that $K_{n+1}\subset K_n$. Let $\mathscr{K}=\{K_n:n\in \mathbb{P}\}$.\\
+In each of the following, if the statement is necessarily true, say so and justify your answer. If the statement is not necessarily true, give a counterexample to justify your answer.
+ \begin{align*}
+\begin{array}{ll}
+(a)&\bigcup \mathscr{K}=K_1\\
+(b)&\bigcap \{K_i:i=1,2,\dots,n\}= K_n\\
+(c)&\bigcap \mathscr{K}\ne \emptyset\\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+(a) $\bigcup \mathscr{K}=K_1$.\\
+\textbf{TRUE.\\}
+Be $x\in K_n$ for any arbitrary $n$. So, $x\in K_n \cup K_{n-1}$. But $ K_n \cup K_{n-1} = K_{n-1}$, giving $x\in K_{n-1}$. Repeating that process with $K_{n-1}\subset K_{n-2}\subset \dots K_2\subset K_1$ we get $x\in K_n$.
+$$\lozenge$$
+(b) $\bigcap \{K_i:i=1,2,\dots,n\}= K_n$.\\
+\textbf{TRUE.\\}
+Suppose first that for all $n$ we have $K_n$ is a \textit{proper} subset of $K_{n-1}$. Then $ K_{n}\cap K_{n-1}=K_n$. Be $x\in K_n$ but not in $K_{n-1}$ for any arbitrary $n$. Then,  $x\in K_{n}\cap K_{n-1}$ is equivalent to $x\in K_n$. Repeating that process with we have $K_n\cap K_{n-1}\cap K_{n-2}\cap \dots K_2\cap K_1= K_n$ and get $x\in K_n$. Hence, $\bigcup \mathscr{K}=K_1$.\\
+In the case that for some or all $n$ we have $K_n=K_{n-1}$ we could also state that  $\bigcap \{K_i:i=1,2,\dots,n\}= K_{n-1}$ but as $K_n=K_{n-1}$ we can write  $\bigcap \{K_i:i=1,2,\dots,n\}= K_{n-1}=K_n$.\\
+The same is true in the case that a sequence of the subsets are proper subset of each other i.e. $K_{n+p}=K_{n+p-1}=\dots K_{n+1}=K_{n} = K_{n-1}=\dots =  K_{n-t}$. then one could write $\bigcap \{K_i:i=1,2,\dots,n\}= K_{n+p}$ but as $K_{n+p}=K_n$, the original statement holds.
+$$\lozenge$$
+(c) $\bigcap \mathscr{K}\ne \emptyset$.\\
+\textbf{TRUE.\\}
+As no $K_n$ is an empty set, $K_n$ will always contain at least one element and due to $(b)$ we get indeed $\bigcap \mathscr{K}\ne \emptyset$: suppose that for a given $n$, $K_n$ contains only one element $x$, then all subsequent $K_{n+p}$ must also have only one element i.e. $x$ and we will get $\bigcap \mathscr{K}=\{x\}$ 
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+For each real number $r>0$, let $L_r=\{x:x\ge r\}$. Sketch the set $\bigcup \{L_r:r>0\}$ and $\bigcap\{L_r:r>0\}$ on a number line. If a set happens to be empty, say so.
+\end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$\bigcup \{L_r:r>0\}$]{\input{./images/fig_1.8.4.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\lozenge$$
+$\bigcap\{L_r:r>0\}=\emptyset$.\\
+
+Indeed, take an arbitrary $r$ and  be $\epsilon > 0$ then $\exists x\in L_r: x\not \in L_{r+\epsilon}$. Then, $L_r\cap L_{r+\epsilon} =\emptyset$. So, whatever $L_r$ we choose in the collection $\mathscr{L}=\{L_r: r\in\mathbb{R}^+\}$ there always be a $L_{r^{'}}$ for which $L_r\cap L_{r^{'}}=\emptyset$ and hence $\bigcap\{L_r:r>0\}=\emptyset$.
+$$\blacklozenge$$
+\newpage
+
+\subsection{}
+\begin{tcolorbox}
+Let $U$ be a set and let $\mathscr{K}$ be a non-empty collection of subsets of $U$. $\sim$ will signify the complement with respect to $U$. Prove the following set identities. The identities are quite important and are known as De Morgan's Laws.
+\begin{align*}
+\begin{array}{ll}
+(a)&\sim(\bigcup \{K:K\in \mathscr{K}\}) = \bigcap\{\sim K:K\in \mathscr{K}\}\\
+(b)&\sim(\bigcap \{K:K\in \mathscr{K}\}) = \bigcup\{\sim K:K\in \mathscr{K}\}\\
+\end{array}
+\end{align*} 
+\end{tcolorbox}
+(a) $\sim(\bigcup \{K:K\in \mathscr{K}\}) = \bigcap\{\sim K:K\in \mathscr{K}\}$\\
+Suppose $x\in\,  \sim(\bigcup \{K:K\in \mathscr{K}\})$, then $x\not\in \bigcup \{K:K\in \mathscr{K}\}$. This means that $x$ is not an element of any $K\in \mathscr{K}$ i.e. $\forall K\in \mathscr{K}: x\not\in K$. This can also be expressed as  $\forall K\in \mathscr{K}: x\in\, \sim K)$. This means that $x$ is an element of all $\sim K$ giving $x\in \bigcap\{\sim K:K\in \mathscr{K}\}$ and thus $\sim(\bigcup \{K:K\in \mathscr{K}\}) \subset \bigcap\{\sim K:K\in \mathscr{K}\}$.\\
+Suppose now that $x\in \bigcap\{\sim K:K\in \mathscr{K}\}$. This means that $x$ is an element of  $\{\sim K: K\in \mathscr{K}\}$ for all $K$ i.e. $x\not \in \{K: K\in \mathscr{K}\}$ for all $K$, (indeed if $x$ would be an element of a $K\in  \mathscr{K}$ then $x$ would not be an element of its complement and so $x$ could not be an element of $\bigcap\{\sim K:K\in \mathscr{K}\}$). The conclusion is that $x\not\in \bigcup \{K:K\in \mathscr{K}\}$ and thus $x\in \sim\bigcup \{K:K\in \mathscr{K}\}$. Hence, $\bigcap\{\sim K:K\in \mathscr{K}\}\subset \sim(\bigcup \{K:K\in \mathscr{K}\})$. \\
+Conclusion $\sim(\bigcup \{K:K\in \mathscr{K}\}) = \bigcap\{\sim K:K\in \mathscr{K}\}$.
+$$\lozenge$$
+(b) $\sim(\bigcap \{K:K\in \mathscr{K}\}) = \bigcup\{\sim K:K\in \mathscr{K}\}$\\
+Suppose $x\in\,  \sim(\bigcap \{K:K\in \mathscr{K}\})$, then $x\not\in \bigcap \{K:K\in \mathscr{K}\}$. This means that there exists at least one $K\in \mathscr{K}$ so that $x$ is not an element of this  $K$ i.e. $\exists K\in \mathscr{K}: x\not\in K$. This can also be expressed as  $\exists K\in \mathscr{K}: x\in\, \sim K$. This means that $x$ is an element of  $\bigcup\{\sim K:K\in \mathscr{K}\}$ and thus $\sim(\bigcap \{K:K\in \mathscr{K}\}) \subset \bigcup\{\sim K:K\in \mathscr{K}\}$. \\
+Suppose now that $x\in \bigcup\{\sim K:K\in \mathscr{K}\}$. This means that $x$ is an element of  at least one $\sim K: K\in   \mathscr{K}$. Stated differently, there exist at least one $ K: K\in   \mathscr{K}$ for which $x\not \in K$. This means that $x$ can not be an element of $\bigcap \{K:K\in \mathscr{K}\}$ and thus $x\in \, \sim \bigcap \{K:K\in \mathscr{K}\}$ which means $\bigcup\{\sim K:K\in \mathscr{K}\}\subset \, \sim(\bigcup \{K:K\in \mathscr{K}\})$\\
+Conclusion $\sim(\bigcap \{K:K\in \mathscr{K}\}) = \bigcup\{\sim K:K\in \mathscr{K}\}$.
+$$\blacklozenge$$
+\newpage
+\subsection{}
+\begin{tcolorbox}
+Let $S=\{1,2,3,4,5\}$ and let $\mathscr{P}(S)$ be the power set of $S$. List the elements in $\mathscr{P}(S)$.
+\end{tcolorbox}
+We order them according to the number of elements in the subsets. We check the number of subsets by using the $\binom{5}{m}$ formula (i.e. combination without repetition). 
+\begin{align*}
+5 \text{ elements}\quad \binom{5}{5}= 1\\
+\{1,2,3,4,5\}\\
+4 \text{ elements}\quad \binom{5}{4}= 5\\
+\{1,2,3,4\}\\
+\{1,2,3,5\}\\
+\{1,2,4,5\}\\
+\{1,3,4,5\}\\
+\{2,3,4,5\}\\
+3 \text{ elements}\quad \binom{5}{3}= 10\\
+\{1,2,3\}\\
+\{1,2,4\}\\
+\{1,2,5\}\\
+\{1,3,4\}\\
+\{1,3,5\}\\
+\{1,4,5\}\\
+\{2,3,4\}\\
+\{2,3,5\}\\
+\{2,4,5\}\\
+\{3,4,5\}\\
+\end{align*}
+\begin{align*}
+2 \text{ elements}\quad \binom{5}{2}= 10\\
+\{1,2\}\\
+\{1,3\}\\
+\{1,4\}\\
+\{1,5\}\\
+\{2,3\}\\
+\{2,4\}\\
+\{2,5\}\\
+\{3,4\}\\
+\{3,5\}\\
+\{4,5\}\\
+\end{align*}
+\begin{align*}
+1\text{ element}\quad \binom{5}{1}= 5\\
+\{1\}\\
+\{2\}\\
+\{3\}\\
+\{4\}\\
+\{5\}\\
+0\text{ elements}\quad \binom{5}{0}= 1\\
+\emptyset\\
+\end{align*}
+Note that the total number of subsets in $\mathscr{P}(S)$ is $1+5+10+10+5+1 = 32$ which corresponds to $2^5$.
+$$\blacklozenge$$
+\newpage

@@ -709,3 +709,90 @@ We order them according to the number of elements in the subsets. We check the n
 Note that the total number of subsets in $\mathscr{P}(S)$ is $1+5+10+10+5+1 = 32$ which corresponds to $2^5$.
 $$\blacklozenge$$
 \newpage
+
+ \section{Cartesian Product}
+\subsection{}
+\begin{tcolorbox}
+Suppose that $A\subset B$ and $C$ is a set. Prove that $A\times C\subset B\times C$.
+\end{tcolorbox}
+Be $x\in A$ and $y\in C$. As $A\subset B$, then $x$ is also in $B$. Thus $\underbrace{(x,y)}_{x\in A,\, y\in C}\in A\times C$ means also that $\underbrace{(x,y)}_{x\in B,\, y\in C}\in B\times C$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $A=\{1,2,3\}$, $B=\{a,b\}$, and $C=\{\alpha,\beta\}$. List the elements of each of the following sets:
+\begin{align*}
+\begin{array}{ll}
+(a)&A\times (B\cup C)\\
+(b)&(A\times B)\cup(A\times C)\\
+(c)&(A\cup B)\times C\\
+(c)&(A\times C)\cup(B\times C)\\
+\end{array}
+\end{align*} 
+\end{tcolorbox}
+(a) $A\times (B\cup C)$\\\\
+$(1,a),\,(1,b),\,(2,a),\,(2,b),\,(3,a),\,(3,b)$\\ 
+$(1,\alpha),\,(1,\beta),\,(2,\alpha),\,(2,\beta),\,(3,\alpha),\,(3,\beta)$ 
+$$\lozenge$$
+
+(b) $(A\times B)\cup(A\times C)$\\\\
+$(1,a),\,(1,b),\,(2,a),\,(2,b),\,(3,a),\,(3,b)$\\ 
+$(1,\alpha),\,(1,\beta),\,(2,\alpha),\,(2,\beta),\,(3,\alpha),\,(3,\beta)$ 
+$$\lozenge$$
+
+(c) $(A\cup B)\times C$\\\\
+$(1,\alpha),\,(1,\beta),\,(2,\alpha),\,(2,\beta),\,(3,\alpha),\,(3,\beta)$ 
+$(1,\alpha),\,(1,\beta),\,(2,\alpha),\,(2,\beta),\,(3,\alpha),\,(3,\beta)$ \\
+$(a,\alpha),\,(a,\beta),\,(b,\alpha),\,(b,\beta)$ 
+$$\lozenge$$
+
+(c) $(A\times C)\cup(B\times C)$\\\\
+$(1,\alpha),\,(1,\beta),\,(2,\alpha),\,(2,\beta),\,(3,\alpha),\,(3,\beta)$ 
+$(1,\alpha),\,(1,\beta),\,(2,\alpha),\,(2,\beta),\,(3,\alpha),\,(3,\beta)$ \\
+$(a,\alpha),\,(a,\beta),\,(b,\alpha),\,(b,\beta)$ 
+$$\blacklozenge$$
+\newpage
+\subsection{}
+\begin{tcolorbox}
+Are any of the sets in Exercise 2 the same? If so write the set identities that are suggested by your observations. Try to prove your conjecture.
+\end{tcolorbox}
+In exercise 2 we can see that that the set (a) and (b) are the same. Also (c) and (d) are the same. This suggests the following identities $A\times (B\cup C)=(A\times B)\cup(A\times C)$ and $(A\cup B)\times C=(A\times C)\cup(B\times C)$. \\\\
+$\mathbf{A\times (B\cup C)=(A\times B)\cup(A\times C)}$\\
+Proof:\\
+Be $x\in A$ and $ y\in B\cup C$, so $y$ is an element of $B$ or $C$. Consider $(x,y)\in A\times (B\cup C)$. As the $y$ can be an element of $B$ or $C$  follows immediately that $(x,y)\in (A\times B)$ or $(x,y)\in A\times C)$ and thus  $(x,y)\in (A\times B)\cup(A\times C)$. And get $A\times (B\cup C)\subset(A\times B)\cup(A\times C)$ \\
+Suppose now that $(x,y)\in (A\times B)\cup(A\times C)$. The $(x,y)$ is an element of $A\times B$ or $A\times C$. For the same $x\in A$ this implies that $y\in B$ or $y\in C$ and thus $(x,y) \in A\times (B\cup C)$, giving $(A\times B)\cup(A\times C)\subset A\times (B\cup C)$ leading with the previous  $A\times (B\cup C)=(A\times B)\cup(A\times C)$.
+$$\lozenge$$
+$\mathbf{(A\cup B)\times C=(A\times C)\cup(B\times C)}$\\
+Proof:\\
+Be $x\in A\cup B $ and $ y\in  C$, so $x$ is an element of $A$ or $B$. Consider $(x,y)\in(A\cup B)\times C$. As the $x$ can be an element of $A$ or $B$  follows immediately that $(x,y)\in (A\times C)$ or $(x,y)\in (B\times C)$ and thus  $(x,y)\in (A\times B)\cup(\textbf{A}\times C)$. And get $(A\cup B)\times C\subset(A\times C)\cup(B\times C)$ \\
+Suppose now that $(x,y)\in (A\times B)\cup(\textbf{A}\times C)$. The $(x,y)$ is an element of $A\times C$ or $B\times C$. For the same $y\in C$ this implies that $x\in A$ or $x\in B$ and thus $(x,y) \in (A\times C)\cup(B\times C)$, giving $(A\times C)\cup(B\times C)\subset (A\cup B)\times C$ leading with the previous  $(A\cup B)\times C=(A\times C)\cup(B\times C)$.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $A$ is a set consisting of five elements and $B$ is a set consisting of three elements. How many elements does the set $A\times B$ have? The set $B\times A$?
+\end{tcolorbox}
+$A\times B$ has $5\times 3 =15$ elements. Indeed in the element $(x,y) \in A\times B$  we can choose for $x$ out of the five elements of $A$ and for each choice of $x$ we are free to choose one element out of the $3$ elements of $B$.\\
+For $B\times A$, the reasoning is the same and get $3\times 5=15$ elements.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $A$ is a set consisting of $m$ elements and $B$ is a set consisting of $n$ elements, where $m$ and $n$ are positive integers. How many elements are there in  $A\times B$?
+\end{tcolorbox}
+$A\times B$ has $m\times m $ elements. Indeed in the element $(x,y) \in A\times B$  we can choose for $x$ out of the $m$ elements of $A$ and for each choice of $x$ we are free to choose one element out of the $n$ elements of $B$.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $A$ is a set consisting of three elements, $B$ consists of four elements and $C$ consists of two element. How many elements are there in the set   $(A\times B)\times$?
+\end{tcolorbox}
+$(A\times B)\times C$ has $(3\times 4)\times 2 = 24 $ elements. Indeed in the element $\left((x,y), z\right) \in (A\times B)\times C $  we have  for $(x,y)$,  $3\times 4 =12$ elements (see Exercise $1.9.5$) and for each choice of this $(x,y)$ we are free to choose one element out of the $2$ elements of $C$.
+$$\blacklozenge$$\newpage
+
+ \section{Functions}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$\blacklozenge$$

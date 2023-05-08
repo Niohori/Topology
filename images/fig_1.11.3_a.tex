@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=4.5,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x-3*4)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x-3*3)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x-3*2)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x-3*1)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x-3*0)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x+3*4)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x+3*3)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x+3*2)};
+\addplot [name path=A,domain=-6:6, thick, black, smooth]{x+3*1)};
+
+\end{axis};
+\node at (0,5) {$k=3$};
+\node at (0,3.5)  {$k=3$};
+\node at (0,2)  {$k=1$};;
+\node at (0,0.5)  {$k=0$};
+\node at (1,0)  {$k=-1$};;
+\node at (2.5,0)  {$k=-2$};
+\node at (4,0)  {$k=-3$};
+\end{tikzpicture}

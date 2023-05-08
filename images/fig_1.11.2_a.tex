@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=4.5,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+\addplot [name path=A,domain=-6:1, thick, black, smooth]{sqrt(x^2-1)};
+\addplot [name path=B,domain=-6:1, thick, black, smooth]{-sqrt(x^2-1)};
+
+\addplot [name path=C,domain=1:6, thick, black, smooth]{sqrt(x^2-1)};
+\addplot [name path=D,domain=1:6, thick, black, smooth]{-sqrt(x^2-1)};        
+        
+
+        
+\addplot [name path=E,domain=-6:6, thick, black, smooth]{sqrt(1+x^2)};
+\addplot [name path=F,domain=-6:6, thick, black, smooth]{-sqrt(1+x^2)};
+        
+
+\addplot[pattern=north west lines, pattern color=gray!50]fill between[of=E and F , soft clip={domain=-6:6}];
+\addplot[ color=white]fill between[of=A and B , soft clip={domain=-6:6}];
+\addplot[color=white]fill between[of=C and D , soft clip={domain=-6:6}];
+\draw [](axis cs:-6,0)--(axis cs:6,0);
+\end{axis};
+\end{tikzpicture}

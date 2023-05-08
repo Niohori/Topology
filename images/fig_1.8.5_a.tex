@@ -1,0 +1,21 @@
+
+\usetikzlibrary{arrows,arrows.meta}
+\begin{tikzpicture}
+\coordinate (O) at (0,0);
+\coordinate (x) at (6,0);
+\coordinate (y) at (0,5);
+
+\draw[-Latex]  (O) -- (x);
+\draw[-Latex]  (O) -- (y);
+\draw  plot[smooth, tension=.7] coordinates {(0.5,1) (2.5,2) (5,3)};
+\draw  plot[smooth, tension=.7] coordinates {(1.5,4) (2.5,2) (4,1)};
+\coordinate (xa) at (0,0);
+\coordinate (xb) at (6,0);
+\coordinate (xc) at (0,5);
+\coordinate (xc) at (0,5);
+
+\coordinate (ya) at (0,0);
+\coordinate (yb) at (6,0);
+\coordinate (yc) at (0,5);
+\coordinate (yc) at (0,5);
+\end{tikzpicture}

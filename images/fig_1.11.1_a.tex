@@ -1,0 +1,103 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=6.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+
+
+\addplot [domain=-6:6, thick, black, smooth,fill=white]{3-x};
+\addplot [domain=-6:6, thick, black, smooth,fill=white]{x};
+
+
+\coordinate (A) at (axis cs:7,7) {};
+\coordinate (B) at (axis cs:-6,-6) {};
+\coordinate (C) at (axis cs:-6,7) {};
+\coordinate (D) at (axis cs:6,7) {};
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=-45
+                 ]},
+        pattern color=gray!50](A)--(B)--(C);
+        
+ \coordinate (At) at (axis cs:6,-3) {};
+\coordinate (Bt) at (axis cs:-6,9) {};
+\coordinate (Ct) at (axis cs:-6,-6) {};
+\coordinate (Dt) at (axis cs:6,-9) {};
+\path[ pattern={Lines[
+                  distance=2mm,
+                  angle=45
+                 ]},
+        pattern color=gray!50](At)--(Bt)--(Ct)--(Dt);
+        
+        \path[ pattern={Lines[
+                  distance=2mm,
+                  angle=0
+                 ]},
+        pattern color=gray!50](axis cs:-3,-6)--(axis cs:-3,7)--(axis cs:6,7)--(axis cs:6,-6);
+ \draw [](axis cs:-3,-6)--(axis cs:-3,7);       
+\draw [](axis cs:-4,0)--(axis cs:4,0);
+\draw [](axis cs:0,4)--(axis cs:0,-4);
+
+\begin{scope}
+\coordinate (S) at (axis cs:4,4) {};
+\coordinate (St) at (axis cs:2.5,5.5) {};
+\draw [fill= white] (S) circle [radius=10.05];
+\node[above right] at (St) {$y-x\ge 0$};
+\draw[-{Latex[length=2mm]}] (S) --(St);
+
+\coordinate (Sd) at (axis cs:5,-2) {};
+\coordinate (Std) at (axis cs:2.5,-4.5) {};
+\draw [fill= white] (Sd) circle [radius=10.05];
+\node[below] at (Std) {$y+x\le 3$};
+\draw[-{Latex[length=2mm]}] (Sd) --(Std);
+
+\coordinate (P) at (axis cs:-3,-4.5) {};
+\coordinate (Pt) at (axis cs:-1,-4.5) {};
+\draw [fill= white] (P) circle [radius=10.05];
+\node[below right] at (P) {$x\ge-3$};
+\draw[-{Latex[length=2mm]}] (P) --(Pt);
+
+
+\coordinate (T) at (axis cs:2.7,2.3) {};
+\coordinate (Tt) at (axis cs:-2.7,-3) {};
+%\draw [fill= white] (T) circle [radius=1.05];
+%\node[below] at (Tt) {$A$};
+%\draw[-{Latex[length=2mm]}] (T) --(Tt);
+\coordinate (P1) at (axis cs:-3,6) {};
+\coordinate (P2) at (axis cs:1.5,1.5) {};
+\coordinate (P2a) at (axis cs:1.5,0) {};
+\coordinate (P3) at (axis cs:-3,-3) {};
+\coordinate (P4) at (axis cs:0,3) {};
+\coordinate (P5) at (axis cs:-3,0) {};
+\coordinate (P0) at (axis cs:-0,0) {};
+\draw [fill= black] (P1) circle [radius=10.05];
+\draw [fill= black] (P2) circle [radius=10.05];
+\draw [fill= black] (P2a) circle [radius=10.05];
+\draw [fill= black] (P3) circle [radius=10.05];
+\node[below left] at (P1) {$P_1$};
+\node[right] at (P2) {$P_2$};
+\node[above right] at (P2a) {$P_2^{'}$};
+\node[above left] at (P3) {$P_3$};
+
+\draw [fill= black] (P0) circle [radius=10.05];
+\draw [fill= black] (P4) circle [radius=10.05];
+\draw [fill= black] (P5) circle [radius=10.05];
+\node[below right] at (P0) {$P_0$};
+\node[right] at (P4) {$P_4$};
+\node[above left] at (P5) {$P_5$};
+\draw [dashed, thin] (P2)--(P2a);
+\end{scope}
+
+\end{axis};
+\end{tikzpicture}

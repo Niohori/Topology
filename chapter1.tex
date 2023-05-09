@@ -982,6 +982,7 @@ $$ $$
 \textbf{$R[0]$ }:  $=[-\half,\infty)$\\
 \textbf{$R^{-1}[0]$}:  $=(-\infty,\half]$\\
 $$\blacklozenge$$
+\newpage
 
 \subsection{}
 \begin{tcolorbox}
@@ -998,4 +999,87 @@ $$ $$
 \textbf{$\text{Range} R$} $=[0,+\infty)$\\
 \textbf{$R[0]$ }:  $=\{0\}$\\
 \textbf{$R^{-1}[0]$}:  $=\{0\}$\\
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+ Let $R=\{(x,y):x\ge 0,\, x^2+y^2=26\}$. Find $R[0],\, R[5],\text{ and } R[I]\text{, where } I= \{r:0\le r\le 1\};\, R^{-1}[J]\text{ where } J=  \{r:-1\le r\le 1\}$.
+\end{tcolorbox}
+$$ $$
+\textbf{$R[0]$ }:  $=\{-\sqrt{26},\,\sqrt{26} \}$\\
+\textbf{$R[5]$ }:  $=\{-1,\,1 \}$\\
+\textbf{$R[I]$ }:  $=[-\sqrt{26},-5]\cup [5,\sqrt{26}] $\\
+\textbf{$R^{-1}[J]$}:  $=[5,\sqrt{26}]$\\
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ Let $R=\{(x,y):x\text{ is real and }y=x(x-1)(x-2)\}$. Find $R[0],\, R[1],\, R[2],\, R^{-1}[0]\text{ and } R[I]\text{, where } I= \{x:0\le x\le 2\}$.
+\end{tcolorbox}
+$$ $$ 
+\textbf{$R[0]$ }:  $=\{0\}$\\
+\textbf{$R[1]$ }: $=\{0 \}$\\
+\textbf{$R[2]$ }:   $=\{0 \}$\\
+\textbf{$R^{-1}[0]$}:  $=\{0,\, 1 ,\, 2 \}$\\
+\textbf{$R[I]$ }:  $=[-1,2] $\\
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ Let $R$ be a relation between sets $X$ and $Y$, and suppose that $A$ and $B$ are subsets of $X$. In each of the following, tell wether the statement is necessarily true and give a justification of your answer. 
+ \begin{align*}
+\begin{array}{ll}
+(a)&R[A\cap B] =R[A]\cap R[B]. \\
+(b)&R[A\cap B]\subset R[A]\cap R[B]. \\
+(c)&R[A\cap B] \supset R[A]\cap R[B]. \\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+(a) $R[A\cap B] =R[A]\cap R[B]$\\
+This is not necessarily true. Take for example a non injective function as the relation $R$ with $A\cap B=\emptyset$. This means that  $R[A\cap B] = \emptyset$ but the relation being a non injective function it also possible that $R[A]\cap R[B]\ne \emptyset$. So, $R[A\cap B]\not \supset R[A]\cap R[B]$ and we can't have $R[A\cap B] =R[A]\cap R[B]$.
+$$\lozenge$$
+
+(b) $R[A\cap B] \subset R[A]\cap R[B]$\\
+This is necessarily true. Take  $(x,y):x\in A\cap B$. Then we have obviously $y\in R[A]$ and also $y\in R[A\cap B]$ but as $x\in B$ (because $x\in A\cap B$) we have also $y\in R[B]$. So $y\in R[A]$ and $y\in R[B]$ and thus $y \in R[A]\cap R[B]$ giving
+$R[A\cap B] \subset R[A]\cap R[B]$. 
+$$\lozenge$$
+
+(c) $R[A\cap B] \supset R[A]\cap R[B]$\\
+     See (a).
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ Let $\mathbb{Z}$ be the set of all integers. For each $m$ and $n \in\mathbb{Z}$, let us write $mRn$ if and only $m-n$ is an even integer. Thus this relation $R$ is the set $\{(m,n): m-n=2k,\, k\in \mathbb{Z}\}$. Find $R[1]$ and $R[2]$. How many distinct sets of the form $R[i]$ are there?
+\end{tcolorbox}
+$$ $$ 
+\textbf{$R[0]$ }:  $=\{n: n=1-2k,\, k\in \mathbb{Z}\}$ i.e. the set of all odd integers.\\
+\textbf{$R[1]$ }: $=\{n: n=2-2k,\, k\in \mathbb{Z}\}\Leftrightarrow \{n: n=2k,\, k\in \mathbb{Z}\}$ i.e. the set of all even integers.\\
+There are $2$ distinct sets in total. 
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $R$ be the relation defined as follows: For each ordered pair of integers $(m,n)$, let $mRn$ if and only $m-n$ is an integral multiple of $5$ (including negative multiples of $5$). Find $R[1],\, R[2],$ and $R[6]$. How many distinct sets of the form $R[i]$ are there? Find $R^{-1}[1]$ and $R^{-1}[2]$. Is $R^{-1}[i]=R[i]$ for each $i$? For this relation $R$, if $iRj$ and $jRk$, does it follow that $iRk$?
+ \end{tcolorbox}
+$$ $$ 
+\textbf{$R[1]$ }:  $=\{\dots, -9,-4,1,6,11,\dots\}$\\
+\textbf{$R[2]$ }:  $=\{\dots, -8,-3,2,7,12,\dots\}$\\
+\textbf{$R[6]$ }:  $=\{\dots, -9,-4,1,6,11,\dots\}$\\
+There are $5$ distinct sets in total. \\
+\textbf{$R^{-1}[1]$ }:  $=\{\dots, -9,-4,1,6,11,\dots\}=R[1]$\\
+\textbf{$R^{-1}[2]$ }:  $=\{\dots, -8,-3,2,7,12,\dots\}=R[2]$\\
+$R^{-1}[i]=R[i]$ for each $i$ as the relation $n=m-5k,\forall k\in \mathbb{Z}$ can be written as $m=n-5p,\forall p\in \mathbb{Z}$. So the sets $R^{-1}[i]$ and $R[i]$ are not distinguishable.\\
+If $iRj$ and $jRk$, does it follow that $iRk$? Yes, as the composed relation $(jRk)\circ (iRj) $ has the relation $k=i-5(p+q), p,q\in \mathbb{Z}$ and as $p+q\in\mathbb{Z}$ we can rewrite the relation $(jRk)\circ (iRj) $ as $j= i-5p, p\in\mathbb{Z}$.
+$$\blacklozenge$$
+\newpage
+
+ \section{Set inclusions for image and inverse image sets}
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
 $$\blacklozenge$$

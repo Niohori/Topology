@@ -889,7 +889,7 @@ This is  necessarily true as for $f$ being a function we have $\left( x_2,f(x_2)
 $$\lozenge$$
 
 (c) If $A\subset B , \text{ then } f[A]\subset f[B].$ \\
-This is  necessarily true as for for the same reason as in $(b)$.
+This is  necessarily true as for the same reason as in $(b)$.
 $$\lozenge$$
 
 (d)  $f[A-B] = f[A]-f[B]$ \\
@@ -1041,7 +1041,7 @@ This is not necessarily true. Take for example a non injective function as the r
 $$\lozenge$$
 
 (b) $R[A\cap B] \subset R[A]\cap R[B]$\\
-This is necessarily true. Take  $(x,y):x\in A\cap B$. Then we have obviously $y\in R[A]$ and also $y\in R[A\cap B]$ but as $x\in B$ (because $x\in A\cap B$) we have also $y\in R[B]$. So $y\in R[A]$ and $y\in R[B]$ and thus $y \in R[A]\cap R[B]$ giving
+This is necessarily true. Take  $(x,y):x\in A\cap B, y=R(x)$. Then we have obviously $y\in R[A]$ and also $y\in R[A\cap B]$ but as $x\in B$ (because $x\in A\cap B$) we have also $y\in R[B]$. So $y\in R[A]$ and $y\in R[B]$ and thus $y \in R[A]\cap R[B]$ giving
 $R[A\cap B] \subset R[A]\cap R[B]$. 
 $$\lozenge$$
 
@@ -1079,7 +1079,108 @@ $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-
+Prove that \\
+$\mathbf{12.5}$ Suppose that $R$ is a relation between $X$ and $Y$ . Then, if $\{A_{\alpha}:\alpha \in \Lambda\}$ is a non-empty collection of subsets of $X$, the following hold:
+\begin{align*}
+\begin{array}{ll}
+\mathbf{12.5(a)}&R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]= \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}. \\
+\mathbf{12.5(b)}&R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}. \\
+\end{array}
+\end{align*}
 \end{tcolorbox}
+$\mathbf{12.5(a)}\quad R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]= \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}. $\\
+Be $y \in R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]$, then there must be an $x$ that is an element of at least one of the $A_{\alpha}$ and hence $y$ must be in $R[A_{\alpha}]$, so $y$ will also be in $\bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$ and thus $R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$.\\
+Suppose now that $yin \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$. Then $y$ must be  an element of at least one of the $R[A_{\alpha}]$ and hence there mus be an $x$ that is in a set $A_{\alpha}$, so $x$ will also be in $\bigcup\{A_{\alpha}:\alpha \in \Lambda\}$ and thus $\bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}\subset R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]$.\\
+From this and the previous conclusion follows $R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]= \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$.
+$$\lozenge$$
+$\mathbf{12.5(b)}\quad R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}. $\\\\
+We prove first that  $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$\\
+ Take  $y\in R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]$. Then there must be an $x\in A_{\alpha},\, \forall \alpha \in \Lambda$ and thus $y\in R[A_{\alpha}],\, \forall \alpha \in \Lambda$ giving $y\in  \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$ and thus $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$\\\\
+We prove now that $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\not\supset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$\\
+Be a non injective function as the relation $R$ with $\bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}\ne\emptyset$. As $R$ is a non injective function, we can have a $x\in \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$ but with $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}=\emptyset$, which means that $x$ can't be an element of $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}$ and thus $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\not\supset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$.\\
+(\textit{Take for example the relation defined by $R=\{(n,1):n\in \mathbb{N}\}$ and the subsets of $\mathbb{N}$, $A_{\alpha}=\{\alpha \}: \alpha \in \mathbb{N}\}$. We have $\bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}=\{1\}$ with $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}=\emptyset$ }.)
+$$\blacklozenge$$
 
+\subsection{}
+\begin{tcolorbox}
+Prove that \\
+$\mathbf{12.6}$ Let $f:X\rightarrow Y$ be a function. Let $\{A_{\delta}:\delta\in \Delta\}$ and $\{B_{\lambda}:\lambda\in \Lambda\}$ be non empty collections of subsets of $X$ and $Y$ respectively. Then,\\  
+\begin{align*}
+\begin{array}{ll}
+\mathbf{12.6(a)}&f\left[\bigcup\{A_{\delta}:\delta \in \Delta\}\right]= \bigcup\{f[A_{\delta}]:\delta \in \Delta\}. \\
+\mathbf{12.6(b)}&f\left[\bigcap\{A_{\delta}:\delta \in \Delta\}\right]\subset \bigcap\{f[A_{\delta}]:\delta \in \Delta\}. \\
+\mathbf{12.6(c)}&f^{-1}\left[\bigcup\{B_{\lambda}:\lambda \in \Lambda\}\right]= \bigcup\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}. \\
+&f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]= \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}. \\
+\end{array}
+\end{align*}
+\end{tcolorbox}
+$\mathbf{12.6(a)}\quad f\left[\bigcup\{A_{\delta}:\delta \in \Delta\}\right]= \bigcup\{f[A_{\delta}]:\delta \in \Delta\}$. \\\\
+This a direct consequence of $\mathbf{12.6}$  with $R=f$.
+$$\lozenge$$
+$\mathbf{12.6(b)}\quad f\left[\bigcap\{A_{\delta}:\delta \in \Delta\}\right]\subset \bigcap\{f[A_{\delta}]:\delta \in \Delta\}$.\\\\
+This a direct consequence of $\mathbf{12.6}$  with $R=f$.
+$$\lozenge$$
+$\mathbf{12.6(c)}\quad f^{-1}\left[\bigcup\{B_{\lambda}:\lambda \in \Lambda\}\right]= \bigcup\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$. \\\\
+As $f^{-1}$ is a relation and by $\mathbf{12.6}$  with $R=f^{-1}$ we get the asked identity.
+$$\lozenge$$
+$\mathbf{12.6(c^{'})}\quad f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]= \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$. \\\\
+As $f^{-1}$ is a relation and by $\mathbf{12.6}$  with $R=f^{-1}$ we get $f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]\subset \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$.\\
+We prove now that  $f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]\supset \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$.\\
+Suppose $x\in \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$ then $x\in f^{-1}[B_{\lambda}]:\forall \lambda \in \Lambda$. This means that there must be an unique $y=f(x)$ ($f$ being a function) for which yields $y\in B_{\lambda}:\forall \lambda \in \Lambda$. Hence $y$ must be in $\bigcap\{B_{\lambda}:\lambda \in \Lambda\}$ and thus $x\in f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]$ giving $f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]\supset \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Prove that \\
+$\mathbf{12.7}$ Let $f:X\rightarrow Y$ be a function. Then, each of the following holds\\  
+\begin{align*}
+\begin{array}{ll}
+\mathbf{12.7(a)}&\forall x\in X,\, x\in f^{-1}[f[x]]. \\
+\mathbf{12.7(b)}&\forall A\subset X,\, A\subset f^{-1}[f[A]]. \\
+\mathbf{12.7(c)}&\forall y\in \text{Range} f,\,  f[f^{-1}[y]]=\{y\}.
+\end{array}
+\end{align*}
+\end{tcolorbox}
+$\mathbf{12.7(a)}\quad \forall x\in X,\, x\in f^{-1}[f[x]]$. \\
+Be $y=f(x)$, then obviously there is at least one $x$  (there could be more if $f$ is not injective), so that $x=  f^{-1}[y]$. Hence, $\forall x\in X,\, x\in f^{-1}[f[x]]$.
+$$\lozenge$$
+$\mathbf{12.7(b)}\quad A\subset X,\, A\subset f^{-1}[f[A]]$.\\
+This is a consequence of the previous statement but with the remark that we could have (for a non injective function) a  $x\in B$ with $A\cap B=\emptyset$ for which we have $f(x) \in f[A]$. So $A$ is not always equal to $ f^{-1}[f[A]]$ and get $A\subset X,\, A\subset f^{-1}[f[A]]$.
+$$\lozenge$$
+$\mathbf{12.7(c)}\quad \forall y\in \text{Range} f,\,  f[f^{-1}[y]]=\{y\}$. \\
+This a direct consequence of $f$ being a function. Indeed suppose for a given $y$ we have the set $A=f^{-1}[\{y\}]$, so this set will contain all $x$ as element which $f$ maps (uniquely, $f$ being a function) to $y$. So $f[A]= f[f^{-1}(y)]=\{y\}$.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Prove that \\
+Suppose that $f:X \rightarrow Y$ is a function and $A$ and $B$ are subsets of $X$. Suppose also that $C$ and $D$ are subsets of $Y$. For each of the following, determine whether the statement is necessarily true. In any case for which the statement is not necessarily true, determine whether it is under any of the following conditions: $f:X \rightarrow Y$  is a surjection,$f:X \rightarrow Y$  is a injection,$f:X \rightarrow Y$  is a bijection. 
+\begin{align*}
+\begin{array}{ll}
+\mathbf{(a)}&f[A-B] = f[A]-f[B]. \\
+\mathbf{(b)}&f^{-1}[D-C] = f^{-1}[D]-f^{-1}[C]. \\
+\mathbf{(c)}&f^{-1}[f[A]] = A.\\
+\mathbf{(b)}&f[f^{-1}[C]] = C.
+\end{array}
+\end{align*}
+\end{tcolorbox}
+$\mathbf{(a)}\quad f[A-B] = f[A]-f[B]$. \\
+This is not necessarily True.\\
+Suppose, $x\in A$ but not in $B$ and $y=f(x)$, so $y \in f[A-B]$ but if $f$ is not a surjection then it is possible that a $x^{'}\in B$ exists which is mapped to $y$, meaning that $y$ will not be an element of $f[A]-f[B]$ i.e. $y\not \in  f[A]-f[B]$ and thus $f[A-B] \not \subset  f[A]-f[B]$ meaning that not always $f[A-B] \ne f[A]-f[B]$. So this identity can only be true if $f$ is a surjection or a bijection as  a bijection has to be an injection. Of course $f:X \rightarrow Y$  is a surjection, is not a sufficient condition for the identity to be true as a surjection is not necessarily an injection.
+$$\lozenge$$
+$\mathbf{(b)}\quad f^{-1}[D-C] = f^{-1}[D]-f^{-1}[C]$.\\
+This is True if $f$ is a surjection (or by extension a bijection).\\
+Suppose, $x\in f^{-1}[D-C]$, so there is a $y \in D-C$ for which $x=f^{-1}(y)$. Also, $y\in D$ but not in $C$. Can there be $y^{'}\in C, \not \in D $ for which $y^{'}=f(x)$ ? Obviously not, as $f$ is a function meaning that $y^{'}=f(x)$ and  $y^{}=f(x)\Rightarrow y^{'}=y^{}$. This means that $x$ can't be an element of $f^{-1}[C]$ and thus that $x\in  f^{-1}[D]-f^{-1}[C]$. Hence, $f^{-1}[D-C] \subset f^{-1}[D]-f^{-1}[C]$.\\
+Suppose now that $x\in f^{-1}[D]-f^{-1}[C]$, so there is no $x \in f^{-1}[C]$ for which $y=f(x),\, y\in C$. This means that $y\not \in C$ but  $y$ must be in $D$. i.e. $y\in D-C$ and thus $x\in f^{-1}[D-C]$ or $f^{-1}[D]-f^{-1}[C]\subset f^{-1}[D-C]$, leading to the identity.\\
+ Remark that the reasoning deployed implies that $f$ is a surjection as if $y\in D-C$ has no inverse image in $X$, this would mean that  $f^{-1}[D-C]=\emptyset$ and thus no $x$ would exist for the given identity.
+$$\lozenge$$
+$\mathbf{c)}\quad f^{-1}[f[A]] = A$. \\
+This is not necessarily True.\\
+Be $y\in f[A]$, if $f$ is not an injection then it is possible that there exist a $x^{'}\in B \not\subset A$ so that $f(x^{'})=y$, so $x^{'}$ will be an element of $f^{-1}[f[A]]$ and as $x^{'}\not\in  A$ the identity can't be true. So, $f$ needs to be an injection (and by extension a bijection) for the identity to be true.
+$$\lozenge$$
+$\mathbf{(d)}\quad f[f^{-1}[C]] = C$. \\
+This is True if $f$ is a surjection (or by extension a bijection).\\
+Be $y\in C$ and  $x\in f^{-1}[C]$, as $f$ is a function then $f(x)$ will be in $C$ and  the set $f^{-1}[C]$ will contain all $x$ for which  $f(x)\in C$. But note that $C$ may contain elements which are not mapped by $f$. In that case $ f[f^{-1}[C]] \not \subset C$. So $f$ needs to be a surjection (or by extension a bijection).\\
+On the other hand, suppose $y\in C$, then $f^{-1}[C]$ will contain all $x\in X$ which are mapped to $C$ and $f$ being a function  we will have $f[f^{-1}[C]]\subset C$.\\
+Conclusion, the identity is true if $f$ is a surjection (or by extension a bijection).
 $$\blacklozenge$$

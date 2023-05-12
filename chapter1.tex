@@ -1166,7 +1166,7 @@ Suppose that $f:X \rightarrow Y$ is a function and $A$ and $B$ are subsets of $X
 \end{tcolorbox}
 $\mathbf{(a)}\quad f[A-B] = f[A]-f[B]$. \\
 This is not necessarily True.\\
-Suppose, $x\in A$ but not in $B$ and $y=f(x)$, so $y \in f[A-B]$ but if $f$ is not a surjection then it is possible that a $x^{'}\in B$ exists which is mapped to $y$, meaning that $y$ will not be an element of $f[A]-f[B]$ i.e. $y\not \in  f[A]-f[B]$ and thus $f[A-B] \not \subset  f[A]-f[B]$ meaning that not always $f[A-B] \ne f[A]-f[B]$. So this identity can only be true if $f$ is a surjection or a bijection as  a bijection has to be an injection. Of course $f:X \rightarrow Y$  is a surjection, is not a sufficient condition for the identity to be true as a surjection is not necessarily an injection.
+Suppose, $x\in A$ but not in $B$ and $y=f(x)$, so $y \in f[A-B]$ but if $f$ is not a surjection then it is possible that a $x^{'}\in B$ exists which is mapped to $y$, meaning that $y$ will not be an element of $f[A]-f[B]$ i.e. $y\not \in  f[A]-f[B]$ and thus $f[A-B] \not \subset  f[A]-f[B]$ meaning that not always $f[A-B] = f[A]-f[B]$. So this identity can only be true if $f$ is a surjection or a bijection as  a bijection has to be an injection. Of course $f:X \rightarrow Y$  is a surjection, is not a sufficient condition for the identity to be true as a surjection is not necessarily an injection.
 $$\lozenge$$
 $\mathbf{(b)}\quad f^{-1}[D-C] = f^{-1}[D]-f^{-1}[C]$.\\
 This is True if $f$ is a surjection (or by extension a bijection).\\
@@ -1182,5 +1182,29 @@ $\mathbf{(d)}\quad f[f^{-1}[C]] = C$. \\
 This is True if $f$ is a surjection (or by extension a bijection).\\
 Be $y\in C$ and  $x\in f^{-1}[C]$, as $f$ is a function then $f(x)$ will be in $C$ and  the set $f^{-1}[C]$ will contain all $x$ for which  $f(x)\in C$. But note that $C$ may contain elements which are not mapped by $f$. In that case $ f[f^{-1}[C]] \not \subset C$. So $f$ needs to be a surjection (or by extension a bijection).\\
 On the other hand, suppose $y\in C$, then $f^{-1}[C]$ will contain all $x\in X$ which are mapped to $C$ and $f$ being a function  we will have $f[f^{-1}[C]]\subset C$.\\
-Conclusion, the identity is true if $f$ is a surjection (or by extension a bijection).
+Conclusion, the identity is true if $f$ is a surjection (or by extension a bijection).\\
+To illustrate this, take $A$ as the subset $\mathbb{N}\subset \mathbb{R}$ and $C$ as the subset of $\mathbb{R}$ with the even natural numbers as elements. Define now the function $f=\{(n,4n): n\in A\}$. Obviously $f[A] \ne C $ as $f[A]=\{4,8,12,\,\dots\}\ne \{2,4,6,8,\,\dots\}$. Then as $f^{-1}[C] = A$, we have  $f[f^{-1}[C]] \ne C$
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+Let $M:\mathbb{R}\times\mathbb{R}\rightarrow \mathbb{R}$ be the map from $\mathbb{R}\times\mathbb{R}$ into $\mathbb{R}$ defined as follows: For each $(a,b)\in \mathbb{R}\times\mathbb{R}$, let $M\left((a,b)\right)=ab$. Is $M$ a map from $\mathbb{R}\times\mathbb{R}$ onto $\mathbb{R}$? Representing $\mathbb{R}\times\mathbb{R}$ s a plane, draw a sketch for each of the following sets: $M^{-1}[0],\,M^{-1}[1],\, M^{-1}[I]$, where $I$ is the closed interval $[0,1]$. 
+\end{tcolorbox}
+Yes, $M$ is a map from $\mathbb{R}\times\mathbb{R}$ onto $\mathbb{R}$ as every $x\in\mathbb{R}$ can be expressed as the product of two real numbers.
+\begin{figure}[H]%
+    \centering
+    \subfloat[$\text{Inverse image of } M^{-1}(0),\,M^{-1}(1),\, M^{-1}(I)$]{\input{./images/fig_1.12.5.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Examin carefully the content of Theorem $\mathbf{12.6}$ and your answer to Exercise $4(a)$ and $(b)$. Which seems to have a nicer behaviour on collections of sets, $f$ or $f^{-1}$?
+\end{tcolorbox}
+Putting aside the notion of 'nicer', we still could put forward that $f^{-1}$ requires less restrictions in order to have certain identities. \\
+Take first $\mathbf{12.6}(b)\quad f\left[\bigcap\{A_{\delta}:\delta \in \Delta\}\right]\subset \bigcap\{f[A_{\delta}]:\delta \in \Delta\}$ compared to $\mathbf{12.6}(c^{'})\quad f^{-1}\left[\bigcap\{B_{\lambda}:\lambda \in \Lambda\}\right]= \bigcap\{f^{-1}[B_{\lambda}]:\lambda \in \Lambda\}$. $f^{-1}$ requires no special condition (except for $f$ being a function) in order to have an equality for the intersection of the sets in the collection.\\
+Moreover in Exercise $4$, for having the identity $4(a)\quad f[A-B] = f[A]-f[B]$, we need $f$ to be at least an injection while for $4(b)\quad ff^{-1}[D-C] = f^{-1}[D]-f^{-1}[C]$ we "only need a$f$ to be a surjection which can be achieved by  restricting the target $Y$ to $D\cup C$.
 $$\blacklozenge$$

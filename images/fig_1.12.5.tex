@@ -1,0 +1,69 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$a$,
+ylabel=$b$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=5.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+
+\addplot [name path = A,domain=-6:-0.09, thick, smooth]{1/x};
+\addplot [name path = B,domain=0.09:6, thick,, smooth]{1/x};
+\addplot[pattern=north west lines, pattern color=gray!50]fill between[of=A and B , soft clip={domain=-6:6}];
+
+ \coordinate (At) at (axis cs:0,0) {};
+\coordinate (Bt) at (axis cs:6,0) {};
+\coordinate (Ct) at (axis cs:6,-6) {};
+\coordinate (Dt) at (axis cs:0,-6) {};
+\path[fill =white](At)--(Bt)--(Ct)--(Dt);
+ \coordinate (A) at (axis cs:0,0) {};
+\coordinate (B) at (axis cs:-6,0) {};
+\coordinate (C) at (axis cs:-6,6) {};
+\coordinate (D) at (axis cs:0,6) {};
+\path[fill =white](A)--(B)--(C)--(D);
+\draw[thick](axis cs:-6,0)--(axis cs:6,0);
+\draw[thick](axis cs:0,-6)--(axis cs:0,6);
+\coordinate (H1) at (axis cs:1,1) {};
+
+\coordinate (H1a) at (axis cs:1,0) {};
+
+\coordinate (H1b) at (axis cs:0,1) {};
+
+\draw[dashed] (H1)--(H1b);
+\draw[dashed] (H1)--(H1a);
+\coordinate (H2) at (axis cs:-1,-1) {};
+\draw [fill= black] (H2) circle [radius=0.5];
+\coordinate (H2a) at (axis cs:-1,0) {};
+
+\coordinate (H2b) at (axis cs:0,-1) {};
+\draw[dashed] (H2)--(H2b);
+\draw[dashed] (H2)--(H2a);
+\draw [fill= black] (H1) circle [radius=0.5];
+\draw [fill= white] (H1a) circle [radius=0.9];
+\draw [fill= white] (H1b) circle [radius=0.9];
+\draw [fill= white] (H2a) circle [radius=0.9];
+\draw [fill= white] (H2b) circle [radius=0.9];
+\node[below] at (H1a) {$1$};
+\node[left] at (H1b) {$1$};
+\node[above] at (H2a) {$-1$};
+\node[right] at (H2b) {$-1$};
+
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {(axis cs:-0.59,-1.6) (axis cs:2.7,-3.1) (axis cs:3.4,-4)};
+\draw  [Latex-]plot[smooth, tension=.7] coordinates {(axis cs:1.7,0.55) (axis cs:3.3,-3) (axis cs:3.6,-4)};
+\node[below] at  (axis cs:3.6,-4) {$M^{-1}[1]$};
+
+\draw[Latex-]  plot[smooth, tension=.7] coordinates {(axis cs:-2.5,0) (axis cs:-2,2) (axis cs:-3,4.4)};
+\draw  [Latex-]plot[smooth, tension=.7] coordinates {(axis cs:0,2.2) (axis cs:-1.1,3.2) (axis cs:-3.0,4.6)};
+\node[above] at (axis cs:-3.0,4.6) {$M^{-1}[0]$};
+\path [pattern=north west lines, pattern color=gray!50](axis cs:3,3)--(axis cs:4,3)--(axis cs:4,4)--(axis cs:3,4)--(axis cs:3,3);
+\node[right] at (axis cs:4,3) {$M^{-1}[I]$};
+\end{axis};
+\end{tikzpicture}

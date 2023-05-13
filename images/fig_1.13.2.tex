@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=6.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+
+
+\addplot [domain=-6:6, thick, black, smooth]{sqrt((x-1)*(x-1))};
+\addplot [domain=-6:6, thick, black, smooth]{x-1};
+
+\draw[-Latex]  plot[smooth, tension=.7] coordinates {(axis cs:2.5,5) (axis cs:2.5,4) (axis cs:3,2)};
+\draw[-Latex]  plot[smooth, tension=.7] coordinates {(axis cs:2.5,5) (axis cs:1.5,4) (axis cs:-2,3)};
+\node[above] at(axis cs:2.5,5){$f(x)$};
+
+\draw[-Latex]  plot[smooth, tension=.7] coordinates {(axis cs:2.5,-4.55) (axis cs:0,-4) (axis cs:-2.5,-3.5)};
+\draw[-Latex]  plot[smooth, tension=.7] coordinates {(axis cs:2.5,-4.55) (axis cs:1.5,-2)  (axis cs:3,2)};
+\node[below] at(axis cs:2.5,-4.55){$g(x)$};
+\end{axis};
+\end{tikzpicture}

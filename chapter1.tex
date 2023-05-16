@@ -1088,6 +1088,7 @@ $\mathbf{12.5}$ Suppose that $R$ is a relation between $X$ and $Y$ . Then, if $\
 \end{array}
 \end{align*}
 \end{tcolorbox}
+$$ $$
 $\mathbf{12.5(a)}\quad R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]= \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}. $\\
 Be $y \in R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]$, then there must be an $x$ that is an element of at least one of the $A_{\alpha}$ and hence $y$ must be in $R[A_{\alpha}]$, so $y$ will also be in $\bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$ and thus $R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$.\\
 Suppose now that $yin \bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}$. Then $y$ must be  an element of at least one of the $R[A_{\alpha}]$ and hence there mus be an $x$ that is in a set $A_{\alpha}$, so $x$ will also be in $\bigcup\{A_{\alpha}:\alpha \in \Lambda\}$ and thus $\bigcup\{R[A_{\alpha}]:\alpha \in \Lambda\}\subset R\left[\bigcup\{A_{\alpha}:\alpha \in \Lambda\}\right]$.\\
@@ -1241,7 +1242,256 @@ As $f(x)\equiv|\cos{x}|$,  $f(x)=g(x)$ implies $S=\{[-\frac{\pi}{2} k,-\frac{\pi
  \section{Composition of functions}
 \subsection{}
 \begin{tcolorbox}
+Let $f:\Breal\rightarrow\Breal$ and $g:\Breal\rightarrow\Breal$ be given by $f(x)= \frac{x}{x+1}$ and $g(x)=x^2$. Give explicit formulas for $g\circ f(x)$ and $f\circ g(x)$. Determine the ranges of $g\circ f$ and $f\circ g$.
+\end{tcolorbox}
+$$ $$
+$g\circ f(x)= \frac{x^2}{x^2+2x+1}$\\
+$f\circ g(x)= \frac{x^2}{x^2+1}$\\
+$Range \,g\circ f= [0,+\infty)$\\
+$Range \,f\circ g=[0,1)$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow\Breal$ and $g:\Breal\rightarrow\Breal$ be defined as follows:
+\begin{align*}
+\begin{array}{lll}
+f(x)&=x^2&\text{for } x\ge 0\\
+&=2&\text{for } x< 0\\
+g(x)&=\sqrt{x}&\text{for } x\ge 0\\
+&=x&\text{for } x<0\\
+\end{array}
+\end{align*}
+(a) Sketch the graph of $g\circ f$\\
+(b) Sketch the graph of $f\circ g$\\
+(c) Find $\left( f\circ g\right)^{-1}[x]$ for each $x\in \Breal$\\
 
 \end{tcolorbox}
+\begin{figure}[H]%
+    \centering
+  \subfloat[$g\circ f$]{\input{./images/fig_1.14.2_a.tex}}\quad
+    \subfloat[$f\circ g$]{\input{./images/fig_1.14.2_b.tex}}
+    %\caption{}
+\label{fig:fig_p3}
+\end{figure}
+(c) Find $\left( f\circ g\right)^{-1}[x]$ for each $x\in \Breal$\\\\
+$\left( f\circ g\right)^{-1}[x]=\emptyset, \forall x< 0$\\\\
+$\left( f\circ g\right)^{-1}[x]=\{x\}, \forall x\ge 0$\\\\
+$\left( f\circ g\right)^{-1}[x]=(-\infty,0)\cup \{{2}\} \text{ for } x= {2}$
+$$\blacklozenge$$
 
+\subsection{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow\Breal$ and $g:\Breal\rightarrow\Breal$ be given by $f(x)=\sin{x}$ and $g(x)= |x|$. Write explicit expressions for $g\circ f(x)$ and $f\circ g(x)$ and find the range of each.
+\end{tcolorbox}
+$$ $$ 
+$g\circ f(x)= |\sin{x}|$\\
+$f\circ g(x)= \sin{|x|}$\\
+$Range \,g\circ f= [0,1]$\\
+$Range \,f\circ g=[-1,1]$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow\Breal$ and $g:\Breal\rightarrow\Breal$ be given by $f(x)=x^2+2$ and $g(x)= x-1$. Find expressions for $(g\circ f)(x)$ and $(f\circ g)(x)$ and note that $g\circ f\ne f\circ g$.
+\end{tcolorbox}
+$$ $$ 
+$(g\circ f)(x)=x^2+1$\\
+$(f\circ g)(x)= x^2-2x+3$\\
+$$\blacklozenge$$
+\newpage
+
+\subsection{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow\Breal$,$g:\Breal\rightarrow\Breal$  and $h:\Breal\rightarrow\Breal$ be given by $f(x)=x^2+x$, $g(x)=(x-1)^2$  and $h(x)= x+1$ for each $x\in\Breal$. Find an expression for $h\circ g\circ f(x)$ for $x\in\Breal$.
+\end{tcolorbox}
+$$ $$ 
+ $h\circ g\circ f(x)=\underbrace{ \underbrace{\left((\underbrace{x^2+x}_{f(x)})-1\right)^2}_{g(x)}+1}_{h(x)}=x^4+2x^3-x^2+2x+2$
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+Suppose $f:X\rightarrow Y$ is a bijection. Show that $f^{-1}\circ f=i$ where $i:X\rightarrow X$ is the identity map on $X$ and $f\circ f^{-1}=j$ where $j$ is the identity map on $Y$.
+\end{tcolorbox}
+$$ $$ 
+$\mathbf{f^{-1}\circ f=i}$\\
+Let $x\in X$. Then, $\left(x,f(x)\right) \in f$. Hence, $\left(f(x),x\right) \in f^{-1}$. thus, $f^{-1}\left(f(x)\right)= x$ and $\left(f^{-1}\circ f\right)(x)= x$ for each $x\in X$. hence, $f{-1}\circ f = i$, the identity map on $ X$. \\
+$\mathbf{f=i\circ f^{-1}=j}$\\
+Let $y\in Y$. Then, $\left(y,f^{-1}(y)\right) \in f^{-1}$. Hence, $\left(f^{-1}(y),y\right) \in f$. thus, $f\left(f^{-1}(y)\right)= y$ and $\left(f\circ f^{-1}\right)(y)= y$ for each $y\in Y$. hence, $f\circ f^{-1} = j$, the identity map on $ Y$.\\
+Note that in the step  \textit{$\left(y,f^{-1}(y)\right) \in f^{-1}$} we implicitly use the fact that $f$ is a bijection.
+ 
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow\Breal$ and $g:\Breal\rightarrow\Breal$ be surjections. Suppose $g\circ f=i$ where $i:X\rightarrow X$ is the identity map on $X$. Show: 
+\begin{align*}
+\begin{array}{ll}
+(a)&f\text{ is one-to-one}\\
+(b)&g\text{ is one-to-one}\\
+(c)&f\circ g = j \text{ where } j:X\rightarrow X \text{ is the identity map from} $Y$ \text{ onto }$Y$\\
+(d)&f=g^{-1}\\
+(d)&g=f^{-1}
+\end{array}
+\end{align*}
+
+\end{tcolorbox}
+$$ $$ 
+(a) $\mathbf{f\text{ is one-to-one}}$\\
+Suppose that $f$ is not one-to-one. This means that there exist $2$ or more $x_1,x_2,\dots $ which are mapped by $f$ to an element $y^{*}\in Y$. But as $g$ is a function, the image $g[\{y^{*}\}]$ can only have one element. Hence, $x_1$ or $x_2$ will not be included in this image. Suppose that $x_2$ is not an element of $g[\{y^{*}\}]$. As $g$ is a surjection, there must be an $y^{'}\in Y$ so that $g(y^{'})= x_2$. But also $f$ is a surjection, so there must be an $x_3\in X$ so that $f(x_3)= y^{'}$. 
+So $g(y^{'})= x_2$ implies $g(f(x_3))= x_2$. But $g(f(x_3))= g\circ f(x^3)$ and given that $g\circ f=i$ (the identity map) we get $g\circ f(x^3)=x_3$ and can conclude that $x_2=x_3$ resulting in $f(x_2)= y^{'}$. But we started with the assumption that $f(x_2)= y^{*}$ and as $f$ is a function, this means $y^{'}=y^{*}$, so there is no other $(y,x_2)\in g$ that maps $y$ to $x_2$, meaning that only the element $x_1$ is mapped to the chosen $y^{*}$. Hence $f$ is one-to-one.
+$$\lozenge$$
+
+(b) $\mathbf{g\text{ is one-to-one}}$\\
+Suppose that $g$ is not one-to-one. This means that for a given $x^{*} $ we could have $2$ (or more) $y_1,y_2,\dots$, so that $g(y_1)=x^{*}$ and $g(y_2)=x^{*}$. But $f$ is on-to-one (see $1.14.7 (a)$) so we must have two distinct $x_1,x_2$ for which we have $f(x_1)=y_1$ and $f(x_2)=y_2$, but $g(y_1)=x^{*}$ and $g(y_2)=x^{*}$, so $g\circ f(x_1)=x^{*}$ and $g\circ f(x_2)=x^{*}$ and given that $g\circ f=i$ (the identity map) we get $x_1=x_2=x^{*}$ and also $y_1=y_2$ and conclude that $g$ must be one-to-one.
+$$\lozenge$$
+
+(c) $\mathbf{f\circ g = j \text{ where } j:X\rightarrow X \text{ is the identity map from } Y \text{ onto }Y}$\\
+We have $g\circ f=i$, so $g\circ f(x)=x$. As $x\in X$ we can apply $f$ to $x$ and this gives $(f\circ g\circ f)(x)=f(x)$ or $(f\circ g)\circ f(x)=f(x)$. Put $f(x)=y$, we can rewrite this as $(f\circ g)(y)=y$. Hence $f\circ g$ is the identity map $j:Y\rightarrow Y$.
+$$\lozenge$$
+
+
+(d) $\mathbf{f=g^{-1}}$\\
+Be $(y,x)\in g$. Then, $(x,y)\in g^{-1}$. As $f$ is a bijection, we have one $x\in X$ and one $y\in Y$ so that $y= f(x)$. Then, $(x,y)\in g^{-1}$ is equivalent to $(x,f(x))\in g^{-1}$. But, by definition , we have  $(x,f(x))\in f$, and conclude $f\subset g^{-1}$. \\
+Be now, $(x,y)\in f$. As $g$ is one-to-one (see above), there is just one $(x,y)$ so that $x=g(y)$. Thus, $(g(y),y)\in f$. We notice that $(y, g(y))\in g$, or $(g(y),y )\in g^{-1}$. This give with $(g(y),y)\in f$, $g^{-1}\subset f$.\\
+Combining with the first subset we get $f=g^{-1}$.
+$$\lozenge$$
+(e) $\mathbf{g=f^{-1}}$\\
+Be $(x,y)\in f$. Then, $(y,x)\in f^{-1}$. As $g$ is a bijection, we have one $x\in X$ and one $y\in Y$ so that $x= g(y)$. Then, $(y,x)\in f^{-1}$is equivalent to $(y,g(y))\in f^{-1}$. But, by definition , we have  $(y,g(y))\in g$, and conclude $g\subset f^{-1}$. \\
+Be now, $(y,x)\in g$. As $g$ is one-to-one (see above), there is just one $(y,x)$ so that $x=g(y)$. Thus, $(y,g(y))\in g$. But $y=f(x)$.  This gives  $(f(x),\underbrace {f\circ g}_{=j}(y))\in g$. But we notice that $(x,f(x))\in f $ or  $(f(x),x)\in f^{-1} $ and conclude with $(f(x),x)\in g$ that  $f^{-1}\subset g$.\\
+Combining with the first subset we get $g=f^{-1}$.
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Recall that $\Breal_{+}=\left\{x:x\in \Breal \text{ and } x> 0\right\}$. Recall also that the natural logarithm function , $\ln$, is defined on $\Breal_{+}$, with range $\Breal$; the exponential function, $ \{(x,e^x):x\in \Breal\}$, is the inverse of the of the $\ln$ function.; $\cosh x = \frac{ e^x+e^{-x}}{2}$ for each $x\in \Breal$. \\
+Sketch the $\cosh$ function and note that although $\cosh$ is not one-to-one, the restriction $\cosh |\Breal_{+}$ is one-to-one and hence, its inverse is a function. By using the results of  Exercise $1.14.7$, prove that $\cosh^{-1}(x)= \ln \left(x+\sqrt{x^2-1}\right)$ for $x\ge 1$.
+\end{tcolorbox}
+$$ $$ 
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.14.8.tex}
+\caption{The function $\cosh x$}
+\label{fig:fig_p8b}
+\end{figure}
+For two functions $f:\Breal\rightarrow\Breal$ and $g:\Breal\rightarrow\Breal$ for which yields $g\circ f=i$, we know from Exercise $1.14.7(c)$  that  $f\circ g=j$ (the unit map). We put  $f(x)= \cosh x = \frac{ e^x+e^{-x}}{2}$ and try to find $g= f^{-1}$. From the sketch, we see that if we restrict $x$ to $[0,+\infty)$ that $f$ is bijective with $Range\, f= [1,+\infty)$. \\
+What we have to do, is to solve the functional equation $g\left(\frac{ e^x+e^{-x}}{2}\right)=x$ (with $g=f^{-1}$) (this expression represent $g\circ f=i$).\\
+We use the identity $a=e^{\ln a}$ and use the equivalence of  $g\circ f=i$ and $f\circ g=j$, i.e. $$\frac{ e^{g(y(}+e^{-g(y)}}{2} =y$$
+ We put tentatively $g(y) = \ln p(y)$ with $p: [1,+\infty)\rightarrow\Breal$ and get from $a=e^{\ln a}$:
+ \begin{align*}
+ &\frac{ e^{g(y)}+e^{-g(y)}}{2} =y\\
+ \Leftrightarrow \quad &\frac{ e^{\ln p(y)}+e^{-g(y)}}{2} =y\\
+ \Leftrightarrow \quad &\frac{ p(y)+\frac{1}{p(y)}}{2} =y\\
+ \Leftrightarrow \quad &p^2(y)-2 p(y)y  =-1\\
+ \Leftrightarrow \quad &p^2(y)-2 p(y)y+y^2  =y^2-1\\
+ \Leftrightarrow \quad &\left(p(y)-y\right)^2  =y^2-1\\
+ \Rightarrow \quad &p(y)= y\pm \sqrt{y^2-1}\\
+ \end{align*}
+ From our definition $g(y) = \ln p(y)$, we get $g(y) = \ln \left(y\pm \sqrt{y^2-1}\right)$. To get a real valued $g$ we need obviously $y\ge 1$ but also need that $g(y)\ge 0$ as we restricted the function $f$ to $\Breal_{+}$ which requires $y\pm \sqrt{y^2-1}\ge 1$ and thus only the solution $g(y) = \ln \left(y+ \sqrt{y^2-1}\right),\quad y\ge 1$ can be retained.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Consider the map $P:\Breal^2\rightarrow \Breal$ such that for each $(x,y)\in \Breal^2$, $\alpha\left((x,y)\right)$ is the element $(u,v)\in \Breal^2$ given by $u=2x-y,\, v= 5x+y$. Recall that $\Breal^2$ denotes $\Breal\times\Breal$.\\
+\begin{align*}
+\begin{array}{ll}
+(a)&\text{Does }\alpha[\Breal^2] = \Breal^2\text{ ?}.\\
+(b)&\text{Is }\alpha\text{ one-to-one?}.\\
+(c)&\text{If }\alpha\text{ is one-to-one, find a rule for }\\
+&\alpha^{-1} \text{ analogous to the rule given for }\alpha.
+\end{array}
+\end{align*} 
+\end{tcolorbox}
+$$ $$ 
+(a)$ \text{ Does }\alpha[\Breal^2] = \Breal^2\text{ ?}$\\
+(b)$\text{Is }\alpha\text{ one-to-one?}$.\\
+The answer is yes to both questions as we can consider the map as a system of linear equation with $(x,y)$ as unknowns and $(u,v)$ as parameters i.e.
+\begin{align*}
+\left\{\begin{matrix}
+2x-y=u\\ 5x+y=v
+\end{matrix}\right.
+\end{align*}
+ The determinant of this system is not zero (it is $7$) and so for every $(u,v)$ we have a unique $(x,y)$. From the definition it is also clear that $u,v\in \Breal$ (it is in fact a map from one plane to another plane).\\
+  So, $\alpha[\Breal^2] = \Breal^2$ and $\alpha$ is a bijection.
+  $$\lozenge$$
+ (c) If $\alpha$ is one-to-one, find a rule for $\alpha^{-1}$  analogous to the rule given for $\alpha$.
+ \begin{align*}
+\left\{\begin{matrix}
+x=& \frac{u+v}{7}\\ y=& \frac{2v-5u}{7}
+\end{matrix}\right.
+\end{align*}
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Consider the map $P:\Breal^2\rightarrow \Breal$ such that for each $(x,y)\in \Breal^2$, $P\left((x,y)\right)=x$. Note that $P$ is not one-to-one. Find a subset $S$ of $\Breal^2$ such that $P | S:S\rightarrow \Breal$ is a one-to-one map from $S$ to $\Breal$.
+\end{tcolorbox}
+$$ $$ 
+We can find two types of restrictions:\\
+A type with $y$ a constant i.e. $P_r | S_r:S_r\rightarrow \Breal$ with $P_r=\{(x,r): x\in\Breal,\, r\in \Breal = \text{ constant}\}$.\\
+
+And a type with $y= f(x)$ where $f:\Breal\rightarrow \Breal$ is a one-to-one function.
+ 
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose $f: A\rightarrow B$ is a one-to-one map from $A$ to $B$ and $g:B\rightarrow C$ is a one-to-one map from $B$ into $C$. Prove that $g\circ f:A\rightarrow C$ is one-to-one map from $A$ into $C$.
+\end{tcolorbox}
+Suppose $g\circ f$ is not one-to-one. This means that for at least one $z\in C$ there exist two (or more) $x_1,\, x_2$ such that $(x_1,z^{*})\text{ and } (x_2,z^{*})\in g\circ f$. But $f: A\rightarrow B$ and $g:B\rightarrow C$ are one-to-one maps which means that $x_1\in A$ is mapped to a unique $y_1\in B$ (the same for  $x_2$ mapped to a unique $y_2$) and also $y_1\in B$ is mapped to a unique $z_1\in C$ (the same for $y_2$ mapped to a unique $z_2$). So the map $ g\circ f$ will map $x_1$ into $z_1$ and $x_2$ into $z_2$. So supposition that there exist a $z^{*}$ is in contradiction with our result that $z_1\ne z_2$. \\
+Is $g\circ f$ a surjection ?\\
+As $f$ and $g$ are one-to-one, every $y\in B$ and every $z\in C$ are covered by $f,g$ respectively, so every $z\in C$ is also covered by $g\circ f$. So, $g\circ f$ is a surjection and by the first argument also a bijection. 
+$$ $$ 
+
+ 
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow \Breal$ be a map such that for each pair of numbers $x$ and $y$, $f(x+y)=f(x)+f(y)$. 
+\begin{align*}
+\begin{array}{ll}
+(a)&\text{Show that  }f(0)=0.\\
+(b)&\text{Show that  }f(-x)=-f(x),\quad\forall x\in \Breal.\\
+(c)&\text{Show that  }f(mx)=mf(x),\quad \forall m \in \mathbb{Z}, x\in \Breal.\\
+(d)&\text{Show that  }f(rx)=rf(x),\quad \forall r \in \mathbb{Q}, x\in \Breal.\\
+\end{array}
+\end{align*} 
+\end{tcolorbox}
+$$ $$ 
+(a) Show that $f(0)=0$.\\
+Put $x=0$ and $y=0$. We have, $\underbrace{f(0+0)}_{=f(0)} =\underbrace{f(0)+f(0)}_{=2f(0)}$. This implies that $f(0)=0$.\\\\
+(b) Show that $f(-x)=-f(x),\quad\forall x\in \Breal$.\\
+Put  $y=-x$. We have, $\underbrace{f(x+(-x))}_{=f(0)=0} =f(x)+f(-x)$. This implies that $f(-x)=-f(x)$.\\\\
+(c) Show that $f(mx)=mf(x),\quad \forall m \in \mathbb{Z}, x\in \Breal$.
+\begin{align*}
+f(mx)&= f(x+ (m-1)x)\\
+&= f(x)+ f((m-1)x)\\
+&= f(x)+ f(x+(m-2)x)\\
+&= f(x)+ f(x)+f((m-2)x)\\
+&=\quad \vdots\\
+&= \underbrace{f(x)+ f(x)+\dots f(x)}_{=mf(x)}
+\end{align*}
+and get the required result.\\
+(d) Show that $f(rx)=rf(x),\quad \forall r \in \mathbb{Q}, x\in \Breal$.
+\begin{align*}\begin{matrix}
+&f(rx)&= f(\frac{m}{n}x)\\
+\Leftrightarrow& f(rx)&= mf(\frac{1}{n}x)\\
+\times n\quad & nf(rx)&= mnf(\frac{1}{n}x)\\
+\Leftrightarrow&nf(rx) &= mf(\frac{n}{n}x)\\
+\Rightarrow & f(rx) &= \frac{m}{n}f(x)\\
+\Rightarrow & f(rx) &= rf(x)
+\end{matrix}
+\end{align*}
+ 
+$$\blacklozenge$$
+\newpage
+ \section{Sequences}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
 $$\blacklozenge$$

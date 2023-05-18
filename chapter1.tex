@@ -1491,7 +1491,116 @@ $$\blacklozenge$$
  \section{Sequences}
 \subsection{}
 \begin{tcolorbox}
+In each of the following find a formula for the $n$th term $a_n$ of an infinite sequence whose first five terms are given. 
+\begin{align*}
+\begin{matrix}
+(a)& a_l = 1, a_2 = \frac{1}{2}, a_3 = \frac{1}{4}, a_4 = \frac{1}{8}, a_5 =\frac{1}{16} \\
+(b)& a_1= 1, a_2 = 0, a_3= 1, a_4= 0, a_5 = 1. \\
+(c)& a_1= 1 , a_2 = 0, a_3= -1, a_4= 0, a_5 = 1. \\
+(d)& a_1= 1, a_2 = 3, a_3= 6, a_4= 10, a_5 = 15. \\ 
+\end{matrix}
+\end{align*}
+\end{tcolorbox}
+$$ $$
+(a) $ a_l = 1, a_2 = \frac{1}{2}, a_3 = \frac{1}{4}, a_4 = \frac{1}{8}, a_5 =\frac{1}{16}$ \\
+$$a_n=\frac{1}{2^{n-1}}$$
+$$\lozenge$$
+(b) $ a_1= 1, a_2 = 0, a_3= 1, a_4= 0, a_5 = 1$ \\
+$$a_n=n\Mod{2}$$
+$$\lozenge$$
+(c) $ a_1= 1 , a_2 = 0, a_3= -1, a_4= 0, a_5 = 1$ \\
+$$a_n=\left(\sin \frac{\pi}{2}n\right)\left(n\Mod{2}\right)$$
+$$\lozenge$$
+(d) $ a_1= 1, a_2 = 3, a_3= 6, a_4= 10, a_5 = 15$ \\
+$$a_{n+1}=a_{n}+ (n+1),\quad a_1=1$$
 
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $f= (f_i)_{i=1}^{+\infty}$  g, be the sequence defined as follows: Let $g(x) = \sin x$. For each positive integer $i$, let $f_i = g^{(i)}(0)$, where $g^{(i)}$ is the $i^{th}$ derivative of $g$. Write the terms off sufficiently far to see the pattern followed.
+\end{tcolorbox}
+$$ $$
+We have $g^{(1)}(x)=\cos x,\,g^{(2)}(x)=-\sin x,\,g^{(3)}(x)=-\cos x,\,g^{(4)}(x)=\sin x,\,g^{(5)}(x)=\cos x,\,\dots$, so we get $f=(1,0,-1,0,1,0,-1,\dots$, so from Exercise $1.15.1(c)$, we get
+$$f_i=\left(\sin \frac{\pi}{2}i\right)\left(i\Mod{2}\right)$$
+$$\blacklozenge$$
+\\
+\subsection{}
+\begin{tcolorbox}
+For each $n \in P$ , let $a_n = \sum_{j=1}^{n}j^2$. Try to discover a formula for $a_n$.
+\end{tcolorbox}
+$$ $$
+We can suppose that when $n\rightarrow +\infty$ that $a_n = \sum_{j=1}^{n}j^2$ and $\int_0^{n}x^2dx$ will tend to a common value. As $\int_0^{n}x^2dx= \frac{1}{3}n^3$ we tentatively write $a_n$ as a cubic expression $a_n= an^3+bn^2+cn+d$. As $a_{n+1} = a_n +(n+1)^2$ we try to find the parameters $a,\,b,\,c,\,d $ by solving the expression $$ a(n+1)^3+b(n+1)^2+c(n+1)+d =  an^3+bn^2+cn+d+ (n+1)^2$$
+for some values of $n$.
+Expanding gives $$(3a-1)n^2+(3a+2b-2)n+a+b+c-1=0 $$
+For $n=1,2,3$ we get the following system of linear equations
+\begin{align*}
+\left\{
+\begin{array}{l}
+7a+3b+c=4\\
+19a+5b+c=9\\
+37a+7b+c=16
+\end{array}
+\right.
+\end{align*}
+and get $a_n=\frac{1}{3},\, b= \half,\, c= \frac{1}{6}$ giving
+$a_n= \frac{1}{3}n^3+\half n^2+\frac{1}{6}n+d$ and for $n=1,\, a_n=1$ we get $1= \underbrace{\frac{1}{3}+\half+\frac{1}{6}}_{=1}+d$, giving $d=0$.
+And get as expression $a_n= \frac{1}{3}n^3+\half n^2+\frac{1}{6}n$ which can be rewritten as 
+$$ a_n= \frac{n(2n+1)(n+1)}{6}$$ 
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $a$ is a sequence such that $a_l = 1,\, a_2 = 3,\, a_3 = a_1+a_2,$ and for $j \ge 3,\, a_j = a_{j-1}+a_{j-2}$. Find $a_4,\, a_5,\, a_6$ and $a_7$.
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose a sequence a is given by $a_n = 2^n$ for each positive integer $n$. For which values of $n$ is it true that $a_n\ge 10.000$?
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let a be the sequence given by $a_n = \frac{n}{ (n + 1)}$. Find the smallest integer $N$ such that for $n\ge N,\, a_n > \frac{9}{10}$.
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let a be the sequence given by $a_n= \sqrt{n+1} -\sqrt{n}$. Find an integer $N$ such that for $n\ge  N,\, a_{n+1} < a_n$. Find an integer $M$ such that for $n\ge M, \, a_n\le \frac{1}{16}$.
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+For each $(x, y)\in \Breal^2$, let $f(x, y) = (x2 ^-y^2, 2xy)$. Let the point $p_1$ in the plane be given by $f(\half,\half),\, p_2 = f(p_1),\, p_3 = f(p_2),\, p_4= f(p_3),\, p_5 = f(p_4)$. Calculate and plot the points $p_1,\, p_2,\,\dots,\,p_5$.
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $A_l = \{I, 2, 3\}, A_2 = \{1, 2\}, A_3 = \{a,b\}$.  Write out the elements of $A_1 \times A_2\times A_3$. Write out the elements of $(A_1\times A_2) \times A_3$. Show that there is a "natural" one-to-one correspondence between the elements of these two sets. 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that for each $i \in  \mathbb{P},\, A_i = \{0, \,1\}$. Describe in words the set $\bigtimes\{A_i:i \in \mathbb{P}\}$.
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $A_l$ be the set of all real numbers $\Breal$. For each $i \in \mathbb{P}$ such that $i \ge 2$, let $A_i=\{0\}$. Describe in words the set $\bigtimes \{A_i: i \in \mathbb{P}\}$. Show that there exists a bijection from $\bigtimes \{A_i: i \in \mathbb{P}\}$ onto $\Breal$.
 \end{tcolorbox}
 $$ $$
 $$\blacklozenge$$

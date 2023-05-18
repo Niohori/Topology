@@ -49,7 +49,7 @@
 \usepackage{tkz-euclide}
 \usepackage{tikz-3dplot}
 \usetikzlibrary{patterns,patterns.meta}
-
+\usepgfplotslibrary{fillbetween}
 %\usepackage[margin=0cm,nohead]{geometry}
 %\usepackage[active,tightpage]{preview}
 %\usepackage[pdf]{pstricks}
@@ -73,7 +73,9 @@
 \newcommand\del{\overline{\boldsymbol{{\triangledown}}}}
 \newcommand\maal{\boldsymbol{\times}}
 \newcommand\spatie{\quad\quad\quad\quad}
+\newcommand\Breal{\mathbb{R}}
 \newcommand\RAr{\quad\Rightarrow\quad}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 %\newcommand{\myabsdv}[3]{{\frac{\delta^2 \ensuremath{{#1}}}{{\delta %%\ensuremath{{#2}}}{\delta\ensuremath{{#3}}}}}}
 \newcommand\myabsdv[3][1]{{\frac{{\delta^{2}}{#1}}{\delta {#2} \delta {#3}}}}
 

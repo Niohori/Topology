@@ -1545,8 +1545,24 @@ For $n=1,2,3$ we get the following system of linear equations
 \end{align*}
 and get $a_n=\frac{1}{3},\, b= \half,\, c= \frac{1}{6}$ giving
 $a_n= \frac{1}{3}n^3+\half n^2+\frac{1}{6}n+d$ and for $n=1,\, a_n=1$ we get $1= \underbrace{\frac{1}{3}+\half+\frac{1}{6}}_{=1}+d$, giving $d=0$.
-And get as expression $a_n= \frac{1}{3}n^3+\half n^2+\frac{1}{6}n$ which can be rewritten as 
+So, we get the expression $a_n= \frac{1}{3}n^3+\half n^2+\frac{1}{6}n$ which can be rewritten as 
 $$ a_n= \frac{n(2n+1)(n+1)}{6}$$ 
+Yet, we didn't prove formally that this equation works for every $n$:\\
+We notice that this equation is exact for $n=1$. Suppose that it is also correct for a $n$. Then:\\
+\begin{align*}
+a_{n+1}&= a_{n} + (n+1)^2\\
+&=  \frac{1}{3}n^3+\half n^2+\frac{1}{6}n + (n+1)^2\\
+&=  \frac{1}{3}n^3+\half n^2+\frac{1}{6}n + n^2+2n+1\\
+&=  \frac{1}{3}n^3+\frac{3}{2}n^2+\frac{13}{6}n+1\\
+\end{align*}
+Using the proposed closed expression for $n+1$ gives
+\begin{align*}
+a_{n+1}&=\frac{1}{3}(n+1)^3+\half (n+1)^2+\frac{1}{6}(n+1)\\
+&=\frac{1}{3}n^3+n^2+n+\frac{1}{3}+\half n^2+n+\half+\frac{1}{6}n+\frac{1}{6}\\
+&=\frac{1}{3}n^3+\frac{3}{2}n^2+\frac{13}{6}n+1\\
+\end{align*}
+So, both expression are the same and by the axiom of induction , we conclude that the expression is correct for every $n$.
+
 $$\blacklozenge$$
 
 \subsection{}
@@ -1554,13 +1570,16 @@ $$\blacklozenge$$
 Suppose that $a$ is a sequence such that $a_l = 1,\, a_2 = 3,\, a_3 = a_1+a_2,$ and for $j \ge 3,\, a_j = a_{j-1}+a_{j-2}$. Find $a_4,\, a_5,\, a_6$ and $a_7$.
 \end{tcolorbox}
 $$ $$
+$a_4=6,\,a_5=10,\,a_6=16,\,a_7=26$.
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Suppose a sequence a is given by $a_n = 2^n$ for each positive integer $n$. For which values of $n$ is it true that $a_n\ge 10.000$?
+Suppose a sequence a is given by $a_n = 2^n$ for each positive integer $n$. For which values of $n$ is it true that $a_n\ge 10,000$?
 \end{tcolorbox}
 $$ $$
+We have to find a $n$ such that $\log_2 2^n \ge \log_2 10,000$ (the logarithm function is a strict increasing function). \\
+So, $n\ge \log_{10} 10,000 \log_2 10$ or $n\ge \underbrace{4\times 3.3}_{=13.3}$ and hence $n\ge 14$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -1568,27 +1587,70 @@ $$\blacklozenge$$
 Let a be the sequence given by $a_n = \frac{n}{ (n + 1)}$. Find the smallest integer $N$ such that for $n\ge N,\, a_n > \frac{9}{10}$.
 \end{tcolorbox}
 $$ $$
+We need $\frac{n}{ (n + 1) }> \frac{9}{10}$ or $n> 9$, hence $N=10$.
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Let a be the sequence given by $a_n= \sqrt{n+1} -\sqrt{n}$. Find an integer $N$ such that for $n\ge  N,\, a_{n+1} < a_n$. Find an integer $M$ such that for $n\ge M, \, a_n\le \frac{1}{16}$.
+Let a be the sequence given by $a_n= \sqrt{n+1} -\sqrt{n}$. Find an integer $N$ such that for $n\ge  N,\, a_{n+1} < a_n$. Find an integer $M$ such that for $n\ge M, \, a_n\le \frac{1}{10}$.
 \end{tcolorbox}
 $$ $$
+$a_{n+1} < a_n$ gives $\sqrt{n+1} -\sqrt{n} < \sqrt{n} -\sqrt{n-1}$ or $\sqrt{n+1}+\sqrt{n-1} < 2\sqrt{n} $. As both sides are positive, we can take the power of thus inequality and get $2n+2\sqrt{n^2-1} < 4n $ or $\sqrt{n^2-1} < n $ giving the trivial inequality $0> -1$ meaning that the inequality yields for all $N>0$.\\\\
+$a_n\le \frac{1}{10}$\\
+We have 
+\begin{align*}
+&\sqrt{n+1} -\sqrt{n}\le \frac{1}{10}\\
+\Rightarrow\quad & n+1\le \left(\sqrt{n}+ \frac{1}{10}\right)^2\\
+\Rightarrow\quad & (4.95)^2 \le n\\
+\end{align*}
+from which we conclude that $n$ must be greater or equal to $25$.
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-For each $(x, y)\in \Breal^2$, let $f(x, y) = (x2 ^-y^2, 2xy)$. Let the point $p_1$ in the plane be given by $f(\half,\half),\, p_2 = f(p_1),\, p_3 = f(p_2),\, p_4= f(p_3),\, p_5 = f(p_4)$. Calculate and plot the points $p_1,\, p_2,\,\dots,\,p_5$.
+For each $(x, y)\in \Breal^2$, let $f(x, y) = (x^2 -y^2, 2xy)$. Let the point $p_1$ in the plane be given by $f(\half,\half),\, p_2 = f(p_1),\, p_3 = f(p_2),\, p_4= f(p_3),\, p_5 = f(p_4)$. Calculate and plot the points $p_1,\, p_2,\,\dots,\,p_5$.
 \end{tcolorbox}
 $$ $$
+$p(1)=(0,\half), \,p(2)=(-\frac{1}{2^2},0), \,p(3)=(\frac{1}{2^4},0), \,p(4)=(\frac{1}{2^8},0), \,p(5)=(\frac{1}{2^{16}},0)$\\ 
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.15.8.tex}
+\caption{The dynamical system $f(x, y) = (x^2 -y^2, 2xy)$ with starting point $(\half,\half)$}
+\label{fig:fig_p8b}
+\end{figure}
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Let $A_l = \{I, 2, 3\}, A_2 = \{1, 2\}, A_3 = \{a,b\}$.  Write out the elements of $A_1 \times A_2\times A_3$. Write out the elements of $(A_1\times A_2) \times A_3$. Show that there is a "natural" one-to-one correspondence between the elements of these two sets. 
+Let $A_l = \{1, 2, 3\}, A_2 = \{1, 2\}, A_3 = \{a,b\}$.  Write out the elements of $A_1 \times A_2\times A_3$. Write out the elements of $(A_1\times A_2) \times A_3$. Show that there is a "natural" one-to-one correspondence between the elements of these two sets. 
 \end{tcolorbox}
 $$ $$
+$A_1 \times A_2\times A_3$\\
+\begin{align*}
+\left\{\begin{matrix}
+(1, 1, a)&(1, 1, b)&(1, 2, a)&(1, 2, b)\\
+(2, 1, a)&(2, 1, b)&(2, 2, a)&(2, 2, b)\\
+(3, 1, a)&(3, 1, b)&(3, 2, a)&(3, 2, b)\\
+\end{matrix}
+\right\}
+\end{align*}
+
+$\left(A_1 \times A_2\right)\times A_3$\\
+\begin{align*}
+\left\{\begin{matrix}
+\left((1, 1), a\right)&\left((1, 1), b\right)&\left((1, 2), a\right)&\left((1, 2), b\right)\\
+\left((2, 1), a\right)&\left((2, 1), b\right)&\left((2, 2), a\right)&\left((2, 2), b\right)\\
+\left((3, 1), a\right)&\left((3, 1), b\right)&\left((3, 2), a\right)&\left((3, 2), b\right)\\
+\end{matrix}
+\right\}
+\end{align*}
+As the two sets have the same number of elements, we can define a bijection between the two sets. The most natural bijection is the one which maps an element $(x,y,z)\in A_1 \times A_2\times A_3$ to $\left((x,y),z\right)\in \left(A_1 \times A_2\right)\times A_3$ according to the following scheme:
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.15.9.tex}
+\caption{"natural" one-to-one correspondence between the elements of $A_1 \times A_2\times A_3$ and $(A_1\times A_2) \times A_3$}
+\label{fig:fig_p8b}
+\end{figure}
 $$\blacklozenge$$
 
 \subsection{}
@@ -1596,11 +1658,84 @@ $$\blacklozenge$$
 Suppose that for each $i \in  \mathbb{P},\, A_i = \{0, \,1\}$. Describe in words the set $\bigtimes\{A_i:i \in \mathbb{P}\}$.
 \end{tcolorbox}
 $$ $$
+Each element of $\bigtimes\{A_i:i \in \mathbb{P}\}$ is of the form $(1,0,0,\dots, 1,1\dots 0,1\dots)$ and can be interpreted as the binary representation of any $n\in \mathbb{P}\cup\{0\}$. (In the given example $n= 1\times 2^0+0\times 2^1+0\times 2^2+\dots+ 1\times 2^k +1\times 2^{k+1}+\dots + 0\times 2^p + 1\times 2^{p+1}+\dots$).
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Let $A_l$ be the set of all real numbers $\Breal$. For each $i \in \mathbb{P}$ such that $i \ge 2$, let $A_i=\{0\}$. Describe in words the set $\bigtimes \{A_i: i \in \mathbb{P}\}$. Show that there exists a bijection from $\bigtimes \{A_i: i \in \mathbb{P}\}$ onto $\Breal$.
+Let $A_1$ be the set of all real numbers $\Breal$. For each $i \in \mathbb{P}$ such that $i \ge 2$, let $A_i=\{0\}$. Describe in words the set $\bigtimes \{A_i: i \in \mathbb{P}\}$. Show that there exists a bijection from $\bigtimes \{A_i: i \in \mathbb{P}\}$ onto $\Breal$.
 \end{tcolorbox}
 $$ $$
+Each element of $\bigtimes\{A_i:i \in \mathbb{P}\}$ is of the form $(r,0,0,0,\dots),\, r\in \Breal$ and can be interpreted in different ways. One way is to consider an element of $\bigtimes\{A_i:i \in \mathbb{P}\}$ as the coordinates of a family of points in an infinite dimensional vector space where the points are strictly collinear with the first base vector.\\
+The bijection is trivial as for each point of this family, only one real number is assigned along the first base vector
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Sequences and Subsequences}
+\subsection{}
+\begin{tcolorbox}
+Consider the sequence $S = (1,\half,\frac{1}{3},\dots,\frac{1}{n },\dots)$. Find a map $N:\mathbb{P}\rightarrow \mathbb{P}$ such that $S\circ N$  is the sequence $(\frac{1}{3}, \frac{1}{6},\dots , \frac{1}{3n},\dots )$. 
+\end{tcolorbox}
+$$ $$
+Define the  map $N:\mathbb{P}\rightarrow \mathbb{P}$ as $N=\{n,3n):n\in\mathbb{P}\}$.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Consider the sequence $S$ such that $S(n) = (-1)^n \frac{1}{2^n}$. Find the $n$th term of the subsequence of $S$ whose terms consist of all the positive terms of $S$ and none of the negative terms of $S$.
+\end{tcolorbox}
+$$ $$
+Define the  map $N:\mathbb{P}\rightarrow \mathbb{P}$ as $N=\{n,2n):n\in\mathbb{P}\}$ (each $n\mathbb{P}$ is mapped to an even element of $\mathbb{P}$). Hence $(S\circ N)_n =  \frac{1}{4^n}$.
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+For each positive integer $n$, let $h_n$ be the function given by $h_n= \{(x, x^{n+1}):0 \le x\le 1\}$. Suppose that $k$ is the sequence such that for each $n\in \mathbb{P},\, k_n=\int^1_0 h_n dt$ . Find the $n$th term of $k$. 
+\end{tcolorbox}
+$$ $$
+\begin{align*}
+k_n&=\int^1_0 t^{n+1} dt\\
+&= \frac{1}{n+2}(x^{n+2})_{0}^{1}\\
+&= \frac{1}{n+2}
+\end{align*}
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ In each of the following determine whether or not the sequence is a strictly increasing sequence.
+\begin{align*}
+\begin{array}{ll}
+ (a)&\left(\frac{n}{n+1}\right)^{+\infty}_{n=1} \\
+ (b) &((n -\half)^2)^{+\infty}_{n=1} \\
+ (c)&f = (50n - n^2)^{+\infty}_{n=1} \\
+ (d) &g \circ f, \text{where }f \text{ is a strictly increasing sequence of positive integers}\\
+ &\text{and } g \text{ is a strictly increasing sequence of real numbers}. 
+\end{array}
+\end{align*}
+\end{tcolorbox}
+$$ $$
+(a) $\left(\frac{n}{n+1}\right)^{+\infty}_{n=1}$ \\
+We note that for $n>1$,  $\Delta_n= \frac{n}{n+1}- \frac{n-1}{n}= \frac{n^2-(n+1)(n-1)}{(n+1)n}= \frac{1}{(n+1)n}$, so $\Delta_n >0, \forall  n \in\mathbb{P}$ proving that the sequence is strictly increasing.
+$$\lozenge$$
+(b) $((n -\half)^2)^{+\infty}_{n=1}$ \\
+We note that $\Delta_{n+1}= (n+1  -\half)^2- (n -\half)^2= (n  +\half)^2- (n -\half)^2= 2n $, so $\Delta_n > 0, \forall  n>1 \in\mathbb{P}$ proving that the sequence is strictly increasing.
+$$\lozenge$$
+(c) $f = (50n - n^2)^{+\infty}_{n=1}$ \\
+We note that $\Delta_{n+1}= (50(n+1) - (n+1)^2)- (50n - n^2)=(50n+50 - n^2-2n-1-50n+ n^2)= 49-2n $, so $\Delta_n < 0, \forall  n\ge 25 \in\mathbb{P}$ proving that the sequence is not strictly increasing.
+$$\lozenge$$
+(d) $g \circ f, \text{where }f \text{ is a strictly increasing sequence of positive integers}$\\
+$\text{      and } g \text{ is a strictly increasing sequence of real numbers}$. \\
+For  $f$ we have $f:\mathbb{P}\rightarrow \mathbb{P} $, such that $f=\{(n,i): n,i \in \mathbb{P}\text{ and }f(n+p) > f(n)\quad \forall n,\,p \in\mathbb{P}\}$. Analogously, for  $g$ we we have $g:\mathbb{P}\rightarrow \mathbb{R} $, such that $g=\{(k,x): k\in \mathbb{P}, \,x \in \mathbb{R}\text{ and }g(k+q) > g(k)\quad \forall k,\, q\in\mathbb{P}\}$. \\
+Suppose that for a given $n$ we have $f(n)=k$, then for $(g\circ f)(n)$ we have $(g\circ f)(n)=g(k)$. But we know that for a $n^{'}< n$ we will have $f(n^{'})=k^{'}<k$, so $(g\circ f)(n^{'})=g(k^{'})< g(k^{})$ and notice that $g\circ f$ is a strictly increasing sequence.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $h$ is a subsequence of a sequence $k$ and $f$ is a subsequence of $h$. Is $f$ a subsequence of $k$? 
+\end{tcolorbox}
+$$ $$
+For  $h$ we have $\exists N:\mathbb{P}\rightarrow \mathbb{P} $, such that $h=k\circ N$. Analogously, for  $f$ we have $\exists M:\mathbb{P}\rightarrow \mathbb{P} $, such that $f=h\circ M$. Using the composition of functions, we have $f=k\circ N\circ M$. Be $Q= N\circ M$. Is $Q$ a strictly increasing sequence? The  answer is yes (see Exercise $1.16.4(d)$).
+As $Q$ is strictly increasing, $f$ will be a subsequence of $k$.
 $$\blacklozenge$$

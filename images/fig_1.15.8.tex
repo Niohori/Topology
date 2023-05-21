@@ -1,0 +1,43 @@
+\begin{tikzpicture}[spy using outlines={circle, magnification=4, size=6cm, connect spies}]
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-0.3,
+xmax=0.55,
+ymin=-0.05,
+ymax=0.6,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+\coordinate (p0) at (axis cs:0.5,0.5);
+\draw [fill= black] (p0) circle [radius=10.05];
+\node[right] at (p0) {$p_0$};
+
+\coordinate (p1) at (axis cs:0,0.5);
+\draw [fill= white] (p1) circle [radius=10.05];
+\node[right] at (p1) {$p_1$};
+
+\coordinate (p2) at (axis cs:-1/2/2,0);
+\draw [fill= white] (p2) circle [radius=10.05];
+\node[above] at (p2) {$p2$};
+
+\coordinate (p3) at (axis cs:1/2/2/2/2,0);
+\draw [fill= white] (p3) circle [radius=10.05];
+\node[above ] at (p3) {$p_3$};
+
+\coordinate (p4) at (axis cs:1/2/2/2/2/2/2/2/2,0);
+\draw [fill= white] (p4) circle [radius=10.05];
+\node[anchor = north west] at (p4) {$p_4$};
+
+\coordinate (p5) at (axis cs:1/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2,0);
+\draw [fill= white] (p5) circle [radius=10.05];
+\node[above left] at (p5) {$p_5$};
+\coordinate (a) at (axis cs:0,0);
+\end{axis};
+\spy [dashed] on (a) in node  at (-2,4);
+\end{tikzpicture}

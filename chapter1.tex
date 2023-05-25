@@ -1739,3 +1739,242 @@ $$ $$
 For  $h$ we have $\exists N:\mathbb{P}\rightarrow \mathbb{P} $, such that $h=k\circ N$. Analogously, for  $f$ we have $\exists M:\mathbb{P}\rightarrow \mathbb{P} $, such that $f=h\circ M$. Using the composition of functions, we have $f=k\circ N\circ M$. Be $Q= N\circ M$. Is $Q$ a strictly increasing sequence? The  answer is yes (see Exercise $1.16.4(d)$).
 As $Q$ is strictly increasing, $f$ will be a subsequence of $k$.
 $$\blacklozenge$$
+
+\newpage
+
+ \section{Finite induction and well-ordering for positive integers.}
+\subsection{}
+\begin{tcolorbox}
+Prove that the following statement is equivalent to $17.1$.\\
+Suppose that $h$ is an integer. Suppose further that $S(n)$ is 
+a statement for each integer $n\ge h$, $S(h)$ is true, and $S(n)$ implies $S(n + 1)$ for each integer $n\ge h$. Then $S(n)$ is true for each integer $n \ge h$. 
+\end{tcolorbox}
+$$ $$
+We first prove that the above statement implies $17.1$.
+Take as statement $S(n):n\text{ is an integer}$. Obviously $S(1)$ is true and $S(n)$ implies $S(n + 1)$ for each integer $n\ge 1$. And thus $S(n)$ is true for all $n\ge 1$.
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Prove that the sum of the first $n$ positive integers is $\half n(n+1)$. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Prove that $1^2 + 2^2 +3^2 +\dots + n^2 = \frac{1}{6}n(n + 1)(2n +1)$ for each $n \in  \mathbb{P}$. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Prove or disprove the following statement: For each $n \in \mathbb{P}$,$$ 1^3 + 2^3 + 3^3 +\dots + n^3 =\frac{1}{4}n^2(n + 1)^2$$
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+ Is the following statement true? Justify your answer. \\For each positive integer $n$, $2^n -1\ge n$. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+ Either prove or disprove the following statement: For each positive integer $n$, $$1 . 2 + 2 . 3 + 3 . 4 +\dots  + n(n + 1) =\frac{1}{3}\left[n(n + 1)(n+2)+3\right]$$. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Either prove or disprove the following statement: For each $n\in \mathbb{P}$, $7^n-3^n$ is divisible by $4$.
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+ Suppose that $K$ is a nonempty collection of negative integers. Prove that there is a largest element in $K$. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Is $3n^2+ n$ an even integer for each positive integer $n$? Justify your answer.
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Try to discover a formula for the number of subsets (including the empty set) of a set of $n$ objects. Then prove by induction that your conjecture is correct. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Is $n(n + 1)(n + 2)$ divisible by $3$ for each positive integer $n$? Justify your answer. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+ Is $\frac{\left[n(n + 1)(n + 2)(n + 3)\right]}{24}$ an integer for each positive integer $n$? Justify your answer. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Sequences defined inductively}
+\subsection{}
+\begin{tcolorbox}
+Prove Theorem $\mathbf{18.4}$, using the discussion in $\mathbf{18.3}$ as a hint. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Using Theorem $\mathbf{18.4}$, prove that there exists a unique function $f$ on the set of all nonnegative integers that satisfies the following conditions. \\
+$f(0) = 1 $ and $ f(n) =n(f(n)- 1)$ for each positive integer $n$. (Recall that common notation for $f(j)$ as defined inductively in this exercise is $j!$, read "$j$ factorial.")  
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+Following are some exercises concerning the factorial function that are useful in various branches of mathematics.\\
+
+\subsection{}
+\begin{tcolorbox}
+ For each positive integer $n$ and each nonnegative integer $r$   such that $r\leq n$, define $\left(\begin{matrix}n\\ r\end{matrix}\right) =\frac{n!}{r!(n- r)!}$. Verify each of the following:
+ \begin{align*}
+ \begin{array}{ll} 
+(a)& \left(\begin{matrix}n\\ 0\end{matrix}\right) = 1\text{ for each positive integer } n. \\\\
+(b) &\left(\begin{matrix}n\\ n\end{matrix}\right) = 1\text{ for each positive integer } n. \\\\
+(c)& \text{For each positive integer }  h \text{ and for each positive integer } j\le h\\\\
+& \left(\begin{matrix}h\\ j\end{matrix}\right)+\left(\begin{matrix}h\\ j-1\end{matrix}\right)=\left(\begin{matrix}h+1\\ j\end{matrix}\right)
+\end{array}
+\end{align*}
+We can make use of Exercise 3 to prove the binomial expansion theorem in the next exercise. 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\subsection{}
+\begin{tcolorbox}
+Prove that for each positive integer $n$, 
+$$(a + b)^n =\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n}b^{0}+\left(\begin{matrix}n\\ 1\end{matrix}\right)a^{n-1}b^{1}+\left(\begin{matrix}n-1\\ 2\end{matrix}\right)a^{n-2}b^{2}+\dots +\left(\begin{matrix}n\\n-1\end{matrix}\right)a^{1}b^{n-1}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n}$$ Note  that a short form for writing this, using summation notation, is $$\sum^n_{i=0} = \left(\begin{matrix}n\\ i\end{matrix}\right)a^{n-i}b^i$$
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Some important properties of relations}
+\subsection{}
+\begin{tcolorbox}
+ In each of the following, classify the relation as to which of the properties discussed in Section $19$ it possesses.
+  \begin{align*}
+ \begin{array}{ll} 
+(a)& \text{Let } S \text{ be the set of all triangles in the plane.} \\
+& \text{Let } R \text{ be the relation in } S \text{ defined as follows: for all } a \text{ and } b \text{ in } S,\\
+& a \, R \, b \text{ if and only if } a \text{ is congruent } to b. \\\\
+(b) &\text{Let } R \text{ be the set of all real numbers. }\\
+&\text{Let } S = \left\{(x, y): (x, y) \in \Breal\times\Breal \text{ and }  y \neq 0\right\}.\\
+&\text{For all } (a, b) \text{ and } (c, d) \in S, 
+\text{ let } (a, b) R (c, d) \text{ provided that } ad = be. \\\\
+(c)& \text{Suppose } j \text{ is a fixed positive integer.}\\
+& \text{For each } a \text{ and } b\in Z, \text{ let } a R b \text{ if and only if } a - b = jk 
+\text{ for some integer } k. \\
+&\text{(See Exercises 9 and 10, page 23 .)  }
+\end{array}
+\end{align*} 
+ 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $R$ is a relation that is transitive in a set $S$. Let us define a new relation in $S$ as follows: For each $a$ and $b$ in $S$, let $a R^{*}b$ if and only if $a=b$ or $a R b$. Is $R^{*}$ transitive in $S$? Is$R^{*}$ reflexive in $S$? Illustrate with an $R$ that is not reflexive. 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $R$ is a relation in a set $S$. Let us define a new relation $R^{*}$  as follows: For each $a$ and $b$ in $S$, let $a R^{*}b$ if and only if $a R b$ is true  and $b R a$ is false. Suppose $R$ is transitive.  Is $R^{*}$ also transitive ? Is $R^{*}$ necessarily antisymmetric? 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+ Suppose that a relation $R$ in a set $S$ is transitive and antireflexive. Is it necessarily antisymmetric? 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ Are the following propositions true? 
+ \begin{align*}
+ \begin{array}{ll}
+ (a)& \text{Suppose that } R \text{ is a relation in a set } S. \text{ Then } R \text{ is symmetric if and only if }R \subset R^{-1}. \\
+ (b)& \text{Suppose that } R \text{ is a relation in a set } S. \text{ Then } R \text{ is symmetric if and only if } R=R^{-1}. 
+ \end{array}
+ \end{align*}
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ Suppose that $R$ is a relation defined in $S$. Is $R \cap R^{-1}$ a symmetric relation in $S$? 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+ Suppose that $R$ is a transitive relation in $S$. Is $R^{-1}$ transitive in $S$? 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+Suppose that $R$ is symmetric in $S$. is $R^{-1}$ symmetric in $S$? 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+ Suppose that $R$ is reflexive in $S$. Is $R^{-1}$ reflexive in $S$?
+ \end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+
+\subsection{}
+\begin{tcolorbox}
+Does there exist a nonempty set $S$ and a relation $R$ in $S$ such that $R$ is both symmetric and antisymmetric in $S$? 
+\end{tcolorbox}
+$$ $$
+$$\blacklozenge$$
+
+

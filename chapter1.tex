@@ -1750,15 +1750,31 @@ Suppose that $h$ is an integer. Suppose further that $S(n)$ is
 a statement for each integer $n\ge h$, $S(h)$ is true, and $S(n)$ implies $S(n + 1)$ for each integer $n\ge h$. Then $S(n)$ is true for each integer $n \ge h$. 
 \end{tcolorbox}
 $$ $$
-We first prove that the above statement implies $17.1$.
-Take as statement $S(n):n\text{ is an integer}$. Obviously $S(1)$ is true and $S(n)$ implies $S(n + 1)$ for each integer $n\ge 1$. And thus $S(n)$ is true for all $n\ge 1$.
-
+Without loss of generality we take $h=1$ (we could also define for a given $h$ the map $N_h:\mathbb{P}\rightarrow \mathbb{Z}$ defined as $N=\{(p,h+p-1): p\in \mathbb{P},\, h\in \mathbb{Z}\}$ and consider the statements $S\circ N_h(p)$.).\\
+Let's define $$M=\{ m\in \mathbb{P}: S(m)\text{ is true}\}$$
+Then the assumptions\\
+i) $S(1)$ is true, is equivalent to $1\in M$\\ 
+ii) $S(n)$ implies $S(n + 1)$ for each integer $n\ge 1$, is equivalent to $n\in M$ implies $ n+ 1\in M $ for each integer $n\ge 1$\\ 
+iii) Then $S(n)$ is true for each integer $n \ge 1$, is equivalent to $m\in M$ every $m\ge 1$. This last statement implies that $m$ contains all positive integers and thus $M = \mathbb{P}$.
 $$\blacklozenge$$
+
+
 \subsection{}
 \begin{tcolorbox}
 Prove that the sum of the first $n$ positive integers is $\half n(n+1)$. 
 \end{tcolorbox}
 $$ $$
+Take $n=1$, then $\half n(n+1)= 1$ which corresponds to $\sum_{n=1}^{1}n = 1$.\\
+Suppose that $\sum_{k=1}^{n}k = \half n(n+1)$ for a give $n$. Then $\sum_{k=1}^{n+1}k = \underbrace{\sum_{k=1}^{n}k}_{=\half n(n+1)}+n+1$, giving \\
+\begin{align*}
+\sum_{k=1}^{n+1}k &= \half n(n+1)+n+1\\
+&= \half \left[n(n+1)+2n+2\right]\\
+&= \half \left[n^2+ n+2n+2\right]\\
+&= \half \left[(n^2+2n+1)+(n+1)\right]\\
+&= \half \left[(n+1)^2+(n+1)\right]\\
+&= \half (n+1)(n+2)\\
+\end{align*}
+confirming the expression.
 
 $$\blacklozenge$$
 \subsection{}
@@ -1766,7 +1782,7 @@ $$\blacklozenge$$
 Prove that $1^2 + 2^2 +3^2 +\dots + n^2 = \frac{1}{6}n(n + 1)(2n +1)$ for each $n \in  \mathbb{P}$. 
 \end{tcolorbox}
 $$ $$
-
+See Exercise $\mathbf{1.15.3}5$
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
@@ -1774,27 +1790,58 @@ Prove or disprove the following statement: For each $n \in \mathbb{P}$,$$ 1^3 + 
 \end{tcolorbox}
 $$ $$
 
+Take $n=1$, then $\frac{1}{4}n^2(n + 1)^2= 1$ which corresponds to $1^3$.\\
+Suppose that $\sum_{k=1}^{n-1}k^3 = \frac{1}{4}(n-1)^2(n)^2$ for a give $n-1$. Then $\sum_{k=1}^{n}k^3  = \underbrace{\sum_{k=1}^{n-1}k}_{=\frac{1}{4}(n-1)^2(n)^2}+n^3$, giving \\
+\begin{align*}
+\sum_{k=1}^{n}k^3 &= \frac{1}{4}(n-1)^2n^2+n^3\\
+&= \frac{1}{4}n^2\left[(n-1)^2+4n\right]\\
+&= \frac{1}{4}n^2\left[(n^2+2n+1\right]\\
+&= \frac{1}{4}n^2(n+1)^2\\
+\end{align*}
+confirming the expression.
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
  Is the following statement true? Justify your answer. \\For each positive integer $n$, $2^n -1\ge n$. 
 \end{tcolorbox}
 $$ $$
-
+Take $n=1$, then $2^n -1\ge 1$ which is a true statement.\\
+Suppose now that for  given $n-1$ we have  $2^{n-1} -1\ge n-1$, then for $n$ we have 
+\begin{align*}
+2^{n} -1&= \left(2^{n-1}\right)2-1\\
+&= \left(2^{n-1}-\half\right)2\\
+&= \left(\underbrace{2^{n-1}-1}_{\ge n-1}+\half\right)2\\
+&\ge 2\left(n-\half\right)\\
+&\ge 2n-1
+\end{align*}
+We prove that $2n-1\ge n$ for all positive integers.
+For $n=1$ we have $2n-1\ge 1$.\\
+Suppose now that for  given $n$ we have  $2n-1\ge n$, then for $n+1$ we have $2(n+1)-1 = 2n+1$ which is $\ge 2n$ which is $\ge n$ as $n$ is a positive integer, confirming the inequality stated.
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
  Either prove or disprove the following statement: For each positive integer $n$, $$1 . 2 + 2 . 3 + 3 . 4 +\dots  + n(n + 1) =\frac{1}{3}\left[n(n + 1)(n+2)+3\right]$$. 
 \end{tcolorbox}
 $$ $$
-
+Take $n=1$, then $\frac{1}{3}\left[n(n + 1)(n+2)+3\right]= 3$. But this should give $1.2=2$, so even for $n=1$, the expression is wrong, hence can't be correct for all $n\in \mathbb{P}$. 
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
 Either prove or disprove the following statement: For each $n\in \mathbb{P}$, $7^n-3^n$ is divisible by $4$.
 \end{tcolorbox}
 $$ $$
-
+ For each $n\in \mathbb{P}$, $7^n-3^n$ is divisible by $4$ means that there exist a $k\in \mathbb{P}$ so that $7^n-3^n=4k$.\\
+ take $n=1$, then $7^n-3^n=4$ and with $k=1$ the statement is true .\\
+ Suppose now that for  given $n-1$ we have $7^{n-1}-3^{n-1}=4k$,  this means that $7^{n-1}=3^{n-1}+4k$. Then for $n$ we get
+ \begin{align*}
+7^{n}-3^{n} &=  7^{n-1}7-3^{n-1}3\\
+&=\left(3^{n-1}+4k\right)7-3^{n-1}3\\
+&=3^{n-1}7+28k-3^{n-1}3\\
+&=3^{n-1}(7-3)+28k\\
+&=3^{n-1}4+28k\\
+&=4\left(3^{n-1}+7k\right)\\
+\end{align*}
+ and get $7^{n}-3^{n}= 4p^{'}$ with $ p^{'}=3^{n-1}+7k$ where $ p^{'}\in \mathbb{P}$. Hence, $7^{n}-3^{n}$ is divisible by $4$.
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
@@ -1808,21 +1855,37 @@ $$\blacklozenge$$
 Is $3n^2+ n$ an even integer for each positive integer $n$? Justify your answer.
 \end{tcolorbox}
 $$ $$
-
+Take $n=1$, then $3n^2+ n= 4$, an even integer.\\
+Suppose that for a give $n$ we have $3n^2+ n= 2p$ with $p\in \mathbb{P}$. Then for $n+1$ we have
+ \begin{align*}
+3(n+1)^2+ n+1 &= 3n^2+6n + 3 + n+1\\
+&= \underbrace{3n^2+ n}_{=2p} +6n + 4\\
+&= 2p +2(3n + 2)\\
+&= 2(p +3n + 2)
+\end{align*}
+Hence, $3n^2+ n$ an even integer for each positive integer $n$.
 $$\blacklozenge$$
+
+
 \subsection{}
 \begin{tcolorbox}
 Try to discover a formula for the number of subsets (including the empty set) of a set of $n$ objects. Then prove by induction that your conjecture is correct. 
 \end{tcolorbox}
 $$ $$
-
+Be $S$ the considered set with $n$ objects, then the number of elements in the powerset $\mathscr{P}$ is,  $\#\mathscr{P}=2^n$.
+Be $n=0$ ($S=\emptyset$), then $\#\mathscr{P}=1$ which is correct as $\mathscr{P}=\{\emptyset\}$, containing only one subset.\\
+Suppose that for a $n$ we have $\#\mathscr{P}_n=2^n$. Adding one object $x\not\in S $ to the set $S$ we get a new set $S^{'} = S\cup \{x\}$. Be $\mathscr{P}_n=\{P_1, P_2,\dots P_{2^n}\}$, so the new powerset $\mathscr{P}_{n+1}$ can be expressed as 
+$\mathscr{P}_{n+1}=\{P_1, P_2,\dots P_{2^n},P_1\cup \{x\}, P_2\cup \{x\},\dots P_{2_n}\cup \{x\}\}=\{P_1, P_2,\dots P_{2_n}\}\cup \{P_1\cup \{x\}, P_2\cup \{x\},\dots P_{2^n}\cup \{x\}\} $
+meaning that $\mathscr{P}_{n+1}$ will contain $2(2^{n})=2^{n+1} $ subsets. 
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
 Is $n(n + 1)(n + 2)$ divisible by $3$ for each positive integer $n$? Justify your answer. 
 \end{tcolorbox}
 $$ $$
-
+We could perform the usual induction, but we can use another reasoning. \\
+Suppose $n$ is divisible by $3$, then we are done. If $n$ is not divisible by $3$ then $n$ will be of the form $n=3k+1$ or  $n=3k+2$ for a given $k\in \mathbb{P}$. We don't need to consider the forms beyond $n=3k+2$ because $n=3k+3$, obviously is divisible by $3$.\\
+So, in the case $n$ is not divisible by $3$ , $n(n + 1)(n + 2)$ can be expressed as $(3k+1)(3k+2)(3k+3)$ or $(3k+2)(3k+3)(3k+4)$, so in  both cases, one of the numbers in the product is divisble by $3$, hence the total product also.
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}

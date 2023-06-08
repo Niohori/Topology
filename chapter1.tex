@@ -1848,8 +1848,13 @@ $$\blacklozenge$$
  Suppose that $K$ is a nonempty collection of negative integers. Prove that there is a largest element in $K$. 
 \end{tcolorbox}
 $$ $$
-
+Suppose $K$ has no biggest element. 
+Be $ N= \mathbb{Z}_{-}- K$.\\
+Note that $-1\in N$ as otherwise $-1$ would be an element of $K$  making this the largest element of $K$ which we assumed had none. Consider now the set $N_n= \{ n,n+1,\dots, -2,-1 \}$. Obviously $N_n\subset N$ as otherwise one of the element of $N_n$ would be in $K$ and thus $K$ would have a largest element.  
+Be $N_n\subset  N$, then $N_{n-1} \subset  N$ for otherwise $n-1$ would be the largest element of $K$. Continuing that process with $n-k, \, k\in \mathbb{P}$ we see that $N_{n-k}-> \mathbb{Z}_{-}$ meaning that $\mathbb{Z}_{-}\subset N$ and hence $N= \mathbb{Z}_{-}$. Thus $K$ must be the empty-set which is a contradiction. Hence $K$ must have a largest element.
 $$\blacklozenge$$
+
+
 \subsection{}
 \begin{tcolorbox}
 Is $3n^2+ n$ an even integer for each positive integer $n$? Justify your answer.
@@ -1892,12 +1897,54 @@ $$\blacklozenge$$
  Is $\frac{\left[n(n + 1)(n + 2)(n + 3)\right]}{24}$ an integer for each positive integer $n$? Justify your answer. 
 \end{tcolorbox}
 $$ $$
-
+We prove  by induction that $\forall n\in \mathbb{P}: n(n + 1)(n + 2)(n + 3)=24m,\, m\in \mathbb{P}$\\
+For $n=1$, we have $ n(n + 1)(n + 2)(n + 3) =24$.\\
+Suppose $\exists n\in \mathbb{P}:\, n(n+1)(n+2)(n+3)=24k,\, k\in \mathbb{P}$. The for $n+1$  have 
+\begin{align}
+(n+1)(n+2)(n+3)(n+4)&= \underbrace{n(n+1)(n+2)(n+3)}_{=24k}+4(n+1)(n+2)(n+3)
+\end{align}
+From $\mathbf{1.17.11}$ we know that  $(n+1)(n+2)(n+3)$ is divisible by $3$ for each positive integer $n$. Hence  $(1)$ can be written as 
+\begin{align}
+(n+1)(n+2)(n+3)(n+4)&= 24k+4\times 3\times m
+\end{align} 
+We claim that $m$ is even. Indeed, for $n=1$ , $n(n+1)(n+2)=2\times 3$ \\
+Suppose $\exists n\in \mathbb{P}:\, n(n+1)(n+2)=3\times 2\times q,\, q\in \mathbb{P}$. Then, for $n+1$  have 
+\begin{align}
+(n+1)(n+2)(n+3)&= \underbrace{n(n+1)(n+2)}_{=3\times 2\times q}+3(n+1)(n+2)
+\end{align}
+In the second term  of $(3)$,  or $(n+1$) or $ (n+2)$ will be even, so $(3)$ can be written as 
+\begin{align*}
+(n+1)(n+2)(n+3)&= 3\times 2\times q+3\times 2\times q^{'}\times n^*\quad (n^*= n+1\text{ or } n+2)\\
+&= 3\times \underbrace{2\times \left(q+q^{'}\times n^*\right)}_{=m}
+\end{align*}
+By induction, we conclude that $m$ indeed, must be even.
+Hence $(1)$ becomes 
+\begin{align*}
+(n+1)(n+2)(n+3)(n+4)&= 24k+4\times 3\times 2\times \left(q+q^{'}\times n^*\right)\\
+&= 24\left(k+q+q^{'}\times n^*\right)
+\end{align*}
+proving, by the induction principle (remember the initialisation with $n=1$) that $\frac{n(n + 1)(n + 2)(n + 3)}{24}$ is an integer for each positive integer $n$
 $$\blacklozenge$$
 
 \newpage
 
  \section{Sequences defined inductively}
+\begin{tcolorbox}
+Clarification to example $\mathbf{18.3} $
+\end{tcolorbox}
+$$ $$
+\newpage 
+ 18.3. Example. Let $f(1)=2$, $f(2)= 7$. Furthermore, let it be given that for each positive integer $n\ge  3$, $f(n)=\half\left[(f(n-I)+ f(n-2)\right]$. At this point it would be instructive for the reader to calculate a few terms off $f$. It is intuitively clear that there should exist a unique function satisfying the above properties. It furthermore seems reasonable that we should be able to prove by induction that such a function exists. This we can do, but not in as straightforward a manner as we might guess. To establish the existence of a function $f$ satisfying the required properties, we proceed as follows: Let $f_2 =\{(1,2),\, (2,7)\}$ . and for $n\ge 3$, let $S(n)$ be the following statement.\\
+ $\mathbf{ 18.3(a)}$. There exists a map $f_n:\mathbb{P}_n\rightarrow \Breal$ such that $f_n(1) = 2$ and $f_n(2)=7$ , and for $i\in \{3,4,\dots , n\}$, 
+ $$f_n(i)=\half\left[(f_n(i-1)+ f_n(i-2)\right]$$ We see that $S(3)$ is true by considering the function $f_3=\{(1,2),(2, 7), (3, \frac{9}{2})\}$. Let $h \ge 3$ and assume that $S(h)$ is true. We show that $S(h +1)$ is true. To see this 
+let 
+$$f_{h+1} =f_h\cup \{(h+1,  \half\left[(f_h(h)+ f_h(h-1)\right]\}$$ It is easy to show that $f_{h+1}$ satisfies the properties required of it so that $S(h+1)$ is true. Hence, by induction, $S(n)$ is true for each integer $n \ge 3$. Thus, there exists a collection of functions $\{f_n:n\ge3\}$, each of which satisfies the conditions stated in $\mathbf{18.1(a)}$. We next prove that for each $f_n$ in the collection, $f_{n+1}|\mathbf{P}_n=f_n$. To see this, suppose that for some fixed integer $n\ge 3$, $f_{n+1}|\mathbf{P}_n\ne f_n$. Let $j$ be the first positive integer for which $f_{n+1}(j)\ne f_n(j)$. We observe that $3 \le j \le n$. Then
+$$f_{n+1}(j-1)= f_n(j-1) \text{ and  } f_{n+1}(j-2)= f_n(j-2)$$ 
+From this, we obtain 
+$$f_{n+1}(j)= \half\left[(f_{n+1}(j-1)+ f_{n+1}(j-2)\right] = \half\left[(f_{n}(j-1)+ f_{n}(j-2)\right]=f_n(j)$$ and we have arrived at a contradiction. For each $n \in \mathbb{ P}$ , let $f_n$  be a function satisfying $\mathbf{18.3(a)}$. We may apply $\mathbf{18.1}$ to $\{f_n:n\in\mathbb{P}\}$ and conclude that $f=\bigcup\{f_i=i\ge3\}$  is a function. Next recall the remark in $\mathbf{18.2}$, about the union of functions theorem. which states that $f(x)=f_n(x)$ for all $x$ for which $x \in  Dom f_n$. Thus, $f(1)= f_3(1)= 2,\, f(2)= f_3(2)= 7$ , and $f(3)= f_3(3)=\half\left[(f_{3}(2)+ f_{3}(1)\right]$. Also, for $i\ge 3$,
+$$ f(i)=f_i(i)= \half\left[(f_{i}(i-1)+ f_{i}(i-2)\right]\half\left[(f_{}(i-1)+ f_{}(i-2)\right]$$ 
+That $f$ is a unique function that satisfies the given conditions is seen as follows: Suppose that there is another function $f^{*}$ that satisfies the required conditions. Then the set $K =\{j:f^{*}(j)\ne f^{}(j)\}$ would be a nonempty set of positive integers. Let $m$ be the first element in $K$. Obviously $m\ge 4$. But then $f(i) = f^{*}(i)$ for $i < m$. However, $$f(m) = \half\left[(f_{}(m-1)+ f_{}(m-2)\right]= \half\left[(f^{*}(m-1)+ f^{*}(m-2)\right]=f^{*}(m)$$, and we have a contradiction. 
+\newpage
 \subsection{}
 \begin{tcolorbox}
 Prove Theorem $\mathbf{18.4}$, using the discussion in $\mathbf{18.3}$ as a hint. 

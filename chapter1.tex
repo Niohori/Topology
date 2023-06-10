@@ -1950,15 +1950,61 @@ That $f$ is a unique function that satisfies the given conditions is seen as fol
 Prove Theorem $\mathbf{18.4}$, using the discussion in $\mathbf{18.3}$ as a hint. 
 \end{tcolorbox}
 $$ $$
-
+Note that $S$ is the set of all finite sequences with $X$ as domain. Hence, the following sequence will be in $S$:
+$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h),\,(h+1,x_{h+1}),\,\dots,\, (n,x_n)\right\},\quad (a_i,\, x_k \in X)$$ 
+The given map $G$ is a map from $S$ into $X$. So, for the element (a sequence of length $h$) 
+$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h)\right\}$$ there exist an element $f_{h+1}=G\left(\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h)\right\}\right)\in X$. As $f_{h+1}\in X$ the sequence 
+$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h),\,(h+1,f_{h+1})\right\}$$
+will be also in $S$. Again this element (sequence of length $h+1$) will be mapped by $G$ to an element $f_{h+2}\in X$. hence the sequence
+$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h),\,(h+1,f_{h+1}),\,(h+2,f_{h+2})\right\}$$
+will be in $S$.\\
+By induction, we conclude that there exists a sequence $f$ such that
+\begin{align*}
+f_i&= \left\{
+\begin{array}{ll}
+a_i& \text{for } i\in \left\{1,2,\dots, h\right\}\\
+G\left(\{f_1,\,f_2,\,\dots ,\, f_h,\, f_{h+1},\,\dots,\, f_{i-1}\}\right) & \text{for } i\ge h+1
+\end{array}
+\right.
+\end{align*}
+Is this sequence, uniquely defined by $G:S\rightarrow X$? Yes, as $G$ is a mapping (a function), so for a given element $\{f_1,\,f_2,\,\dots ,\, f_n\}$, there is a unique $G\left(\{f_1,\,f_2,\,\dots ,\, f_n\}\right)\in X$.
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
 Using Theorem $\mathbf{18.4}$, prove that there exists a unique function $f$ on the set of all nonnegative integers that satisfies the following conditions. \\
-$f(0) = 1 $ and $ f(n) =n(f(n)- 1)$ for each positive integer $n$. (Recall that common notation for $f(j)$ as defined inductively in this exercise is $j!$, read "$j$ factorial.")  
+$f(0) = 1 $ and $ f(n) =nf(n- 1)$ for each positive integer $n$. (Recall that common notation for $f(j)$ as defined inductively in this exercise is $j!$, read "$j$ factorial.")  
 \end{tcolorbox}
 $$ $$
+Be $X=\mathbb{N},\, h=1,\, a_1=1\in \mathbb{N}\text{ and } G: S\rightarrow X\text{ with } S$ a set of all finite-sequences with ranges in $\mathbb{N}$.\\
+From theorem $\mathbf{18.4}$ we know that theer is a unique sequence $f$ such that 
+\begin{align*}
+f_i&= \left\{
+\begin{array}{ll}
+a_i& \text{for } i\in \left\{1,2,\dots, h\right\}\\
+G\left(\{f_1,\,f_2,\,\dots ,\, f_h,\, f_{h+1},\,\dots,\, f_{i-1}\}\right) & \text{for } i\ge h+1
+\end{array}
+\right.
+\end{align*}
 
+As $h_1=1$ and $ a_1=1$ and defining $G$ as $G\left(\{f_1,\,f_2,\,\dots f_{i-1}\}\right)=i\,f_{i-1} $, this simplifies to 
+\begin{align*}
+f_i&= \left\{
+\begin{array}{ll}
+1& \text{for } i=1\\
+i\, f(i-1) & \text{for } i\ge 2
+\end{array}
+\right.
+\end{align*}
+We can extend the function by adding one element $f_0=1$ to the sequence, giving as definition 
+\begin{align*}
+f_i&= \left\{
+\begin{array}{ll}
+1& \text{for } i=0\\
+1& \text{for } i=1\\
+i\, f(i-1) & \text{for } i\ge 2
+\end{array}
+\right.
+\end{align*}
 $$\blacklozenge$$
 
 Following are some exercises concerning the factorial function that are useful in various branches of mathematics.\\
@@ -1977,15 +2023,45 @@ Following are some exercises concerning the factorial function that are useful i
 We can make use of Exercise 3 to prove the binomial expansion theorem in the next exercise. 
 \end{tcolorbox}
 $$ $$
-
+(a) $\left(\begin{matrix}n\\ 0\end{matrix}\right) = \frac{n!}{0!(n- 0)!}=\frac{n!}{(n)!}=1$\\\\
+(b) $\left(\begin{matrix}n\\ n\end{matrix}\right) = \frac{n!}{n!(n- n)!}=\frac{n!}{(n)!}=1$\\\\
+(c) $\left(\begin{matrix}h\\ j\end{matrix}\right)+\left(\begin{matrix}h\\ j-1\end{matrix}\right)=\left(\begin{matrix}h+1\\ j\end{matrix}\right)$\\
+\begin{align*}
+\left(\begin{matrix}h\\ j\end{matrix}\right)+\left(\begin{matrix}h\\ j-1\end{matrix}\right)&=\frac{h!}{j!(h- j)!}+\frac{h!}{(j-1)!(h- j+1)!}\\\\
+&=\frac{h!}{(j-1)!}\left(\frac{1}{j(h-j)!}+\frac{1}{(h-j+1)!}\right)\\\\
+&=\frac{h!}{(j-1)!}\left(\frac{(h-j+1)+j}{j(h-j+1)!}\right)\\\\
+&=\frac{h!}{(j-1)!}\left(\frac{(h+1)}{j(h-j+1)!}\right)
+\\\\
+&=\frac{(h+1)!}{j!(h+1-j)!}\\\\
+&= \left(\begin{matrix}h+1\\ j\end{matrix}\right)
+\end{align*}
 $$\blacklozenge$$
+\newpage
 \subsection{}
 \begin{tcolorbox}
 Prove that for each positive integer $n$, 
-$$(a + b)^n =\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n}b^{0}+\left(\begin{matrix}n\\ 1\end{matrix}\right)a^{n-1}b^{1}+\left(\begin{matrix}n-1\\ 2\end{matrix}\right)a^{n-2}b^{2}+\dots +\left(\begin{matrix}n\\n-1\end{matrix}\right)a^{1}b^{n-1}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n}$$ Note  that a short form for writing this, using summation notation, is $$\sum^n_{i=0} = \left(\begin{matrix}n\\ i\end{matrix}\right)a^{n-i}b^i$$
+$$(a + b)^n =\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n}b^{0}+\left(\begin{matrix}n\\ 1\end{matrix}\right)a^{n-1}b^{1}+\left(\begin{matrix}n\\ 2\end{matrix}\right)a^{n-2}b^{2}+\dots +\left(\begin{matrix}n\\n-1\end{matrix}\right)a^{1}b^{n-1}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n}$$ Note  that a short form for writing this, using summation notation, is $$\sum^n_{i=0} = \left(\begin{matrix}n\\ i\end{matrix}\right)a^{n-i}b^i$$
 \end{tcolorbox}
 $$ $$
+Initialize with $n=1$, we have
+$(a + b)^1=  \underbrace{\left(\begin{matrix}1\\ 0\end{matrix}\right)}_{=1}a^{1}b^{0}+\underbrace{\left(\begin{matrix}1\\ 1\end{matrix}\right)}_{=1}a^{1-1}b^{1}=a+b$. So, the proposed expression is true for $n=1$. \\
 
+Suppose now that it is alos correct for a certain $n$:
+$$(a + b)^n =\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n}b^{0}+\left(\begin{matrix}n\\ 1\end{matrix}\right)a^{n-1}b^{1}+\left(\begin{matrix}n\\ 2\end{matrix}\right)a^{n-2}b^{2}+\dots +\left(\begin{matrix}n\\n-1\end{matrix}\right)a^{1}b^{n-1}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n}$$ 
+Then $(a + b)^{n+1}= (a + b)^{n}(a+b)$ giving 
+\begin{align*}
+(a + b)^{n+1}&=\left\{\begin{array}{l}\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n+1}b^{0}+\left(\begin{matrix}n\\ 1\end{matrix}\right)a^{n}b^{1}+\left(\begin{matrix}n\\ 2\end{matrix}\right)a^{n-1}b^{2}+\dots +\left(\begin{matrix}n\\n-1\end{matrix}\right)a^{2}b^{n-1}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{1}b^{n}+\\\\
+\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n}b^{1}+\left(\begin{matrix}n\\ 1\end{matrix}\right)a^{n-1}b^{2}+\left(\begin{matrix}n\\ 2\end{matrix}\right)a^{n-2}b^{3}+\dots +\left(\begin{matrix}n\\n-1\end{matrix}\right)a^{1}b^{n}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n+1}\end{array}
+\right.
+\end{align*}
+regrouping as much as possible terms of the same power and using the results $(a),\, (b),\ (c)$ of the previous exercise we get
+\begin{align*}
+(a + b)^{n+1}&=\left\{\begin{array}{l}\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n+1}b^{0}+\left[\left(\begin{matrix}n\\ 1\end{matrix}\right)+\left(\begin{matrix}n\\ 0\end{matrix}\right)\right]a^{n}b^{1}+\left[\left(\begin{matrix}n\\ 2\end{matrix}\right)+\left(\begin{matrix}n\\ 1\end{matrix}\right)\right]a^{n-1}b^{2}+\dots \\\\
++\left[\left(\begin{matrix}n\\ n-2\end{matrix}\right)+\left(\begin{matrix}n\\ n-1\end{matrix}\right)\right]a^{2}b^{n-1}+\left[\left(\begin{matrix}n\\ n-1\end{matrix}\right)+\left(\begin{matrix}n\\ n\end{matrix}\right)\right]a^{1}b^{n}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n+1}\end{array}
+\right.\\\\
+&= \left(\begin{matrix}n+1\\ 0\end{matrix}\right)a^{n+1}b^{0}+\left(\begin{matrix}n+1\\ 1\end{matrix}\right)a^{n}b^{1}+\left(\begin{matrix}n+1\\ 2\end{matrix}\right)a^{n-1}b^{2}+\dots +\left(\begin{matrix}n+1\\n\end{matrix}\right)a^{1}b^{n}+\left(\begin{matrix}n+1\\ n+1\end{matrix}\right)a^{0}b^{n+1}
+\end{align*}
+Hence, by the induction principle, the proposed expression is true.
 $$\blacklozenge$$
 
 \newpage
@@ -1998,7 +2074,7 @@ $$\blacklozenge$$
  \begin{array}{ll} 
 (a)& \text{Let } S \text{ be the set of all triangles in the plane.} \\
 & \text{Let } R \text{ be the relation in } S \text{ defined as follows: for all } a \text{ and } b \text{ in } S,\\
-& a \, R \, b \text{ if and only if } a \text{ is congruent } to b. \\\\
+& a \, R \, b \text{ if and only if } a \text{ is congruent } to  b. \\\\
 (b) &\text{Let } R \text{ be the set of all real numbers. }\\
 &\text{Let } S = \left\{(x, y): (x, y) \in \Breal\times\Breal \text{ and }  y \neq 0\right\}.\\
 &\text{For all } (a, b) \text{ and } (c, d) \in S, 
@@ -2009,16 +2085,41 @@ $$\blacklozenge$$
 &\text{(See Exercises 9 and 10, page 23 .)  }
 \end{array}
 \end{align*} 
- 
 \end{tcolorbox}
 $$ $$
+\textbf{(a)}\\
+$\bullet\quad R$ is reflexive (a triangle is congruent to itself).\\
+$\bullet\quad R$ is symmetric (if a triangle $A$   is congruent to a triangle $B$ then the triangle $B$ will also be congruent to $A$).\\
+$\bullet\quad R$ is transitive (if a triangle $A$   is congruent to a triangle $B$ and this triangle $B$ is congruent to a triangle $C$  then the triangle $A$ will also be congruent to $C$).\\\\
+
+
+\textbf{(b)} $(a,b)R(c,d) \Rightarrow ad=bc$\\
+$\bullet\quad R$ is reflexive ($(a,b)R(a,b) \Rightarrow ad=ab$).\\
+$\bullet\quad R$ is symmetric ($(a,b)R(c,d) \Rightarrow ad=bc$ and  $(c,d)R(a,b) \Rightarrow cb=ad$, ).\\
+$\bullet\quad R$ is transitive ($\left[(a,b)R(c,d) \Rightarrow ad=bc\right.$ ,   $\left.(c,d)R(e,f) \Rightarrow cf=de\right] \Rightarrow af=be$  and  $(a,b)R(e,f) \Rightarrow af=be$ ).\\\\
+
+\textbf{(c)} $aRb \Rightarrow a-b=jk, k\in \mathbb{Z}$\\
+$\bullet\quad R$ is reflexive ($aRb \Rightarrow a-b=j\times 0, 0\in \mathbb{Z}$).\\
+$\bullet\quad R$ is symmetric ($aRb \Rightarrow a-b=j\times k, k\in \mathbb{Z}$ and $bRa \Rightarrow b-a=j\times (-k), -k\in \mathbb{Z}$).\\
+$\bullet\quad R$ is transitive ($aRb \Rightarrow a-b=j\times k, k\in \mathbb{Z}$,  $bRac \Rightarrow b-c=j\times (k^{'}), k^{'}\in \mathbb{Z} \Rightarrow a-b+b-c= a-c = j( k+k^{'}),\, \in \mathbb{Z}$ and $aRc \Rightarrow a-c=j\times k^{"}, k^{"}\in \mathbb{Z}$ with $ k^{"}= k+k^{'}$ ).
 $$\blacklozenge$$
+
 
 \subsection{}
 \begin{tcolorbox}
-Suppose that $R$ is a relation that is transitive in a set $S$. Let us define a new relation in $S$ as follows: For each $a$ and $b$ in $S$, let $a R^{*}b$ if and only if $a=b$ or $a R b$. Is $R^{*}$ transitive in $S$? Is$R^{*}$ reflexive in $S$? Illustrate with an $R$ that is not reflexive. 
+Suppose that $R$ is a relation that is transitive in a set $S$. Let us define a new relation in $S$ as follows: For each $a$ and $b$ in $S$, let $a R^{*}b$ if and only if $a=b$ or $a R b$. Is  $R^{*}$ transitive in $S$? Is $R^{*}$ reflexive in $S$? Illustrate with an $R$ that is not reflexive. 
 \end{tcolorbox}
 $$ $$
+(a) Is $R^*$ transitive?\\
+Be $aR^* b$ and $bR^* c$, we can have $4$ possibilities: \\
+$\bullet\quad a=b,\, b=c$, then $a=c$ and by definition of the relation $aR^* c$.\\
+$\bullet\quad a=b,\, b\neq c$, then $aR^* b\Leftrightarrow aR^* c$\\
+$\bullet\quad a\neq b,\, b= c$, then $aR^* b\Leftrightarrow aR^* c$\\
+$\bullet\quad a\neq b,\, b\neq c$, then $aR b$ and $  bR c$ and as $R$ is transitive, thus $aR c$ and by definition of the relation we have $aR^* c$.\\\\
+(b) Is $R^*$ reflexive?\\
+By the definition of $R^*$ (case a=b) , we have indeed $aR^* a$.
+$$\lozenge$$
+Consider the set $S= \mathbb{R}$ and the relation $aRb: a<b$. $R$ is obviously not reflexive, yet is transitive ($a<b,\, b<c\Rightarrow a<c$), but  $aR^* a\equiv (a,a)\in R^*$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2026,6 +2127,24 @@ $$\blacklozenge$$
 Suppose that $R$ is a relation in a set $S$. Let us define a new relation $R^{*}$  as follows: For each $a$ and $b$ in $S$, let $a R^{*}b$ if and only if $a R b$ is true  and $b R a$ is false. Suppose $R$ is transitive.  Is $R^{*}$ also transitive ? Is $R^{*}$ necessarily antisymmetric? 
 \end{tcolorbox}
 $$ $$
+a) Is $R^*$ transitive?\\
+We have 
+\begin{align*}
+\left\{\begin{array}{lll}
+aR^*b&\Leftrightarrow& aRb\quad \wedge \quad b\cancel{R} a\\\\
+bR^*c&\Leftrightarrow& bRc\quad \wedge \quad c\cancel{R}b
+\end{array}\right.
+\end{align*}
+$R$ is transitive, so $a R^* c$ is transitive provided that $b\cancel{R} a\quad \wedge \quad c\cancel{R} b$. So, provided that $R$ is antisymmetric and transitive , $R^*$ will be transitive.\\
+b) Is $R^{*}$ necessarily antisymmetric? \\
+Suppose 
+\begin{align*}
+\left\{\begin{array}{lll}
+aR^*b&\Leftrightarrow& aRb\quad \wedge \quad b\cancel{R} a\\\\
+bR^*a&\Leftrightarrow& bRa\quad \wedge \quad a\cancel{R}b
+\end{array}\right.
+\end{align*}
+This is a contradiction, hence the answer is, yes, $R^{*}$ is necessarily antisymmetric.
 $$\blacklozenge$$
 
 
@@ -2034,6 +2153,8 @@ $$\blacklozenge$$
  Suppose that a relation $R$ in a set $S$ is transitive and antireflexive. Is it necessarily antisymmetric? 
 \end{tcolorbox}
 $$ $$
+$R$ transitive means $aRb,\, bRc \Rightarrow aRc$, $R$ antireflexive means $(a,a)\not\in R$ and antisymmetric means $aRb,\, bRa \Rightarrow a=b$. \\
+Be $c=a$, then transitivity implies $aRb,\, bRa \Leftrightarrow aRa$, but as $R$ is antireflexive we can't have $aRa$, meaning that $aRb\wedge bRa$ can not be true. So $R$ needs definitely to be antysymmetric.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2047,6 +2168,15 @@ $$\blacklozenge$$
  \end{align*}
 \end{tcolorbox}
 $$ $$
+(a)\\
+Suppose $R$ is symmetric. Then $aRb\Leftrightarrow bRa$ or stated differently $(a,b)\in R$ and $(b,a)\in R$ for all $a,b\in S$. 
+For $R^{-1}$ we have $(b,a)\in R^{-1}$ if $(a,b)\in R^{}$. So we have $(b,a)\in R^{-1}$ and provided that $R$ is symmetric  $(b,a)\in R$, hence, $R\subset R^{-1}$ (starting from $R$ is symmetric and noting that $(a,b)\in R\Rightarrow (b,a)\in R^{-1}$ we can also conclude that $R^{-1}\subset R^{}$ ).\\ Suppose now that $R\subset R^{-1}$, this means that if $(b,a) \in  R^{}$ we also have also
+ $(b,a) \in  R^{-1}$, the latter implying $(a,b) \in  R^{}$, so we have $(a,b) \in  R^{}$ and $(b,a) \in  R^{}$, thus $R$ is symmetric.\\\\
+ (b)\\
+ Suppose $R$ is symmetric.
+ From (a) we have $R= R^{-1}$.\\
+ We must prove that also  $R^{-1}\subset R^{}$. \\
+ Suppose now that $R= R^{-1}$, this means that if $(b,a) \in  R^{}$ we also have also  $(b,a) \in  R^{-1}$, the latter implying $(a,b) \in  R^{}$, so we have $(a,b) \in  R^{}$ and $(b,a) \in  R^{}$, thus $R$ is symmetric.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2054,21 +2184,28 @@ $$\blacklozenge$$
  Suppose that $R$ is a relation defined in $S$. Is $R \cap R^{-1}$ a symmetric relation in $S$? 
 \end{tcolorbox}
 $$ $$
-$$\blacklozenge$$
+Suppose,  $R\cap R^{-1}$ is symmetric, then $\forall a,b\in S: aR\cap R^{-1}b\Rightarrow bR\cap R^{-1} a$ which means $(a,b)\in R\cap R^{-1} \, \wedge \, (b,a)\in R\cap R^{-1}$. This means that $(b,a)$ also must be an element of $R$ or $bRa$. If $R$ is not symmetric then the statement is not true and $R\cap R^{-1}$ can not be symmetric in a general case.
 
+$$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}
  Suppose that $R$ is a transitive relation in $S$. Is $R^{-1}$ transitive in $S$? 
 \end{tcolorbox}
 $$ $$
+We have $(a,b)\in R, (b,c)\in R\Rightarrow (a,c)\in R$. But, $(a,c)\in R$ implies that $(c,a)\in R^{-1}$.
+For $R^{-1}$ to be transitive, we need $(b,a)\in R^{-1}, (c,b)\in R^{-1}\Rightarrow (c,a)\in R^{-1}$. \\
+So, yes indeed, $R^{-1}$ is transitive in $S$
 $$\blacklozenge$$
 
 
 \subsection{}
 \begin{tcolorbox}
-Suppose that $R$ is symmetric in $S$. is $R^{-1}$ symmetric in $S$? 
+Suppose that $R$ is symmetric in $S$. Is $R^{-1}$ symmetric in $S$? 
 \end{tcolorbox}
 $$ $$
+We have $(a,b)\in R\Rightarrow (b,a)\in R$. But, $(b,a)\in R$ implies that $(a,b)\in R^{-1}$.
+For $R^{-1}$ to be symmetric, we need $(b,a)\in R^{-1}\Rightarrow (a,b)\in R^{-1}$. \\
+So, yes indeed, $R^{-1}$ is symmetric in $S$
 $$\blacklozenge$$
 
 
@@ -2077,6 +2214,7 @@ $$\blacklozenge$$
  Suppose that $R$ is reflexive in $S$. Is $R^{-1}$ reflexive in $S$?
  \end{tcolorbox}
 $$ $$
+$(a,a)\in R\Rightarrow (a,a)\in R^{-1}$. Hence, $R^{-1}$ is reflexive in $S$
 $$\blacklozenge$$
 
 
@@ -2085,6 +2223,193 @@ $$\blacklozenge$$
 Does there exist a nonempty set $S$ and a relation $R$ in $S$ such that $R$ is both symmetric and antisymmetric in $S$? 
 \end{tcolorbox}
 $$ $$
+Be $S=\{a\}$ an arbitrary non-empty set with $1$ element. Let's define $R$ as the identity map i.e. $R=\{(a,a):a\in S\}$.\\
+\textbf{Symmetry} means
+$$\forall x,y\in S:(x,y)\in R \Rightarrow (y,x)\in R$$ which is a true statement as $(x=a,y=x),\, (y=x,x=a)\in R$ because $R$ is the identity map.\\\\
+\textbf{Anti-symmetry} means
+$$\forall x,y\in S:(x,y)\in R \, \wedge (y,x)\in R \Rightarrow x=y$$ which is a true statement as $x=a,\, y=a\quad \forall x,y\in S$ and $R$ is the identity map.
 $$\blacklozenge$$
 
 
+\newpage
+
+ \section{Decomposition of a set}
+\subsection{}
+\begin{tcolorbox}
+For each real number $r$, let $F_r=\{(r,y):y\in \Breal\}$. Is $\{F_r:r\in \Breal\}$ a partition of $\Breal\times \Breal$? 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let $A_0= \{ x:-1\leq x\leq 1\}$. For each $x\in \Breal-A_0$ let $A_x = \{x\}$. Is the following collection $\mathscr{K}$ a decomposition of the real line $\Breal $ ? 
+$$\mathscr{K}= \{A_x:x = 0 \text{ or } |x| > 1\} $$
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Suppose $X$ is a nonempty set and $f:X\rightarrow Y$ is a surjection. Is $\{f^{-1}[y]: y\in Y\}$ a decomposition of $X$? 
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Partially ordered and totally ordered sets}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+\newpage
+
+ \section{Axiom of choice and Zorn's lemma}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Cardinality of sets (Introduction)}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Countable sets}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Uncountable sets}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\newpage
+
+ \section{Review exercises}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+\end{tcolorbox}
+$$ $$
+
+$$\blacklozenge$$

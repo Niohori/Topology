@@ -2239,7 +2239,8 @@ $$\blacklozenge$$
 For each real number $r$, let $F_r=\{(r,y):y\in \Breal\}$. Is $\{F_r:r\in \Breal\}$ a partition of $\Breal\times \Breal$? 
 \end{tcolorbox}
 $$ $$
-
+First note that $F_r\cap F_{r^{'}}=\emptyset$ if $r\neq r^{'}$.\\
+Also $\bigcup\{(r,y):y\in \Breal\}$ will cover, for a given $r$, the whole $\Breal$-axis. Also, as $F_r$ is defined for each real number, for each of this number will be associated the whole  real number axis, and hence $\{F_r:r\in \Breal\}$ a partition of $\Breal\times \Breal$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2248,7 +2249,10 @@ Let $A_0= \{ x:-1\leq x\leq 1\}$. For each $x\in \Breal-A_0$ let $A_x = \{x\}$. 
 $$\mathscr{K}= \{A_x:x = 0 \text{ or } |x| > 1\} $$
 \end{tcolorbox}
 $$ $$
-
+$\bullet\quad \bigcup\{A_x:x = 0 \text{ or } |x| > 1\} =\Breal$. This can be seen as $A_0$ is the closed interval $[-1,1]$ and for  all other $x\in \Breal-A_0$ i.e. $x\in (-\infty,-1)\cup (1,+\infty)$, each  $A_x,\, x\geq 1$ is $\{x\}$ itself. So,  $\bigcup\{A_x:x = 0 \text{ or } |x| > 1\} =(-\infty,1) \cup [-1,1]\cup (1,+\infty)=\Breal$\\
+$\bullet\quad A_0\cap A_x=\emptyset,\, \forall\, |x|>1$.\\
+$\bullet\quad A_x\cap A_{x^{'}}=\{x\}\cap \{x^{'}\}=\emptyset,\, \forall\, |x|,|x^{'}|>1$.\\
+Conclusion: $\mathscr{K}$ a decomposition of the real line $\Breal $
 $$\blacklozenge$$
 
 \subsection{}
@@ -2256,7 +2260,8 @@ $$\blacklozenge$$
 Suppose $X$ is a nonempty set and $f:X\rightarrow Y$ is a surjection. Is $\{f^{-1}[y]: y\in Y\}$ a decomposition of $X$? 
 \end{tcolorbox}
 $$ $$
-
+$f$ is a surjection, so every $y\in Y$ has at least one element of $x\in X$ such that $f(x) = y$. But for two different $y_1,\, y_2\in Y$, as $f$ is a function, we must have $f^{-1}[y_1]\cap f^{-1}[y_2]= \emptyset$ as otherwise we would have a $x^*$, such that $f(x^*)=y_1$ and $f(x^*)=y_2$, which is excluded as $f$ is a function. So, one condition for $\{f^{-1}[y]: y\in Y\}$ a being a decomposition of $X$ is fulfilled\\
+What about $\bigcup\{f^{-1}[y]: y\in Y\}$? We notice that $\{f^{-1}[y]: y\in Y\}$ corresponds to  $dom\, f$ which is not necessarily equal to $X$ ($dom\, f\subset X$, see definition $\mathbf{10.3}$ page $16$). So, $\{f^{-1}[y]: y\in Y\}$ a not always a decomposition of $X$.
 $$\blacklozenge$$
 
 \newpage
@@ -2265,18 +2270,60 @@ $$\blacklozenge$$
  \section{Equivalence classes}
 \subsection{}
 \begin{tcolorbox}
-For each ordered pair of real numbers $(a, b)$ such that $a\neq 0$ and $b\neq 0$, let $E(a, b)$ be the equation $ax by = 0$. Let $\xi= \{E(a, b):a\neq 0 \text{ and } b\neq 0\}$. For $E(a, b)$ and $E(c, d)$ in $\xi$, let us define a relation as follows. $E(a, b) \simeq  E(c, d)$ if and only if every solution $(x,y)$ of $ax+ by = 0$ is a solution of $cx + dy = 0$, and every solution of $cx+ dy = 0$ is a solution of $ax + by = 0$. Note that $\simeq$  is an equivalence relation. Is it true that $E(2, 3)\simeq E(4, 6)$? Try to discover an equation relating $a, b,\, c, \,$ and $d$ so that $E(a,b)\simeq E(c, d) $ provided that $a, b,\, c, \,$ and $d$  satisfy your equation. Justify your conjecture. Write an equation that is in the same equivalence class as is $E(3, 2)$ but which is not the same as $E(3, 2)$. 
+For each ordered pair of real numbers $(a, b)$ such that $a\neq 0$ and $b\neq 0$, let $E(a, b)$ be the equation $ax+ by = 0$. Let $\xi= \{E(a, b):a\neq 0 \text{ and } b\neq 0\}$. For $E(a, b)$ and $E(c, d)$ in $\xi$, let us define a relation as follows. $E(a, b) \simeq  E(c, d)$ if and only if every solution $(x,y)$ of $ax+ by = 0$ is a solution of $cx + dy = 0$, and every solution of $cx+ dy = 0$ is a solution of $ax + by = 0$. Note that $\simeq$  is an equivalence relation. Is it true that $E(2, 3)\simeq E(4, 6)$? Try to discover an equation relating $a, b,\, c, \,$ and $d$ so that $E(a,b)\simeq E(c, d) $ provided that $a, b,\, c, \,$ and $d$  satisfy your equation. Justify your conjecture. Write an equation that is in the same equivalence class as is $E(3, 2)$ but which is not the same as $E(3, 2)$. 
 
 \end{tcolorbox}
 $$ $$
-
+We first check that $\simeq$ is an equivalence relation.\\
+i) reflexivity: $E(a,b)\simeq E(a,b)$ is obvious as $(x,y)$ is of course  a solution of the same equation $ax+by=0$ on both sides of the relation $\simeq$.\\
+ii) symmetric: $E(a,b)\simeq E(c,d)\Leftrightarrow E(c,d)\simeq E(a,b)$ is obvious as a solution $(x,y)$ of $E(a,b)$ will be a solution of $E(c,d)$ and vice-versa, a solution of  $E(c,d)$ will also be a solution of $E(a,b)$.\\
+iii) transitivity $E(a,b)\simeq E(c,d),\,E(c,d)\simeq E(e,f) \Rightarrow E(a,b)\simeq E(e,f)$: also obvious as a solution of $ax+by=0$ will be a solution of $cx+dy=0$ but then also a solution of $ex+fy=0$.\\\\
+a) $E(2,3) \simeq E(4,6)$\\
+\begin{align*}
+\left\{\begin{array}{l}
+2x+3y=0\\
+4x+6y=0\Leftrightarrow 2x+3y=0
+\end{array}\right.
+\end{align*}
+so, yes,  $E(2,3) \simeq E(4,6)$\\\\
+b) Try to discover an equation relating $a, b,\, c, \,$ and $d$ so that $E(a,b)\simeq E(c, d) $\\\\
+Suppose $(x,y)$ is a solution of $ax+by=0$ and a solution of $cx+dy=0$. 
+\begin{align*}
+&\left\{\begin{array}{l}
+ax+by=0\\
+cx+dy=0
+\end{array}\right.\\
+\Rightarrow & \left\{\begin{array}{l}
+cax+cby=0\\
+acx+ady=0
+\end{array}\right.\\
+\Rightarrow & \left\{\begin{array}{l}
+cax+cby=0\\
+(ad-bc)y=0
+\end{array}\right.\\
+\end{align*}
+If we exclude the trivial solution $(x,y)= (0,0)$ we see that $ad-bc$ must be zero, hence the condition needed is 
+$$ad-bc=0$$
+c)Write an equation that is in the same equivalence class as is $E(3, 2)$ but which is not the same as $E(3, 2)$.\\\\
+Using the previous result we need $3d-2c=0$ or $c = \frac{3}{2}d$. Hence another equation is with $d=1$  $\frac{3}{2}x+y=0$
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Let $\Breal_{+}$, be the collection of all positive real numbers. For $a \in \Breal$, and $b \in Breal $,, let $a R b$ if and only if $\frac{a}{b}$ is a rational number. Is $R$ an equivalence relation on $\Breal_{+}$? Justify your answer. What is the form of all the numbers $b$ such that $b \in R[\sqrt{2}]$? If $a$ is an irrational positive number and $b R a$, is $b$ necessarily an irrational number? 
+Let $\Breal_{+}$, be the collection of all positive real numbers. For $a \in \Breal_{+}$, and $b \in \Breal_{+} $,, let $a R b$ if and only if $\frac{a}{b}$ is a rational number. Is $R$ an equivalence relation on $\Breal_{+}$? Justify your answer. What is the form of all the numbers $b$ such that $b \in R[\sqrt{2}]$? If $a$ is an irrational positive number and $b R a$, is $b$ necessarily an irrational number? 
 \end{tcolorbox}
 $$ $$
+a) Is $R$ an equivalence relation on $\Breal_{+}$?\\\\
+i) reflexivity: $aRa$ implies $\frac{a}{a}=1\in \mathbb{Q}$.\\\\
+ii) symmetric : $aRb$ implies $\frac{a}{b}\in \mathbb{Q}$ We can then express $\frac{a}{b}$ as $\frac{a}{b} =\frac{p}{q}$ with $p,\, q\in \mathbb{Z}_{+}$. Obviously, $\frac{b}{a} =\frac{q}{p}\in \mathbb{Q} $ and thus $bRa$.\\\\
+iii) transitivity : We need $aRb, bRc\Rightarrow aRc$.\\\\
+$aRb$ implies $\frac{a}{b}=\in \mathbb{Q}$ and  $cRd$ implies $\frac{c}{d}=\in \mathbb{Q}$. We can then express $\frac{a}{b}$ as $\frac{a}{b} =\frac{p}{q}$ with $p,\, q\in \mathbb{Z}_{+}$. Also $\frac{c}{d} =\frac{r}{s}$ with $r,\, s\in \mathbb{Z}_{+}$.\\
+Hence, we have $\frac{a}{b}\frac{b}{c} = \frac{pr}{qs}$ or $\frac{a}{c}= \frac{u}{v}$ with $(u=pr,v=qs) \in \mathbb{Q} $ and thus $aRc$.\\\\
+b) What is the form of all the numbers $b$ such that $b\in R[\sqrt{2}]$?\\\\
+First remember (see section 11) that $R[a]=\{ b:aRb\}$, so $R[\sqrt{2}]=\{ b:\sqrt{2}Rb\}$ and from the definition of $R$  we must have $\frac{\sqrt{2}}{b}\in\mathbb{Q}$. As $\sqrt{2}$ is irrational we need $b$ to be of the form $q \sqrt{2}$ with $q\in \mathbb{Q}$.\\\\
+c) If $a$ is an irrational positive number and $b R a$, is $b$ necessarily an irrational number? \\\\
+Suppose $\frac{b}{a}\in \mathbb{Q}$. Then $\frac{b}{a}= \frac{p}{q}$ with $p,q \in \mathbb{Z}_{+}$. Thus $ b= a\frac{p}{q}$. Suppose $b$ is rational then $ b = \frac{u}{v}$, $u,v\in \mathbb{Z}_{+}$ giving $\frac{u}{v}=a\frac{p}{q}$. Hence $ \underbrace{uq}_{=s\in \mathbb{Z}_{+}}=a\underbrace{pv}_{=t\in \mathbb{Z}_{+}}$ from which follows that $a= \frac{s}{t}$ and thus rational.\\\\
+ We get a contradiction and hence $b$ is necessarily irrational.
 
 $$\blacklozenge$$
 

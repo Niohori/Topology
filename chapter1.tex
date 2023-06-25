@@ -756,7 +756,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Are any of the sets in Exercise 2 the same? If so write the set identities that are suggested by your observations. Try to prove your conjecture.
 \end{tcolorbox}
-In exercise 2 we can see that that the set (a) and (b) are the same. Also (c) and (d) are the same. This suggests the following identities $A\times (B\cup C)=(A\times B)\cup(A\times C)$ and $(A\cup B)\times C=(A\times C)\cup(B\times C)$. \\\\
+In exercise 2 we can see that the set (a) and (b) are the same. Also (c) and (d) are the same. This suggests the following identities $A\times (B\cup C)=(A\times B)\cup(A\times C)$ and $(A\cup B)\times C=(A\times C)\cup(B\times C)$. \\\\
 $\mathbf{A\times (B\cup C)=(A\times B)\cup(A\times C)}$\\
 Proof:\\
 Be $x\in A$ and $ y\in B\cup C$, so $y$ is an element of $B$ or $C$. Consider $(x,y)\in A\times (B\cup C)$. As the $y$ can be an element of $B$ or $C$  follows immediately that $(x,y)\in (A\times B)$ or $(x,y)\in A\times C)$ and thus  $(x,y)\in (A\times B)\cup(A\times C)$. And get $A\times (B\cup C)\subset(A\times B)\cup(A\times C)$ \\
@@ -780,12 +780,12 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Suppose that $A$ is a set consisting of $m$ elements and $B$ is a set consisting of $n$ elements, where $m$ and $n$ are positive integers. How many elements are there in  $A\times B$?
 \end{tcolorbox}
-$A\times B$ has $m\times m $ elements. Indeed in the element $(x,y) \in A\times B$  we can choose for $x$ out of the $m$ elements of $A$ and for each choice of $x$ we are free to choose one element out of the $n$ elements of $B$.
+$A\times B$ has $m\times n $ elements. Indeed in the element $(x,y) \in A\times B$  we can choose for $x$ out of the $m$ elements of $A$ and for each choice of $x$ we are free to choose one element out of the $n$ elements of $B$.
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Suppose that $A$ is a set consisting of three elements, $B$ consists of four elements and $C$ consists of two element. How many elements are there in the set   $(A\times B)\times$?
+Suppose that $A$ is a set consisting of three elements, $B$ consists of four elements and $C$ consists of two element. How many elements are there in the set   $(A\times B)\times C$?
 \end{tcolorbox}
 $(A\times B)\times C$ has $(3\times 4)\times 2 = 24 $ elements. Indeed in the element $\left((x,y), z\right) \in (A\times B)\times C $  we have  for $(x,y)$,  $3\times 4 =12$ elements (see Exercise $1.9.5$) and for each choice of this $(x,y)$ we are free to choose one element out of the $2$ elements of $C$.
 $$\blacklozenge$$\newpage
@@ -2059,7 +2059,7 @@ regrouping as much as possible terms of the same power and using the results $(a
 (a + b)^{n+1}&=\left\{\begin{array}{l}\left(\begin{matrix}n\\ 0\end{matrix}\right)a^{n+1}b^{0}+\left[\left(\begin{matrix}n\\ 1\end{matrix}\right)+\left(\begin{matrix}n\\ 0\end{matrix}\right)\right]a^{n}b^{1}+\left[\left(\begin{matrix}n\\ 2\end{matrix}\right)+\left(\begin{matrix}n\\ 1\end{matrix}\right)\right]a^{n-1}b^{2}+\dots \\\\
 +\left[\left(\begin{matrix}n\\ n-2\end{matrix}\right)+\left(\begin{matrix}n\\ n-1\end{matrix}\right)\right]a^{2}b^{n-1}+\left[\left(\begin{matrix}n\\ n-1\end{matrix}\right)+\left(\begin{matrix}n\\ n\end{matrix}\right)\right]a^{1}b^{n}+\left(\begin{matrix}n\\ n\end{matrix}\right)a^{0}b^{n+1}\end{array}
 \right.\\\\
-&= \left(\begin{matrix}n+1\\ 0\end{matrix}\right)a^{n+1}b^{0}+\left(\begin{matrix}n+1\\ 1\end{matrix}\right)a^{n}b^{1}+\left(\begin{matrix}n+1\\ 2\end{matrix}\right)a^{n-1}b^{2}+\dots +\left(\begin{matrix}n+1\\n\end{matrix}\right)a^{1}b^{n}+\left(\begin{matrix}n+1\\ n+1\end{matrix}\right)a^{0}b^{n+1}
+&= \underbrace{\left(\begin{matrix}n+1\\ 0\end{matrix}\right)}_{=1=\left(\begin{matrix}n\\ 0\end{matrix}\right) }a^{n+1}b^{0}+\left(\begin{matrix}n+1\\ 1\end{matrix}\right)a^{n}b^{1}+\left(\begin{matrix}n+1\\ 2\end{matrix}\right)a^{n-1}b^{2}+\dots +\left(\begin{matrix}n+1\\n\end{matrix}\right)a^{1}b^{n}+ \underbrace{\left(\begin{matrix}n+1\\ n+1\end{matrix}\right)}_{= 1=\left(\begin{matrix}n\\ n\end{matrix}\right)}a^{0}b^{n+1}
 \end{align*}
 Hence, by the induction principle, the proposed expression is true.
 $$\blacklozenge$$
@@ -2383,6 +2383,18 @@ $$\blacklozenge$$
 \newpage
 \setcounter{section}{22}
 \section{Partially ordered and totally ordered sets}
+\textit{\textbf{Some clarifications:}}\\\\
+Although evident, let's recall some basic remarks:\\\\
+$\quad\bullet\quad$ \textbf{Upper and lower bounds} of a subset $A\subset S$ are \textbf{not} necessarily elements of $A$ (well of $S$ of course).\\\\
+$\bullet\quad$ On the other hand, \textbf{Least  and Greatest elements}  of a subset $A\subset S$ are \textbf{necessarily} elements of $A$.\\\\
+$\bullet\quad$Remark on the definition $\mathbf{23.6}$:\\
+$\mathbf{23.6.}$ \textbf{Definition. Least upper bound and greatest lower bound. }\\
+Let $(S,\leq)$ be a partially ordered set. Suppose that $A$ is a subset of $S$ and $A$ has an upper bound in $S$. If the set of \textit{upper bounds of $S$ }has a least element $l$, then $l$ is called the least upper bound of $A\, (l.u.b.(A))$. If $A$ has a lower bound and the set of lower bounds of $S$ has a greatest element $g$, then $g$ is called the greatest lower bound of $A\, (g.l.b. (A))$. \\
+The text in italic is a little bit confusing for me and would restate the definition as :\\\\
+$\mathbf{23.6.}$ \textbf{Definition. Least upper bound and greatest lower bound. }\\
+Let $(S,\leq)$ be a partially ordered set. Suppose that $A$ is a subset of $S$ and $A$ has an upper bound in $S$. \textbf{If the set $P$ of upper bounds of $A$} has a least element $l$, then \textbf{$l\in P$} is called the least upper bound of $A\, (l.u.b.(A))$. If $A$ has a lower bound and \textbf{the set $P$ of lower bounds} of $A$ has a greatest element $g$, then $\mathbf{g\in P}$ is called the greatest lower bound of $A\, (g.l.b. (A))$. \\
+Note that $l\in P$ or $g\in P$ are not necessarily an element of $A$.\\\\
+$\bullet\quad$\textbf{Maximal and minimal elements} of a set can be seen as $g.u.b.(S)$ / $l.u.b.(S)$ being elements of $S$.
 \subsection{}
 \begin{tcolorbox}
 Consider the system $(\Breal, \leq )$ of the real line $\Breal$ together with the usual ordering $\leq $.\\
@@ -2498,19 +2510,60 @@ $$a_1\leq b_1,\,\text{ and if } a_l = b_1, \text{ then } a_2\leq b_2$$ For obvio
 (b) If the answer to (a) is yes, is $\mathscr{L}$  a total ordering for $\Breal\times\Breal$? 
 \end{tcolorbox}
 $$ $$
+(a) $\mathscr{L}$ being a partial ordering of $\Breal\times \Breal$ requires that $\mathscr{L}$ is transitive, reflexive and anti-symmetric.\\\\
+i) transitivity:  $(a_1,\, a_2)\mathscr{L} (b_1, b_2),\, (b_1,\, b_2)\mathscr{L} (c_1, c_2)\implies (a_1,\, a_2)\mathscr{L} (c_1, c_2)$\\\\
+ From the definition of $\mathscr{L}$ we have:\\
+ \begin{align*}\left\{\begin{array}{l}(a_1,\, a_2)\mathscr{L} (b_1, b_2)\Ieoi a_1\leq b_1,\,\text{ and if } a_1 = b_1, \text{ then } a_2\leq b_2\\\\
+ (b_1,\, b_2)\mathscr{L} (c_1, c_2)\Ieoi b_1\leq c_1,\,\text{ and if } b_1 = c_1, \text{ then } b_2\leq c_2
+ \end{array}\right.
+ \end{align*}
+ We consider three cases:\\\\
 
-$$\blacklozenge$$
+ $1.\quad a_1\neq b_1,\, b_1\neq c_1$\\
+ Then, we have $a_1\leq b_1 \Et b_1\leq c_1\implies a_1\leq c_1 $ which satisfies the definition of $\mathscr{L}$ (note that we can't have the case $a_1=c_1$).\\\\
+  $2.\quad a_1\neq b_1,\, b_1= c_1$\\
+  Then, we have $a_1\leq b_1 \Et b_1 = c_1\implies a_1\leq c_1  $ which satisfies the definition of $\mathscr{L}$ for  $(a_1,a_2)\mathscr{L}(c_1, c_2)$ as $a_1\neq c_1$.\\\\
+    $3.\quad a_1= b_1,\, b_1\neq c_1$\\
+  Then, we have $a_1= b_1 \Et b_1 \leq c_1\implies a_1\leq c_1  $ which satisfies the definition of $\mathscr{L}$ for  $(a_1,a_2)\mathscr{L}(c_1, c_2)$ as $a_1\neq c_1$.\\\\
+      $4.\quad a_1= b_1,\, b_1=c_1$\\
+  Then, we have $a_1= b_1 \Et b_1 = c_1\implies (a_1= b_1 \Et a_2\leq b_2) \Et  (b_1= c_1 \Et b_2\leq c_2) $ which implies  $a_1= c_1 \Et a_2\leq c_2) $ which satisfies the definition of $\mathscr{L}$ for  $(a_1,a_2)\mathscr{L}(c_1, c_2)$ .\\\\
+  Conclusion: $\mathscr{L}$ is a transitive relation.
+$$\lozenge$$
+ii) reflexivity  $(a_1,\, a_2)\mathscr{L} (a_1, a_2)$ is true.\\\\
+ From the definition of $\mathscr{L}$, we should have  $$(a_1,\, a_2)\mathscr{L} (a_1, a_2)\Ieoi a_1\leq a_1,\,\text{ and if } a_1 = a_1, \text{ then } a_2\leq a_2$$
+ $\implies $: $(a_1,\, a_2)\mathscr{L} (a_1, a_2)\implies a_1\leq a_1,\,\text{ and if } a_1 = a_1, \text{ then } a_2\leq a_2$.\\\\
+ Obviously, we have the condition $a_1\leq a_1$ and as $a_1= a_1$ we should have $a_2\leq a_2$ which is true as $a_2= a_2$.\\\\
+  $\Leftarrow  $: $(a_1,\, a_2)\mathscr{L} (a_1, a_2)\Leftarrow a_1\leq a_1,\,\text{ and if } a_l = a_1, \text{ then } a_2\leq a_2$.\\\\
+We have by assumption,as $a_1= a_1$,  $a_1\leq a_1$ and as as $a_2= a_2$we have also  $a_2\leq a_2$. By definition, we have $(a_1,\, a_2)\mathscr{L} (a_1, a_2)$.\\\\
+Conclusion $\mathscr{L} $ is a reflexive relation.
+
+iii) anti-symmetric  $\forall (a_1,\, a_2), (b_1,\, b_2)\mathscr{L} (b_1, b_2)\Et (b_1,\, b_2)\mathscr{L} (a_1, a_2) \implies (a_1,\, a_2)= (b_1,\, b_2)$.\\\\
+From the definition of $\mathscr{L}$ we have:
+ \begin{align}\left\{\begin{array}{l}(a_1,\, a_2)\mathscr{L} (b_1, b_2)\Ieoi a_1\leq b_1,\,\text{ and if } a_1 = b_1, \text{ then } a_2\leq b_2\\\\
+ (b_1,\, b_2)\mathscr{L} (a_1, a_2)\Ieoi b_1\leq a_1,\,\text{ and if } b_1 = a_1, \text{ then } b_2\leq a_2
+ \end{array}\right.
+ \end{align}\\
+If $(a_1,\, a_2)\mathscr{L} (b_1, b_2)\Et (b_1,\, b_2)\mathscr{L} (a_1, a_2)$ we see from the definition of $\mathscr{L}$ that we have $a_1\leq b_1 \Et b_1\leq a_1$, hence we will have $a_1=b_1$. Then, the definition implies  $a_2\leq b_2 \Et b_2\leq a_2$, and thus  $a_2=b_2$. Hence we have indeed $(a_1,\, a_2)= (b_1,\, b_2)$ and thus $\mathscr{L}$ is anti-symmetric.\\\\
+Conclusion: from i), ii) and iii) we see that $\mathscr{L}$ is a partial ordering  of $\Breal\times\Breal$.
+$$\lozenge$$
+(b) If the answer to (a) is yes, is $\mathscr{L}$  a total ordering for $\Breal\times\Breal$? \\\\
+Yes, as the usual relation $\leq$ in $\Breal$ is a total ordering of $\Breal$. Hence for all $(a,\,b)\in \Breal\times \Breal$ the $\leq$ relation of the two entries are defined for all $a$ and $b$ and thus from the definition also for all $(a,\,b)\in \Breal\times \Breal$.
+ $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
 Prove that if $(S,\leq)$  is a well-ordered set, then it is a linearly ordered set. 
 \end{tcolorbox}
 $$ $$
-$\bullet$ Let's remind what a well ordered set means:\\
-If $(S,\leq )$ is a partially ordered set such that every nonempty subset of $S$ has a first element, then $\neq$ is said to be a well ordering for $S$ and $(S,\neq )$ is said to be a well-ordered set.\\
-$\bullet$ And a maximal element $m$ of a partially ordered set $(S,\leq )$ implies that $\forall s\in S: m\leq s\implies m=s$.\\
-$\bullet$ A linearly ordered set means that $\forall x,y\in S: x\leq y\text{ or } y\leq x$. \\\\
-
+Let's remind some definitions:\\\\
+$a)$ A well ordered set means: 
+If $(S,\leq )$ is a partially ordered set such that every nonempty subset of $S$ has a first element, then $\leq$ is said to be a well ordering for $S$ and $(S,\leq )$ is said to be a well-ordered set.\\
+$b)$ A first element $m$ of a partially ordered set $(T,\leq )$ implies that $\exists m\in T, \forall s\in T: m\leq s$.\\
+$c)$ A linearly ordered set means that $\forall x,y\in S: x\leq y\text{ or } y\leq x$. \\\\
+Now, suppose that $(S,\leq)$ is not linearly ordered, then:
+\begin{align}\exists x\in S, \forall y\in S: x\not \leq y \Et y\not \leq x\end{align}
+Take a subset $S_x\subset S$ such that $x\in S_x$. As $(S,\leq)$ is a well ordered set, $S_x$ has a first element $m_x$. This means that for the element $x\in S_x$ we have $m_x\leq x$.\\
+But we get a contradiction as $m_x\leq x$ is defined but we  supposed that $x\not \leq m_x\text{ and } m_x\not \leq x$ (substitute $y$ with $m_x$ in $(1)$). Hence our supposition that $(S,\leq)$ is not linearly ordered is wrong and conclude $(S,\leq)$ is linearly ordered. 
 $$\blacklozenge$$
 
 
@@ -2523,7 +2576,19 @@ $$\blacklozenge$$
 Show that the two forms of Zorn's lemma given in $\mathbf{24.3}$ are equivalent. 
 \end{tcolorbox}
 $$ $$
-
+\textbf{$\mathbf{24.3}$ gives only one version of Zorn's lemma. So it is not clear what the author wants. Does he want that, starting with Hausdorff maximal principle we can prove Zorn's lemma? If yes we have to prove that:}
+\\\\
+$\mathbf{24.4.}$\textbf{ Hausdorff Maximality Principle.} \\
+Let $(S,\leq)$ be a partially ordered set. Then $S$ contains a maximal linearly ordered subset. 
+$$\mathbf{\Downarrow} $$
+$\mathbf{24.3.}$\textbf{ Zorn's Lemma.} \\
+Suppose that $(S, \leq)$ is a nonempty partially ordered set such that every linearly ordered subset in $S$ has an upper (lower) bound in $S$.\\
+ Then $S$ has a maximal (minimal) element in $S$ 
+ $$\circ$$
+ First,note that in this book the notion of \textit{maximal linearly ordered subset} is not defined explicitly. So, we put as definition: a linearly ordered subset $P\subset S$ with $(S,\leq)$ a partially ordered set, is a maximal linearly ordered subset of $S$ if  $\forall X^{*}\subset S:X^{*}\subset P$ where $X^{*}$ are linearly ordered subsets of $S$.\\
+ Let's show the asked equivalence. \\\\
+ Consider a partially ordered set $S$, where every linearly ordered subset has an upper bound.\\ \textit{Note: This is possible because the considered subset is linearly order, so the relation $a\leq b$ exists for all $a,\, b$ in this subset. So, we will certainly have an upper bound (in fact , a largest element) in this subset (although other upper bounds may exist which are not in this subset).} \\\\
+ According to the Hausdorff maximum principle there exists a maximal linearly ordered subset $P\subset S$ and $P$ has an upper bound , $m$. Suppose $m$ is not the largest element in $P$ then $\{m\}\cup P$ is also a linearly ordered set\footnote{This follows form the fact that we supposed that $m$ is not the largest element. This assumption on itself,  means that $m\leq x\Ou x\leq m, x\in P$ is defined.} in which $P$ would be properly contained i.e. $P\subset \{m\}\cup P$, contradicting the definition. Thus $m$ is a maximal element in $S$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2532,26 +2597,44 @@ Prove the following variation of $\mathbf{24.4}$. Let $(S, \leq)$ be a partially
 
 \end{tcolorbox}
 $$ $$
+Following the line of proof of $\mathbf{24.4.}$ \textbf{Hausdorff Maximality Principle}, we know that there exists a set $M$ such that $M$ is a maximally linearly ordered subset of $S$.\\
+Now, suppose we have a linearly ordered subset $A^{'}$ of $S$ for  which $A^{'}\supset M$.\\
+This means that $M$ is contained in $A^{'}$, meaning that there exists an upper bound $A^{'}$ in $S$ for which $M \subset A^{'}$ with $A^{'}$ a linearly ordered subset of $S$, meaning that $M$ would not be maximal, a contradiction. Hence, $A^{'}\subset M$.
 
 $$\blacklozenge$$
 
-\subsection{}
+\subsection{$\dagger$}
 \begin{tcolorbox}
 Let $\mathscr{K}$ be a collection of sets. Prove that there exists a maximal nested subcollection $\mathscr{K}$. 
 \end{tcolorbox}
 $$ $$
-
+Can we simply use Hausdorff maximality principle on $(\mathscr{K},\subset)$? \\
+Then, we know that $(\mathscr{K},\subset)$ contains a maximal linearly ordered subset  $(\mathscr{K}^{*},\subset)$. As $(\mathscr{K}^{*},\subset)$ is a linearly ordered subset we have, $ \forall a,b\in \mathscr{K}^{*}:a\subset b\Ou b\subset a$ which is a definition of a nested set.\\
+\textbf{Conclusion}: $\mathscr{K}^{*}$ is maximal and nested.
 $$\blacklozenge$$
 
 \newpage
 
  \section{Cardinality of sets (Introduction)}
-\subsection{}
+\subsection{$\dagger$}
 \begin{tcolorbox}
 Prove Theorem $\mathbf{25.3}$. 
 \end{tcolorbox}
 $$ $$
- 
+ Be $\mathscr{K}=\{A,B,C,\dots\}$ a collection of sets. If $\sim$ is defined in $\mathscr{K}$, this means that for some sets in the collection we have a bijection between these sets.\\
+ An equivalence relation requires $3$ constraints:\\\\
+ \begin{align*}
+ \left\{\begin{array}{l}
+ \forall a\in A: (a,a)\\\\
+ \forall a\in A,b\in B:(a,b)\implies (b,a)\\\\
+ \forall a\in A,b\in B,c\in C:(a,b),(b,c)\implies (a,c)
+ \end{array}\right.
+ \end{align*}\\\\
+ Recall that $\sim$ means that there exists a bijection $f$ between the two involved sets.\\\\
+ i) Suppose $A\sim A$, obviously we can take the identity map as trivial bijection which can be expressed as $(a,a),\,\forall a\in A $.// So, the first prerequisite for an equivalence relation is fulfilled.\\\\
+ ii) Suppose $A\sim B$. This means that for every element $a$ in $A$ there exists an element $b$ in  $B$  such that $(a,b)$ exists but as $f$ is a bijection, the map $f^{-1}$ exists which maps $b$ again to $a$. Hence, $(b,a)$ is a valid set and exists.\\ So, the second prerequisite for an equivalence relation is fulfilled.\\\\
+ iii) Suppose $A\sim B,\, B\sim C$ this means that there exist bijection $f$ and $g$ such that $\forall a\in A,\, \exists ! b\in B: b=f(a)$ and $\forall b\in B,\, \exists ! c\in BC: c=g(b)$, hence, $(g\circ f )(a)=c$. \\ So, the third prerequisite for an equivalence relation is fulfilled.\\\\
+ As all prerequisites are fulfilled we are able to define a equivalence relation between some sets in $\mathscr{K}$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2559,7 +2642,8 @@ $$\blacklozenge$$
 Show that the set $\mathbb{P}$ of all positive integers is equivalent to the set of all positive even integers.
 \end{tcolorbox}
 $$ $$
- 
+ Define the one-to-one map $f:\mathbb{P}\rightarrow \mathbb{P}_{2n}$ with $f=\{(n,2n):n\in \mathbb{P}\}$ and  $\mathbb{P}_{2n}$ being the set of positive even numbers.\\\\
+ Obviously, $f$ is one-to-one and thus the function defines the equivalence of the two sets. 
 $$\blacklozenge$$
 
 \subsection{}
@@ -2567,7 +2651,8 @@ $$\blacklozenge$$
 Show that the set $\mathbb{P}$ of all positive integers is equivalent to the set $\mathbb{P}-\{1\}$.  
 \end{tcolorbox}
 $$ $$
-
+ Define the one-to-one map $f:\mathbb{P}\rightarrow \mathbb{P}-\{1\}$ with $f=\{(n,n+1):n\in \mathbb{P}\}$ .\\\\
+ Obviously, $f$ is one-to-one and $1\not \in \mathbb{P}-\{1\}$.\\ Thus the function defines the equivalence of the two sets. 
 $$\blacklozenge$$
 
 \subsection{}
@@ -2575,7 +2660,8 @@ $$\blacklozenge$$
 Recall that $\mathbb{P}_n = \{1, 2, ... , n\}$. Show that $\mathbb{P} \sim  (\mathbb{P}-\mathbb{P}_n)$.
 \end{tcolorbox}
 $$ $$
-
+Define the one-to-one map $f:\mathbb{P}\rightarrow \mathbb{P}-\mathbb{P}_n$ with $f=\{(p,p+n:n\in \mathbb{P}\}$ .\\\\
+ Obviously, $f$ is one-to-one and the image of $f$ is $\{n+1,n+2,n+3,\dots\} = \mathbb{P}-\mathbb{P}_n$.\\ Thus the function defines the equivalence of the two sets. 
 $$\blacklozenge$$
 
 \newpage
@@ -2586,25 +2672,37 @@ $$\blacklozenge$$
 Prove that the set of all rational real numbers is a countably infinite set. 
 \end{tcolorbox}
 $$ $$
-
+Every $q\in \mathbb{Q}$ is of the form $\frac{m}{n},\, m\in\mathbb{Z},\, n\in \mathbb{P}$ and can be represented by the ordered set $(m,n)$.\\\\
+Define the relation
+\begin{align*}
+f=\left\{\begin{array}{ll}
+\frac{p}{2}&\text{for } p\in \mathbb{P},\, p\text{ is even}\\
+(-1)^{p}\frac{p-1}{2}&\text{for } p\in \mathbb{P},\, p\text{ is odd}\\
+\end{array}\right.
+\end{align*}
+This relation maps the even elements of $\mathbb{P}$ onto the positive elements of $\mathbb{Z}$ and the odd elements of $\mathbb{P}$ onto the negative elements of $\mathbb{Z}$ and the zero element. Hence $f$ is a surjection.\\
+By $\mathbf{26.6}$, as $\mathbb{P}$ is countable, then $\mathbb{Z}$ is also countable.\\\\
+By theorem $\mathbf{26.7}$ we know that $\mathbb{P}\times \mathbb{P}$ is countably infinite. Considering that $(m,n)$ as a representation of a rational number can be expressed by $(f(p), n)$ and hence we can associate with every rational number an ordered set $(p,n)\in \mathbb{P}\times \mathbb{P}$ we conclude that $\mathbb{Q}$ is countably infinite.
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
 Prove that if $X$ is a set that is equivalent to a countable set, then $X$ is also a countable set. 
-
 \end{tcolorbox}
 $$ $$
-
+Be $C$ a countable set. As $X\sim C$ there is a bijection $f$ from  $C$ into $X$. The same yields for $C$ with a bijection $g$ from $P^*$ into $C$ with $\mathbb{P}^* = \mathbb{P}_n$ or $\mathbb{P}$.\\
+$h=g\circ f:\mathbb{P}^* \rightarrow X$ is also a bijection.\\
+Hence, $X$ is countable. 
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Suppose that $f: X\rightarrow Y$ is a map from a set $X$ onto a countable set $Y$. Suppose that for each $y \in  Y,\,  f^{-1}[v]$ is a countable set. Is $X$ necessarily a countable set? 
+Suppose that $f: X\rightarrow Y$ is a map from a set $X$ onto a countable set $Y$. Suppose that for each $y \in  Y,\,  f^{-1}[y]$ is a countable set. Is $X$ necessarily a countable set? 
 
 \end{tcolorbox}
 $$ $$
-
+As $Y$ is countable, there exists a bijection $f:\mathbb{P}^* \rightarrow Y $ with $\mathbb{P}^* = \mathbb{P}_n$ or $\mathbb{P}$.\\\\
+Be $X_y= f^{-1}[y]$ for a certain $y\in Y$. By assumption, $X_y$ is a countable set. Be $\mathscr{K}$ the collection of the sets $X_y$ for all $y\in Y$. As $Y$ is countable, $\mathscr{K}$ will also be countable. From theorem $\mathbf{26.8}$ we know that $\bigcup\mathscr{K}$ is countable. As $f: X\rightarrow Y$ is a map from a set $X$ onto a countable set $Y$, we know that $\cup X_y:\forall y\in Y$ will correspond to $X$, hence, $X=\bigcup\mathscr{K}$ and as $\bigcup\mathscr{K}$ is countable, $X$ will also be countable.
 $$\blacklozenge$$
 
 
@@ -2613,6 +2711,19 @@ $$\blacklozenge$$
 Prove that if $A$ and $B$ are countable sets, then so is $A \times B$.  
 \end{tcolorbox}
 $$ $$
+Be, $\mathbb{P}^*$ be $ \mathbb{P}_{n}$ or $\mathbb{P}$.
+$A$ and $B$ are countable sets implies that $A\overset{f}{\sim} \mathbb{P}_{n_A}$ and  $B\overset{g}{\sim}\mathbb{P}_{n_B}$, with $f,\, g$ the  bijective maps associated with the equivalence. .\\
+So, for each $(a,b)\in  A\times B$ let's define a map $f:A\times B\rightarrow \mathbb{P}^*$ with $\mathbb{P}^*= \mathbb{P}_{n_A\times b_B}$ or $\mathbb{P}$
+$$ f=\{2^{f^{}(a)} 3^{g^{}(b)}:a\in A,\, b\in B\}$$
+We note that $2^{f^{}(a)} 3^{g^{}(b)}:a\in A,\, b\in B$ is indeed unique (i.e. $f$ is really a map).\\
+$2^{f^{}(a)} 3^{g^{}(b)}:a\in A,\, b\in B$ can be written as $2^m 3^n:m\in \mathbb{P}_A^*,\,n\in \mathbb{P}_B^* $\\
+Suppose we have the more general expression 
+$$2^{m^{'}} 3^{n^{'}}=2^{m} 3^{n}:m, \,m^{'},\, n,\,n^{'}\in \mathbb{P} $$
+Be $m^{'}=m+p,\, n^{'}=n+q $ with $ p,q\in \mathbb{Z}$. Then,
+$2^{m^{}} 3^{n^{}}2^{p} 3^{q}=2^{m} 3^{n}$. This implies $2^{p} 3^{q}=1$ or $p=0,\, q=0$. So, indeed, $2^{f^{}(a)} 3^{g^{}(b)}:a\in A,\, b\in B$ is unique (i.e. $f$ is really a map).\\
+Hence, we can write $f(a,b)= h(m,n)$ where $(m,n)$ are unique for a given $(a,b)$. \\
+Thus, $$A\times B \sim \mathbb{P}_A^*\times \mathbb{P}_B^*$$
+and hence $A\times B$ is countable.
 $$\blacklozenge$$
 
 \subsection{}
@@ -2620,7 +2731,10 @@ $$\blacklozenge$$
 Let $f: X \rightarrow Y$ be a surjection. Show that there is a subset of $X$ that is equivalent to $Y$. 
 \end{tcolorbox}
 $$ $$
-
+Be the relation $f^{-1}$ the inverse of the function $f$. Let, $X_y=f^{-1}[y]$. This exists for all $y\in Y$ ($f$ is a surjection).\\
+By the axiom of choice, for each $X_y$ we can choose a single element  $x_y\in X_y$. As each $x\in X$ will be an element of a certain $X_y$ we choose the $x_y$ such that $x_y\ne x_y^{'},\, \forall y,\, y^{'}\in Y$.\\
+Be $S=\bigcup\{x_y\}\subset X$. We know that the $\{x_y\}$ are disjoint. So for each element of $S$ there is a unique $y\in Y$ and for each $y\in Y$ we have one and only one $x\in S$. Moreover $S\subset X$. We conclude that the constructed relation is a bijection and hence
+$$S\in Y$$.
 $$\blacklozenge$$
 
 
@@ -2629,7 +2743,7 @@ $$\blacklozenge$$
  \section{Uncountable sets}
 \subsection{}
 \begin{tcolorbox}
-It is known that every real number between $0$ and $1$ inclusive has a (binary) representation in the form $.a_l a_2 a_3 \dots a_n\dots$ where each $a$, is either $0$ or $1$. However, as in the decimal system, the representation is not unique. For example, $.01100$ (remaining terms 0) represents the same number as $.0101111$ (remaining terms 1). But each real number between $0$ and $1$ has at least one and no more than two representations. Use this information to prove that the reals are uncountable. Point out why this implies that the set of all irrational numbers is uncountable. 
+It is known that every real number between $0$ and $1$ inclusive has a (binary) representation in the form $.a_1 a_2 a_3 \dots a_n\dots$ where each $a_i$, is either $0$ or $1$. However, as in the decimal system, the representation is not unique. For example, $.01100$ (remaining terms 0) represents the same number as $.0101111$ (remaining terms 1). But each real number between $0$ and $1$ has at least one and no more than two representations. Use this information to prove that the reals are uncountable. Point out why this implies that the set of all irrational numbers is uncountable. 
 \end{tcolorbox}
 $$ $$
 

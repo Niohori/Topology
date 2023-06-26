@@ -2711,7 +2711,7 @@ $$\blacklozenge$$
 Prove that if $A$ and $B$ are countable sets, then so is $A \times B$.  
 \end{tcolorbox}
 $$ $$
-Be, $\mathbb{P}^*$ be $ \mathbb{P}_{n}$ or $\mathbb{P}$.
+Be $\mathbb{P}^*$ equal to  $ \mathbb{P}_{n}$ or $\mathbb{P}$.
 $A$ and $B$ are countable sets implies that $A\overset{f}{\sim} \mathbb{P}_{n_A}$ and  $B\overset{g}{\sim}\mathbb{P}_{n_B}$, with $f,\, g$ the  bijective maps associated with the equivalence. .\\
 So, for each $(a,b)\in  A\times B$ let's define a map $f:A\times B\rightarrow \mathbb{P}^*$ with $\mathbb{P}^*= \mathbb{P}_{n_A\times b_B}$ or $\mathbb{P}$
 $$ f=\{2^{f^{}(a)} 3^{g^{}(b)}:a\in A,\, b\in B\}$$
@@ -2741,7 +2741,7 @@ $$\blacklozenge$$
 \newpage
 
  \section{Uncountable sets}
-\subsection{}
+\subsection{$\dagger$}
 \begin{tcolorbox}
 It is known that every real number between $0$ and $1$ inclusive has a (binary) representation in the form $.a_1 a_2 a_3 \dots a_n\dots$ where each $a_i$, is either $0$ or $1$. However, as in the decimal system, the representation is not unique. For example, $.01100$ (remaining terms 0) represents the same number as $.0101111$ (remaining terms 1). But each real number between $0$ and $1$ has at least one and no more than two representations. Use this information to prove that the reals are uncountable. Point out why this implies that the set of all irrational numbers is uncountable. 
 \end{tcolorbox}
@@ -2755,15 +2755,28 @@ Suppose that $A$ is an uncountable set and $C$ is a countable subset of $A$. Sho
 
 \end{tcolorbox}
 $$ $$
-
+Suppose $A-C$ is countable. \\
+Consider $\mathscr{K}=\{A-C,C\}$. Obviously $\mathscr{K}$ is countable and it's elements are countable. By $\mathbf{26.8}$ we know that the union of a countable collection of countable set, is also countable. But $$\bigcup \mathscr{K}= (A-C)\cup C= A$$
+We have a contradiction as $A$ was not countable.
+\\
+Conclusion:  $A-C$ is not countable
 $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Suppose that $A,\, B,\, C,$ and $D$ are sets such that $A \cap C = B\cap D$. Suppose further that $A\sim  B$ and $C\sim  D$. Is $(A \cup C) \sim (B\cup  D)$? 
+Suppose that $A,\, B,\, C,$ and $D$ are sets such that $A \cap C = B\cap D=\emptyset$. Suppose further that $A\sim  B$ and $C\sim  D$. Is $(A \cup C) \sim (B\cup  D)$? 
 \end{tcolorbox}
 $$ $$
-
+As $A\sim  B$ and $C\sim  D$ there exist two bijection $f: A\rightarrow B$ and $g: C\rightarrow D$.\\ 
+Let's define $h: (A \cup C) \rightarrow (B\cup  D)$ as 
+\begin{align*}
+h(x)=\left\{\begin{array}{ll}
+f(x)&\text{for } x\in A\\
+g(x)&\text{for } x\in C\\
+\end{array}\right.
+\end{align*}
+As $A\cap C=\emptyset$ we will have $h(x)=f(x)$ or $h(x)=g(x)$ for a certain $x\in A\cup C$ and as $f$ and $g$ have different images $B$ and $D$ with $B\cap D=\emptyset$ we will have $h(x)\in B$ or $h(x)\in D$. Hence the function $h: (A \cup C) \rightarrow (B\cup  D)$ is a bijection as $f$ and $g$ are bijections. \\
+Conclusion: $(A \cup C) \sim (B\cup  D)$
 $$\blacklozenge$$
 
 \subsection{}
@@ -2771,22 +2784,57 @@ $$\blacklozenge$$
 Prove that every infinite set contains a countably infinite subset. 
 \end{tcolorbox}
 $$ $$
-
+Be $X$ the considered infinite set.\\
+Lets define recursively, the following sets
+\begin{align*}
+\begin{array}{lll}
+S_1=\{x_1\}&&x_1\in X\\
+S_2=\{x_2\}\cup S_1&&x_2\in X-S_1\\
+S_3=\{x_3\}\cup S_2&&x_3\in X-S_2\\
+S_4=\{x_4\}\cup S_3&&x_4\in X-S_3\\
+&\vdots&
+\end{array}
+\end{align*}
+where the $x_i$ are chosen randomly in the relevant set (this is possible by the axiom of choice).\\
+Each $S_k$ is countable. Also be $\mathscr{K}=\{S_1,S_2,S_3,\dots\}$.  $\mathscr{K}$ is countable. By $\mathbf{26.8}$ we know that $\bigcup\mathscr{K}$ is countable and as $\bigcup\mathscr{K}\subset X$ we find that $X$ contains a countably infinite set.
 $$\blacklozenge$$
-
+\newpage
 \subsection{}
 \begin{tcolorbox}
 Prove that if $S$ is an infinite set and $x \in S$, then $S - \{x\} \sim S$. 
 \end{tcolorbox}
 $$ $$
-
+By the previous exercise $4$ we know that every infinite set contains  a countably infinite set. So, as $S - \{x\}$ and  $S$ are infinite sets they will both contain a countably infinite set. \\
+Let's denote $C$ and $C^{'}$ these sets for $S$ and $S-\{x\}$ respectively. This means that we can express $S$ as $S=S^{'}\cup C$, where $S^{'}= S-C$. Also, we can express $S-\{x\}$ as $S-\{x\}=S^{"}\cup C^{'}$, where $S^{"}= (S- \{x\})-C^{'}$.\\
+Notice that nor $S^{"}$ nor $C^{'}$ can contain $x$. On the other hand or $S^{'}$ or $C$ will contain $x$. We know that $C$ is countably infinite. If $x\in S^{'}$ we can 'extract' $x$ out of $S^{'}$ and make it an element of $C$. $C$ will still be infinite and countable. Hence, $S^{'}$ will be $S^{"}$. Doing so, we get the following expressions
+\begin{align*}
+\left\{\begin{array}{lll}
+S= S^{"}\cup C&\text{ with }& S^{"}\cap C=\emptyset\\
+S-\{x\}= S^{"}\cup C^{'}&\text{ with }& S^{"}\cap C^{'}=\emptyset\\
+\end{array}\right.
+\end{align*} 
+Obviously, $S^{"}\sim S^{"}$ (the identity map is a bijection).\\
+By exercise $3$ of this section we know that if $A \cap C = B\cap D=\emptyset$ and further that $A\sim  B$ and $C\sim  D$, that we have  $(A \cup C) \sim (B\cup  D)$.\\
+So, provided that $C\sim C^{'}$ we can apply this last theorem and would indeed get that $S-\{x\}\sim S$.\\
+Question is $C\sim C^{'}$?\\
+The answer is yes by applying again theorem $\mathbf{26.8}$ noting that we can write $C=\bigcup\{\{x\}, C^{'}\}$. As both $\{x\}$ and $C^{'}$ are countable and the collection $\{\{x\}, C^{'}\}$ is countable, $C$ will also be countable and thus we can find a bijection between $C$ and $C^{'}$.\\
+Conclusion: $S - \{x\} \sim S$
 $$\blacklozenge$$
-
-\subsection{}
+\newpage
+\subsection{$\dagger$}
 \begin{tcolorbox}
 Suppose $S$ is an uncountable set and $C$ is a countable set. Show that $S - C\sim S$. 
 \end{tcolorbox}
 $$ $$
+The proof is analogue to the previous problem with some additional twists.\\
+First, note that $S$ is necessarily infinite as it is non countable. Also, $S - C$ will be an infinite uncountable set (this is a consequence of the theorem stated in exercise $2$ of this section) . \\
+As $S - C$ and  $S$ are infinite sets they will both contain a countably infinite set. \\
+Let's denote $C^*$ and $C^{'}$ these sets for $S$ and $S-C$ respectively. This means that we can express $S$ as $S=S^{'}\cup C^*$, where $S^{'}= S-C^*$. Also, we can express $S-C$ as $S-C=S^{"}\cup C^{'}$, where $S^{"}= (S- C)-C^{'}$.\\
+We investigate $3$ possible cases:\\\\
+i) $C \subset  C^{'}$\\\\\\\\\\\\\\\\
+ii) $C \supset  C^{'}$\\\\\\\\\\\\\\\\
+iii) $C \cap  C^{'}=\emptyset$\\\\\\\\\\\\\\\\
+
 
 $$\blacklozenge$$
 

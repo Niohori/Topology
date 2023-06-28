@@ -2825,17 +2825,39 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Suppose $S$ is an uncountable set and $C$ is a countable set. Show that $S - C\sim S$. 
 \end{tcolorbox}
-$$ $$
+
 The proof is analogue to the previous problem with some additional twists.\\
 First, note that $S$ is necessarily infinite as it is non countable. Also, $S - C$ will be an infinite uncountable set (this is a consequence of the theorem stated in exercise $2$ of this section) . \\
 As $S - C$ and  $S$ are infinite sets they will both contain a countably infinite set. \\
 Let's denote $C^*$ and $C^{'}$ these sets for $S$ and $S-C$ respectively. This means that we can express $S$ as $S=S^{'}\cup C^*$, where $S^{'}= S-C^*$. Also, we can express $S-C$ as $S-C=S^{"}\cup C^{'}$, where $S^{"}= (S- C)-C^{'}$.\\
-We investigate $3$ possible cases:\\\\
-i) $C \subset  C^{'}$\\\\\\\\\\\\\\\\
-ii) $C \supset  C^{'}$\\\\\\\\\\\\\\\\
-iii) $C \cap  C^{'}=\emptyset$\\\\\\\\\\\\\\\\
+We investigate $4$ possible cases in the more general case where $C$ is countably infinite:\\
 
-
+\begin{figure}[H]%
+    \centering
+    \subfloat[$S^{*}\cap C^{}=\emptyset,\,C^{*}= C^{} $]{\input{./images/fig_1.27.6_a.tex}}
+    \subfloat[$S^{*}\cap C^{}\neq\emptyset,\,C^{*}\cap C^{}\neq\emptyset,\,C^{*}\neq C^{} $]{\input{./images/fig_1.27.6_b.tex}} \\  		                     	\subfloat[$S^{*}\cap C^{}\neq\emptyset,\,C^{*}\cap C^{}=\emptyset $]{\input{./images/fig_1.27.6_c.tex}}
+    	\subfloat[$S^{*}\cap C^{}=\emptyset,\,C^{*}\cap C^{}\neq\emptyset,\,C^{*}\neq C^{} $]{\input{./images/fig_1.27.6_d.tex}}
+%\caption{}
+\label{fig:fig_p3}
+\end{figure}
+Note first that the case $S^{*}= C^{}$ is not possible as otherwise $S= S^{*}\cup  C^{*}= C^{}\cup  C^{*}$ leading to the contradiction that $S$ would be countable.\\\\
+(a) $S^{*}\cap C^{}=\emptyset,\,C^{*}= C^{} $\\\\
+Here we have $S-C= S^{*}$ with $S= S^{*}\cup C$. So we have to prove that $$S^{*}\sim S^{*}\cup C$$
+As $S^{*}$ is infinite, it contains a countably infinite set $C^{'}$. Lets put $\hat{S}= S^{*}-C^{'}$. We have $S^{*}= \hat{S}\cup C^{'}$ and $S^{*}\cup C= (\hat{S}\cup C^{'})\cup C = \hat{S}\cup (C^{'}\cup C)$. \\
+We use the result of exercise $3$ of this section:\\
+\textit{If $A \cap E = B\cap D=\emptyset$ and further that $A\sim  B$ and $E\sim  D$, then we have  $(A \cup E) \sim (B\cup  D)$.\\}\\
+Put, $A= B=\hat{S}$, $ E= C^{'}$ and $D=  (C^{'}\cup C))$.\\
+Obviously $A\sim B$ and also we have $E\sim D$ (see diagram herunder.
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.27.6_e.tex}
+\caption{$f,\, g ,\, h$ are bijections, hence $g\circ h\circ f^{-1}$ is also a bijection.}
+\label{fig:fig_p8b}
+\end{figure}
+Hence, we get $(A \cup E) \sim (B\cup  D)$ or
+$$(\hat{S} \cup C^{'}) \sim \hat{S}\cup  (C^{'}\cup C)$$
+and thus
+$$(S-C \sim S$$
 $$\blacklozenge$$
 
 \newpage

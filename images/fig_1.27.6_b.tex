@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=0.9]
+\coordinate (S) at (-3.5,0);
+\coordinate (Sst) at (-1.,0.75);
+\coordinate (Cst) at (2,0.75);
+\coordinate (C) at(0.5,-1);
+\coordinate (Circ) at (0.5,-1);
+\draw[very thick]  (-3,2) rectangle (3,-2);
+\draw  (1,2) rectangle (3,-2);
+\draw [very thick,pattern=north west lines, pattern color=gray!50] (-1.5,0) rectangle (2.5,-2);
+\fill[fill=white](Circ) circle (0.4);
+
+\node at (S) {$S^{}$};
+\node at (Sst) {$S^{*}$};
+\node at (Cst) {$C^{*}$};
+\node at (C) {$C$};
+
+
+
+\draw [very thick,pattern=north east lines, pattern color=gray!50] (-2,0) rectangle (-0,-1);
+\coordinate (Cacc) at(-1.,-0.5);
+\coordinate (Circacc) at (-1.,-0.5);
+\fill[fill=white](Circacc) circle (0.4);
+\node at (Cacc) {$C^{'}$};
+\end{tikzpicture}

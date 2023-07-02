@@ -2394,7 +2394,21 @@ The text in italic is a little bit confusing for me and would restate the defini
 $\mathbf{23.6.}$ \textbf{Definition. Least upper bound and greatest lower bound. }\\
 Let $(S,\leq)$ be a partially ordered set. Suppose that $A$ is a subset of $S$ and $A$ has an upper bound in $S$. \textbf{If the set $P$ of upper bounds of $A$} has a least element $l$, then \textbf{$l\in P$} is called the least upper bound of $A\, (l.u.b.(A))$. If $A$ has a lower bound and \textbf{the set $P$ of lower bounds} of $A$ has a greatest element $g$, then $\mathbf{g\in P}$ is called the greatest lower bound of $A\, (g.l.b. (A))$. \\
 Note that $l\in P$ or $g\in P$ are not necessarily an element of $A$.\\\\
-$\bullet\quad$\textbf{Maximal and minimal elements} of a set can be seen as $g.u.b.(S)$ / $l.u.b.(S)$ being elements of $S$.
+$\bullet\quad$\textbf{Maximal and minimal elements vs. Greatest and Least elements} \\
+The distinction between those two elements are quite confusing at first sight. Herunder is a clarification borrowed from a Reddit feed.\\\\
+\textit{The notion that's important in understanding the distinction is that of a comparability, and more importantly, a chain. Two elements, x and y, or a set ordered by $\leq$ (where $\leq$ is just some arbitrary ordering) are said to be comparable if $x \leq y$ or $y \leq x$. A chain is a subset of A such that any two elements in the chain are comparable.}\\
+
+\textit{The usual relation $\leq$ in $\Breal$ is what's called a linear ordering, meaning every subset is a chain. However, the relation $|$ (where $x|y$ means $x$ divides $y$) is not a linear ordering, so it allows for the existence of sets that are not chains.}\\
+
+\textit{Now a maximal element b in a subset $B$ of an ordered set $A$ is one such that there is no $x$ in $B$ such that $b\leq x$ and $x$ is distinct from b. A greatest element c is one such that, if $x$ is in $B$, $\leq c$.}\\
+
+\textit{The important part: The greatest and maximal elements in a set are only ever distinct if the set is not a chain. Consider the set $\{2, 4, 8, 16, 3, 9, 27\}$ ordered under the relation $|$. Then it has two maximal elements, $16$ and $27$, and no greatest element. However, the subsets $\{2, 4, 8, 16\}$ and $\{3, 9, 27\}$ are both chains, so the maximal elements $16$ and $27$ are both greatest elements, too.}\\
+
+\textit{Another important relation where it's easy to find subsets which are not chains is the subset relation: say, a relation $R$ on $\mathscr{P}(\mathbb{N})$ such that $ARB$ if $A$ is a subset of $B$. Then $\{\{1\},\{2\},\{1,2\}\}$ has the greatest element $\{1,2\}$, but $\{\{2\},\{2,3\},\{4\},\{4,5\}\}$ has two maximal elements, $\{2,3\}$ and $\{4,5\}$, but no greatest element.}\\\\
+
+\textit{The notion of a maximal [element] is weaker than that of the greatest element and least element (which are also known, respectively, as maximum and minimum); indeed a partially ordered set may have multiple maximal and minimal elements. As an example, in the collection
+$$S = \{\{d, o\}, \{d, o, g\}, \{g, o, a, d\}, \{o, a, f\}\}$$
+ordered by containment, the element $\{d, o\}$ is minimal, the element $\{g, o, a, d\}$ is maximal, the element $\{d, o, g\}$ is neither, and the element $\{o, a, f\}$ is both minimal and maximal. By contrast, neither a maximum nor a minimum exists for $S$.}
 \subsection{}
 \begin{tcolorbox}
 Consider the system $(\Breal, \leq )$ of the real line $\Breal$ together with the usual ordering $\leq $.\\
@@ -2836,7 +2850,7 @@ Be $\hat{S}= S-C-C^{*}$. We can express $S$ as $S=\hat{S}\cup C^{'}\cup C^{*}$, 
     \centering
     \subfloat[$\hat{S}= S-C-C^{*}$]{\input{./images/fig_1.27.6_0.tex}}
     \subfloat[$f,\, g ,\, h$ are bijections, hence \\ $g\circ h\circ f^{-1}$ is also a bijection.]{\input{./images/fig_1.27.6_e.tex}}
-%\caption{}
+\caption{$S - C\sim S$ with $S$ an uncountable set and $C$ a countable set}
 \label{fig:fig_p3}
 \end{figure}
 We use the result of exercise $3$ of this section:\\
@@ -2872,7 +2886,12 @@ Let $p$ and $q,\, r,$ and $s$ be statements. Consider the following compound sta
 5. None of the previous choices is correct, but a correct one is  $\dots$
 \end{tcolorbox}
 $$ $$
-
+\begin{align*}
+&(p \wedge q)\implies (r \vee s)\\
+\Leftrightarrow\quad &\lnot (r \vee s)\implies \lnot (p \wedge q)\\
+\Leftrightarrow\quad &(\lnot r \wedge \lnot s)\implies (\lnot p \vee \lnot q)\\
+\end{align*}
+Hence, $(1)$ is the correct answer.
 $$\blacklozenge$$
 
 
@@ -2885,7 +2904,8 @@ $$\blacklozenge$$
 Let $A$ and $B$ and $C$ be nonempty sets. Either prove the following statement or give a counterexample. $$(A\times  B) \cap (C\times D) = (A\cap C) \times (B \cap D)$$.
 \end{tcolorbox}
 $$ $$
-
+Be $(a,b)\in A\times B$ and $(c,d)\in C\times D$. Then $(A\times  B) \cap (C\times D)\neq \emptyset$ implies that there exist $(a,b)$ and $(c,d)$ such that $a=c$ and $b=d$. As in that case $a$ and $c\in A\cap C$ and  $b$ and $d\in B\cap D$ implies that $(a,c)$ and $(b,d) \in (A\cap C) \times (B \cap D)$ and thus 
+$$(A\times  B) \cap (C\times D) = (A\cap C) \times (B \cap D)$$
 $$\blacklozenge$$
 
 
@@ -2905,6 +2925,14 @@ Suppose that $R$ is a relation defined on the set of real numbers  as follows: $
 Justify your answers.
 \end{tcolorbox}
 $$ $$
+We check the three required properties: Associative, reflexive and symmetric.\\\\
+i) associative : $aRb$ and $bRc$ implies $aRc$.\\
+Be $x-y=k$ and $y-z=m$. Adding those two expressions gives $x-z=m+k$.\\
+The relation is associative.\\\\
+ii) reflexive  : means that $aRa$ is defined.\\
+Obviously $x-x=0$ with $0\in \mathbb{Z}$ and thus the relation is reflexive.\\\\
+iii)symmetric   : $aRb$  implies $bRa$ is also defined.\\
+Be$x-y=k$. Obviously $-x+y=-k$ or $y-x=k^{'}$ with $k^{'}=-k \in \mathbb{Z}$ and thus the relation is symmetric.
 
 $$\blacklozenge$$
 \subsubsection{}
@@ -2918,51 +2946,57 @@ Suppose that $R$  is an equivalence relation defined in a set $A$. Which of the 
 (f) $R= R^{-1}$
 \end{tcolorbox}
 $$ $$
-
+$(a)$ is necessarily true as by definition of an equivalence relation (see page $39$), $xRx$ is defined for all $x\in A$.\\\\
+$(b)$ is true by the definition of a relation.\\\\
+$(c)$ is true as an equivalence relation must be reflexive.\\\\
+$(d)$ Suppose $R[a]\cap R[b]\neq \emptyset$ with an element $y\in R[a]\cap R[b]$. This means that we have $(a,y)\in R$ and $(b,y)\in R$ for $a\neq b$. We know that $R$ is symmetric, hence $(y,b)\in R$ and by the transitivity we have $aRb$. Hence, $b\in R[a]$. Also, by the symmetry we have $a\in R[b]$. By the reflexivity of $R$ we have also $a\in R[a]$ and $b\in R[b]$. Thus, $\{a,\, b\}\in R[a]$ and $\{a,\, b\}\in R[b]$ and finally $R[a]\cap R[b]\neq \emptyset$. This reasoning suggest the following counterexample to show that (d) is not necessarily true:\\\\
+Be $A= \{a,\,b,\, c\}$ and $R = \{(a,a),\, (b,b) ,\, (c,c),\,(a,b),\, (b,a) ,\, (a,c),\,(c,a),\, (b,c) ,\, (c,b)\}$.We have \\
+$R[a]=\{a,\ b,\, c\}$ and $R[b]=\{a,\ b,\, c\}$ giving $R[a]\cap R[b]=\{a,\ b,\, c\}\neq \emptyset$.\\\\
+$(e)$ 
+We know by assumption $\exists y\in R[a]\cap R[b]$. So, $(a,y)\in R$ and $(b,y)\in R$. By symmetry and transitivity we have $(a,b)\in R$. Suppose $\exists y^{'}\in R[a]\Et y^{'}\not\in R[b]$. This means that $(a,y^{'})\in R$ and by symmetry $(y^{'},a)\in R$. \\
+This combined with   $(a,b)\in R$ gives by transitivity $(y^{'},b)\in R$ and by symmetry $(b, y^{'})\in R$. Hence $y^{'}\in R[b]$. We get a contradiction and conclude $\not \exists y^{'}\in R[a]\Et y^{'}\not\in R[b]$ and get 
+$$R[a]=R[b]$$\\\\
+(f) By symmetry of an equivalence relation we have $(a,b) \in R$ and $(b,a)\in R$ which is the definition of the inverse of a relation. 
 $$\blacklozenge$$
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{4}}
 \subsection{}
 Let $R$ be the relation defined as follows: 
-$$R = \{(x, y):x \text{ is real}, y \text{ is real}, and |x - y| =5\} $$
+$$R = \{(x, y):x \text{ is real}, y \text{ is real}, \Et |x - y| =5\} $$
 
 \subsubsection{}
 \begin{tcolorbox}
 Is $R$ a symmetric relation? 
 \end{tcolorbox}
-$$ $$
- 
+ Obviously as $|x-y|=|y-x|$.
 $$\blacklozenge$$
 \subsubsection{}
 \begin{tcolorbox}
 
 2. Is $R$ a transitive relation? 
 \end{tcolorbox}
-$$ $$
- 
-$$\blacklozenge$$\\
+ No, take as counterexample $(2,-3)\in R$ and $(-3,2)\in R$, we would get $(2,2)\not\in R$.
+$$\blacklozenge$$
 \subsubsection{}
 \begin{tcolorbox}
 Determine $R[2]$. 
 \end{tcolorbox}
-$$ $$
- 
+ $R[2]=\{-3,\, 7\}$
 $$\blacklozenge$$
 \subsubsection{}
 \begin{tcolorbox}
 Is $R$ a function? 
 \end{tcolorbox}
-$$ $$
- 
+
+ No, as for $x=0$ we have $0R5$ and $0R(-5)$.
 $$\blacklozenge$$
 \subsubsection{}
 \begin{tcolorbox}
 Find the domain of $R^{-1}$
 \end{tcolorbox}
-$$ $$
- 
+$Dom\, R^{-1}= \Breal$. 
 $$\blacklozenge$$
-
+\newpage
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{5}}
 \subsection{}
@@ -2972,8 +3006,10 @@ Let $f: X\rightarrow Y$ be a bijection. Let $A$ and $B$ be subsets of $X$.
 \begin{tcolorbox}
 Prove that $f[A \cap B] = f[A] \cap  f[B]$.
 \end{tcolorbox}
-$$ $$
+Be $x\in A\cap B$. Then, as $f$ is a bijection, hence "onto", so there $\exists y\in Y: y=f(x)$. Hence $y=f(x)\in f[A] \cap  f[B]$. Hence we have $f[A \cap B] \subset f[A] \cap  f[B]$\\\\
+Suppose now we have $y\in f[A]\Et f[B]$. This means that we must have an $x^{'}\in A$ and a $x^{"}\in B$, for which we have $y=f(x^{'})=f(x^{"})$. Could it be possible that $ x^{'}\neq x^{"}$? The answer is no, as $f$ is surjective, so once an element of $A$ is mapped to a certain element of $Y$ no other element of $X\supset A,\, B$ will be mapped to that element (the same reasoning yields  for an element in $B$). So,$ x^{'}= x^{"}$, which means $x^{'}\in f[A\cap B]$ and thus $f[A \cap B] \supset f[A] \cap  f[B]$\\\\
 
+Ans conclude $f[A \cap B] = f[A] \cap  f[B]$.
 $$\blacklozenge$$
 
 \subsubsection{}
@@ -2981,15 +3017,16 @@ $$\blacklozenge$$
 Give a counterexample to show that the preceding is not true if $f$ is not a one-to-one function but simply a function. 
 \end{tcolorbox}
 $$ $$
-
+Take $f: \Breal\rightarrow \Breal: y=x^2$ and $A=[-2,0]$ and $B= [0,2]$. We get $f[A \cap B] = \{f(0)\}=\{0\}$ and  $f[A]= f[B]=[0,4]$ and get $f[A] \cap  f[B]=[0,4]$.
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Explain what step in your proof of the first part breaks down if the hypothesis does not say "one-to-one." 
 \end{tcolorbox}
-$$ $$
-
+See $1.29.V.1$ second part where we treat the case $f[A \cap B] \supset f[A] \cap  f[B]$.
+$$\blacklozenge$$
+\newpage
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{6}}
 \subsection{}
@@ -2998,26 +3035,27 @@ Consider the map $f:\Breal\rightarrow \Breal$ given by the following: $f(x)=x(x 
 \begin{tcolorbox}
 Find the range of $f$.
 \end{tcolorbox}
-$$ $$
-
+Using calculus, the extrema are determined by $f^{'}= 2(x-1)=0$, or $x=1$ and thus $y_{\text{min}}=-1$ and get 
+$$\text{Range } f=[-1,+\infty)$$
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Determine the set $f^{-1}\left[\{y:-1\leq y\leq 0\}\right]$. 
 \end{tcolorbox}
-$$ $$
 
+We know from $1.29.VI.1$ that for $y=-1$ we have $x=1$. And for $y= 0$ we have $x(x-2)=0$ giving $f^{-1}[0]=\{0,\, 2\}$. Hence 
+$$f^{-1}\left[\{y:-1\leq y\leq 0\}\right]= [0,2]$$
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox} 
 Find the largest number $z$ such that $f$ restricted to the set $\{x :0\leq x \leq z\}$ is a one-to-one function. 
 \end{tcolorbox}
-$$ $$
+Using calculus again, the slope of $f$ is $f^{'}= 2(x-1)$. At $x=0$ the slope is negative but the sign of the slope changes at $x=1$, hence $f$ is monotone decreasing between $[0,\,1]$ and we conclude that $z$ must be $1$.
 
 $$\blacklozenge$$
-
+\newpage
 
 
 
@@ -3027,32 +3065,37 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Give a precise statement of the principle of finite induction.  
 \end{tcolorbox}
-$$ $$
-
+Suppose that $M$ is a subset of $\mathbb{P}$ such that $1 \in M$, and $h \in M$ implies that $h+1\in M$. Then $M = \mathbb{P}$.
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Give a precise statement of the well-ordering principle for integers. 
 \end{tcolorbox}
-$$ $$
-
+Let $K$ be a nonempty set of positive integers. Then there is a first (smallest) element in $K$. 
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Prove that the well-ordering principle implies the principle of finite induction. 
 \end{tcolorbox}
-$$ $$
-
+Let $M$ be a set of positive integers such that $1\in M$, and $h\in M$ implies that $h+1\in M$. We wish to show that $M = \mathbb{P}$. If $M \neq \mathbb{P}$, then $\mathbb{P}- M$ is a nonempty set of positive integers. By the well-ordering principle, there is a smallest integer $k$ in $\mathbb{P}-M$,  and thus $k-1\not\in \mathbb{P}-M$. Since $k \neq 1$, $k-1\in \mathbb{P}$ and, thus, $k-1\in M$ . However, by our assumption for the set $M$, it now follows that $k\in M$ and we have a contradiction. 
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
  Prove that $9^n-8n-1$ is divisible by $64$, if $n$ is any positive integer. 
 \end{tcolorbox}
-$$ $$
-
+We prove by induction.\\
+Take $n=1$. We have $9^1-8\times 1-1=0$ and is divisible by $64$.\\
+Suppose, for a certain $n$ we have $9^n-8n-1=64k$ with $k \in \mathbb{P}\cup \{0\}$. Then, for $n+1$ we have 
+\begin{align*}
+9^{(n+1)}-8(n+1)-1& = 9^n9-8n-8-1\\
+& = 9(9^n-8n-1)+64n\\
+& = 9\times 64 k+64n\\
+&= 64m\quad\text{ with } m=9k+n\in \mathbb{P}
+\end{align*}
+By induction, the expression is proved.
 $$\blacklozenge$$
 
 
@@ -3062,7 +3105,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Define what is meant by an infinite sequence.
 \end{tcolorbox}
-$$ $$
+A infinite sequence is a function defined on the set of the positive integers.
 
 $$\blacklozenge$$
 
@@ -3070,15 +3113,14 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Define what is meant by a subsequence of an infinite sequence.
 \end{tcolorbox}
-$$ $$
-
+Let $f:\mathbb{P}\rightarrow X$ be a sequence with functional values in a set $X$. Let $N:\mathbb{P}\rightarrow\mathbb{P}$ be a strictly increasing sequence from $\mathbb{P}$ into $\mathbb{P}$ (i.e. if $i>j$ then $N(i)> N(j)$). Then, the composition $h=f\circ N$ is said to be a subsequence of $f$.
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Define what is meant by a decomposition of a set.
 \end{tcolorbox}
-$$ $$
+If $S$ is a set, form the collection $\mathscr{K}$ with subsets of $S$ as elements but in such a way that all elements in $\mathscr{K}$ are disjoint (i.e. $\forall A\in \mathscr{K},\, B \in \mathscr{K},\, A\neq B: A\cap B=\emptyset$. Moreover if we have that $\bigcup \mathscr{K}= S$ then  $\mathscr{K}$ is a decomposition of $S$. 
 
 $$\blacklozenge$$
 
@@ -3086,17 +3128,17 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Define what is meant by a function that is one-to-one.
 \end{tcolorbox}
-$$ $$
+Synonym is \textit{injection}. This means that for a function $f:X\rightarrow Y$ if $f(x)=f(x^{'})$ then we have $x=x^{'}$.
 
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Suppose that $f:X\rightarrow Y$ is a one-to-one function, and $g: Y \rightarrow Z$ is also a one-to-one function. Prove that the composition $g \circ f$ is a one-to-one function. 
-
 \end{tcolorbox}
-$$ $$
-
+We have for, $f:X\rightarrow Y$: if $f(x)=f(x^{'})$ then we have $x=x^{'}$ and for $g:Y\rightarrow Z$: if $g(y^{})=f(y^{'})$ then we have $y=y^{'}$.\\
+Suppose for $h:X\rightarrow Z: h=g\circ f$ we could have $x,\, x^{'}\in X$ such that  $h(x)=h(x^{'})$  with $x\neq x^{'}$.
+This means $g(f(x))=g(f(x^{'}))$ with $x\neq x^{'}$. But $f$ is an injection so $f(x)\neq f(x^{'})$. Moreover $g$ is also an injection. This means  $g(f(x))\neq g(f(x^{'}))$ as  $f(x)\neq f(x^{'})$. So we can't have $h(x)=h(x^{'})$ with $x\neq x^{'}$ and thus $$(g\circ f)(x)=(g\circ f)(x^{'})\implies x=x^{'}$$.
 $$\blacklozenge$$
 
 
@@ -3105,9 +3147,10 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Is the following statement necessarily true? Justify your answer.\\ If $R$ is a relation and $R^{-1} \subset R$, then $R$ is a symmetric relation. 
 \end{tcolorbox}
-$$ $$
+Yes as, if $R^{-1}$ is a subset of $R$  we must  have that $(a,\, b) \in R$ implies that  $(b,\, a) \in R^{-1}$ and thus $(b,\, a) \in R^{}$ as $R^{-1} \subset R$. Conclusion  $(a,\, b)$ and  $(b,\, a)$ are elements of $R^{}$ and thus $R$ is a symmetric relation. 
 
 $$\blacklozenge$$
+\newpage
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{10}}
 \subsection{}
@@ -3115,7 +3158,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Define what is meant by a partially ordered set.
 \end{tcolorbox}
-$$ $$
+Be $S$ a set and define a relation $\leq$ from $S$ into $S$, such that this relation is transitive, reflexive but anti-symmetric i.e. $\forall a,\, b\in S: a\leq b\Et b\leq a\implies a=b$. Note that it is not necessary that the relation is defined for all $b\in S$. This means that it is possible that for some elements $x\in S$, we can't find an element $a\in S$ such that $a\leq x$. 
 
 $$\blacklozenge$$
 
@@ -3123,7 +3166,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Define what is meant by a totally ordered set.
 \end{tcolorbox}
-$$ $$
+This means that any arbitrary element $x$ in $S$, we will find an element $a\in S$ such that $a\leq x$. 
 
 $$\blacklozenge$$
 
@@ -3131,24 +3174,39 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Give an example of a partially ordered set that is not totally ordered.  
 \end{tcolorbox}
-$$ $$
 
+See Exercise $\mathbf{1.23.2(a)}$.
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Give an example of a partially ordered set that has a maximal element but no greatest element. 
 \end{tcolorbox}
-$$ $$
-
+Consider the poset $S=(\mathbb{C},\leq)$ with $\leq$ the usual ordering in the real numbers. Then
+$$A\subset S=\{1,i, 2,2i, 3,3i\}$$
+has no Greatest element but has $3$ as Maximal element.
+Indeed, recall the definitions.\\\\
+$g$ is said to be the greatest element of $S$ provided that 
+$$g\in A\Et x\leq g,\, \forall x\in A$$
+The important thing here is the "$\forall x\in A$". Obviously we can not compare let's say $3$ with $3i$ with the given ordering relation, so can not find a $g\in A$.\\ 
+On the other hand from the definition of a Maximal element $m$ in $S$:
+$$\forall s\in S: m\leq s\implies s=m$$
+This means that if we  can compare certain elements in $S$ then we can perhaps find a Maximal element. This is the case in the example given as we can say $$1\leq 1,\,1\leq 2,\,1\leq 3,\,2\leq 2,\,2\leq 3,\,3\leq 3$$ 
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Prove that a set has at most one greatest lower bound. 
 \end{tcolorbox}
-$$ $$
-
+The ordering relation is anti-symmetric. So, from the definition of a poset $(S,\leq)$:\\
+\textit{Suppose that a subset $A$ of $S$ has an lower bound in $S$. If the set of lower bounds of $S$ has a greatest element $g$, then $g$ is called the greatest lower bound of $A$ (g.l.b.$(A)$).}\\
+Suppose that $L=\{l_1,\, l_1,\, \dots \}$ is the set of lower bounds of $S$. Be $l_g$ a greatest lower bound. That means that $l_g\in L\Et x\leq l_g\forall x\in L$. Suppose now that there is another greatest lower bound $l^{'}_g$. Then we would have
+$$l^{'}_g\in L\Et x\leq l^{'}_g\forall x\in L$$ 
+As this must be true for all $x\in L$ and $l_g\in L$ we would have $$l_g\leq l^{'}_g$$
+But as $l_g$ was supposed to be the greatest lower bound and $l^{'}_g\in L$ we would also have 
+$$l^{'}_g\leq l^{}_g$$
+As the ordering relation is anti-symmetric we must conclude 
+$$l^{'}_g= l^{}_g$$
 $$\blacklozenge$$
 
 

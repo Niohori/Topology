@@ -1,0 +1,101 @@
+\begin{tikzpicture}[scale = 0.8]
+
+\draw[thick]  (-2,8) ellipse (1.5 and 4);
+\draw[thick]  (-8.5,8) ellipse (1.5075 and 4.0077);
+\node (v1) at (-8.5,10) {};
+\node (v3) at (-8,8.5) {};
+\node (v7) at (-8,7) {};
+\node (v5) at (-8,5) {};
+\node (v2) at (-2,10) {};
+\node (v4) at (-2.5,8) {};
+\node (v6) at (-2,5.5) {};
+\draw(v1) circle (2pt);
+\draw(v2) circle (2pt);
+\draw(v3) circle (2pt);
+\draw(v4) circle (2pt);
+\draw(v5) circle (2pt);
+\draw(v6) circle (2pt);
+\draw(v7) circle (2pt);
+\draw[very thick,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]    plot[smooth, tension=.7] coordinates {(v1) (-6,11) (v2)};
+\draw[very thick,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]    plot[smooth, tension=.7] coordinates {(v3) (-5.5,9) (v4)};
+\draw[very thick,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]     plot[smooth, tension=.7] coordinates {(-8,5) (-5.5,6) (v6)};
+\draw[very thick,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]   plot[smooth, tension=.7] coordinates {(-8,7) (-5.5,8) (v4)};
+\node at (-8.5,12.5) {$X$};
+\node at (-1.95,12.5) {$Y$};
+
+
+\draw[thick]  (-5.5,0) ellipse (2 and 4);
+
+\coordinate (n1) at (-5.5,-3) {};
+\coordinate (n2) at (-5,-1.5) {};
+\coordinate  (n3) at (-6.5,1) {};
+\coordinate  (n4) at (-4.5,2) {};
+
+\draw[very thick,dashdotted,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
+    ]     plot[smooth, tension=.7] coordinates {(v1) (-11,3.5) (n1)};
+\draw[very thick,dashdotted,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
+    ]      plot[smooth, tension=.7] coordinates {(v3) (-10,4) (n2)};
+\draw[very thick,dashdotted,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
+    ]       plot[smooth, tension=.7] coordinates {(v7) (-9,4)(n3)};
+\draw [very thick,dashdotted,decoration={
+    markings,
+    mark=at position 0.4 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
+    ]      plot[smooth, tension=.7] coordinates {(-8,5) (-7.5,3.5) (n4)};
+\node at (-5.5,-4.5) {$\mathbb{P}$};
+
+\node at (-6,11.5) {$f$};
+\node at (-5.5,7.5) {$f$};
+\node at (-5.5,9.5) {$f$};
+\node at (-5.5,5.5) {$f$};
+\node at (-7,3.5) {$\alpha$};
+\node at (-10.5,3.5) {$\alpha$};
+\node at (-9.5,3.5) {$\alpha$};
+\node at (-8.5,3.5) {$\alpha$};
+\draw [very thick,dashed,decoration={
+    markings,
+    mark=at position -0.32 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]      plot[smooth, tension=.7] coordinates {(v6) (-3,3) (n4)};
+\draw [very thick,dashed,decoration={
+    markings,
+    mark=at position -0.42 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]      plot[smooth, tension=.7] coordinates {(v4) (-1.5,3) (n2)};
+\draw [very thick,dashed,decoration={
+    markings,
+    mark=at position -0.4 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]      plot[smooth, tension=.7] coordinates {(v2) (-0.5,2) (n1)};
+\node at (-3,2.5) {$\beta$};
+\node at (-1.5,2.5) {$\beta$};
+\node at (-0.5,1.5) {$\beta$};
+\draw[very thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-5.1,1.9)  (-6,-1) (-6,-3) (-5,-3) (-4.5,-2) (-4,0) (-4.3,2.4) };
+\node at (-4.5,1) {$\beta[Y]$};
+\draw[dotted,thick]  plot[smooth cycle, tension=.7] coordinates {(-6.7,1.3) (-6.1,1.1) (-5.7,0.4) (-4.8,-0.9) (-4.7,-1.8) (-5.5,-1.7) (-6.7,0.2)};
+\node at (-2.6,-4.1) {$\alpha^{-1}[f^{-1}[y]]$};
+
+\draw[dotted, thick,-]  plot[smooth, tension=.7] coordinates {(-3.6,-4) (-4.4,-3.7)(-5.2,-1.9)};
+\fill[fill = white](n1) circle (5pt);
+\fill[fill = white](n2) circle (5pt);
+\fill[fill = white](n3) circle (5pt);
+\fill[fill = white](n4) circle (5pt);
+\node at (n1) {$1$};
+\node at (n2) {$2$};
+\node at (n3) {$3$};
+\node at (n4) {$4$};
+\end{tikzpicture}

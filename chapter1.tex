@@ -3208,7 +3208,7 @@ $$l^{'}_g\leq l^{}_g$$
 As the ordering relation is anti-symmetric we must conclude 
 $$l^{'}_g= l^{}_g$$
 $$\blacklozenge$$
-
+\newpage
 
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{11}}
@@ -3218,15 +3218,36 @@ $$\blacklozenge$$
 Use the axiom of choice to give an alternate proof of Theorem $\mathbf{26.6}$. 
 
 \end{tcolorbox}
-$$ $$
-
+Let's recall the theorem and it's proof:\\\\
+$\mathbf{26.6.}$ Theorem. If $f: X \rightarrow Y$ is a surjection and $X$ is countable, then $Y$ is countable. \\
+\textbf{PROOF.} Let $\mathbb{P}^*$ be $\mathbb{P}_n$, or $\mathbb{P}$ according to whether $X$ is finite with cardinality $n\ge 1$ or is infinite. Then there exists a bijection $\alpha: \mathbb{P}^* \rightarrow X$. Using the well-ordering principle for positive integers, define $\beta:Y\rightarrow \mathbb{P}^*$ by $\beta(y) = $ least element of $\alpha^{-1}\left [f^{-1}[y]\right]$. The mapping $\beta:Y\rightarrow \mathbb{P}^*$  is an injection (one-to-one) and $\beta[Y]$ is a countable set by $\mathbf{26.4.}$.  The fact that $\beta: Y\rightarrow \beta[Y]$ is a bijection shows, by $\mathbf{ 26.5.}$, that $Y$ is countable. 
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.29.X.1.tex}
+\caption{Scheme of proof that if $f:X\rightarrow Y$ is a surjection and $X$ is countable, then $Y$ is countable.}
+\label{fig:fig_p8b}
+\end{figure}
+$$\lozenge$$
+The axiom of choice as stated in the book is:\\\\
+\textit{Suppose $\mathscr{K}$ is a nonempty collection of nonempty sets. Then there is a function $s$ defined on $\mathscr{K}$ such that $s(K)\in K$ for each $K\in \mathscr{K}$}.\\\\
+The alternate proof is very similar of course with the proof given above. The only thing to change is the argument\\\\
+\textit{Using the well-ordering principle for positive integers, define $\beta:Y\rightarrow \mathbb{P}^*$ by $\beta(y) = $ least element of $\alpha^{-1}\left [f^{-1}[y]\right]$}. 
+\\\\
+We now change the definition of $\beta:Y\rightarrow \mathbb{P}^{*}$ to $\beta = \alpha^{-1 }\circ f^{-1}$. For a given $y\in Y$, $\beta[y] = \alpha^{-1}\left [f^{-1}[y]\right]$ will be a set consisting of $n$ elements with $n\in \mathbb{P}$ (as $f$ is a surjection). Obviously $\beta[y]$ is countable.  We now construct the collection of sets $\mathscr{K}=\{\beta[y], \, y\in Y\}$. We now apply the axiom of choice with the "choice function" $s$, and form the set $S=\{s(K)\in K:K\in \mathscr{K}\}$. As $S\subset \mathbb{P}$ and as $ \mathbb{P}$ is countable, $S$ is also countable. Hence with every element $y\in Y$ we can associate one and only one element of $S$ and thus $Y$ is countable.
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
 Let $\mathscr{S}$ be the collection of all finite-sequences of integers. Is $\mathscr{S}$ a countable set? 
 \end{tcolorbox}
-$$ $$
+We first have to check whether or not $\mathscr{S}$ is infinite or infinite set, as if it is finite, then by definition, it will be countable.\\\\
+\textbf{Lemma: $\mathscr{S}$ is an infinite set}.\\\\
+The elements $S_i$  \footnote{The index is in fact an abuse of notation, as this would suggest that $\mathscr{S}$ is countable, which still has to be proven. The index is to be considered here as a place holder for an identification between sets}   of $\mathscr{S}$ are all finite sequences. \\
+Be the set $S=\bigcup\mathscr{S}$. We will "expand" $\mathscr{S}$ recursively, with the following two procedure.\\
+$\bullet$ If $S$ is not in $\mathscr{S}$ then we "expand" $\mathscr{S}$ and form $\mathscr{S}\cup S$. \\
+$\bullet$ If $S$ is  in $\mathscr{S}$, we know that $S$ is a finite set of integers, hence will contain a greatest element $g$. We "expand" $S$ and form $S\cup \{g+1\}$. We "expand" again $\mathscr{S}$ and form $\mathscr{S}\cup S$.\\
+We can perform this procedure indefinitely and conclude that $\mathscr{S}$ is an infinite set.
+$$\lozenge$$
 
 $$\blacklozenge$$
 

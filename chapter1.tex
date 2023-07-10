@@ -2647,7 +2647,7 @@ $$ $$
  Recall that $\sim$ means that there exists a bijection $f$ between the two involved sets.\\\\
  i) Suppose $A\sim A$, obviously we can take the identity map as trivial bijection which can be expressed as $(a,a),\,\forall a\in A $.// So, the first prerequisite for an equivalence relation is fulfilled.\\\\
  ii) Suppose $A\sim B$. This means that for every element $a$ in $A$ there exists an element $b$ in  $B$  such that $(a,b)$ exists but as $f$ is a bijection, the map $f^{-1}$ exists which maps $b$ again to $a$. Hence, $(b,a)$ is a valid set and exists.\\ So, the second prerequisite for an equivalence relation is fulfilled.\\\\
- iii) Suppose $A\sim B,\, B\sim C$ this means that there exist bijection $f$ and $g$ such that $\forall a\in A,\, \exists ! b\in B: b=f(a)$ and $\forall b\in B,\, \exists ! c\in BC: c=g(b)$, hence, $(g\circ f )(a)=c$. \\ So, the third prerequisite for an equivalence relation is fulfilled.\\\\
+ iii) Suppose $A\sim B,\, B\sim C$ this means that there exist bijection $f$ and $g$ such that $\forall a\in A,\, \exists ! b\in B: b=f(a)$ and $\forall b\in B,\, \exists ! c\in C: c=g(b)$, hence, $(g\circ f )(a)=c$. \\ So, the third prerequisite for an equivalence relation is fulfilled.\\\\
  As all prerequisites are fulfilled we are able to define a equivalence relation between some sets in $\mathscr{K}$.
 $$\blacklozenge$$
 
@@ -3257,9 +3257,33 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Let $\mathscr{F}$ be the set of all functions that map the closed interval $[0, 1]$ into $[0, 1]$. Prove that $[0,1] < \mathscr{F}$ (Hint: Imitate somewhat the proof of $\mathbf{27.1}$.) 
 \end{tcolorbox}
-$$ $$
+As preliminary, we first note that $\mathscr{F}$ "is onto " $\RZO$ (e.g. the identity function is an element of $\mathscr{F}$).\\\\
+\textbf{We first prove that $\exists \mathscr{K}\subset \mathscr{F}:\RZO\sim\mathscr{F}$}.\\\\
+
+
+$\RZO\sim\mathscr{K}$ means that there exists a bijection between these two sets. \\
+\begin{figure}[H]%
+    \centering
+    \input{./images/fig_1.29.XII.a.tex}
+\caption{relations from $\mathscr{F}\rightarrow\RZO $.}
+\label{fig:fig_p8b}
+\end{figure}
+For each $x\in \RZO$ we can associate (see figure above) the subset $\mathscr{F}_x\subset \mathscr{F}$ such that $$\mathscr{F}_x=\{f\in \mathscr{F}: \exists a \in \RZO, x= f(a)\in\RZO\}$$
+Obviously, with every $x\in \RZO$ there is only one $\mathscr{F}_x$ associated and conclude that there is a bijection between $\RZO$ and the collection of sets $\{\mathscr{F}_x: x\in\RZO\}$.\\
+Suppose that indeed, $\RZO\sim\mathscr{K}$, then for every $x\in\RZO$ there must exist a unique $f^*_x\in\mathscr{F}_x $ which is not an element of any element in $\{\mathscr{F}_y: y\in\RZO-\{x\}\}$ (recall that an element $f_x\in\mathscr{F}_x $ could also be in another set $\mathscr{F}_y $ as we could have $x= f_x(a)= f_y(b)$.\\
+Consider the associated (to $\mathscr{F}_x$) set , $\mathscr{F}^x=\bigcup \{\mathscr{F}_y: y\in\RZO-\{x\}\}$. Then we have 
+$\mathscr{F}_x-\mathscr{F}x^=\{f_x^*\}$, where $f_x^*$ is the constant function $f_x^*: \mathbb{R}_{[0,1]} \rightarrow \mathbb{R}_{[0,1]}$ defined as $f_x^*(a)=x,\forall a\in \mathbb{R}_{[0,1]}$ (obviously, there is only one and unique constant function\footnote{Be $f[\mathbb{R}_{[0,1]}]= \{x\}$ and $f^{'}[\mathbb{R}_{[0,1]}]= \{x\}$, then, $f=f^{'}$} for a given $x$). So for every $x\in \mathbb{R}_{[0,1]}$ we can associate a unique function $f_x^*: \mathbb{R}_{[0,1]} \rightarrow \mathbb{R}_{[0,1]}$, hence we have $\mathscr{K}= \{f_x^*; x\in \mathbb{R}_{[0,1]}\}\subset \mathscr{F}$ with a bijection between $\mathbb{R}_{[0,1]}$ and $\mathscr{K}$ and thus $\mathbb{R}_{[0,1]}\sim\mathscr{K}$.\\\\
+ We still have to prove that there is no bijection between $\mathbb{R}_{[0,1]}$ and $\mathscr{F}$ (i.e $\mathbb{R}_{[0,1]}\not \sim \mathscr{F}$).\\\\
+ Consider the subset $\mathscr{F}_{\{0,1\}}\subset \mathscr{F}$ such that $f[\mathbb{R}_{[0,1]}]=\{0,1\}$ for $f\in \mathscr{F}_{\{0,1\}}$.\\
+ The functions  $f$ (represented as a collection of tuples) will have a form of $\{(0,0),\dots (x,1)\dots (y,0)\dots (z,1)\dots\}$, $\{(0,1),\dots (x,1)\dots (y,1)\dots (z,1)\dots\}$, $\{(0,0),\dots (x,0)\dots (y,0)\dots (z,0)\dots\}$,  etc. \\\\
+ We are now ready to apply the scheme used in $\mathbf{27.1}$. Suppose that $\mathbb{R}_{[0,1]}\sim \mathscr{F}_{\{0,1\}}$. Then, with every $f\in \mathscr{F}_{\{0,1\}}$ we can associate a unique $x\in \RZO$ as we have a bijection between $\RZO$ and $\mathscr{F}_{\{0,1\}}$. Let's denote $f_x$ the function associated with $x$. \\
+ Let's define the function $\alpha: \RZO\rightarrow \{0,\,1\}$, such that $\alpha(x) = 1-f_x(x)$. $\alpha(x)\in \mathscr{F}_{\{0,1\}}$ but there is no $x^{'}\in \RZO$ left, which can be mapped by the bijection,  to $\alpha(x)$. \\
+ We have a contradiction and so $\mathbb{R}_{[0,1]}\not \sim \mathscr{F}_{\{0,1\}}$ and as $\mathscr{F}_{\{0,1\}}\subset \mathscr{F}$.
+ 
 
 $$\blacklozenge$$
+\newpage
+
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{13}}
 \subsection{}

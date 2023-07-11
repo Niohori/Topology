@@ -3291,17 +3291,24 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Give an example of a set A and a relation R in A that is symmetric and transitive in A but is not reflexive. 
 \end{tcolorbox}
-$$ $$
-
+Be $A=\Breal$ and let $xRy$ if and only if the product $xy$ is strictly positive, in other words $$\forall x,\, y\in \Breal: xRy\Leftrightarrow xy>0$$
+This is not reflexive because the number zero does not produce a strictly positive product with itself.\\
+$R$ is symmetric and also transitive as, if $xy>0$ and $yz>0$, then $xz>0$.
 $$\blacklozenge$$
 
 \subsubsection{}
 \begin{tcolorbox}
-Tell what is wrong with the following argument, which claims that to show that if a relation $R$ in a set $A$ is transitive, then it is reflexive.
+Tell what is wrong with the following argument, which claims that to show that if a relation $R$ in a set $A$ is transitive and symmetric, then it is reflexive.
 \\
-Let $a\in A$. Choose an element $b\in A$ such that $aRb$. Since $R$ is symmetric, it then follows that $bRa$. Since $R$ is transitive, $aRb$ and $bRa$ imply that $aRa$. hence, we have shown that $R$ is reflexive.
+Let $a\in A$. Choose an element $b\in A$ such that $aRb$. Since $R$ is symmetric, it then follows that $bRa$. Since $R$ is transitive, $aRb$ and $bRa$ imply that $aRa$. Hence, we have shown that $R$ is reflexive.
 \end{tcolorbox}
-$$ $$
+Consider the relation $R$ on a set $A=\{a,b,c\}$ defined as $$R=\{(a,b),\, (b,a),\,(a,c),\,(c,a),\,(b,c),\,(c,b),\,(b,b),\,(c,c)\}$$
+Clearly, $R$ is transitive and symmetric, but not reflexive as $(a,a)\not \in R$.\\
+Recall the exact definition of transitivity as a statement. \\
+$R$ is transitive in $A$ if and only if for all $x,\, y,\, z \in A$
+$$xRy \Et yRz \implies xRz$$
+In order to have that statement to be true we need that both sides of the $\implies$ connective, have to be true. In the example give, the right side is not given by assumption to be always true 
+
 
 $$\blacklozenge$$
 

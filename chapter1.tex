@@ -3277,8 +3277,10 @@ $\mathscr{F}_x-\mathscr{F}x^=\{f_x^*\}$, where $f_x^*$ is the constant function 
  Consider the subset $\mathscr{F}_{\{0,1\}}\subset \mathscr{F}$ such that $f[\mathbb{R}_{[0,1]}]=\{0,1\}$ for $f\in \mathscr{F}_{\{0,1\}}$.\\
  The functions  $f$ (represented as a collection of tuples) will have a form of $\{(0,0),\dots (x,1)\dots (y,0)\dots (z,1)\dots\}$, $\{(0,1),\dots (x,1)\dots (y,1)\dots (z,1)\dots\}$, $\{(0,0),\dots (x,0)\dots (y,0)\dots (z,0)\dots\}$,  etc. \\\\
  We are now ready to apply the scheme used in $\mathbf{27.1}$. Suppose that $\mathbb{R}_{[0,1]}\sim \mathscr{F}_{\{0,1\}}$. Then, with every $f\in \mathscr{F}_{\{0,1\}}$ we can associate a unique $x\in \RZO$ as we have a bijection between $\RZO$ and $\mathscr{F}_{\{0,1\}}$. Let's denote $f_x$ the function associated with $x$. \\
- Let's define the function $\alpha: \RZO\rightarrow \{0,\,1\}$, such that $\alpha(x) = 1-f_x(x)$. $\alpha(x)\in \mathscr{F}_{\{0,1\}}$ but there is no $x^{'}\in \RZO$ left, which can be mapped by the bijection,  to $\alpha(x)$. \\
- We have a contradiction and so $\mathbb{R}_{[0,1]}\not \sim \mathscr{F}_{\{0,1\}}$ and as $\mathscr{F}_{\{0,1\}}\subset \mathscr{F}$.
+ Let's define the function $\alpha: \RZO\rightarrow \{0,\,1\}$, such that $\alpha(x) = 1-f_x(x)$ i.e. this function is of the form $$\alpha=\{\left(0,\, 1-f_0(0)\right),\dots ,\left(x,\, 1-f_x(x)\right),\dots ,\left(y,\, 1-f_y(y)\right),\dots ,\left(z,\, 1-f_z(z)\right),\dots  \}  $$ and
+  $\alpha(x)\in \mathscr{F}_{\{0,1\}}$ but there is no $x^{'}\in \RZO$ left, which can be mapped by the bijection,  to $\alpha(x)$. Indeed, suppose $\alpha=f_{x^{'}}$, then 
+\begin{align*}\alpha&=\{\left(0,\, f_{x^{'}}(0)\right),\dots ,\left(x,\, f_{x^{'}}(x)\right),\dots ,\left(y,\, f_{x^{'}}(y)\right),\dots ,\underbrace{\left(x^{'},\, f_{x^{'}}({x^{'}})\right)}_{\leftrightarrow \left(x^{'},\, 1-f_{x^{'}}({x^{'}})\right)} ,\dots ,\left(z,\, f_{x^{'}}(z)\right),\dots  \}  \end{align*}\\
+ We have a contradiction in the position $(x^{'},\circ)$ as $f_{x^{'}}({x^{'}})$ is either $0$ or $1$ and so $\mathbb{R}_{[0,1]}\not \sim \mathscr{F}_{\{0,1\}}$ and as $\mathscr{F}_{\{0,1\}}\subset \mathscr{F}$ we can't have $\mathbb{R}\sim \mathscr{F}_{\{0,1\}}$.
  
 
 $$\blacklozenge$$
@@ -3304,20 +3306,27 @@ Let $a\in A$. Choose an element $b\in A$ such that $aRb$. Since $R$ is symmetric
 \end{tcolorbox}
 Consider the relation $R$ on a set $A=\{a,b,c\}$ defined as $$R=\{(a,b),\, (b,a),\,(a,c),\,(c,a),\,(b,c),\,(c,b),\,(b,b),\,(c,c)\}$$
 Clearly, $R$ is transitive and symmetric, but not reflexive as $(a,a)\not \in R$.\\
-Recall the exact definition of transitivity as a statement. \\
+Recall the exact definition of transitivity as a statement: \\\\
 $R$ is transitive in $A$ if and only if for all $x,\, y,\, z \in A$
 $$xRy \Et yRz \implies xRz$$
-In order to have that statement to be true we need that both sides of the $\implies$ connective, have to be true. In the example give, the right side is not given by assumption to be always true 
-
-
+In order to have that statement to be true we need that both sides of the $\implies$ connective, have to be true. In the example given, the right side is true for every element, giving the wrong conclusion as stated in the assignment. 
 $$\blacklozenge$$
-
+\newpage
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{14}}
 \subsection{}
 \begin{tcolorbox}
-Let $(S,\leq )$ be a nonempty partially ordered set such that every linearly ordered subset has an upper bound. Show that if $a\in A$, then there is a maximal element $m\in S$ such that $a\leq m$. 
+Let $(S,\leq )$ be a nonempty partially ordered set such that every linearly ordered subset $A$ has an upper bound. Show that if $a\in A$, then there is a maximal element $m\in S$ such that $a\leq m$. 
 \end{tcolorbox}
-$$ $$
+Let's recall some definitions:\\\\
+$\bullet$ $(S,\leq)$ means that for some (not necessarily all) $x,\, y\in S$ that $x\leq$ or $y\leq x$ is defined.\\
+$\bullet$ Linearly or totally ordered means that the relation $x\leq y$ or $y\leq x$ is defined for every $x,\, y\in S$.\\
+$\bullet$ Upper bound of a subset $A\subset S$: means that there exists a $u\in S$ (not necessarily an element of $A$) such that $x\leq u,\, \forall x\in A$.\\
+$\bullet$ Maximal element $m\in S$ means that  $m$ is not \textbf{followed} by any element in $S$ or stated in a different way: $\forall \in S:\, m\leq s \implies m=s$.\\\\
+We know that $A$ has an upper bound $u\in S$. \\
+Suppose first that $u\in A$. This mean that $\forall x\in A: a\leq u$. It is clear that $u$ is not followed by any element in $A$, which implies that $u$ is a maximal element of $A$.\\\\
+Suppose now that $u\not\in A$.\\ If there are no other element $p\in S$ such that $u\leq p$, then $u$ is a maximal element and we can put $m=u$.\\
+ If there is another element $p\in S$ such that $u\leq p$, then by transitivity, $p$ is also an upper bound for $A$ and can put $u=p$. We repeat the reasoning until we find no other element in $S$ such that $u\leq p$. Then, $u$ is a maximal element and we can put $m=u$.\\
+
 
 $$\blacklozenge$$
 %\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}

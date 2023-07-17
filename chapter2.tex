@@ -1,0 +1,170 @@
+\chapter{Structure of $\Breal$ and $\Breal^{n}$}
+\pagebreak[4]
+
+\mysection{30}{Algebraic structure of $\Breal$ }
+\subsection*{Remark on the Archimedean principle}
+The Archimedean principle is sometimes stated as :\\
+If $x,\,y\in \Breal$ with $y>0$, then $\exists n\in \Zed: (n-1)y\leq x < ny$.\\\\
+On page $25$, we have \\\\
+$\mathbf{30.6}$ \textbf{The least upper bound axiom for the real number system} $\mathbf{\Breal}$.\\
+If $S$ is a nonempty subset of $\Breal$ and $S$ has an upper bound, then $S$ has a least upper bound in $\Breal$.\\\\
+It is strange that  the author first gives the Archimedean principle as a principle (aka Axiom ?) and afterwards $\mathbf{30.6}$ as an axiom as the Archimedean principle can be proved with this axiom. \\\\
+\textbf{Proof} (by contradiction):\\
+Be arbitrary $x,\, y\in \Breal$ with $y> 0$. Suppose that we have $py\leq x$ is true for all $p\in \Zed$. Be $A$ the subset of $\Breal$ with all the real numbers $py$ as elements. From axiom $\mathbf{30.6}$ we know that $A$ has a least upper bound with $x$ as an upper bound. Be $\xi= lub(A)$. As we have $y>0$, then $\xi -y$ is not an upper bound of $A$.  This mean that there is a $p$ such that $py>\xi -y$. Hence, $ (p+1)y>\xi$. Thus $\xi$ can not be a upper bound of $A$, and we have a contradiction. Hence, there must be a $p\in \Zed$ for which $py>x$.
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Explain by example why it is that the system of all rational numbers does not satisfy the least upper bound axiom.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove that the least upper bound property implies the following: If $S$ is a nonempty subset of real numbers that has a lower bound, then $S$ has a greatest lower bound. 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $S = \left\{x:x=1-\frac{1}{n},\, n\in\Pee\right\}$. Find $l.u.b. (S)$ and $g.l.b. (S)$ if they exist. 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $f:\Breal\rightarrow \Breal$  be given by $f (x)=x^3$. Find the $1.u.b. (f [\{x: 0 < x < 1\}])$. \\
+Find $l.u.b. (f [\{x:0\leq x\leq 1\})$. 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $f: \{x :0 < x\}\rightarrow\Breal$ is given by $f (x)= \frac{1}{x}$  for $0 < x$. Does $f [\{x : 0 < x\}]$ have a $l.u.b.$? Does it have a $g.l.b.$? 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give an example of a function $f$ defined on a closed interval $S$ such that $l.u.b. (f [S])$ exists but $f$ does not attain a maximum value on $S$.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove the following statement: If$a = I.u.b. (A)$, then for each $\epsilon > 0$ , there is an $x \in  A$ such that $a-\epsilon < x \leq a$. State and prove an analogous proposition for $g.l.b. (A)$. 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+Prove that if $A$ is a nonempty bounded set of real numbers then $g.l.b. (A) \leq l.u.b. (A)$. For what kind of set $A$ is $g.l.b. (A) =1.u.b. (A)$? 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove that if $A$ and $B$ are nonempty subsets of $\Breal$ and $A \subset B$, then $g.l.b. (B) \leq g.l.b. (A)\leq  l.u.b. (A) \leq l.u.b. (B)$.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage
+
+\mysection{31}{ Distance between two points in $\Breal$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Verify the properties stated in $\mathbf{31.2}$
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $p\in\Breal$. Give an example of a collection $\mathscr{K}$ of neighborhoods of $p$ such that $\bigcap\mathscr{K}$ is not a neighborhood. Show that if $\mathscr{K}$ is a nonempty finite collection of neighborhoods of $p$, then $\bigcup\mathscr{K}$ and $\bigcap\mathscr{K}$ are neighborhoods of $p$.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage
+
+
+\mysection{32}{Limit of a sequence in $\Breal$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $(a_n)$ is a sequence such that $a_n\leq a_{n+1}$, $a_{n+1}\leq a_{n}$ for each positive integer $n$. Suppose further that the sequence $(a_n)$ is bounded above (below). Then $\lim (a_n)$ exists. 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = a_n+b_n$, where $\lim(a_n)= A$ and $\lim(b_n)= B$.\\
+ Then, $\lim (c_n)= A +B$.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+ Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = ka_n$, where $k$ is a constant and $\lim (a_n)= A$.\\
+ Then, $\lim (c_n)= kA$.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+ Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = a_nb_n$, where $\lim (a_n)= A$ and $\lim (b_n)= B$.\\
+ Then, $\lim (c_n)= AB$. 
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = \frac{a_n}{b_n}$, where $b_n\neq 0$,  $\lim (a_n)= A$ and $\lim (b_n)= B\neq 0$.\\
+ Then, $\lim (c_n)= \frac{A}{B}$.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Ifs a a sequence $(a_i)$ has a limit, it is unique.
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage

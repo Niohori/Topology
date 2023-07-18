@@ -22,6 +22,7 @@
 \usepackage{xcolor}
 \usepackage{etoolbox} %ifthen
 \usepackage[outline]{contour} % glow around text
+\usepackage{boondox-cal}
 
 %**************************** Bibliography management *******************************
 \usepackage{biblatex} %Imports biblatex package
@@ -74,6 +75,7 @@
 \newcommand\maal{\boldsymbol{\times}}
 \newcommand\spatie{\quad\quad\quad\quad}
 \newcommand\Breal{\mathbb{R}}
+\newcommand\Qiuu{\mathbb{Q}}
 \newcommand\Bint{\mathbb{Z}}
 \newcommand\Bnat{\mathbb{N}}
 \newcommand\Bcomp{\mathbb{C}}
@@ -86,6 +88,7 @@
 \newcommand\Ieoi{\Leftrightarrow }
 
 
+\newcommand{\mysection}[2]{\setcounter{section}{#1}\addtocounter{section}{-1}\section{#2}}
 
 
 
@@ -108,7 +111,7 @@
 
 
 %**************************** Where to find images *****************************
-%\graphicspath{ {images/} }
+%\graphicspath{ {./images/} }
 
 
 %**************************** Document itself *******************************
@@ -140,6 +143,7 @@ You're welcome to use these notes, but they may contain errors, so proceed with 
 \tableofcontents
 \listoffigures
 \include{chapter1}
+\include{chapter2}
 
 \printbibliography %Prints bibliography
 \end{document}

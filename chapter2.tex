@@ -11,6 +11,7 @@ If $S$ is a nonempty subset of $\Breal$ and $S$ has an upper bound, then $S$ has
 It is strange that  the author first gives the Archimedean principle as a principle (aka Axiom ?) and afterwards $\mathbf{30.6}$ as an axiom as the Archimedean principle can be proved with this axiom. \\\\
 \textbf{Proof} (by contradiction):\\
 Be arbitrary $x,\, y\in \Breal$ with $y> 0$. Suppose that we have $py\leq x$ is true for all $p\in \Zed$. Be $A$ the subset of $\Breal$ with all the real numbers $py$ as elements. From axiom $\mathbf{30.6}$ we know that $A$ has a least upper bound with $x$ as an upper bound. Be $\xi= lub(A)$. As we have $y>0$, then $\xi -y$ is not an upper bound of $A$.  This mean that there is a $p$ such that $py>\xi -y$. Hence, $ (p+1)y>\xi$. Thus $\xi$ can not be a upper bound of $A$, and we have a contradiction. Hence, there must be a $p\in \Zed$ for which $py>x$.
+\newpage
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \setcounter{subsection}{0}
 \subsection{}
@@ -18,7 +19,9 @@ Be arbitrary $x,\, y\in \Breal$ with $y> 0$. Suppose that we have $py\leq x$ is 
 \begin{tcolorbox}
 Explain by example why it is that the system of all rational numbers does not satisfy the least upper bound axiom.
 \end{tcolorbox}
-
+Be $A\subset\Qiuu$ such that $A=\{\frac{2^n-1}{2^n}: n\in \Pee\}$. $A$ has an upper bound $sup(A)=1$ as $\frac{2^n-1}{2^n}<1,\,\forall n\in \Pee$. Suppose we have a lower upper bound, then we must have a $N\in \Pee$ such that $l.u.b.(A)= \frac{2^N-1}{2^N}$. But then, we have $\frac{2^{N+1}-1}{2^{N+1}}= \frac{2^N-1}{2^N}-\frac{1}{2^{N-1}}$. \\
+$\frac{2^N-1}{2^N}-\frac{1}{2^{N-1}}$ is still a rational number but $\frac{2^N-1}{2^N}-\frac{1}{2^{N-1}}= l.u.b.(A)-\frac{1}{2^{N-1}}< l.u.b.(A)$. Hence, we can't find a $N\in\Pee$ such that $\frac{2^N-1}{2^N}=l.u.b.(A)$ and $\Qiuu$ does not satisfy the upper bound axiom.\\\\
+\textbf{Remark}: A very superficial conclusion could be that, because $A\subset \Breal$ as well, this counter example would mean that the upper bound axiom is not satisfied for $\Breal$. The pint here is that to find the $l.u.b.(A)$ we are not restricted to numbers of the form $\frac{2^n-1}{2^n}: n\in \Pee$  
 $$\blacklozenge$$
 
 \subsection{}
@@ -26,7 +29,9 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove that the least upper bound property implies the following: If $S$ is a nonempty subset of real numbers that has a lower bound, then $S$ has a greatest lower bound. 
 \end{tcolorbox}
-
+Suppose $S$ is a nonempty subset of real numbers that has a lower bound $\mathbcal{s}$. For all $x\in S$ we have $\mathbcal{s}\leq x$. Let's define a new set $\hat{S}$ with $\hat{S}=\{2\mathbcal{s}-x: x\in S\}$. Then, $\mathbcal{s}$ is an upper bound for $\hat{S}$. By the upper bound axiom for real number, we have a $\mathbcal{\hat{s}}= l.u.b.(\hat{S})$ and we have $2\mathbcal{s}-x\leq \mathbcal{\hat{s}}$ for all $x\in S$. And thus, $$2\mathbcal{s}- \mathbcal{\hat{s}}\leq x$$
+for all $x\in S$.\\
+$2\mathbcal{s}- \mathbcal{\hat{s}}$ is a $g.l.b.(A)$ as, suppose we would have a $\epsilon>0$ such that  $2\mathbcal{s}- \mathbcal{\hat{s}}+\epsilon \leq x$ and thus $\underbrace{2\mathbcal{s}-x}_{\in\hat{S}} \leq \mathbcal{\hat{s}}-\epsilon$ for all $\hat{x}\in \hat{S}$. We get a contradiction as we would have $\mathbcal{\hat{s}}-\epsilon$ as an upper bound which is smaller than $l.u.b.(\hat{S})$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -163,7 +168,7 @@ $$\blacklozenge$$
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Ifs a a sequence $(a_i)$ has a limit, it is unique.
+If a sequence $(a_i)$ has a limit, it is unique.
 \end{tcolorbox}
 
 $$\blacklozenge$$

@@ -19,9 +19,7 @@ Be arbitrary $x,\, y\in \Breal$ with $y> 0$. Suppose that we have $py\leq x$ is 
 \begin{tcolorbox}
 Explain by example why it is that the system of all rational numbers does not satisfy the least upper bound axiom.
 \end{tcolorbox}
-Be $A\subset\Qiuu$ such that $A=\{\frac{2^n-1}{2^n}: n\in \Pee\}$. $A$ has an upper bound $sup(A)=1$ as $\frac{2^n-1}{2^n}<1,\,\forall n\in \Pee$. Suppose we have a lower upper bound, then we must have a $N\in \Pee$ such that $l.u.b.(A)= \frac{2^N-1}{2^N}$. But then, we have $\frac{2^{N+1}-1}{2^{N+1}}= \frac{2^N-1}{2^N}-\frac{1}{2^{N-1}}$. \\
-$\frac{2^N-1}{2^N}-\frac{1}{2^{N-1}}$ is still a rational number but $\frac{2^N-1}{2^N}-\frac{1}{2^{N-1}}= l.u.b.(A)-\frac{1}{2^{N-1}}< l.u.b.(A)$. Hence, we can't find a $N\in\Pee$ such that $\frac{2^N-1}{2^N}=l.u.b.(A)$ and $\Qiuu$ does not satisfy the upper bound axiom.\\\\
-\textbf{Remark}: A very superficial conclusion could be that, because $A\subset \Breal$ as well, this counter example would mean that the upper bound axiom is not satisfied for $\Breal$. The pint here is that to find the $l.u.b.(A)$ we are not restricted to numbers of the form $\frac{2^n-1}{2^n}: n\in \Pee$  
+Be $A\subset\Qiuu$ such that $A=\{x^2\leq 2,\, x\in \Qiuu\}$. $A$ has upper bounds (e.g.  $sup(A)=2$). This set can be re-expressed as $A= (-\sqrt{2},\sqrt{2})$ and has no $l.u.b.(A)$ as $\sqrt{2}\not \in \Qiuu$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -39,16 +37,20 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Let $S = \left\{x:x=1-\frac{1}{n},\, n\in\Pee\right\}$. Find $l.u.b. (S)$ and $g.l.b. (S)$ if they exist. 
 \end{tcolorbox}
-
+$$ $$ 
+For $n=1$ we have $x=0$ and thus $g.l.b(S)=0$.\\\\
+For $n\rightarrow +\infty $ we have $x\rightarrow 1$ and thus $l.u.b(S)=1$.
 $$\blacklozenge$$
 
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Let $f:\Breal\rightarrow \Breal$  be given by $f (x)=x^3$. Find the $1.u.b. (f [\{x: 0 < x < 1\}])$. \\
+Let $f:\Breal\rightarrow \Breal$  be given by $f (x)=x^3$. Find the $l.u.b. (f [\{x: 0 < x < 1\}])$. \\
 Find $l.u.b. (f [\{x:0\leq x\leq 1\})$. 
 \end{tcolorbox}
-
+$$ $$ 
+$l.u.b. (f [\{x: 0 < x < 1\}])= 1$.\\\\
+$l.u.b. (f [\{x:0\leq x\leq 1\})= 1$
 $$\blacklozenge$$
 
 \subsection{}
@@ -56,7 +58,9 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Suppose that $f: \{x :0 < x\}\rightarrow\Breal$ is given by $f (x)= \frac{1}{x}$  for $0 < x$. Does $f [\{x : 0 < x\}]$ have a $l.u.b.$? Does it have a $g.l.b.$? 
 \end{tcolorbox}
-
+$$ $$ 
+$l.u.b. (f [\{x : 0 < x\}])$ does not exist.\\\\
+$g.l.b. (f [\{x : 0 < x\}])=0$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -64,24 +68,27 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Give an example of a function $f$ defined on a closed interval $S$ such that $l.u.b. (f [S])$ exists but $f$ does not attain a maximum value on $S$.
 \end{tcolorbox}
-
+Consider $f:\Breal_{[0,1]}\rightarrow \Breal$ such that $f=\left\{\frac{1-a^{-\frac{x}{1-x}}}{1+a^{-\frac{x}{1-x}}}:x\in \Breal_{[0,1]},\, a>1 \right\}$ with $l.u.b. (f [S])=1\not\in f [S]$.
 $$\blacklozenge$$
 
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Prove the following statement: If$a = I.u.b. (A)$, then for each $\epsilon > 0$ , there is an $x \in  A$ such that $a-\epsilon < x \leq a$. State and prove an analogous proposition for $g.l.b. (A)$. 
+Prove the following statement: If $a = l.u.b. (A)$, then for each $\epsilon > 0$ , there is an $x \in  A$ such that $a-\epsilon < x \leq a$. State and prove an analogous proposition for $g.l.b. (A)$. 
 \end{tcolorbox}
-
+Suppose for a given $\epsilon$,  $\not\exists\, x\in A:\, a-\epsilon < x$, then, $x\leq a-\epsilon$. Thus $a-\epsilon$ is a lower bound which is smaller than $l.u.b.(S)$. We have a contradiction and thus $\forall\epsilon\in\Breal, \exists\, x\in A:\, a-\epsilon < x \leq a$.\\\\
+For $b= g.l.b. (A)$, the statement becomes $$\forall\epsilon\in\Breal, \exists\, x\in A:\, b\leq  x < b+\epsilon$$
+Suppose for a given $\epsilon$,  $\not\exists\, x\in A:\, x < b+\epsilon$, then, $x \leq b+\epsilon$. Thus $b+\epsilon$ is a upper bound which is greater than $g.l.b.(S)$. We have a contradiction and thus $\forall\epsilon\in\Breal, \exists\, x\in A:\, b\leq  x < b+\epsilon$.
 $$\blacklozenge$$
 
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
 
-Prove that if $A$ is a nonempty bounded set of real numbers then $g.l.b. (A) \leq l.u.b. (A)$. For what kind of set $A$ is $g.l.b. (A) =1.u.b. (A)$? 
+Prove that if $A$ is a nonempty bounded set of real numbers then $g.l.b. (A) \leq l.u.b. (A)$. For what kind of set $A$ is $g.l.b. (A) =l.u.b. (A)$? 
 \end{tcolorbox}
-
+$A$ is bounded, hence by the upper bound property and its corollary (see Exercise 2.30.2) then $A$ has both a $l.u.b.(A)$  and a $g.l.b.(A)$. This mean that for every $x\in A$ we have $l.u.b.(A)\leq x\leq g.l.b.(A)$ and thus $l.u.b.(A)\leq g.l.b.(A)$\\\\
+We can have $g.l.b. (A) =l.u.b. (A)$ when $A$ is a singleton, i.e. $A=\{x\}$. E.g. $A=f[\Breal]$ with $f=\{c\}$ with $c$ a constant, has $g.l.b. (A) =l.u.b. (A)=c$ .
 $$\blacklozenge$$
 
 
@@ -89,9 +96,13 @@ $$\blacklozenge$$
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Prove that if $A$ and $B$ are nonempty subsets of $\Breal$ and $A \subset B$, then $g.l.b. (B) \leq g.l.b. (A)\leq  l.u.b. (A) \leq l.u.b. (B)$.
+Prove that if $A$ and $B$ are nonempty subsets of $\Breal$ and $A \subset B$, then $g.l.b. (B) \leq g.l.b. (A)\leq  l.u.b. (A) \leq l.u.b. (B)$. 
 \end{tcolorbox}
-
+From $\mathbf{2.30.8}$ we know that $l.u.b.(A)\leq g.l.b.(A)$ and $l.u.b.(B)\leq g.l.b.(B)$. \\\\
+Suppose we have $g.l.b.(A)< g.l.b.(B)$. This implies that $\exists x\in A: x\not \in B$. We have a contradiction as $A\subset B$ and thus we must have $g.l.b.(B)\leq g.l.b.(A)$.\\
+In the same vein, suppose we have $l.u.b.(B)< l.u.b.(A)$. This implies that $\exists x\in A: x\not \in B$. We have a contradiction as $A\subset B$ and thus we must have $l.u.b.(A)\leq l.u.b.(B)$. \\
+Putting this all together we get indeed
+$$g.l.b. (B) \leq g.l.b. (A)\leq  l.u.b. (A) \leq l.u.b. (B)$$
 $$\blacklozenge$$
 \newpage
 

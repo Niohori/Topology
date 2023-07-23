@@ -115,7 +115,18 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Verify the properties stated in $\mathbf{31.2}$
 \end{tcolorbox}
-
+$\mathbf{31.2(a)}$ and $\mathbf{31.2(b)}$ are trivial as $d(x,y)=|x-y|$.\\\\
+$\mathbf{31.2(c)}$:\\
+We consider 4 possibilities (the cases $a=b$ or $b=c$ are excluded as in that case $d(a,b)$ or $d(b,c)$ are zero).\\
+i) $a<b$ and $b<c$. Then, 
+$$d(a,c)= |a-b+b-c| = |-|a-b|-|b-c||= | |a-b|+|b-c| |= d(a,b)+d(b,c)$$
+ii) $a<b$ and $b>c$. Then, 
+$$d(a,c)= |a-b+b-c| = |-|a-b|+|b-c||< | |a-b|+|b-c| |= d(a,b)+d(b,c)$$
+ii) $a>b$ and $b<c$. Then, 
+$$d(a,c)= |a-b+b-c| = ||a-b|-|b-c||< | |a-b|+|b-c| |= d(a,b)+d(b,c)$$
+iv) $a>b$ and $b>c$. Then, 
+$$d(a,c)= |a-b+b-c| = ||a-b|+|b-c||= | |a-b|+|b-c| |= d(a,b)+d(b,c)$$
+and conclude $$d(a,b)+d(b,c) \geq d(a,c)$$
 $$\blacklozenge$$
 
 \subsection{}
@@ -123,7 +134,9 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Let $p\in\Breal$. Give an example of a collection $\mathscr{K}$ of neighborhoods of $p$ such that $\bigcap\mathscr{K}$ is not a neighborhood. Show that if $\mathscr{K}$ is a nonempty finite collection of neighborhoods of $p$, then $\bigcup\mathscr{K}$ and $\bigcap\mathscr{K}$ are neighborhoods of $p$.
 \end{tcolorbox}
-
+Consider the infinite collection $\mathscr{K}=\{N(p;\frac{1}{n}):n\in \Pee\}$, then $\bigcap\mathscr{K}=\{p\}$ and no $\epsilon>0$ can be found for which $N(p;\epsilon)$ exists. \\\\
+If $\mathscr{K}$ is a finite collection then $\mathscr{K}$ is countable with element $N(p;\epsilon_i)$ and we can construct a finite set $$\mathscr{E}=\{\epsilon_i:i=1,2,\dots,n\}$$  As $ \mathscr{E}\subset \Breal$ and by the least upper bound principle, $\mathscr{E}$ has both a $\epsilon_u= l.u.b.(\mathscr{E})$ and a $\epsilon_l = g.l.b(\mathscr{E})$. Moreover, $N(p;\epsilon_u)$ and  $N(p;\epsilon_l)$ are elements of $\mathscr{K}$ and hence we get\\\\
+$$\bigcup\mathscr{K}=N(p;\epsilon_u)$$ and $$\bigcap\mathscr{K}=N(p;\epsilon_l)$$.
 $$\blacklozenge$$
 \newpage
 
@@ -135,9 +148,17 @@ $$\blacklozenge$$
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Suppose that $(a_n)$ is a sequence such that $a_n\leq a_{n+1}$, $a_{n+1}\leq a_{n}$ for each positive integer $n$. Suppose further that the sequence $(a_n)$ is bounded above (below). Then $\lim (a_n)$ exists. 
+Suppose that $(a_n)$ is a sequence such that $a_n\leq a_{n+1}$, $(a_{n+1}\leq a_{n})$ for each positive integer $n$. Suppose further that the sequence $(a_n)$ is bounded above (below). Then $\lim (a_n)$ exists. 
 \end{tcolorbox}
-
+$$ $$ 
+$\mathbf{a_n\leq a_{n+1}}$\\\\
+As $(a_n)$ is bounded above and is a subset of $\Breal$, then by the upper bound property of $\Breal$, has a lower upper bound, $A=l.u.b.$.\\
+We first notice that for any arbitrary $\epsilon\in \Breal$, there must be a $a_N$ such that $A-\epsilon < a_N\leq A$ (as otherwise $A-\epsilon$ would be an upper bound, giving a contradiction).\\
+So we have $A-\epsilon < a_N$ and thus $A-a_N < \epsilon$.  Furthermore as $a_{N+k}\geq a_N$ for all $k$ we will have $A-a_{N+k}\leq A-a_N<\epsilon$.  As $\forall n, A\geq a_n $, $A-a_n$ will stay positive for all $n$. Thus, the last result can be written as $|A-a_{N+k}|<\epsilon$ for a chosen $\epsilon$. From the definition of the limit, we conclude that the $\lim (a_n)= l.u.b.(a_n)$ exists.\\\\
+$\mathbf{a_{n+1}\leq a_{n}}$\\\\
+As $(a_n)$ is bounded below  and is a subset of $\Breal$, then by the corollary of the upper bound property of $\Breal$, has a greatest lower upper bound, $L=g.l.b.$.\\
+We first notice that for any arbitrary $\epsilon\in \Breal$, there must be a $a_N$ such that $L\leq a_N < L+\epsilon$ (as otherwise $L+\epsilon$ would be a lower bound, giving a contradiction).\\
+So we have $a_N < L+\epsilon$ and thus $a_N -L < \epsilon$.  Furthermore as $a_{N+k}\leq a_N$ for all $k$ we will have $a_{N+k}-L\leq a_{N}-L<\epsilon$.  As $\forall n, L\leq a_n $, $a_n-L$ will stay positive for all $n$. Thus, the last result can be written as $|L-a_{N+k}|<\epsilon$ for a chosen $\epsilon$. From the definition of the limit, we conclude that the $\lim (a_n)= g.l.b.(a_n)$ exists.
 $$\blacklozenge$$
 
 \subsection{}
@@ -146,7 +167,19 @@ $$\blacklozenge$$
 Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = a_n+b_n$, where $\lim(a_n)= A$ and $\lim(b_n)= B$.\\
  Then, $\lim (c_n)= A +B$.
 \end{tcolorbox}
-
+From the definition of the limit of a sequence, for a given $\frac{\epsilon}{2}$ there will be elements $a_N$ and $b_{N^{'}}$ such that for all $n\geq N$ and $n^{'}\geq {N^{'}}$ we will have 
+$$|A-a_n|<\frac{\epsilon}{2}\Et |B-b_{n^{'}}|<\frac{\epsilon}{2}$$
+Let's put $M=sup(N,\,N^{'})$. 
+Adding the two inequalities gives 
+$$|A-a_m|+|B-b_{m^{}}|<\epsilon$$
+for any $m\geq M$.
+The triangle inequality of the distance in $\Breal$ states
+$$d(x,z)\leq d(x,y)+d(y,z)$$
+Put $x= a_m-B,\, z= A-b_m$ and $y= A-B$. The triangle inequality gives $|a_m-B-A+b_m  | \leq |a_m-B-A+B |+|A-b_m -A+B |$ or
+$$|a_m+b_m-(A+B)| \leq |A-a_m |+|B-b_m |$$
+But $|A-a_m|+|B-b_{m^{}}|<\epsilon$ and get 
+$$|a_m+b_m-(A+B)| <\epsilon$$
+giving $\lim (a_n+b_n)= A+B$
 $$\blacklozenge$$
 
 \subsection{}
@@ -155,7 +188,10 @@ $$\blacklozenge$$
  Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = ka_n$, where $k$ is a constant and $\lim (a_n)= A$.\\
  Then, $\lim (c_n)= kA$.
 \end{tcolorbox}
-
+Be given $k$. Let's chose a $\frac{\epsilon}{|k|}$ (we suppose $k\neq 0$, this case being trivial).\\
+We have $|a_n-A|<\frac{\epsilon}{|k|}$ for all $n\geq$ then  certain $N$. Multiplying by $|k|$ gives $|k||a_n-A|<\frac{|k|\epsilon}{|k|}$ and thus
+$$|ka_n-kA|<\epsilon$$
+and conclude $\lim ka_n= kA$.
 $$\blacklozenge$$
 
 \subsection{}

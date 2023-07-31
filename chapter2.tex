@@ -156,7 +156,7 @@ As $(a_n)$ is bounded above and is a subset of $\Breal$, then by the upper bound
 We first notice that for any arbitrary $\epsilon\in \Breal$, there must be a $a_N$ such that $A-\epsilon < a_N\leq A$ (as otherwise $A-\epsilon$ would be an upper bound, giving a contradiction).\\
 So we have $A-\epsilon < a_N$ and thus $A-a_N < \epsilon$.  Furthermore as $a_{N+k}\geq a_N$ for all $k$ we will have $A-a_{N+k}\leq A-a_N<\epsilon$.  As $\forall n, A\geq a_n $, $A-a_n$ will stay positive for all $n$. Thus, the last result can be written as $|A-a_{N+k}|<\epsilon$ for a chosen $\epsilon$. From the definition of the limit, we conclude that the $\lim (a_n)= l.u.b.(a_n)$ exists.\\\\
 $\mathbf{a_{n+1}\leq a_{n}}$\\\\
-As $(a_n)$ is bounded below  and is a subset of $\Breal$, then by the corollary of the upper bound property of $\Breal$, has a greatest lower upper bound, $L=g.l.b.$.\\
+As $(a_n)$ is bounded below  and is a subset of $\Breal$, then by the corollary of the upper bound property of $\Breal$, has a greatest lower bound, $L=g.l.b.$.\\
 We first notice that for any arbitrary $\epsilon\in \Breal$, there must be a $a_N$ such that $L\leq a_N < L+\epsilon$ (as otherwise $L+\epsilon$ would be a lower bound, giving a contradiction).\\
 So we have $a_N < L+\epsilon$ and thus $a_N -L < \epsilon$.  Furthermore as $a_{N+k}\leq a_N$ for all $k$ we will have $a_{N+k}-L\leq a_{N}-L<\epsilon$.  As $\forall n, L\leq a_n $, $a_n-L$ will stay positive for all $n$. Thus, the last result can be written as $|L-a_{N+k}|<\epsilon$ for a chosen $\epsilon$. From the definition of the limit, we conclude that the $\lim (a_n)= g.l.b.(a_n)$ exists.
 $$\blacklozenge$$
@@ -193,7 +193,7 @@ We have $|a_n-A|<\frac{\epsilon}{|k|}$ for all $n\geq$ then  certain $N$. Multip
 $$|ka_n-kA|<\epsilon$$
 and conclude $\lim ka_n= kA$.
 $$\blacklozenge$$
-
+\newpage
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
@@ -201,6 +201,21 @@ $$\blacklozenge$$
  Then, $\lim (c_n)= AB$. 
 \end{tcolorbox}
 
+Choose arbitrary $\epsilon_a,\,\epsilon_b>  0$. Then, \\ There exists a $n_a \in \Pee$, such that \begin{align}|a_n - A| < \epsilon_a \,\,\,\ \forall n\in\Pee, n<n_a\end{align}
+there also exists a $n_b \in \Pee$, such that  \begin{align}|b_n - B| <\epsilon_b \,\,\,\ \forall n\in\Pee, n< n_b\end{align}
+Also, there exists  a $\hat{n}$ such that
+$$ |a_n|-|A| \leq ||a_n|-|A||\leq |a_n-A|<1$$
+for all $n > \hat{n}$, so that $|a_n|<|A|+1$, i.e. $\frac{|a_n|}{|A|+1}<1$.\\
+ Hence, for all  $n > \sup\{n_a,n_b,\hat{n}\}$ we have 
+$$|a_nb_n - AB| = |a_nb_n -a_nB+a_nB-AB| = |a_n(b_n-B)+B(a_n-A)|$$ 
+from which follows, using $(1)$ and $(2)$ 
+\begin{align} |a_nb_n - AB|\leq |a_n(b_n-B)|+|B(a_n-A)| < |a_n|\epsilon_b+|B|\epsilon_a\end{align}
+Let's put $\epsilon_a= \frac{\epsilon}{2(|B|+1)}$ and $\epsilon_b= \frac{\epsilon}{2(|A|+1)}$ such that we have
+\begin{align}|a_n - A| < \frac{\epsilon}{2(|B|+1)} \,\,\,\ \forall n\in\Pee, n<n_a\\
+|b_n - B| < \frac{\epsilon}{2(|A|+1)} \,\,\,\ \forall n\in\Pee, n< n_b
+\end{align}
+As $\frac{|a_n|}{|A|+1}<1$ (see above) and $\frac{|B|}{|B|+1}\leq 1$, we get for $(3)$, using $(4)$ and $(5)$   $$ |a_nb_n - AB|< \underbrace{\frac{|a_n|}{(|A|+1)}}_{<1}\frac{\epsilon}{2}+\underbrace{\frac{|B|}{(|B|+1)}}_{<1}\frac{\epsilon}{2}<\frac{\epsilon}{2} +\frac{\epsilon}{2} = \epsilon.$$
+for any arbitrary $\epsilon$.\\\\\\
 $$\blacklozenge$$
 
 \subsection{}
@@ -209,13 +224,220 @@ $$\blacklozenge$$
 Let the sequence $(c_n)$ in $\Breal$ be given by $c_n = \frac{a_n}{b_n}$, where $b_n\neq 0$,  $\lim (a_n)= A$ and $\lim (b_n)= B\neq 0$.\\
  Then, $\lim (c_n)= \frac{A}{B}$.
 \end{tcolorbox}
+Choose arbitrary $\epsilon_a,\,\epsilon_b>  0$. Then, \\ There exists a $n_a \in \Pee$, such that \begin{align}|a_n - A| < \epsilon_a \,\,\,\ \forall n\in\Pee, n<n_a\end{align}
+there also exists a $n_b \in \Pee$, such that  \begin{align}|b_n - B| <\epsilon_b \,\,\,\ \forall n\in\Pee, n< n_b\end{align}
+Also, there exists  a $\hat{n}$ such that
+$$ |b_n|> \frac{|B|}{2} $$
+for all $n > \hat{n}$ (as otherwise we would have $|b_n|\leq \frac{|B|}{2}$ for all $n > \hat{n}$, meaning that $|b_n|$ will not be able to get arbitrarily close to $|B|$.)\\
+Thus we can write 
+\begin{align}
+\frac{1}{|b_n|}< \frac{2}{|B|}\quad \forall n > \hat{n}
+\end{align}.\\\\
+ Hence, for all  $n > \sup\{n_a,n_b,\hat{n}\}$ we have 
+$$\left|\frac{a_n}{b_n} - \frac{A}{B}\right| = \left|\frac{a_n}{b_n}-\frac{A}{b_n}+\frac{A}{b_n} - \frac{A}{B}\right|\leq\frac{|a_n-A|}{|b_n|} +|A|\left|\frac{1}{b_n}-\frac{1}{B} \right|=\frac{|a_n-A|}{|b_n|} +|A|\frac{|B-b_n|}{|B| |b_n|}$$ Using $(1),\, (2)$ and $(3)$ we get 
+\begin{align}
+\left|\frac{a_n}{b_n} - \frac{A}{B}\right|&<  \frac{1}{|b_n|}\left(\epsilon_a + \frac{|A|}{|B|}\epsilon_b\right)\\
+&<    \frac{2}{|B|}\left(\epsilon_a + \frac{|A|}{|B|}\epsilon_b\right)
+ \end{align}
+ Let's put $\epsilon_a = \frac{|B|}{4}\epsilon$ and $\epsilon_b = \frac{|B|^2}{4|A|}\epsilon$  we get 
+\begin{align*}
+\left|\frac{a_n}{b_n} - \frac{A}{B}\right|&<  \frac{1}{2}\epsilon+ \frac{1}{2}\epsilon\\
+&=\epsilon 
+\end{align*}
+for any arbitrary $\epsilon$.
+$$\blacklozenge$$
+\newpage
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+If a sequence $(a_i)$ has a limit, it is unique.
+\end{tcolorbox}
+Suppose we have for an arbitrary $\epsilon$
+\begin{align*}
+&\exists n_1,\, |a_n-A|<\epsilon,\, \forall n>n_1\\
+&\exists n_2,\, |a_n-A^{'}|<\epsilon,\, \forall n>n_2
+\end{align*}
+
+Suppose that $A \neq A^{'}$. Let $\epsilon = \frac{|A - A^{'}|}{2} $. By hypothesis there exists a $n_1 \in \Pee$ such that 
+$$
+|a_n - A| <\frac{|A - A^{'}|}{2} \quad \text{if} \quad n \geq n_1 
+$$ 
+By hypothesis, there exists $n_2 \in \Pee$ such that 
+$$
+|a_n - A^{'}|<\frac{|A - A^{'}|}{2} \quad \text{if} \quad n \geq n_2 
+$$
+Let $\hat{n} = sup\{n_1,n_2\}$. If $n \geq \hat{n}$, then by the triangle inequality
+$$
+|A - A^{'}| = |(a_n - A) - (a_n - a^{'})| <|a_ n - A| + |a_n - A^{'}| < 2 \frac{|A - A^{'}|}{2} = |A - A^{'}|
+$$
+And we have a contradiction as we get $
+|A - A^{'}| <|A - A^{'}|
+$.
+$$\blacklozenge$$
+\newpage
+
+\mysection{33}{The nested interval theorem for $\Breal$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give the details of the proof of Theorem $\mathbf{33.1}$.
+\end{tcolorbox}
+First we note that we have 
+\begin{align}
+a_1\leq \dots \leq a_n\leq a_{n+1}\leq\dots \leq b_1\\
+a_1\leq \dots \leq b_{n+1}\leq b_n \leq\dots \leq b_1
+\end{align}
+We see that the subset $\{a_n\}\subset\Breal $ is bounded above, and the subset $\{b_n\}\subset\Breal $ is bounded below, hence, by the upper bound principle (and its corollary) in $\Breal$, $\{a_n\}$ has a $l.u.b.$ and  $\{b_n\}$ has a $g.l.b.$ Let's denote them $A$ and $B$ respectively.\\
+Be $\epsilon>0$, then there exists a $n_1\in\Pee$ such that  $\forall n\geq n_1 $ we have $A-\epsilon < a_n\leq A$ (as otherwise $A-\epsilon$ would be an upperbound, which is contradictory with the fact that $A$ is a $l.u.b.$
+Then, we have as $\epsilon>0$, 
+$$A-\epsilon < a_n< A+\epsilon$$ and thus 
+\begin{align}|a_n-A|<\epsilon\end{align}
+Giving $A=\lim \{a_n\}$\\\\
+The same reasoning on the lower bound of $b_n$ gives $B\leq b_n < B+\epsilon$ and thus 
+\begin{align}|b_n-B|<\epsilon\end{align}
+and $B=\lim \{b_n\}$\\\\
+Then we have 
+\begin{align}
+a_1\leq \dots \leq a_n\leq a_{n+1}\leq\dots \leq A\leq b_1\\
+a_1\leq B \leq \dots \leq b_{n+1}\leq b_n \leq\dots \leq b_1
+\end{align}
+From this we conclude that $A\leq B$. Indeed, suppose we would have $A>B$.\\
+From $(5)$ and $(6)$ we can write $(3)$ and $(4)$ as 
+\begin{align}
+|a_n-A|= A-a_n<\epsilon\quad \forall n\geq n_1\\
+|b_n-B|= b_n-B<\epsilon\quad \forall n\geq n_2
+\end{align}
+Choose $\epsilon = \frac{A-B}{2},\, (>0$ as we supposed $A>B)$ and  $\hat{n}=\max(n_1,\, n_2)$. Adding $(7)$ and $(8)$ gives
+\begin{align}
+&A-B+ b_n-a_n<\epsilon+\epsilon\\
+\implies\quad &A-B+ b_n-a_n <A-B\\
+\implies\quad & b_n <a_n
+\end{align}
+which is impossible as we have $a_n \leq b_n,\, \forall n\in \Pee$.\\\\
+Till now, we proved that $A=\lim \{a_n\} $ and $B=\lim \{b_n\}$ exist and that $A\leq B$.\\\\
+Consider $[A,\, B]$ and an element $x\in [A,\, B]$. We have 
+$$A\leq x\leq B$$
+But we know $a_n\leq A\Et b_n\geq B,\, \forall n\in \Pee$ and so we get  
+$$a_n\leq A\leq x\leq B\leq b_n$$
+and thus $x\in [a_n,b_n]$ and conclude 
+$$[A,B]\subset [a_n,b_n],\,  \forall n \in \Pee$$ and we can state
+$$\exists x\in  \bigcap^{\infty}_{i=1}[a_i,b_i]$$ and thus
+$$\bigcap^{\infty}_{i=1}[a_i,b_i]\neq \emptyset$$
+\\\\
+We now prove that if $\lim \left(|b_i -a_i|\right)=0$ then $\bigcap^{\infty}_{i=1}[a_i,b_i]$ has exactly one element.\\
+Suppose $x,\, y\in \bigcap^{\infty}_{i=1}[a_i,b_i]$, two different elements. Then $| b_i-a_i| \geq |x-y| >0,\, \forall i\in \Pee$ as $x\neq y$. Choose $\epsilon=\frac{|x-y|}{2}$, then 
+$| b_i-a_i|  >\epsilon ,\, \forall i\in \Pee$ and thus $|b_i-a_i|$ doe not have a limit. We get a contradiction as we supposed $\lim \left(|b_i -a_i|\right)=0$.
+$$\blacklozenge$$
+\newpage
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give an example of nonempty intervals $I_i$ (see $\mathbf{33.2}$) such that 
+$$I_1\supset I_2 \supset \dots \supset I_n\supset \dots  \Et \bigcap^{\infty}_{i=1}I_i=\emptyset $$
+\end{tcolorbox}
+Choose $I_i=(0,\, 2^{-i})$. Suppose there exists $x\in \bigcap^{\infty}_{i=1}I_i$, then for any $i\in \Pee$, there exists a $n > i$ such that $x\geq 2^{-n}$ and thus $x\not\in I_n$ and hence $x\not\in \bigcap^{\infty}_{i=1}I_i$.\\\\
+Thus $$\bigcap^{\infty}_{i=1}I_i=\emptyset $$
 
 $$\blacklozenge$$
 
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-If a sequence $(a_i)$ has a limit, it is unique.
+Is the following statement true? Given an interval $I$ and a point $p\in I$, there exists a countable collection of closed intervals $\{I_i\}$ such that $p\in I_1\subset I_2\subset I_3\dots \subset I_n\dots $ (possibly only a finite number needed) and such that $I=\bigcup^{\infty}_{i=1}I_i$.
+\end{tcolorbox}
+Without loss of generalization, put $I=(0,1)$ and $p\in I$. Define, the following collection of closed sets
+\begin{align*}
+I_n=\left[a_n,\, b_n\right]=\left[\frac{p}{2^n},\, \frac{p+2^n-1}{2^n}\right]
+\end{align*}
+We have $I_n\subset I_{n+1}$. Indeed,
+\begin{align*}
+b_{n+1}=\frac{p+2^{n+1}-1}{2^{n+1}}&=\half \frac{p+2.2^{n}-1}{2^{n}}\\
+&= \half \frac{2p+2.2^{n}-2+1-p}{2^{n}}\\
+&=  \frac{p+2^{n}-1}{2^{n}}+\half \underbrace{\frac{1-p}{2^{n}}}_{>0}\\
+&>\frac{p+2^{n}-1}{2^{n}}=b_n
+\end{align*}
+and also $a_{n+1}=\frac{p}{2^{n+1}}<\frac{p}{2^n}=a_n$ giving $I_n\subset I_{n+1}$.\\\\
+Also, for every $n\in\Pee $ we have $a_n=\frac{p}{2^n}>0$ and 
+\begin{align*}
+b_n=\frac{p+2^{n}-1}{2^{n}}&= \underbrace{\frac{p-1}{2^{n}}}_{<0}+1\\
+&< 1
+\end{align*}
+Moreover $a_n< p,\, \forall p\in \Pee$ and 
+\begin{align*}
+b_n-p&=\frac{p+2^{n}-1}{2^{n}}-p\\
+&= \frac{p+2^{n}-1-2^np}{2^{n}}\\
+&= \frac{(2^{n}-1)-(2^n-1)p}{2^{n}}\\
+&= \underbrace{\frac{(2^{n}-1)}{2^{n}}}_{>0}\underbrace{(1-p)}_{>0}\\
+&>0\\
+\implies \quad b_n&>p
+\end{align*}
+So $I_n$  are closed intervals containing $p$ and for which we have,
+$$p\in I_1\subset I_2\subset I_3\dots \subset I_n\dots $$
+and 
+$$I_n\subset I,\, \forall n\in \Pee$$\\
+Obviously, the collection of $I_n$ is countable as $n\in \Pee$ and $\Pee$ is countable.
+\\\\
+We now prove that 
+$$I=\bigcup^{\infty}_{i=1}I_i $$
+Suppose we have $x\in I$, then, $$\exists \hat{n}\in \Pee,\, \frac{p}{2^{\hat{n}}}\leq x\leq \frac{p+2^{\hat{n}}-1}{2^{\hat{n}}}$$
+Indeed, it suffice to take $\hat{n}= max(\log_2 \frac{p}{x},\, \log_2 \frac{1-p}{1-x})$ with $\hat{n}\in\Pee$.\\
+So, for every $x\in I$ we can find a closed interval containing $x$ and thus $$I\subset  \bigcup^{\infty}_{i=1}I_i$$
+and as $I_i\subset I,\, \forall i\in \Pee$ we have also 
+$$\bigcup^{\infty}_{i=1}I_i\subset  I$$
+giving
+$$I=\bigcup^{\infty}_{i=1}I_i$$
+$$\blacklozenge$$
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $\mathscr{K}$ is a collection of intervals such that $\bigcap\mathscr{K}\neq \emptyset$. Is $\bigcup\mathscr{K}$ necessarily an interval?
+\end{tcolorbox}
+As $$\bigcap\mathscr{K}\neq \emptyset$$ there exists at least one  $x\in I_i,\, \forall I_i\in \mathscr{K}$.\\\\
+As the $I_i$ are intervals, we have for all $a_i,\, b_i \in I_i$ with $a_i\leq b_i$ such that $[a_i,\, b_i]\subset I_i$
+$$\blacklozenge$$
+\newpage
+
+\mysection{34}{Algebraic structure for  $\Breal^{n}$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Verify the properties stated in $\mathbf{34.2}$ and $\mathbf{34.4}$.
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+\begin{tcolorbox}
+Show that for points in $\Breal^2$, $|x-y|$ gives the usual distance formula with which the reader is familiar from analytic geometry.
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+\subsection{}
+\begin{tcolorbox}
+Let $x,\, y,\, \Et z$ be distinct points in $R^2$. Let $L_1$ be the line segment with endpoints $x$ and $z$. Let $L_2$ be the line segment with endpoints $y$ and $z$. Let $\alpha$ be the smaller angle (or one of the angles if equal) formed by $L_1$ and $L_2$ at $z$. Show that $$\cos\alpha = \frac{(x-z)(y-z)}{|x-z| |(y-z|}$$
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\subsection{}
+\begin{tcolorbox}
+Let $x$ and $y$ be two elements in $R^2$. Show that $|x. y|\leq |x||y|$ and $|x+y|\leq |x|+|y|$
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+\subsection{}
+\begin{tcolorbox}
+The results of this exercise will be needed in the next section. Consider the function $f$ given by $f (x) = A x^2+ 2Bx+ C$, where $A>0$, and which further satisfies $f(x) \geq 0$ for all real $x$. Prove that $B^2-AC\leq 0$. 
 \end{tcolorbox}
 
 $$\blacklozenge$$

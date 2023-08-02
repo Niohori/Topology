@@ -397,8 +397,16 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Suppose that $\mathscr{K}$ is a collection of intervals such that $\bigcap\mathscr{K}\neq \emptyset$. Is $\bigcup\mathscr{K}$ necessarily an interval?
 \end{tcolorbox}
-As $$\bigcap\mathscr{K}\neq \emptyset$$ there exists at least one  $x\in I_i,\, \forall I_i\in \mathscr{K}$.\\\\
-As the $I_i$ are intervals, we have for all $a_i,\, b_i \in I_i$ with $a_i\leq b_i$ such that $[a_i,\, b_i]\subset I_i$
+Be $a\in \bigcup \mathscr{K}\Et b\in \bigcup \mathscr{K}$. Consider the closed interval $[a,\, b]$. Is it possible that $[a,\, b]\not \subset \bigcup \mathscr{K}$?\\\\
+$[a,\, b]\not \subset \bigcup \mathscr{K}$ would mean that $\exists x\in [a,\, b]$ such that $x\not\in \bigcup \mathscr{K}$.\\
+As $a\in \bigcup \mathscr{K}$ there exists at least one interval $K_a\in \mathscr{K}$ such that $a\in K_a$. In the same way $\exists K_b\in\mathscr{K}$ for which we have $b\in K_b$.\\\\
+If we have $a\in K_a$ and also $b\in K_a$, then we can put $K_a=K_b$ with the consequence that  $x\in K_a$ as $K_a$ is an interval and hence $\forall a,\, b\in K_a, [a,\, b]\subset K_a$.\\
+Hence, $x$ will also be an element of $\bigcup \mathscr{K}$ and we get $[a,\, b]\subset \bigcup \mathscr{K}$.\\\\
+Suppose now, $K_a\neq K_b$. As we suppose $x\in [a,\, b]$, but $x\not\in K_a$ and $x\not\in K_b$ we will have 
+$$a<x<b\quad(\text{compared to } a\leq x\leq b)$$
+As $a$ and $b$ are arbitrary (insofar $a\in K_a$ and $b\in K_b$) and $x\not \in K_a\cup K_b$, we get $$K_a\cap K_b=\emptyset$$
+This is not possible as we have $\bigcap\mathscr{K}\neq \emptyset$ and thus $x$ must be an element of $\bigcup \mathscr{K}$ implying $[a,\, b]\subset \bigcup \mathscr{K}$.\\\\
+\textbf{Conclusion}: Provided that we have $\bigcap\mathscr{K}\neq \emptyset$ , $\bigcup \mathscr{K}$ is indeed an interval 
 $$\blacklozenge$$
 \newpage
 

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\coordinate (z) at (0,0);
+\coordinate (x) at (3,1.8);
+\coordinate (y) at (3.5,-0.5);
+\coordinate (S) at (6.5,1.3);
+\draw [] (z)--(x);
+\draw [] (z)--(y);
+\draw [] (z)--(S);
+\draw [dashed] (x)--(S);
+\node[left] at (z){$z$};
+\node[above] at (x){$x$};
+\node[right] at (y){$y$};
+\node[right] at (S){$(x-z)+(y-z)$};
+\node[above] at (1.5,1) {$L_1$};
+\node[below ] at (1.5,-0.5) {$L_2$};
+\node[above ] at (5,1.5) {$L_2$};
+\pic [draw, "$\alpha$", angle eccentricity=1.5] {angle = y--z--x};
+\pic [draw, "$\beta$", angle eccentricity=1.5] {angle = z--x--S};
+\end{tikzpicture}

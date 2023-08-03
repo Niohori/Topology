@@ -420,7 +420,84 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Verify the properties stated in $\mathbf{34.2}$ and $\mathbf{34.4}$.
 \end{tcolorbox}
+$$ $$
+$\mathbf{34.2( a)}$. For vector addition: For all $x,\, y,\, \Et z$ in $\Breal^n $,\\\\
+(i) $x + y = y + x$\\
+\begin{align*}
+x + y &= (x_1+y_1,\, x_2+y_2,\,\dots  ,\,x_n+y_n) \\ 
+&= (y_1+x_1,\, y_2+x_2,\,\dots ,\, y_n+x_n) = y+x
+\end{align*}
+(ii) $x + (y + z) = (x +y) + z$\\
+\begin{align*}
+x + (y + z)&= (x_1+(y_1+z_1),\, x_2+(y_2+z_2),\,\dots ,\, x_n+(y_n+z_n))\\ &=((x_1+y_1)+z_1,\, (x_2+y_2)+z_2,\,\dots ,\, (x_n+y_n)+z_n = (x+y)+z
+\end{align*}
+(iii) $\theta + x = x$\\
+\begin{align*}
+\theta + x &= (0+x_1,\, 0+x_2,\,\dots ,\, 0+x_n)\\ &=(x_1,\, x_2,\,\dots ,\, x_n)=x
+\end{align*}
+(iv) $x - x =\theta $ (by $x - y$ we shall mean $x + (-y)$)\\
+\begin{align*}
+x-x &= x+(-x)= (x_1+(-x_1),\, x_2+(-x_2),\,\dots ,\, x_n+(-x_n))\\ &=(0,\, 0,\,\dots ,\, 0)=\theta
+\end{align*}
+$$\lozenge$$
+$\mathbf{34.2( b)}$. For scalar multiplication: For scalars $\alpha,\, \beta$ and vectors $x \Et y$,\\\\
+(i) $\alpha(\beta x) = \alpha\beta(x)$\\
+\begin{align*}
+\alpha(\beta x)&= \alpha(\beta x_1,\, \beta x_2,\,\dots ,\, \beta x_n)\\
+&= ((\alpha\beta) x_1,\, (\alpha\beta) x_2,\,\dots ,\,(\alpha \beta) x_n)\\
+&= (\alpha\beta)( x_1,\,  x_2,\,\dots ,\, x_n)=(\alpha\beta)(x)\\
+\end{align*}
+(ii) $(\alpha + \beta)x = \alpha x + \beta x$\\
+\begin{align*}
+(\alpha + \beta)x 
+&= ((\alpha+\beta) x_1,\, (\alpha+\beta) x_2,\,\dots ,\,(\alpha + \beta) x_n)\\
+&= (\alpha x_1 +\beta x_1,\, \alpha x_2+\beta x_2,\,\dots ,\,\alpha x_n + \beta x_n)\\
+&= (\alpha x_1,\, \alpha x_2,\,\dots ,\,\alpha x_n + )+ (\beta x_1,\, \beta x_2,\,\dots ,\, \beta x_n)\\
+&= \alpha x + \beta x
+\end{align*}
+(iii) $\alpha(x + y) = \alpha x + \alpha y$\\
+\begin{align*}
+\alpha(x + y)
+&= \alpha( x_1+y_1,\, x_2+y_2,\,\dots ,\, x_n+y_n)\\
+&= ( \alpha x_1+\alpha y_1,\, \alpha x_2+\alpha y_2,\,\dots ,\, \alpha x_n+\alpha y_n)\\
+&= (\alpha x_1,\, \alpha x_2,\,\dots ,\,\alpha x_n + )+ (\alpha y_1,\, \alpha y_2,\,\dots ,\,\alpha y_n + )\\
+&= \alpha x + \alpha y
+\end{align*}
+(iv) $1x = x$\\
+\begin{align*}
+1x
+&= ( 1.x_1,\, 1.x_2,\,\dots ,\, 1.x_n)\\
+&= (x_1,\, x_2,\,\dots ,\, x_n)\\
+&=x
+\end{align*}
+$$\lozenge$$
+$\mathbf{34.4}$. Properties of the inner product. For $x,\,\Et z $ in $\Breal^n$ and scalars $\alpha\Et \beta$\\\\
+(i) $x . y = y . x$\\
+\begin{align*}
+x . y &= x_1 y_1+x_2 y_2+\dots + x_n y_n\\
+&= y_1 x_1+y_2 x_2+\dots + y_n x_n\\
+&= y.x
+\end{align*}
 
+(ii) $x . (\alpha y + \beta z) = \alpha(x.y) + \beta(y.z)$\\
+\begin{align*}
+x . (\alpha y + \beta z) &= x_1 (\alpha y_1+\beta z_1)+x_2 (\alpha y_2+\beta z_2)+\dots +x_n (\alpha y_n+\beta z_n)\\
+&= \alpha x_1 y_1+\beta x_1 z_1+\alpha x_2 y_2+\beta x_2 z_2+\dots +\alpha x_n y_n+\beta x_n z_n\\
+&= (\alpha x_1 y_1+\alpha x_2 y_2+\dots +\alpha x_n y_n) +(\beta x_1 z_1+ \beta x_2 z_2+\dots +\beta x_n z_n)\\
+&= \alpha(x.y) + \beta(y.z)
+\end{align*}
+(iii) $(\alpha x + \beta y). z = \alpha(x . z) + \beta(y.z)$\\
+\begin{align*}
+(\alpha x + \beta y). z &= (\alpha x_1+\beta y_1)z_1+ (\alpha x_2+\beta y_2)z_2+\dots + (\alpha x_n+\beta y_n)z_n\\
+&= \alpha x_1z_1+\beta y_1z_1+ \alpha x_2 z_2+\beta y_2z_2+\dots + \alpha x_nz_n +\beta y_nz_n\\
+&= (\alpha x_1z_1+ \alpha x_2 z_2+\dots + \alpha x_nz_n )+(\beta y_1z_1+ \beta y_2z_2+\dots +\beta y_nz_n)\\
+&=\alpha(x . z) + \beta(y.z)
+\end{align*}
+(iv) $x .x > 0 \text{ if } x\neq \theta \Et \theta.\theta = 0$\\
+\begin{align*}
+x .x = x_1 x_1+ x_2 x_2+\dots + x_nx_n 
+\end{align*}
+is  a sum of positive numbers and possibly zero's of $x\neq \theta$ and thus $x>0$.
 $$\blacklozenge$$\\
 
 
@@ -428,20 +505,70 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Show that for points in $\Breal^2$, $|x-y|$ gives the usual distance formula with which the reader is familiar from analytic geometry.
 \end{tcolorbox}
-
+\begin{align*}
+|x-y|^2= \left((x-y).(x-y)\right)&=(x_1-y_1)^2+(x_2-y_2)^2\\
+\implies \spatie |x-y|&= \sqrt{(x_1-y_1)^2+(x_2-y_2)^2}
+\end{align*}
 $$\blacklozenge$$\\
 \subsection{}
 \begin{tcolorbox}
 Let $x,\, y,\, \Et z$ be distinct points in $R^2$. Let $L_1$ be the line segment with endpoints $x$ and $z$. Let $L_2$ be the line segment with endpoints $y$ and $z$. Let $\alpha$ be the smaller angle (or one of the angles if equal) formed by $L_1$ and $L_2$ at $z$. Show that $$\cos\alpha = \frac{(x-z)(y-z)}{|x-z| |(y-z|}$$
 \end{tcolorbox}
-
+\begin{figure}[H]%
+    \centering
+\input{./images/fig_2.34.4.tex}\\
+\caption{Proof that the scalar product determine the angle of two segments }
+\label{fig:fig_p8a}
+\end{figure}
+Consider the triangle $\triangle \left(z,\,x,\, (x-z)+ (y-z)\right)$. From trigonometry we have 
+\begin{align}
+|x-z|^2+|y-z|^2&= |x-z+ y-z|^2+2|x-z||y-z|\cos \beta
+\end{align}
+where $\beta$ is the inner angle at $x$.
+We have 
+\begin{align*}
+|x-z+ y-z|^2= |x-z|^2+|y-z|^2+2(x-z)(y-z)
+\end{align*}
+and can write $(1)$ as 
+\begin{align*}
+|x-z|^2+|y-z|^2&= |x-z|^2+|y-z|^2+2(x-z)(y-z)+2|x-z||y-z|\cos \beta\\
+\implies\quad \cos\beta&= -\frac{(x-z)(y-z)}{|x-z||y-z|}
+\end{align*}
+From geometry we have $2\alpha+2\beta = 2\pi$ and thus $\cos\beta = \cos (\pi-\alpha)= -\cos\alpha$, giving 
+$$\cos \alpha= \frac{(x-z)(y-z)}{|x-z||y-z|}$$
 $$\blacklozenge$$\\
 
 \subsection{}
 \begin{tcolorbox}
 Let $x$ and $y$ be two elements in $R^2$. Show that $|x. y|\leq |x||y|$ and $|x+y|\leq |x|+|y|$
 \end{tcolorbox}
-
+We suppose $y\neq 0$, then for any $p\in \Breal$ we have
+\begin{align}
+0&\leq (x+py).(x+py)\\
+&= (x.x) + p^2(y.y)+2p(x.y)\\
+&=|x|^2+p^2|y|^2+2p(x.y)
+\end{align}
+As $p$ is arbitrary, choose $p= -\frac{(x.y)}{|y|^2}$ and substitute in $(3)$, we get 
+\begin{align*}
+0&\leq|x|^2-\frac{(x.y)^2}{|y|^2}-\frac{(x.y)^2}{|y|^4}|y|^2\\
+&= |x|^2|y|^2-(x.y)^2
+\end{align*}
+from which we get 
+$$(x.y)^2\leq |x|^2|y|^2$$
+Taking the positive square root:
+$$|x.y|\leq |x||y|$$
+\textit{Note that we have also $(x.y)\leq |x.y|\leq |x||y|$ as $(x.y)$ can be negative}.
+$$\lozenge$$
+\begin{align*}
+|x+y|^2&= (x+y).(x+y)\\
+&= (x.x)+(y.y)+2(x.y)\\
+&= |x|^2+|y|^2+2(x.y)\\
+&\leq |x|^2+|y|^2+2|x||y|\quad\text{ (by the previous inequality)}\\
+&= \left(|x|+|y|\right)^2
+\end{align*}
+Taking again the positive square root, we get 
+$$|x+y|\leq |x|+|y|$$
+\textit{Note: this last inequality is called the \textbf{Minkowski inequality}}.
 $$\blacklozenge$$\\
 \subsection{}
 \begin{tcolorbox}

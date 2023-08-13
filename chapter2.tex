@@ -574,6 +574,469 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 The results of this exercise will be needed in the next section. Consider the function $f$ given by $f (x) = A x^2+ 2Bx+ C$, where $A>0$, and which further satisfies $f(x) \geq 0$ for all real $x$. Prove that $B^2-AC\leq 0$. 
 \end{tcolorbox}
+ $f(x)\geq 0,\, \forall x\in \mathbb{R}$, then $f(-\frac{B}{A})\geq 0$ which gives
+
+\begin{align*}f(-\frac{B}{A})&= \frac{B^2}{A}-2\frac{B^2}{A}+C \geq 0\\
+\Rightarrow\quad &B^2-AC \leq 0
+\end{align*}
+$$\blacklozenge$$
+\newpage
+
+\mysection{35}{The Cauchy-Schwartz inequality}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Verify $\mathbf{35.3}$ .
+\end{tcolorbox}
+$\mathbf{35.3}$. Theorem. For all $x,\, y \Et z$ in $\Breal^n$ and real numbers $\alpha$,\\\\
+$\mathbf{35.3( a)}$. $|x| > 0$ if $x\neq 0\Et |\theta|=0$\\
+This is direct consequence of $\mathbf{34.4.(iv)}$ and the definition $\mathbf{34.5}$ of the magnitude of a vector in $\Breal^n$.
+$$\lozenge$$
+$\mathbf{35.3( b)}$. $|\alpha x| =|\alpha|| x|$\\
+$|\alpha x|^2= (\alpha x).(\alpha x)= \alpha^2 (x.x)$. Hence $|\alpha x|^2= \sqrt{\alpha^2 (x.x)}= |\alpha||x|$ (as the magnitude of a vector is positive or zero by definition positive).
+$$\lozenge$$
+$\mathbf{35.3( c)}$. $|x|=|-x|$\\
+$|x|=|(-1)(-1)x|= |-1||(-1)x|= |-x|$ by $\mathbf{35.3( b)}$
+$$\lozenge$$
+$\mathbf{35.3( d)}$. $|x-y|+ |y- z| \geq |x-z|$\\
+$|x-z|= |x-y+y-z|\leq |x-y|+|y-z|$ by the triangle equality.
+$$\blacklozenge$$\\
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose tha $a\in \Breal^n$. Consider the collection $S=\{\alpha a:-\infty < \alpha <\infty\}$. Show that $S$ is a line.
+\end{tcolorbox}
+The definition of a line is 
+$$S= \{x:x=(1-t)u+tv,\,t\in\Breal\}\Et u\neq v$$ This can be written as
+$$S= \{x:x=u+(v-u)t,\,t\in\Breal\}\Et u\neq v$$
+put $u=\theta,\, v=a $ and $t=\alpha$ an we get 
+$$S= \{x:x= \alpha a,\,\alpha\in\Breal\}$$
+$$\blacklozenge$$
+
+
+\newpage
+
+\mysection{36}{The distance formula in $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove theorem $\mathbf{36.1}$.
+\end{tcolorbox}
+$\mathbf{36.1}$. Theorem. Let $d(x,y)=|x-y|$ for $x\Et y$ in $\Breal^n$ . Then for every $x,\, y,\, \Et z$ in $\Breal^n$\\\\
+$\mathbf{36.1( a)}$. $d(x,y)\geq 0$\\
+This follows immediately from the definition of $|x-y|$ as a sum of squared reals, hence positive or zero.
+$$\lozenge$$
+$\mathbf{36.1( b)}$. $d(x,y)=0 \Leftrightarrow x=y$\\
+$\Leftarrow$: follows from the definition $|x-x|= \sqrt{0^2+0^2+\dots + 0^2}$\\\\
+$\Rightarrow$: from $\mathbf{34.4(iv)}$ we know that $z.z>0$ if $z\neq \theta$, hence $z\neq \theta$, we have $|z|>0$ (by the definition of the norm). And conclude since $d(x,y)= |x-y| = |z|=0$ (put $z=x-y$) that $z$ must be equal to $\theta$ and thus $x=y$.
+$$\lozenge$$
+$\mathbf{36.1( c)}$. $d(x,y)=d(y,x)$\\
+$d(x,y)=|x-y|= |y-x| = d(y,x)$
+$$\lozenge$$
+$\mathbf{36.1( d)}$. $d(x,y)+ d(y,z)\geq d(x,z)$\\
+This follows immediately from the triangle equality $\mathbf{35.3.(d)}$.
+$$\blacklozenge$$\\
+
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Verify that if properties (b), (c), and (d) of $\mathbf{36.1}$ are assumed for a real-valued function defined on $\Breal^n\times \Breal^n\rightarrow \Breal$, then (a) follows automatically.
+\end{tcolorbox}
+We have (with $d(x,y)$ replaced by a real-valued function $f(x,y): \Breal^n\times \Breal^n\rightarrow \Breal$\\\\
+$\mathbf{36.1( b)}$. $f(x,y)=0 \Leftrightarrow x=y$\\
+$\mathbf{36.1( c)}$. $f(x,y)=f(y,x)$\\
+$\mathbf{36.1( d)}$. $f(x,y)+ f(y,z)\geq f(x,z)$\\\\
+In $\mathbf{36.1( d)}$ put $z=x$ then we get 
+$$\underbrace{f(x,y)+ f(y,x)}_{=2f(x,y)}\geq \underbrace{f(x,x)}_{=0}$$
+giving 
+$$f(x,y)\geq 0$$
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove remark $\mathbf{36.3}$.
+\end{tcolorbox}
+Remark: Let $x=\{x_1,\, x_2,\, \dots x_n\} \Et y=\{y_1,\, y_2,\, \dots y_n\} $ be points in $\Breal^n$. Then for each $i\in \Pee_n$:
+$$|x_i-y_i| \leq d(x,y)$$
+and 
+$$d(x,y)\leq \sqrt{n}\max\{|x_i-y_i|: i\in \Pee_n\}$$\\\\
+As $d^2(x,y)=  (x_1-y_1)^2+(x_2-y_2)^2+\dots +(x_n-y_n)^2 $ it is clear that $d^2(x,y)\geq  (x_i-y_i)^2$ for any arbitray $i\in \Pee_n$ and thus 
+$$|x_i-y_i| \leq d(x,y)$$
+Also 
+\begin{align*}
+d^2(x,y)&=  (x_1-y_1)^2+(x_2-y_2)^2+\dots +(x_n-y_n)^2 \\
+&\leq (x_m-y_m)^2+(x_m-y_m)^2+\dots +(x_m-y_m)^2\quad \text{ with } (x_m-y_m)^2=  \max\{(x_i-y_i)^2: i\in \Pee_n\}\\
+&=n (x_m-y_m)^2
+\end{align*}
+giving 
+$$d(x,y)\leq \sqrt{n}\max\{|x_i-y_i|: i\in \Pee_n\}$$
+$$\blacklozenge$$\\
+
+
+
+\newpage
+
+\mysection{37}{Open subsets of $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Verify Examples $37.2, 37.3, 37.4, \Et 37.5$. Let $p \in \Breal^n$ and let $\epsilon > 0$. Prove that the set $N(p;\epsilon)$ is an open subset of $\Breal^n$.
+\end{tcolorbox}
+$\mathbf{37.2}$\\\\
+
+i) $\emptyset$\\
+As there is no $p$ such that there exist a $N(p;\epsilon)$, we have $N(p;\epsilon)=\emptyset\subset \emptyset$.\\
+ii) $\Breal^n$\\
+For every $p\in \Breal^n$ there exist a $\epsilon>0$ such that $\exists q\in\Breal^n\in N(p;\epsilon)$ and thus $N(p;\epsilon)\subset \Breal^n$.\\\\
+$\mathbf{37.3}$ $\Breal^n\times \{0\}$\\\\
+$\Breal^n\times \{0\}$ is a subset of $\Breal^{n+1}$ and any $\epsilon$-neighbourhood of a point $p\in \Breal^n\times \{0\}$ will contain points of the form $(x_1,\ x_2,\, \dots x_n,\ x_{n+1})$ with $x_{n+1}$ not necessarily $0$, hence the neighbourhood will not be a subset of $\Breal^n\times \{0\}$.\\\\
+$\mathbf{37.3}$ $ S=\{(x,\, y): x+y<2\}$\\
+As shown in the figure $2.2$ it suffice to take $\epsilon\leq |p-q|$ where $q$ determines the largest $2$-ball for which the line $y=2-x$ is tangent to the $2$-surface with center $p$.
+\begin{figure}[H]%
+    \centering
+\input{./images/fig_2.37.1_37.4.tex}\\
+\caption{$\epsilon$-neighbourhood for the subset $S=\{(x,y):x+y<2\}$  }
+\label{fig:fig_p8a}
+\end{figure}
+$\mathbf{37.4}$ $ A=\{(x,y): x^2+y^2<1\},\, B=\{(x,y): (x-\half)^2+(y-\half)^2<1\}$\\
+It is obvious that $A\Et B$ are open subsets (they are both $2$-balls in $\Breal^2$). Then $A\cap B$ and $A\cup B$ are open subsets (see Excise hereunder).\\
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove that if $A$ and $B$ are open subsets of $\Breal^{n}$, then $A\cup B$ and $A\cap B$ are open subsets of $\Breal^n$.
+\end{tcolorbox}
+$\mathbf{A\cap B}$ \textbf{is an open subset}:\\
+ Even if $A\cap B=\emptyset$ as $\emptyset$ is a open set (see $\mathbf{37.2}$).\\
+If  $A\cap B\neq\emptyset$,  then for a $p\in  A\cap B$, we have   $p\in A$ and $p\in B$ and as $A$ and $B$ are open sets, there exist a $\epsilon_a$-neighbourhood of $p$ which is a subset of $A$ and a $\epsilon_b$-neighbourhood of $p$ which is a subset of $B$. Take $\epsilon = \min (\epsilon_a,\, \epsilon_b)$ and we have $N(p;\epsilon)\subset A\cap B$.\\\\
+$\mathbf{A\cup B}$ \textbf{is an open subset}:\\
+As $A$ and $B$ are open sets, there exist a $\epsilon_a$-neighbourhood of $p$ which is a subset of $A$ and a $\epsilon_b$-neighbourhood of $p$ which is a subset of $B$ and thus we have a $\epsilon>0$ so that $\forall p\in A: N(p;\epsilon)\subset A \Ou \forall p\in B: N(p;\epsilon)\subset B$ as $p\in A\cup B$ ans thus $p\in A\Ou p\in B$.\\\\
 
 $$\blacklozenge$$
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $\mathscr{K}$ be a collection of open subsets of $\Breal^n$. Prove that $\bigcup\mathscr{K}$ is an open subset of $\Breal^n$. Prove that if $\mathscr{K}$ is a nonempty finite
+collection of open subsets of $\Breal^n$, then $\bigcap \mathscr{K}$ is open.
+The reader, by virtue of having proved the previous exercise
+has proved the following very important theorem. \\
+\textit{The union of an arbitrary collection of open subsets of $\Breal^n$ is open. The intersection of a finite collection of open subsets of $\Breal^n$ is open}.
+\end{tcolorbox}
+The proof is nearly similar to the previous exercise.\\\\
+$\bigcup\mathscr{K}$ \textbf{is an open subset}:\\
+As every $K\in\mathscr{K}$ is an open set, there exist a $\epsilon_K$-neighbourhood ,for every $p\in K$, which is a subset of $K$. Thus $\forall p\in \bigcup\mathscr{K},\, \exists \epsilon: N(p;\epsilon)\subset \bigcup\mathscr{K}$ proving that $\bigcup\mathscr{K}$ is an open set.\\\\
+$\bigcap\mathscr{K}$ \textbf{is an open subset} provided that $\mathscr{K}$ is a finite set:\\\\
+\textbf{i)} Even if $\bigcap\mathscr{K}=\emptyset$, $\bigcap\mathscr{K}=\emptyset$ is an open set as $\emptyset$ is a open set (see $\mathbf{37.2}$).\\\\
+\textbf{ii) }If  $\bigcap\mathscr{K}\neq\emptyset$,  then for a $p\in  \bigcap\mathscr{K}$,  $p$ is an element of all $K_n\in \mathscr{K}$ and as all $K_n$ are open sets, there exist for every $K_n$ an  $\epsilon_n$-neighbourhood of $p$ which is a subset of $K_n$. As $\mathscr{K}$ is finite, it is countable and can form the set $E=\{\epsilon_1,\epsilon_2,\, \dots \epsilon_N\}$. Take $\epsilon = \min (E)$ and we have $N(p;\epsilon)\subset A\cap B$.\\\\
+
+$$\blacklozenge$$\\
+
+
+\newpage
+
+\mysection{38}{Limit points in $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+1. Let $F$ be a finite subset of $\Breal^n$. Can $F$ have any limit points?
+\end{tcolorbox}
+Be $F=\{p_1,\, p_2,\, \dots ,\, p_N\}$ the finite set. Define 
+$$E=\{|p_i-p_j|,\, i,\, j\in \Pee_N,\, i\neq j\}$$
+Then we can find $\epsilon=\min E$ and therefore $N(p_i;\frac{\epsilon}{2})-\{p_i\}$ will not be a subset of $F$ and thus . \\
+$$\left(N(p_i;\frac{\epsilon}{2})-\{p_i\}\right)\cap F=\emptyset$$
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give an example of a subset $S$ of $\Breal^2$ such that every point of $S$ is a limit point of $S$.
+\end{tcolorbox}
+$$S=\{(x,y): |x-y|<r\}\quad \text{ a }2\text{-ball in } \Breal^2$$
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give an example of a subset $S$ of $\Breal^2$ that is infinite and has no limit points.
+\end{tcolorbox}
+$$Z=\{(p,\, q):p,\, q\in \Zed\}$$
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+Suppose $S$ is a nonempty open subset of $\Breal^n$. Is every point of $S$ a limit point of $S$? Give an example of an open nonempty subset of $\Breal^n$ that contains all of its limit points.
+\end{tcolorbox}
+$S$ is a nonempty open subset of $\Breal^n$ so we have for any $p\in S$,
+$$\exists \epsilon>0: N(p;\epsilon)-\{p\}\subset S$$
+so for a $\epsilon^{'}>\epsilon$ we will have a $N(p;\epsilon^{'})$ such that 
+$$N(p;\epsilon)- \{p\}\subset N(p;\epsilon^{'})- \{p\}$$
+and thus 
+$$(N(p;\epsilon^{'})- \{p\})\cap S\neq \emptyset$$
+hence every point $p\in S$ is a limit point of $S$.
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+Suppose that $\mathscr{K}$ is a collection of subsets of $\Breal^n$. Suppose $p$ is a limit point of $\bigcup \mathscr{K}$. Is $p$ necessarily a limit point of at least one $A\in \mathscr{K}$?
+\end{tcolorbox}
+We give a counterexample to prove this is not true.\\\
+\begin{figure}[H]%
+    \centering
+\input{./images/fig_2.38_Ex_5.tex}\\
+\caption{Open subsets $K_n=\{x:|x-(\half,0)|< \frac{2^n-1  }{2^{n+1}},\, n\in\Pee\}$ in $\Breal^2$.}
+\label{fig:fig_p8a}
+\end{figure}
+In $\Breal^2$, take the open subsets $K_n=\{x:|x-(\half,0)|<\frac{2^n-1}{2^{n+1}},\, n\in \Breal\}$ and $\mathscr{K}=\{K_n,\,n\in \Breal \}$. This set for $\Breal^2$ is illustrated in the figure above.\\\\
+$\hat{O}=(0,0)$ is a limit point for $\bigcup \mathscr{K}$. \\
+Indeed, choose an arbitrary $\epsilon >0$. If $\hat{O}$ is a limit point of $\bigcup \mathscr{K}$, then we must have 
+$$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$ Consider a point $(x,0)\in K_n\subset \bigcup \mathscr{K} $. We have $|x-\half|<\frac{2^n-1}{2^{n+1}}$ or 
+\begin{align}
+-\frac{2^n-1}{2^{n+1}}<&x-\half<\frac{2^n-1}{2^{n+1}}\\
+\Leftrightarrow\quad  \frac{1}{2^{n+1}}<&x<1-\frac{1}{2^{n+1}}
+\end{align}
+Consider the points $(x^{'},0)\in N(\hat{O};\epsilon)$. We have $|x^{'}|<\epsilon$ or 
+\begin{align*}
+-\epsilon<&x^{'}<\epsilon
+\end{align*}
+and for $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$, considering only the positive $x^{'}$'s
+\begin{align}
+0<&x^{'}<\epsilon
+\end{align}
+Considering $(2)$ and $(3)$, we can always find a $n$ such that $\frac{1}{2^{n+1}}\leq\epsilon$. Hence  $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap K_n\neq \emptyset$ and thus as $K_n\subset  \bigcup \mathscr{K}$ we have
+$$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$.\\\\
+On the other hand, for a given $K_n\in \mathscr{K}$ it is clear that $\hat{O}$ is not a limit point as we can always find an $\epsilon < \frac{1}{2^{n+1}}$, meaning that $K_n$ and $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$ have no common points, meaning that $\hat{O}$ is not a limit point of $K_n$.
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+If your answer to Exercise $5$ is no, prove the following: Suppose that $\mathscr{K}$ is a finite collection of subsets of $\Breal^n$. If $p$ is a limit point of $\bigcup \mathscr{K}$ , then $p$ is a limit point of at least one $A \in \mathscr{K}$.
+\end{tcolorbox}
+Be $p$ a limit point of $\bigcup \mathscr{K}$. This means
+$$\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$
+
+Be $S=\left(N(p;\epsilon)-\{p\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$. This means $\exists x\in\Breal^n$ such that $ x\in S\Et x\in \bigcup\mathscr{K}$, the latter means that $x$ must be an element of at least one $A^{*}\in \mathscr{K}$.\\
+But $x$ must also be an element of $\left(N(p;\epsilon)-\{p\}\right)$ so we have 
+$$\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap A^{*}\neq \emptyset$$
+Hence, there exists at least one $A^*$ for which $p$ is a limit point.
+$$\blacklozenge$$\\
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $S\subset \Breal^n$  and let $z$ be a limit point of $S$. Show that for every $\epsilon > 0$ , $N(z; \epsilon)\cap S$ is an infinite set.
+\end{tcolorbox}
+We have 
+\begin{align}
+&\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset\\
+\implies \quad &\forall  \epsilon >0, N(p;\epsilon)\cap S\neq \emptyset
+\end{align}
+Suppose $K=N(p;\epsilon)\cap S$ is a finite set. Be $K=\{x_1,\, x_2,\, \dots ,\, x_N\}$ and $E=\{|x_1-z|,\, |x_2-z|,\, \dots ,\, |x_N-z|\}$. Put $\delta = \min{E}$. Then for any $\epsilon^{'}<\delta $ we have 
+\begin{align}
+N(z;\epsilon^{'})\cap S=\emptyset\quad , \epsilon^{'}<\delta 
+\end{align}
+We get a contradiction as $(3)$ puts a constraint on the requirement ($\forall$) in  $(2)$  and thus we conclude \\
+$$N(z;\epsilon^{'})\cap S\text{ is a infinite set.}$$
+$$\blacklozenge$$\\
+
+\newpage
+
+\mysection{39}{Closed subsets of $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\newpage
+
+\mysection{40}{Bounded subsets of $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\newpage
+
+\mysection{41}{ Convergent sequences in $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\newpage
+
+\mysection{42}{Cauchy criterion for convergence}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\newpage
+\mysection{43}{Some additional properties for $\Breal^n$}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
 \newpage

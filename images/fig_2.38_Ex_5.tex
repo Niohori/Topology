@@ -1,0 +1,49 @@
+\begin{tikzpicture} [scale=0.5,c/.style={insert path={circle[radius=1pt]}},spy using outlines={circle, magnification=20, size=2cm, connect spies}]     
+    \pgfplotsset{compat=1.12};
+		\tdplotsetmaincoords{0}{0};
+\pgfplotsset{every axis/.append style={
+		scale=1,
+		axis lines=center,
+		axis on top,
+		xlabel={$x$},
+		ylabel={$y$},
+               axis x line=middle,    % put the x axis in the middle
+               axis y line=middle,    % put the y axis in the middle
+               %x axis line style={-latex, ultra thin}, % arrows on the axis
+               y axis line style={draw opacity=1},
+                x axis line style={draw opacity=1},
+            }}
+            
+	\begin{axis}
+		[ultra thin,
+		xmin=-0.1,
+		xmax=1.25,
+		ymin=-0.75,
+		ymax=0.75,
+		ytick=\empty,
+		xtick=\empty,
+	axis equal, 
+		]
+
+	\coordinate (x0) at ({0},{0});
+	\coordinate (x1) at ({1},{0});
+	\coordinate (p1) at ({0.5},{0});
+	
+	\draw  (p1) [c];
+	\node[tdplot_main_coords,{anchor=south east }] at (x0){$0$};
+	\node[tdplot_main_coords,{above}] at (p1){$\frac{1}{2}$};
+
+\draw[line width=0.01mm] (p1) circle[radius={0.25}];
+\draw[line width=0.01mm] (p1) circle[radius={0.375}];
+\draw[line width=0.01mm] (p1) circle[radius={0.4375}];
+\draw[line width=0.01mm] (p1) circle[radius={0.46875}];
+\draw[line width=0.01mm] (p1) circle[radius={0.484375}];
+\draw[line width=0.01mm] (p1) circle[radius={0.4921875}];
+\draw[line width=0.01mm] (p1) circle[radius={ 0.49609375}];
+\draw[line width=0.01mm] (p1) circle[radius={0.498046875}];
+\draw[line width=0.01mm] (p1) circle[radius={0.4990234375}];
+ 
+\end{axis}
+\spy [gray!80] on (0.65,1.42)
+             in node [left] at (0.25,0);
+\end{tikzpicture}

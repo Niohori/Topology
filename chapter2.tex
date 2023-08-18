@@ -708,8 +708,8 @@ ii) $\Breal^n$\\
 For every $p\in \Breal^n$ there exist a $\epsilon>0$ such that $\exists q\in\Breal^n\in N(p;\epsilon)$ and thus $N(p;\epsilon)\subset \Breal^n$.\\\\
 $\mathbf{37.3}$ $\Breal^n\times \{0\}$\\\\
 $\Breal^n\times \{0\}$ is a subset of $\Breal^{n+1}$ and any $\epsilon$-neighbourhood of a point $p\in \Breal^n\times \{0\}$ will contain points of the form $(x_1,\ x_2,\, \dots x_n,\ x_{n+1})$ with $x_{n+1}$ not necessarily $0$, hence the neighbourhood will not be a subset of $\Breal^n\times \{0\}$.\\\\
-$\mathbf{37.3}$ $ S=\{(x,\, y): x+y<2\}$\\
-As shown in the figure $2.2$ it suffice to take $\epsilon\leq |p-q|$ where $q$ determines the largest $2$-ball for which the line $y=2-x$ is tangent to the $2$-surface with center $p$.
+$\mathbf{37.4}$ $ S=\{(x,\, y): x+y<2\}$\\
+As shown in the figure $2.2$ it suffice to take $\epsilon <|p-q|$ where $q$ determines the largest $2$-ball for which the line $y=2-x$ is tangent to the $2$-surface with center $p$.
 \begin{figure}[H]%
     \centering
 \input{./images/fig_2.37.1_37.4.tex}\\
@@ -717,7 +717,7 @@ As shown in the figure $2.2$ it suffice to take $\epsilon\leq |p-q|$ where $q$ d
 \label{fig:fig_p8a}
 \end{figure}
 $\mathbf{37.4}$ $ A=\{(x,y): x^2+y^2<1\},\, B=\{(x,y): (x-\half)^2+(y-\half)^2<1\}$\\
-It is obvious that $A\Et B$ are open subsets (they are both $2$-balls in $\Breal^2$). Then $A\cap B$ and $A\cup B$ are open subsets (see Excise hereunder).\\
+It is obvious that $A\Et B$ are open subsets (they are both $2$-balls in $\Breal^2$). Then $A\cap B$ and $A\cup B$ are open subsets (see Exercise hereunder).\\
 
 $$\blacklozenge$$\\
 
@@ -839,7 +839,7 @@ and for $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$, considering only the pos
 \end{align}
 Considering $(2)$ and $(3)$, we can always find a $n$ such that $\frac{1}{2^{n+1}}\leq\epsilon$. Hence  $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap K_n\neq \emptyset$ and thus as $K_n\subset  \bigcup \mathscr{K}$ we have
 $$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$.\\\\
-On the other hand, for a given $K_n\in \mathscr{K}$ it is clear that $\hat{O}$ is not a limit point as we can always find an $\epsilon < \frac{1}{2^{n+1}}$, meaning that $K_n$ and $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$ have no common points, meaning that $\hat{O}$ is not a limit point of $K_n$.
+On the other hand, for a given $K_n\in \mathscr{K}$ it is clear that $\hat{O}$ is not a limit point as we can always find an $\epsilon < \frac{1}{2^{n+1}}$, meaning that $K_n$ and $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$ have no common points, hence, $\hat{O}$ is not a limit point of $K_n$.
 $$\blacklozenge$$\\
 
 
@@ -885,7 +885,7 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-
+Suppose that $F$ is a finite subset of $\Breal^n$. Is $F$ necessarily closed in $\Breal^n$?
 \end{tcolorbox}
 
 $$\blacklozenge$$\\
@@ -894,7 +894,40 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
+Prove Theorems $\mathbf{39.2}\Et \mathbf{39.3}$.
+\end{tcolorbox}
+$$ $$
+$\mathbf{39.2}$ Let $S\subset \Breal^n$. Then $S$ is closed if and only if its complement is open in $\Breal^n$.
+$$\implies$$
+Be $p\in \, \sim S$. Then, $p\not \in  S$ and thus $p$ can not be a limit point of $S$. Hence, the statement $\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset$ is false. We have,
+\begin{align*}
+&\neg\left(\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset\right)\\
+\Leftrightarrow\quad &\exists \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S= \emptyset\\
+\Leftrightarrow\quad &\exists \epsilon >0,N(p;\epsilon)\cap S= \emptyset
+\end{align*}
+The last statement follows from the fact that $p\not\in S$, hence the presence of $p$ in $N(p;\epsilon)$ is of no object for the statement.
+By the last statement , $N(p;\epsilon)\not\subset S$ and thus $N(p;\epsilon)$ lies completely in the complement of $S$ and we get for any arbitrary $p\in(\sim S)$:
+$$\exists \epsilon >0,N(p;\epsilon)\subset (\sim S)$$
+proving that $\sim S$ is an open set.
+$$\lozenge$$
+$$\Leftarrow$$
+Be $q$ a limit point of $S$ but not in $S$, then $q\in(\sim S)$. As $\sim S$ is an open set we have $\exists\epsilon >0, N(q;\epsilon)\subset (\sim S)$ and thus $\exists\epsilon >0, N(q;\epsilon)\not \subset S$ giving $\exists\epsilon >0, N(q;\epsilon) \cap S=\emptyset$. The presence of $q$ in $N(q;\epsilon)$ does not change the last statement and we have
+$$\exists\epsilon >0, \left(N(q;\epsilon)-\{q\}\right)\cap S=\emptyset$$
+We have a contradiction as we supposed that $q$ was a limit point of $S$, hence the supposition that $q$ is not in $S$ is wrong. So a limit point of $S$ must be in $S$ and thus $S$ is closed.
+$$\lozenge$$
+$\mathbf{39.3}$\\ 
+$\mathbf{(a)}$ The empty set and $\Breal^n$ are closed subsets of $\Breal^n$.\\\\
+$\mathbf{(b)}$ The intersection of an arbitrary nonempty collection of closed sets is closed\\\\
+$\mathbf{(c)}$ The union of a finite collection of closed sets is closed.
 
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Is the set in Example $\mathbf{37.3 }$a closed set?
 \end{tcolorbox}
 
 $$\blacklozenge$$\\
@@ -903,7 +936,42 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
+Let $a \Et b$ be real numbers and let $S$ be the following subset of $\Breal^2$. $ S = \{(x,y):ax + by \leq 1\}$. Is $S$ a closed set?
+\end{tcolorbox}
 
+$$\blacklozenge$$\\
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $S$ be a subset of $\Breal^n$. Let $S^{'}= \{x:x \in \Breal^n \Et x \text{ is a limit point of } S\}$. Is $S^{'}$ necessarily a closed set?
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give an example of a countable collection $\mathscr{K           }$ of closed subsets of $\Breal^2$ such that $\bigcup\mathscr{K}$ is not closed.
+
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Let $S$ be a subset of $\Breal^n$. Let $F$ consist of all points $p$ in $\Breal^n$ such that for each $\epsilon > 0, \, N(p; \epsilon)\cap S \neq \emptyset$ and $N(p;\epsilon)\cap \left(
+\sim S\right)  \neq \emptyset$. Is $F$ necessarily a closed set?
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Show that lines and polygons are closed subsets of $\Breal^n$ (see $\mathbf{35.5}\Et \mathbf{ 35.6}$).
 \end{tcolorbox}
 
 $$\blacklozenge$$\\

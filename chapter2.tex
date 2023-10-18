@@ -812,17 +812,17 @@ $i)\quad \mathbf{\epsilon^{'}>\epsilon}$\\\\
 In that case we will have $N(p;\epsilon)\subset N(p;\epsilon^{'})$. This means that $N(p;\epsilon)\cap S \subset N(p;\epsilon^{'})\cap S$ and as $N(p;\epsilon)\cap S = N(p;\epsilon)\neq \emptyset$ we conclude $N(p;\epsilon^{'})\cap S\neq \emptyset$.\\\\
 $ii)\quad \mathbf{\epsilon}>\epsilon^{'}$\\\\
 In that case we will have $N(p;\epsilon^{'})\subset N(p;\epsilon)$. As $N(p;\epsilon)\subset S$ we also have $N(p;\epsilon^{'})\subset S$ and conclude $N(p;\epsilon^{'})\cap S\neq \emptyset$.\\\\
-So, for all cases of $\epsilon^{'}$ we got the conclusion 
+So, for all cases of $\epsilon^{'}$ we get the conclusion 
 $$\forall p\in S, \forall\, \epsilon^{'}>0: N(p;\epsilon^{'})\cap S\neq \emptyset $$ Can we prove that also
 \begin{align}
 \forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S\neq \emptyset
 \end{align}
 Suppose, 
 $$\forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S= \emptyset $$
-This means that $p$ would be the only element common to $N(p;\epsilon^{'})$ and $S$. This is not possible as $\epsilon^{'}$ being greater than $0$ means that $N(p;\epsilon^{'})$ contains other elements than $p$ and as $N(p;\epsilon^{'})\subset S$ these other elements must also belong to $S$, hence $\left(N(p;\epsilon^{'})-\{p\}\right)\cap S\neq \emptyset $ and conclude that $(1)$ is a true statement and thus $p$ is a limit point of $S$. As $p$ was arbitrary chosen, this yields for all elements of $S$ and thus every point of $S$ is a limit point of $S$.  
+This means that $p$ would be the only element common to $N(p;\epsilon^{'})$ and $S$. This is not possible as $\epsilon^{'}$ being greater than $0$ means that $N(p;\epsilon^{'})$ contains other elements than $p$ and as $N(p;\epsilon^{'})\subset S$ these other elements must also belong to $S$, hence $\left(N(p;\epsilon^{'})-\{p\}\right)\cap S \neq \emptyset $ and conclude that $(1)$ is a true statement and thus $p$ is a limit point of $S$. As $p$ was arbitrary chosen, this yields for all elements of $S$ and thus every point of $S$ is a limit point of $S$.  
 $$\lozenge$$
 Example of an open nonempty subset of $\Breal^n$ that contains all of its limit points.\\\\
-$$S=\{\}$$
+$$S=\{\Breal^n\}$$
 $$\blacklozenge$$\\
 
 
@@ -855,7 +855,7 @@ and for $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$, considering only the pos
 \begin{align}
 0<&x^{'}<\epsilon
 \end{align}
-Considering $(2)$ and $(3)$, we can always find a $n$ such that $\frac{1}{2^{n+1}}\leq\epsilon$. Hence  $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap K_n\neq \emptyset$ and thus as $K_n\subset  \bigcup \mathscr{K}$ we have
+Considering $(2)$ and $(3)$, we can always find a $n$ such that $\frac{1}{2^{n+1}}<\epsilon$. Hence  $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap K_n= \left(\frac{1}{2^{n+1}},\epsilon\right)\neq \emptyset$ and thus as $K_n\subset  \bigcup \mathscr{K}$ we have
 $$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$.\\\\
 On the other hand, for a given $K_n\in \mathscr{K}$ it is clear that $\hat{O}$ is not a limit point as we can always find an $\epsilon < \frac{1}{2^{n+1}}$, meaning that $K_n$ and $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$ have no common points, hence, $\hat{O}$ is not a limit point of $K_n$.
 $$\blacklozenge$$\\
@@ -882,10 +882,10 @@ Let $S\subset \Breal^n$  and let $z$ be a limit point of $S$. Show that for ever
 \end{tcolorbox}
 We have 
 \begin{align}
-&\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset\\
-\implies \quad &\forall  \epsilon >0, N(p;\epsilon)\cap S\neq \emptyset
+&\forall  \epsilon >0, \left(N(z;\epsilon)-\{z\}\right)\cap S\neq \emptyset\\
+\implies \quad &\forall  \epsilon >0, N(z;\epsilon)\cap S\neq \emptyset
 \end{align}
-Suppose $K=N(p;\epsilon)\cap S$ is a finite set. Be $K=\{x_1,\, x_2,\, \dots ,\, x_N\}$ and $E=\{|x_1-z|,\, |x_2-z|,\, \dots ,\, |x_N-z|\}$. Put $\delta = \min{E}$. Then for any $\epsilon^{'}<\delta $ we have 
+Suppose $K=N(z;\epsilon)\cap S$ is a finite set. Be $K=\{x_1,\, x_2,\, \dots ,\, x_N\}$ and $E=\{|x_1-z|,\, |x_2-z|,\, \dots ,\, |x_N-z|\}$. Put $\delta = \min{E}$. Then for any $\epsilon^{'}<\delta $ we have 
 \begin{align}
 N(z;\epsilon^{'})\cap S=\emptyset\quad , \epsilon^{'}<\delta 
 \end{align}
@@ -893,7 +893,6 @@ We get a contradiction as $(3)$ puts a constraint on the requirement ($\forall$)
 $$N(z;\epsilon^{'})\cap S\text{ is a infinite set.}$$
 $$\blacklozenge$$\\
 
-\newpage
 
 \mysection{39}{Closed subsets of $\Breal^n$}
 \subsection*{Clarifications on Theorem 39.5}
@@ -926,7 +925,7 @@ $d(y, z) \leq  \epsilon — d(x, z)$.\\
 \begin{tcolorbox}
 Suppose that $F$ is a finite subset of $\Breal^n$. Is $F$ necessarily closed in $\Breal^n$?
 \end{tcolorbox}
-
+Consider $\sim F$. Then, all $p\in F$ are limit points of $\sim F$. Indeed, we have, $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\subset \sim F$ and thus $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap \sim F\neq \emptyset$. Conclusion $p$ is a limit point of $\sim F$. and as $p\not\in \sim F$ we can rewrite this as $\forall \epsilon>0: N(p;\epsilon)\cap \sim F\neq \emptyset$. Also, consider an arbitrary point $z\in\sim F$. Be $E=\{|p_1-z|,|p_2-z|,,\dots, |p_n-z|\}$ where the $p_i$ are the element of $F$. Be $\delta = \min E$ and choose $\epsilon^{'} < \delta$, the we will have that $N(z;\epsilon^{'})\subset \sim F$ and thus $\sim F$ is an open subset and by theorem $\mathbf{39.2}$ $F$ is a closed subset.
 $$\blacklozenge$$\\
 
 
@@ -938,6 +937,7 @@ Prove Theorems $\mathbf{39.2}\Et \mathbf{39.3}$.
 $$ $$
 $\mathbf{39.2}$ Let $S\subset \Breal^n$. Then $S$ is closed if and only if its complement is open in $\Breal^n$.
 $$\implies$$
+\textbf{$\mathbf{S}$ is closed.}\\
 Be $p\in \, \sim S$. Then, $p\not \in  S$ and thus $p$ can not be a limit point of $S$. Hence, the statement $\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset$ is false. We have,
 \begin{align*}
 &\neg\left(\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset\right)\\
@@ -948,8 +948,9 @@ The last statement follows from the fact that $p\not\in S$, hence the presence o
 By the last statement , $N(p;\epsilon)\not\subset S$ and thus $N(p;\epsilon)$ lies completely in the complement of $S$ and we get for any arbitrary $p\in(\sim S)$:
 $$\exists\, \epsilon >0,N(p;\epsilon)\subset (\sim S)$$
 proving that $\sim S$ is an open set.
-$$\lozenge$$
+$$\lozenge$$\\\\
 $$\Leftarrow$$
+\textbf{$\mathbf{\sim S}$ is open.}\\
 Be $q$ a limit point of $S$ but not in $S$, then $q\in(\sim S)$. As $\sim S$ is an open set we have $\exists\,\epsilon >0, N(q;\epsilon)\subset (\sim S)$ and thus $\exists\,\epsilon >0, N(q;\epsilon)\not \subset S$ giving $\exists\,\epsilon >0, N(q;\epsilon) \cap S=\emptyset$. The presence of $q$ in $N(q;\epsilon)$ does not change the last statement and we have
 $$\exists\,\epsilon >0, \left(N(q;\epsilon)-\{q\}\right)\cap S=\emptyset$$
 We have a contradiction as we supposed that $q$ was a limit point of $S$, hence the supposition that $q$ is not in $S$ is wrong. So a limit point of $S$ must be in $S$ and thus $S$ is closed.
@@ -961,8 +962,34 @@ is open in $\Breal^n$)}.\\\\
 $\bullet$ As $\emptyset=\sim \Breal^n$ and from $\mathbf{37.2}$ we know that  $\Breal^n$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\emptyset$ is closed. \\\\
 $\bullet$ As $\Breal^n =\sim \emptyset $ and from $\mathbf{37.2}$ we know that  $\emptyset$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\Breal^n$ is closed. 
 $$\lozenge$$
-$\mathbf{(b)}$ The intersection of an arbitrary nonempty collection of closed sets is closed\\\\
-$\mathbf{(c)}$ The union of a finite collection of closed sets is closed.
+For the following statements we use the De Morgan's laws
+\begin{align}
+\bigcup\{\sim K:K\in\mathscr{K}\} = \sim \left(\bigcap\{ K:K\in\mathscr{K}\}\right)\\
+\bigcap\{\sim K:K\in\mathscr{K}\} = \sim \left(\bigcup\{ K:K\in\mathscr{K}\}\right)
+\end{align}
+ and also the results of exercise $\mathbf{2.37.2}$
+ \begin{align}
+ \textit{The union of an arbitray colection of open subsets of }\Breal^n\textit{ is open.}\\
+ \textit{The intersection  of a finite colection of open subsets of }\Breal^n\textit{ is open.}
+ \end{align}
+$\mathbf{(b)}$ \textbf{The intersection of an arbitrary nonempty collection of closed sets is closed}\\\\
+We know that $K$ is closed and thus $\sim K$ is open. By $(3)$ we have
+\begin{align*}
+& \bigcup\{\sim K:K\in\mathscr{K}\} \text{ is open}\\
+\text{and by (1) }\quad  & \bigcup\{\sim K:K\in\mathscr{K}\} = \sim \left(\bigcap\{ K:K\in\mathscr{K}\}\right)\\
+\implies\quad &   \sim\left(\bigcap\{ K:K\in\mathscr{K}\}\right) \text{ is open}\\
+\end{align*}
+By theorem $\mathbf{39.2}$ we conclude 
+$$\bigcap\{ K:K\in\mathscr{K}\} \text{ is closed.}$$\\\\
+$\mathbf{(c)}$ \textbf{The union of a finite collection of closed sets is closed.}\\\\
+We know that $K$ is closed and thus $\sim K$ is open. By $(4)$ we have (as $\mathscr{K}$ is finite)
+\begin{align*}
+& \bigcap\{\sim K:K\in\mathscr{K}\} \text{ is open}\\
+\text{and by (2) }\quad  & \bigcap\{\sim K:K\in\mathscr{K}\} = \sim \left(\bigcup\{ K:K\in\mathscr{K}\}\right)\\
+\implies\quad &   \sim\left(\bigcup\{ K:K\in\mathscr{K}\}\right) \text{ is open}
+\end{align*}
+By theorem $\mathbf{39.2}$ we conclude 
+$$\bigcup\{ K:K\in\mathscr{K}\} \text{ is closed.}$$
 
 
 $$\blacklozenge$$\\
@@ -973,7 +1000,8 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Is the set in Example $\mathbf{37.3 }$a closed set?
 \end{tcolorbox}
-
+Consider $S=\Breal\times\{0\}$. Then, $\sim S=\emptyset\times \Breal_{0}$. We know that $\emptyset$ is open. Also $\Breal_{0}$ is open (choose for any $p\in \Breal_{0}$ an $\epsilon<\frac{|p|}{2}$, giving $N(p;\epsilon)\subset \Breal_{0}$.)\\
+So $\sim S$ is open and by theorem $\mathbf{39.2}$ we conclude that $S$ is a closed subset of $\Breal^2$.
 $$\blacklozenge$$\\
 
 
@@ -982,16 +1010,24 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Let $a \Et b$ be real numbers and let $S$ be the following subset of $\Breal^2$. $ S = \{(x,y):ax + by \leq 1\}$. Is $S$ a closed set?
 \end{tcolorbox}
-
+$ \sim S = \{(x,y):ax + by > 1\}$ is open and by by theorem $\mathbf{39.2}$ we conclude that $S$ is a closed subset of $\Breal^2$.
 $$\blacklozenge$$\\
 
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
 Let $S$ be a subset of $\Breal^n$. Let $S^{'}= \{x:x \in \Breal^n \Et x \text{ is a limit point of } S\}$. Is $S^{'}$ necessarily a closed set?
-
 \end{tcolorbox}
-
+Suppose $p$ is a limit point of $S^{'}$ but not an element of $S^{'}$. This means
+$$\forall \epsilon>0: \left(N(p;\epsilon)-{p}\right)\cap S^{'}\neq \emptyset$$
+As $p\not \in  S^{'}$ we get $\forall \epsilon>0: N(p;\epsilon)\cap S^{'}\neq \emptyset$. So there is at least a $y\in N(p;\epsilon)$ which is also in $S^{'}$. By definition of $S^{'}$, $y$ is a limit point of $S$. This means
+$$\forall \epsilon>0: \left(N(y;\epsilon)-{y}\right)\cap S^{}\neq \emptyset$$
+This means that $\exists x\in S: x\in N(y;\epsilon)$ or $d(x,y) <\epsilon$. Also, as $y\in N(p;\epsilon)$ we have $d(p,y) < \epsilon$.
+We have (triangle inequality)
+$$d(p,x)\leq d(p,y)+d(y,x)$$
+As $d(x,y) <\epsilon$ and $d(p,y) < \epsilon$ we get 
+$$d(p,x)<\epsilon^{'} \quad \text{(with }\quad \epsilon^{'}= \frac{\epsilon}{2}\text{)}$$
+Hence $p\in N(x;\epsilon^{'})$
 $$\blacklozenge$$\\
 
 \subsection{}

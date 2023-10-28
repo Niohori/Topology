@@ -822,7 +822,7 @@ $$\forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)
 This means that $p$ would be the only element common to $N(p;\epsilon^{'})$ and $S$. This is not possible as $\epsilon^{'}$ being greater than $0$ means that $N(p;\epsilon^{'})$ contains other elements than $p$ and as $N(p;\epsilon^{'})\subset S$ these other elements must also belong to $S$, hence $\left(N(p;\epsilon^{'})-\{p\}\right)\cap S \neq \emptyset $ and conclude that $(1)$ is a true statement and thus $p$ is a limit point of $S$. As $p$ was arbitrary chosen, this yields for all elements of $S$ and thus every point of $S$ is a limit point of $S$.  
 $$\lozenge$$
 Example of an open nonempty subset of $\Breal^n$ that contains all of its limit points.\\\\
-$$S=\{\Breal^n\}$$
+$$S=\Breal^n$$
 $$\blacklozenge$$\\
 
 
@@ -905,16 +905,18 @@ Proof. \\
     \textit{$\bullet\quad$(This is because $cl(S)$ by definition must contain all limit point of $S$).}\\
 (d) Hence, there is an $\epsilon  > 0$
 such that $N(x; \epsilon)\subset \Breal^n- S$. \\
-\textit{$\bullet\quad$(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$. As $x$ is not a limit point of $S$ (see (b)) $(N(x; \epsilon)-\{x\})\cap S= \emptyset$ and thus all elements of $(N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
+\textit{$\bullet\quad$(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$. As $x$ is not a limit point of $S$ (see (b)) $(N(x; \epsilon)-\{x\})\cap S= \emptyset$ and thus all elements of $N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
 (e) However, since $x$ is a limit point of $cl (S)$, there is a
 point $z \in \,  cl (S)$ such that $0 < d(x, z) < \epsilon$.\\
 \textit{$\bullet\quad$(This follows from the definition of a limit point $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$ and thus there must be at least one $z\in(N(x; \epsilon)-\{x\})\cap S$ ).}\\
 (f) Then since $z\not\in S$, $z$ is a limit point of $S$.\\
 \textit{$\bullet\quad$(This is because $cl(S)$ by definition must contain all limit point of $S$).}\\
 (g) Since $\epsilon - d(x, z) > 0$ and $z$ is a limit point of $S$, there is a point $y\in S$ such that
-$d(y, z) \leq  \epsilon — d(x, z)$.\\
-(h) However, $d(x, y) \leq d(y, z) + d(z, x) < \epsilon — d(x, z) +d(z, x) = \epsilon$ (see accompanying figure).\\
+$d(y, z) \leq  \epsilon - d(x, z)$.\\
+(h) However, $d(x, y) \leq d(y, z) + d(z, x) < \epsilon - d(x, z) +d(z, x) = \epsilon$ (see accompanying figure).\\
 (i) Hence, $y\in S\cap N(x;\epsilon)$, contrary to the way in which $\epsilon$ was chosen.
+\\
+\textit{$\bullet\quad$(This follows from (d) $N(x; \epsilon)\subset \Breal^n- S)$}, meaning that $S$ and $N(x; \epsilon$ can't have common elements)\\
 \newpage
 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -956,7 +958,7 @@ $$\exists\,\epsilon >0, \left(N(q;\epsilon)-\{q\}\right)\cap S=\emptyset$$
 We have a contradiction as we supposed that $q$ was a limit point of $S$, hence the supposition that $q$ is not in $S$ is wrong. So a limit point of $S$ must be in $S$ and thus $S$ is closed.
 $$\lozenge$$
 $\mathbf{39.3}$\\ 
-$\mathbf{(a)}$ The empty set and $\Breal^n$ are closed subsets of $\Breal^n$.\\\\
+$\mathbf{(a)}$ \textbf{The empty set and $\Breal^n$ are closed subsets of $\Breal^n$.\\\\}
 We use in both case theorem $\mathbf{39.2}$ \textit{(Let $S \subset \Breal^n$. Then $S$ is closed if and only if its complement
 is open in $\Breal^n$)}.\\\\
 $\bullet$ As $\emptyset=\sim \Breal^n$ and from $\mathbf{37.2}$ we know that  $\Breal^n$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\emptyset$ is closed. \\\\
@@ -998,7 +1000,7 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Is the set in Example $\mathbf{37.3 }$a closed set?
+Is the set in Example $\mathbf{37.3 }$ a closed set?
 \end{tcolorbox}
 Consider $S=\Breal\times\{0\}$. Then, $\sim S=\emptyset\times \Breal_{0}$. We know that $\emptyset$ is open. Also $\Breal_{0}$ is open (choose for any $p\in \Breal_{0}$ an $\epsilon<\frac{|p|}{2}$, giving $N(p;\epsilon)\subset \Breal_{0}$.)\\
 So $\sim S$ is open and by theorem $\mathbf{39.2}$ we conclude that $S$ is a closed subset of $\Breal^2$.
@@ -1018,25 +1020,31 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Let $S$ be a subset of $\Breal^n$. Let $S^{'}= \{x:x \in \Breal^n \Et x \text{ is a limit point of } S\}$. Is $S^{'}$ necessarily a closed set?
 \end{tcolorbox}
-Suppose $p$ is a limit point of $S^{'}$ but not an element of $S^{'}$. This means
-$$\forall \epsilon>0: \left(N(p;\epsilon)-{p}\right)\cap S^{'}\neq \emptyset$$
-As $p\not \in  S^{'}$ we get $\forall \epsilon>0: N(p;\epsilon)\cap S^{'}\neq \emptyset$. So there is at least a $y\in N(p;\epsilon)$ which is also in $S^{'}$. By definition of $S^{'}$, $y$ is a limit point of $S$. This means
-$$\forall \epsilon>0: \left(N(y;\epsilon)-{y}\right)\cap S^{}\neq \emptyset$$
-This means that $\exists x\in S: x\in N(y;\epsilon)$ or $d(x,y) <\epsilon$. Also, as $y\in N(p;\epsilon)$ we have $d(p,y) < \epsilon$.
-We have (triangle inequality)
-$$d(p,x)\leq d(p,y)+d(y,x)$$
-As $d(x,y) <\epsilon$ and $d(p,y) < \epsilon$ we get 
-$$d(p,x)<\epsilon^{'} \quad \text{(with }\quad \epsilon^{'}= \frac{\epsilon}{2}\text{)}$$
-Hence $p\in N(x;\epsilon^{'})$
+The proof is analog to the proof of Theorem $\mathbf{39.5}$.\\
+Let $x$ be a limit point of $S^{'}$. We wish to show that $x \in \, S^{'}$.\\
+If $x \not \in \, S^{'}$, then  $x$ is not a limit point of $S$
+    \textit{(This is because $S^{'}$, by definition, must contain all limit point of $S$).}\\
+Hence, there is an $\epsilon  > 0$
+such that $N(x; \epsilon)\subset \Breal^n- S$ 
+\textit{(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$. As $x$ is not a limit point of $S$ , there exists an $\epsilon$ such that  $(N(x; \epsilon)-\{x\})\cap S= \emptyset$ and thus all elements of $N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
+However, since $x$ is a limit point of $S^{'}$, there is a
+point $z \in \,  S^{'}$ such that $0 < d(x, z) < \epsilon$ 
+\textit{( This follows from the definition of a limit point $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$ and thus there must be at least one $z\in(N(x; \epsilon)-\{x\})\cap S$ ).}\\
+Then since $z\in S^{'}$, $z$ is a limit point of $S$ 
+\textit{(This is because $S^{'}$ by definition must contain all limit point of $S$).}\\
+Since $\epsilon - d(x, z) > 0$ and $z$ is a limit point of $S$, there is a point $y\in S$ such that
+$d(y, z) \leq  \epsilon - d(x, z)$.\\
+However, $d(x, y) \leq d(y, z) + d(z, x) < \epsilon - d(x, z) +d(z, x) = \epsilon$.\\
+Hence, $y\in S\cap N(x;\epsilon)$, and we get a contradiction as $N(x; \epsilon)\subset \Breal^n- S$, meaning that $S$ and $N(x; \epsilon)$ can't have common elements.\\
+Conclusion $x$ must be an element of $S^{'}$. So, $S^{'}$ is a closed subset of $\Breal^n$.
 $$\blacklozenge$$\\
 
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
 Give an example of a countable collection $\mathscr{K           }$ of closed subsets of $\Breal^2$ such that $\bigcup\mathscr{K}$ is not closed.
-
 \end{tcolorbox}
-
+See Exercise $\mathbf{2.38.2}$ where the subset $\{\hat{O}\}= \{(0,0)\}$ is a limit point of $\mathscr{K}$ but no element of it.
 $$\blacklozenge$$\\
 
 \subsection{}
@@ -1045,8 +1053,8 @@ $$\blacklozenge$$\\
 Let $S$ be a subset of $\Breal^n$. Let $F$ consist of all points $p$ in $\Breal^n$ such that for each $\epsilon > 0, \, N(p; \epsilon)\cap S \neq \emptyset$ and $N(p;\epsilon)\cap \left(
 \sim S\right)  \neq \emptyset$. Is $F$ necessarily a closed set?
 \end{tcolorbox}
-Consider $S=\{p\}$ a set in $\Breal^n$ consisting of a single point. Then, $\forall \epsilon > 0, \, N(p; \epsilon)\cap S = \{p\}(\neq \emptyset)$ and $N(p;\epsilon)\cap \left(
-\sim S\right)  =N(p;\epsilon)-\{p\}(\neq \emptyset)$. Also, no other element $q$ of $\sim S$ can comply with the condition $\forall \epsilon > 0, \, N(q; \epsilon)\cap S \neq \emptyset$ and hence $F=S$. So $F$ has no limit point (and thus does not contain any), hence $F$ is not closed.
+Consider $S=\{p\}$ a set in $\Breal^n$ consisting of a single point. Then, $\forall \epsilon > 0, \, N(p; \epsilon)\cap S = \{p\}(\neq \emptyset)$, which implies that $p\in F$. Also, $N(p;\epsilon)\cap \left(\sim S\right)\neq \emptyset$ as $N(p;\epsilon)-\{p\}$ contains only elements of $\sim S$. Also, no other element $q$ of $\sim S$ can comply with the condition $\forall \epsilon > 0, \, N(q; \epsilon)\cap S \neq \emptyset$ and hence $F=S$. So $F$ has no limit point (and thus does not contain any), hence $F$ is not closed.
+
 $$\blacklozenge$$\\
 
 \subsection{}
@@ -1055,8 +1063,22 @@ $$\blacklozenge$$\\
 Show that lines and polygons are closed subsets of $\Breal^n$ (see $\mathbf{35.5}\Et \mathbf{ 35.6}$).
 \end{tcolorbox}
 
-First note that by theorem $\mathbf{39.3 (c)}$ (\textit{The
-union of a finite collection of closed sets is closed}) for polygons, it suffice to prove that a line is a closed subset as a polygon is the union of a finite number of lines.
+First note that, for polygons, by theorem $\mathbf{39.3 (c)}$ (\textit{The
+union of a finite collection of closed sets is closed}) it suffice to prove that a line is a closed subset as a polygon is the union of a finite number of line segments and the union of a finite collection of closed sets is closed.\\
+Recall the definition of a line segment $L(a,b)$ determined by $a \Et b$:\\
+$$L=\{x:x=(1-t)a+tb,\, t\in \Breal_{[0,1]}\}$$
+Be a $p$ a limit point of the line $L(a,b)$. Then, $\forall \epsilon: \left( N(p;\epsilon)-\{p\}\right)\cap L(a,b)\neq \emptyset$. This means that $\exists x\in L(a,b)$ which is also an element of $N(p;\epsilon)$. This implies 
+$$ d(p;x)<\epsilon$$
+Suppose that $p\not\in L(a,b)$. This implies
+$$\not\exists\, t\in\Breal : p= (1-t)a+bt$$
+Consider the set $$D=\{d=d(p;x):x= (1-t)a+bt,\forall t\in\Breal \}$$
+As $p\not\in L(a,b)$, the ordered set $(D,\leq)\subset (\Breal,\leq)$ does not contain the element $d=0$, hence $D$ has a lower bound $=0\not \in D$.\
+By the least upper bound axiom on page $\mathbf{61}$ and it's corollary (exercise $2$ page $62$) $D$ has a greatest lower bound. Be $g.l.b\,  D=\delta$. We have 
+$$0<\delta$$ and thus 
+$$\forall\epsilon >0: 0<\delta \leq d(p;x)<\epsilon$$
+But this inequality must be true for any $\epsilon>0$. We get a contradiction as this inequality can't be satisfied for $0<\epsilon <\delta$ and thus our assumption the $p\not\in L(a,b)$ is false.
+
+
 $$\blacklozenge$$\\
 \newpage
 

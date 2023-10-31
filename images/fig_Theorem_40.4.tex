@@ -1,0 +1,75 @@
+\begin{tikzpicture}
+\coordinate (O) at (0,0);
+\coordinate (X1) at (7,0) {};
+\coordinate (X2) at (0,7) {};
+\node[right] at (X1){\tiny$X_1$};
+\node[above] at (X2){\tiny$X_2$};
+\draw[ thick ]   (O)--(X1) ;
+\draw[ thick ]  (O)--(X2);
+\fill[thick,pattern=north west lines, pattern color=gray!50] (1.8,5.4) rectangle (3.5,2.5);
+\coordinate (S) at (2,5.2) {} {};
+\fill[fill=white](S) circle (0.2);
+\node[] at (S){\tiny$S$};
+
+\draw[](0.8,5.6) node (v2) {} rectangle (4.8,1.6) node (v4) {};
+\coordinate (K0) at (1.2,2) {} {} {} {};
+\node[right] at (K0){\tiny$K_0$};
+\node[below] (v5) at (0.8,0) {\tiny$\alpha$};
+\node[below] (v6) at (4.8,0) {\tiny$\beta$};
+\node[left] (v3) at (0,1.6) {\tiny$\alpha$};
+\node[left] (v1) at (0,5.6) {\tiny$\beta$};
+\draw[dashed]  (v1) -- (v2);
+\draw[dashed]   (v3) -- (v4);
+\draw [dashed]  (v2) -- (v5);
+\draw[dashed]   (v4) -- (v6);
+\coordinate (v8) at (4.8,3.6) {};
+\coordinate (v7) at (0,3.6) {};
+\coordinate (v9) at (2.8,5.6) {};
+\coordinate (v10) at (2.8,0) {};
+\draw[dotted,very thick]  (v7) -- (v8);
+\draw[dotted,very thick]   (v9) -- (v10);
+\coordinate (j1) at (3.8,3) {} {} {};
+\coordinate (j2) at (2.2,4.8) {} {} {};
+\node[below] at (j1) {\tiny$J1$};
+\node[below] at (j2) {\tiny$J2$};
+\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (2.8,3.6) --  (2.8,5.6);
+\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (4.8,3.6) --  (2.8,3.6);
+	
+	\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (4.8,-0.2) --  (2.8,-0.2);
+	
+	\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (-0.6,3.6) --  (-0.6,5.6);
+\fill[thick,pattern=north east lines, pattern color=gray!50] (2.8,5.6) rectangle (4.8,3.6);
+
+\coordinate (L1) at (6.2,2.6) {} {} {} {} {};
+\node[below]at (L1){\tiny$K_1=J_1\times J_2$};
+\node (v11) at (4.6,4.2) {};
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(L1) (5.6,3) (5.4,3.6) (v11)};
+\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (2.8,5.6) --  (3.8,5.6);
+\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (4.8,5.6) --  (4.8,4.6);
+
+\coordinate (pj1)at (2.8,4.6) {};
+\coordinate (pj2) at (4.8,4.6) {};
+\coordinate (pj3)at (3.8,5.6) {};
+\coordinate (pj4) at (3.8,3.6) {};
+
+\draw[dotted,very thick]  (pj1) -- (pj2);
+\draw[dotted,very thick]   (pj3) -- (pj4);
+\coordinate (lab1) at (3.4,6) {};
+\coordinate (lab2) at (5.2,5.1) {};
+\node[above] at (lab1) {\tiny$\frac{\beta-\alpha}{2^2}$};
+\node[right] at (lab2) {\tiny$\frac{\beta-\alpha}{2^2}$};
+\fill[very thick,pattern=dots, pattern color=gray!90] (2.8,5.6) rectangle (3.8,4.6);
+\coordinate (L2) at (4.8,6.2) {} {} {} {} {} {};
+\node[above]at (L2){\tiny$K_2$};
+\node (v15) at (3.6,5) {};
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(L2) (4.4,6) (4.2,5.2) (v15)};
+
+\node at (-1.2,4.6) {\tiny$\frac{\beta-\alpha}{2}$};;
+\node at (3.8,-0.8) {\tiny$\frac{\beta-\alpha}{2}$};
+\end{tikzpicture}

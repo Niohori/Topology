@@ -1,0 +1,78 @@
+\begin{tikzpicture}[
+label/.style 2 args={
+  postaction={
+    decorate,
+    transform shape,
+    decoration={
+      pre length=1pt, post length=1pt,
+      markings,
+      mark=at position #1 with \node #2;
+      }
+  }
+}  
+]
+
+
+\coordinate (S) at (-4.8749,-0.3838) {};
+\node[{anchor=north west }] at (S){$S$};
+\coordinate (N) at (0.9266,2.5026) {} {};
+ \draw [very thick] plot[smooth cycle, tension=.7] coordinates { (-3,6)  (-0.7048,5.9957) (1.5262,3.803) (0.3485,2.2354)   (-3,2) };
+
+    \draw [very thick,]  plot[smooth cycle, tension=.7] coordinates {(-5.4083,2.2136) (-6.5253,1.9554) (-7.2728,0.7721) (-7.2621,-0.5242) (-5.8908,-1.1699)    (-3.8951,0.9957)  };
+\node[right] at (N){$X$};
+
+
+\coordinate (a1) at (0.4477,3.4032) {} {} {} {};
+\node[right] at (a1){\tiny$a_1$};;
+\draw[fill=black]  (a1) circle (0.05);
+\coordinate (a2) at (-2.1573,4.2648) {} {} {} {};
+\node[right] at (a2){\tiny$a_2$};;
+\draw[fill=black]  (a2) circle (0.05);
+\coordinate (a3) at (-2.4774,5.162) {} {} {} {};
+\node[right] at (a3){\tiny$a_3$};;
+\draw[fill=black]  (a3) circle (0.05);
+\coordinate (ah) at (-0.5591,4.9791) {} {} {};
+\node[right] at (ah){\tiny$a_h$};;
+\draw[fill=black]  (ah) circle (0.05);
+
+\coordinate (ak) at (-1.554,5.4904) {} {} {} {};
+\draw[fill=white]  (ak) circle (0.05);
+
+\coordinate (x1) at (-2.4194,2.7247) {} {} {} {};
+\coordinate (x2) at (-0.767,3.1583) {} {} {} {};
+\coordinate (x3) at (-0.9849,4.5399) {} {} {} {};
+\coordinate (x4) at (-3.121,4.016) {} {} {} {};
+\draw[fill=white]  (x4) circle (0.05);
+\coordinate (x5) at (-1.8373,2.4703) {} {} {} {} {};
+\draw[fill=white]  (x5) circle (0.05);
+\coordinate (x6) at (-2.3954,5.9911) {} {} {} {} {};
+\draw[fill=white]  (x6) circle (0.05);
+
+\coordinate (f1) at (-5.1294,0.5829) {} {} {} {};
+\node[below] at (f1){\tiny$f_1$};;
+\coordinate (f2) at (-6.0534,1.5086) {} {} {} {};
+\node[below] at (f2){\tiny$f_2$};
+\coordinate (fn) at (-6.237,-0.1953) {} {} {} {} {};
+\node[below] at (fn){\tiny$f_n$};
+\coordinate (fx1) at (-5.6344,-0.036) {} {} {} {} {};
+\draw[fill=white]  (fx1) circle (0.05);
+\coordinate (fx2) at (-4.8489,1.4035) {} {} {} {} {} {};
+\draw[fill=white]  (fx2) circle (0.05);
+\coordinate (fx3) at (-6.6545,0.8511) {} {} {} {} {};
+\draw[fill=white]  (fx3) circle (0.05);
+\coordinate (fx4) at (-6.3493,-0.832) {} {} {} {} {} {};
+\draw[fill=white]  (fx4) circle (0.05);
+\draw[-{Latex[length=2mm]},] plot[smooth, tension=.7] coordinates {(f2) (-4.9425,3.0197)(-2.5791,3.72) (x3)}[
+  label={0.4}{[above]{\tiny$G(f_2)$}},
+  ];
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(f1) (-2.8806,0.9124)(-1.6379,1.283) (x2)}  [label={0.4}{[above]{\tiny$G(f_1)$}}];
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(fn) (-4.9513,1.8738)(-3.2905,2.3029) (x1)}  [label={0.6}{[above]{\tiny$G(f_n)$}}];
+
+\draw[fill=white]  (f1) circle (0.05);
+\draw[fill=white]  (f2) circle (0.05);
+\draw[fill=white]  (fn) circle (0.05);
+\draw[fill=white]  (x1) circle (0.05);
+\draw[fill=white]  (x2) circle (0.05);
+\draw[fill=white]  (x3) circle (0.05);
+
+\end{tikzpicture}

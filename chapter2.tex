@@ -1108,6 +1108,19 @@ The succcesive partition of the close interval $K^{(p)}_i$ in equal $n^2$ closed
 \end{figure}
 In the book, an $\epsilon=1$ is taken to prove that a convergent sequence is bounded. But any positive number can be chosen to prove the boundness as seen in the figure $2.6$.\\
 The sequence begins with $a_1$ and we choose an arbitrary $\delta_k$. As the sequence is convergent this means that for this $\epsilon= \delta_k$ there must be a positive integer $k$ such that $d(L;a_i)<\delta_k$ for all $i>k+1$. And, if we take as $M=max \{d(a_i,L):i\in \Pee\}$ then $\forall i\in \Pee, \forall \delta_M>0: d(a_i,L)< M+\delta_m$
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\\\\
+\subsection*{Remark on Theorem 41.4 on the convergence of a subsequence of a bounded sequence}
+
+Proof.
+ \textit{Suppose the range of $(a_i)$ is a finite set. Then there is a strictly increasing sequence of positive integers $(n_i)$ and a point $z \in\Breal^n$ such that $a_{n_i}=z$ for 
+$i\in\Pee$. Hence, $\lim (a_{n_i} ) =z$ and we are through.}
+\\
+As an example take the sequence in $\Breal^2$ defined by
+$$a_i=\left(\sin{\left(\frac{2\pi}{T}i\right)},\cos{\left(\frac{2\pi}{T}i\right)}\right)\text{ with } T\in \Pee, i\in \Pee$$
+Then the range of the (bounded) sequence is finite with $T$ possible values. Define the subsequence by defining the map 
+$$n_i= T(i-1)+T^{'}\text{ with } T^{'}\in\Pee \Et T^{'}\leq T$$  will map $a_{n_i}$ on one of the $T$ values and we have a convergent sequence with $a_{n_i}= C^t\, \forall n_i$.
 \newpage
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \setcounter{subsection}{0}

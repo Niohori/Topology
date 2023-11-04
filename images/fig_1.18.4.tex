@@ -23,16 +23,16 @@ label/.style 2 args={
 
 
 \coordinate (a1) at (0.4477,3.4032) {} {} {} {};
-\node[right] at (a1){\tiny$a_1$};;
+\node[right] at (a1){\tiny$\tilde{a}_1$};;
 \draw[fill=black]  (a1) circle (0.05);
 \coordinate (a2) at (-2.1573,4.2648) {} {} {} {};
-\node[right] at (a2){\tiny$a_2$};;
+\node[right] at (a2){\tiny$\tilde{a}_2$};;
 \draw[fill=black]  (a2) circle (0.05);
 \coordinate (a3) at (-2.4774,5.162) {} {} {} {};
-\node[right] at (a3){\tiny$a_3$};;
+\node[right] at (a3){\tiny$\tilde{a}_3$};;
 \draw[fill=black]  (a3) circle (0.05);
 \coordinate (ah) at (-0.5591,4.9791) {} {} {};
-\node[right] at (ah){\tiny$a_h$};;
+\node[right] at (ah){\tiny$\tilde{a}_h$};;
 \draw[fill=black]  (ah) circle (0.05);
 
 \coordinate (ak) at (-1.554,5.4904) {} {} {} {};
@@ -62,17 +62,17 @@ label/.style 2 args={
 \draw[fill=white]  (fx3) circle (0.05);
 \coordinate (fx4) at (-6.3493,-0.832) {} {} {} {} {} {};
 \draw[fill=white]  (fx4) circle (0.05);
+\node[below] at (fx2){\tiny$f_k$};;
 \draw[-{Latex[length=2mm]},] plot[smooth, tension=.7] coordinates {(f2) (-4.9425,3.0197)(-2.5791,3.72) (x3)}[
   label={0.4}{[above]{\tiny$G(f_2)$}},
   ];
 \draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(f1) (-2.8806,0.9124)(-1.6379,1.283) (x2)}  [label={0.4}{[above]{\tiny$G(f_1)$}}];
-\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(fn) (-4.9513,1.8738)(-3.2905,2.3029) (x1)}  [label={0.6}{[above]{\tiny$G(f_n)$}}];
-
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(fn) (-4.9513,1.8738)(-3.2905,2.6029) (x1)}  [label={0.6}{[above]{\tiny$G(f_n)$}}];
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(fx2) (-3.9513,1.2738)(-3.2905,1.6029) (x1)}  [label={0.5}{[above]{\tiny$G(f_k)$}}];
 \draw[fill=white]  (f1) circle (0.05);
 \draw[fill=white]  (f2) circle (0.05);
 \draw[fill=white]  (fn) circle (0.05);
 \draw[fill=white]  (x1) circle (0.05);
 \draw[fill=white]  (x2) circle (0.05);
 \draw[fill=white]  (x3) circle (0.05);
-
 \end{tikzpicture}

@@ -23,7 +23,8 @@
 \usepackage{etoolbox} %ifthen
 \usepackage[outline]{contour} % glow around text
 \usepackage{boondox-cal}
-
+\usepackage[]{mdframed}
+ \usepackage{relsize}
 %**************************** Bibliography management *******************************
 \usepackage{biblatex} %Imports biblatex package
 \addbibresource{sample.bib} %Import the bibliography file
@@ -86,6 +87,8 @@
 \newcommand\Et{\text{ and }}
 \newcommand\Ou{\text{ or }}
 \newcommand\Ieoi{\Leftrightarrow }
+\newcommand\Iff{\Leftrightarrow }
+\newcommand{\Brealn}[1]{\Breal^{{#1}}}
 
 
 \newcommand{\mysection}[2]{\setcounter{section}{#1}\addtocounter{section}{-1}\section{#2}}

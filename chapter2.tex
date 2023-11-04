@@ -1120,7 +1120,25 @@ $i\in\Pee$. Hence, $\lim (a_{n_i} ) =z$ and we are through.}
 As an example take the sequence in $\Breal^2$ defined by
 $$a_i=\left(\sin{\left(\frac{2\pi}{T}i\right)},\cos{\left(\frac{2\pi}{T}i\right)}\right)\text{ with } T\in \Pee, i\in \Pee$$
 Then the range of the (bounded) sequence is finite with $T$ possible values. Define the subsequence by defining the map 
-$$n_i= T(i-1)+T^{'}\text{ with } T^{'}\in\Pee \Et T^{'}\leq T$$  will map $a_{n_i}$ on one of the $T$ values and we have a convergent sequence with $a_{n_i}= C^t\, \forall n_i$.
+$$n_i= T(i-1)+T^{'}\text{ with } T^{'}\in\Pee \Et T^{'}\leq T$$  will map $a_{n_i}$ on one of the $T$ values and we have a convergent sequence with $a_{n_i}= C^t\quad \forall n_i$.
+$$\lozenge$$\\
+\textit{Next suppose the range $S$ of
+$(a_i)$ is an infinite set. By the Bolzano-Weierstrass theorem there is a point $z$ that is a limit point of $S$. (We shall find a subsequence $(a_{n_i})$ of $(a_i)$ by choosing for each
+$i\in \Pee$, an $(a_{n_i})$such that $d(a_{n_i} , z) < \frac{1}{i}$. However, we must be careful to choose these in such a way that $(n_i)$ is a strictly increasing sequence of positive integers. We shall do this inductively.) \\\\
+Since $z$ is a limit point of $S$, there is a positive integer such that}
+$$0 < d(a_{n_1}, z) < 1$$
+\textit{Assume that for $1,2,\dots, h$, increasing integers ${n_1},{n_2},\dots,{n_h}$ have been chosen
+such that}
+$$0 < d(a_{n_i}, z) < \frac{1}{i}$$
+\textbf{\textit{Since $S\cap N\left(z;\frac{1}{i+1}\right)$ is an infinite set (see Exercise 7, page 71 ), there is an integer $n_{h+1}$ such that $n_{h} < n_{h+1}$ and for which $d(a_{n_{h+1}}, z) < \frac{1}{h+1}$.} }
+\begin{mdframed}
+Is it so obvious that there is an integer $n_{h+1}$ such that $n_{h} < n_{h+1}$ and for which $d(a_{n_{h+1}}, z) < \frac{1}{h+1}$?\\
+By assumption we have a set $K=\{a_{n_1},a_{n_2},\dots,a_{n_h}\}$ such that $0 < d(a_{n_i}, z) < \frac{1}{i}$. As $U= S\cap N\left(z;\frac{1}{i+1}\right)$ is an infinite set $U-K$ still will be an infinite set because $K$ is a finite set.\\
+So, is it possible that for all elements $a_{n_p}\in U-K$ we have $n_p<n_h$? The answer is definitely negative, as the number of 'available slots' in the set $\{1,2,\dots,n_h\}$ is finite. Hence after excluding all $n_j$ such that $n_j<n_h$ we will still be able to find an infinite number of $n_k > n_h: k\geq h+1$ for which $d(a_{n_{k}}, z) < \frac{1}{k}:\quad n_k > n_h$
+\end{mdframed}
+\textit{Hence, by induction (see $18.4$), a strictly increasing sequence of integers $n_{i}$ has been chosen
+such that $d(a_{n_{i}}, z) < \frac{1}{i}$. It is clear from the way in which the integers $(n_i)$ were
+chosen that $(a_{n_i} )$ is a subsequence of $(a_{i} )$ and that $\lim (a_{n_i}) = z$.}
 \newpage
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \setcounter{subsection}{0}
@@ -1128,7 +1146,67 @@ $$n_i= T(i-1)+T^{'}\text{ with } T^{'}\in\Pee \Et T^{'}\leq T$$  will map $a_{n_
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
+Prove that if $S$ is a subset of $\Breal^n$ and $z \in \Breal^n$, then $z$ is a limit point of $S$ if and only if there exists a sequence $(a_i)$ in $S$ that converges to $z$ and which is such that $a_i\neq a_j$ for $i\neq j$.
+\end{tcolorbox}
+We have to prove
+$$\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\emptyset\quad \iff\quad \exists \quad(a_i)\text{ in } S: a_i\neq a_j \text{ for } i\neq j \Et \lim a_i= z$$\\\\
+$$\lozenge$$\\
+$$\mathbf{\mathlarger{\implies}}$$
+We have that $z$ is a limit point. So, 
+\begin{align}
+\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\emptyset
+\end{align}
+Let's put $\epsilon =1$ and denote 
+$$D_1=\left(N(z;1)-\{z\}\right)\cap S$$
+Then we can write $D_1$ as
+ \begin{align}
+ D_1=\{ x\in S: d(x,z)<1\}
+ \end{align}
+ We know that $D_1$ is an infinite set (see Exercise 7, page 71 ).\\
+ Let's define 
+ \begin{align}
+ \mathscr{D}_1=\{d(x,z): x\in D_1\}
+ \end{align}
+ Obviously $\mathscr{D}_1\subset \Breal$ and is (upper) bounded and is a linearly ordered subset of $\Breal$. Using Zorn's Lemmma (page 47) we know that $\mathscr{D}_1$ has a maximal element in $\mathscr{D}_1$. Let's choose the element $a_1$ of $D_1$ for which $d(a_1,z)=\max \mathscr{D}_1$ ($a_1$ is unique as $S$, being a set, will contain only one element of the same object).\\
+ Consider now 
+ \begin{align}
+ D_2=\{ x\in S: 0<d(x,z)<\frac{1}{2}\}-\{a_1\}
+ \end{align}
+ $D_2$ is still infinite. Let's repeat the procedure initiated in $(3)$ by defining $ \mathscr{D}_2=\{d(x,z): x\in D_2\}$ etc.. and choose an element $a_2$ such that $d(a_2,z)=\max \mathscr{D}_2$.\\
+ Repeating this procedure gives us a sequence
+  \begin{align}
+ \{(1,a_1), (2,a_2),\dots, (i,a_i),\dots\}\text{ such that }0< d(a_i,z)<\frac{1}{i}\text{ for } i\in \Pee 
+ \end{align}
+The definition of convergence of a sequence $(a_i)$ to $z$  is:
+$$\forall\epsilon > 0, \exists N\in\Pee:\, d(a_k,z) <\epsilon \text{ whenever } k \geq N $$
+If we choose an arbitrary $\epsilon>0$ it suffice in $(5)$ to put $\frac{1}{i}\leq \epsilon$ or $i\geq \frac{1}{\epsilon}$ to see that the sequence in $(5)$ converges to $z$.\\\\
+Finally, by the way we constructed  the sequence by defining the different subsets $D_k$ as $$D_k=\{ x\in S: 0<d(x,z)<\frac{1}{k}\}-\{a_1,\dots,a_{k-1}\}  $$ we are assured that $a_i\neq a_j$ for $i\neq j$.
+$$\lozenge$$\\
+$$\mathbf{\mathlarger{\Leftarrow}}$$
+We know that for the sequence $(a_i)$ we have 
+\begin{align}
+\lim a_i= z\quad\Et a_i\neq a_j \text{ for } i\neq j
+\end{align}
+this implies
+\begin{align}
+\forall\epsilon > 0, \exists N\in\Pee:\, d(a_k,z) <\epsilon \text{ whenever } k \geq N
+\end{align}
+The requirement $a_i\neq a_j \text{ for } i\neq j$ in $(6)$ makes that if $z$ occurs in the sequence, it can only occur once. Be $M$ the position in the sequence were $z$ occurs, then the subsequence $(a_k):k> M$ will still converges to $z$ (construct the subsequence $(i,a_i): i>M$ and replace $N$ in $(7)$ by $N-M$).\\
+So, $(7)$ can be replaced by 
+\begin{align}
+\forall\epsilon > 0, \exists N\in\Pee:\, 0< d(a_k,z) <\epsilon \text{ whenever } k \geq N
+\end{align}
+which is equivalent to state as 
+$\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\emptyset$
+$$\blacklozenge$$\\
 
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+ Suppose $(a_i)$ is a sequence in $\Breal^n$ that has the following property:
+For each $\epsilon > 0$, there is an integer $N$ such that $d(a_m, a_n) < \epsilon$
+for $m\geq N $ and $n\geq N$. Show that $(a_i$) is a bounded sequence.
 \end{tcolorbox}
 
 $$\blacklozenge$$\\
@@ -1137,44 +1215,70 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-
-\end{tcolorbox}
-
-$$\blacklozenge$$\\
-
-
-\subsection{}
-%\subsubsection{}{}
-\begin{tcolorbox}
-
+Prove that if $(a_i)$ is a convergent sequence in $\Breal^n$, then for each
+subsequence $(a_{N_i})$ of $(a_i)$, $\lim (a_i) = \lim (a_{N_i})$.
 \end{tcolorbox}
 
 $$\blacklozenge$$\\
 
 \newpage
 
-\mysection{42}{Cauchy criterion for convergence}
 
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Give the details of the proof of $\mathbf{41.2}$.
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove that a subset $S$ of $\Breal^n$ is closed and bounded if and only if
+every sequence in $S$ has a convergent subsequence whose limit
+is a point in $S$.
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose $(S_i)$ is a sequence of nonempty bounded and closed
+subsets of $\Breal^n$ such that for each $i\in \Pee,\, S_{i+1}\subset S_i$. Prove that there
+is at least one point $p\in\bigcap\{S_i:i\in \Pee\}$. (Note that this is a generalization of the nested interval theorem. After proving the proposition, see if your proof depended on some consequence of the nested interval theorem.)
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $(a_i)$ and $(b_i)$ are sequences in $\Breal^n$. Suppose also that $c_i=a_i+b_i$ for $i\in\Pee$. Show that if two of the sequences
+$(a_i), (b_i), (c_i)$ converge, then so does the remaining one and further $\lim (c_i) = \lim (a_i) + \lim (b_i)$.
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Prove that $\lim (a_i) = a$ if and only if $\lim d(a_i,a)= 0$.
+\end{tcolorbox}
+
+$$\blacklozenge$$\\
+\newpage
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \setcounter{subsection}{0}
 
-\subsection{}
-%\subsubsection{}{}
-\begin{tcolorbox}
-
-\end{tcolorbox}
-
-$$\blacklozenge$$\\
 
 
-\subsection{}
-%\subsubsection{}{}
-\begin{tcolorbox}
-
-\end{tcolorbox}
-
-$$\blacklozenge$$\\
-
+\mysection{42}{ Cauchy criterion for convergence}
 
 \subsection{}
 %\subsubsection{}{}
@@ -1185,11 +1289,11 @@ $$\blacklozenge$$\\
 $$\blacklozenge$$\\
 
 \newpage
+
 \mysection{43}{Some additional properties for $\Breal^n$}
 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \setcounter{subsection}{0}
-
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
@@ -1198,16 +1302,10 @@ $$\blacklozenge$$\\
 
 $$\blacklozenge$$\\
 
+\mysection{44}{Some further remarks about $\Breal^n$ and Review exercises}
 
-\subsection{}
-%\subsubsection{}{}
-\begin{tcolorbox}
-
-\end{tcolorbox}
-
-$$\blacklozenge$$\\
-
-
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
@@ -1217,3 +1315,26 @@ $$\blacklozenge$$\\
 $$\blacklozenge$$\\
 
 \newpage
+
+ \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{1}}
+
+
+
+ \subsubsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+
+
+
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{2}}
+\subsection{}
+\subsubsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$

@@ -1956,29 +1956,33 @@ Prove Theorem $\mathbf{18.4}$, using the discussion in $\mathbf{18.3}$ as a hint
 \label{fig:fig_p8b}
 \end{figure}
 \textit{Before attacking the proof, let's clarify some objects defined in the theorem.\\
-First $S$ is a (possibly infinite) set of finite sequences $f:\Pee_n\rightarrow X$. As $X$ could be an infinite set and the $f$ are finite sequences, $S$ can be an infinite set. Considering the elements (sequences) $f\in S$ as sets we can state that 
-$$ \bigcup S= X$$
+First $S$ is a (possibly infinite) set of finite sequences $f:\Pee_n\rightarrow X$. As $X$ could be an infinite set and the $f$ are finite sequences, $S$ can be an infinite set.\\ Also, considering $S^{'}=\{{f_k(n)}:f_k\in S\} $ the collection of sets containing the terms $f_k(n)$ of a sequence $f_k$,   we can state that 
+$$ \bigcup S^{'}= X$$
 What is this map $G$?\\
-$G$ will take an element (sequence) of $S$ and map it to one element of $X$. So if $X= \Qiuu$, a sequence $f$ will be mapped to a rational number.}\\\\
+$G$ will take an element (sequence) of $S$ and map it to one element of $X$. \\
+Note that $G$, by definition, is onto or or a bijection.\\
+Example, if $X= \Qiuu$, a sequence $f$ will be mapped to a rational number.}\\\\
 $$\lozenge$$
-Note that $S$ is the set of all finite sequences with $X$ as domain. Hence, the following sequence will be in $S$:
-$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h),\,(h+1,x_{h+1}),\,\dots,\, (n,x_n)\right\},\quad (a_i,\, x_k \in X)$$ 
-The given map $G$ is a map from $S$ into $X$. So, for the element (a sequence of length $h$) 
-$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h)\right\}$$ there exist an element $f_{h+1}=G\left(\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h)\right\}\right)\in X$. As $f_{h+1}\in X$ the sequence 
-$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h),\,(h+1,f_{h+1})\right\}$$
-will be also in $S$. Again this element (sequence of length $h+1$) will be mapped by $G$ to an element $f_{h+2}\in X$. hence the sequence
-$$\left\{ (1,a_1),\, (2,a_2),\, (3,a_3),\, \dots ,\,(h,a_h),\,(h+1,f_{h+1}),\,(h+2,f_{h+2})\right\}$$
+Note that $S$ is the set of all finite sequences with $X$ as range. Hence, the following sequence will be in $S$:
+$$\left\{ (1,\tilde{a}_1),\, (2,\tilde{a}_2),\, (3,\tilde{a}_3),\, \dots ,\,(h,\tilde{a}_h),\,(h+1,a_{h+1}),\,\dots,\, (n,a_n)\right\},\quad (\tilde{a}_i,\, a_k \in X)$$ 
+were the $\tilde{a}_k$ are the $h$ first "given" terms and $a_k\in X$.\\
+The given map $G$ is a map from $S$ into $X$. So, for the element (a sequence) of $S$ of length $h$
+$$\left\{ (1,\tilde{a}_1),\, (2,\tilde{a}_2),\, (3,\tilde{a}a_3),\, \dots ,\,(h,\tilde{a}_h)\right\}$$ there exist an element $a_{h+1}=G\left(\left\{ (1,\tilde{a}_1),\, (2,\tilde{a}_2),\, (3,\tilde{a}_3),\, \dots ,\,(h,\tilde{a}_h)\right\}\right)\in X$. As $a_{h+1}\in X$ the sequence 
+$$\left\{ (1,\tilde{a}_1),\, (2,\tilde{a}_2),\, (3,\tilde{a}_3),\, \dots ,\,(h,\tilde{a}_h),\,(h+1,a_{h+1})\right\}$$
+will be also be in $S$. Again this element (sequence of length $h+1$) will be mapped by $G$ to an element $a_{h+2}\in X$. hence the sequence
+$$\left\{ (1,\tilde{a}_1),\, (2,\tilde{a}_2),\, (3,\tilde{a}_3),\, \dots ,\,(h,\tilde{a}_h),\,(h+1,a_{h+1}),\,(h+2,a_{h+2})\right\}$$
 will be in $S$.\\
 By induction, we conclude that there exists a sequence $f$ such that
 \begin{align*}
 f_i&= \left\{
 \begin{array}{ll}
-a_i& \text{for } i\in \left\{1,2,\dots, h\right\}\\
-G\left(\{f_1,\,f_2,\,\dots ,\, f_h,\, f_{h+1},\,\dots,\, f_{i-1}\}\right) & \text{for } i\ge h+1
+\tilde{a}_i& \text{for } i\in \left\{1,2,\dots, h\right\}\\
+G\left(\{\tilde{a}_1,\,\tilde{a}_2,\,\dots ,\, \tilde{a}_h,\, a_{h+1},\,\dots,\, a_{i-1}\}\right) & \text{for } i\ge h+1
 \end{array}
 \right.
 \end{align*}
-Is this sequence, uniquely defined by $G:S\rightarrow X$? Yes, as $G$ is a mapping (a function), so for a given element $\{f_1,\,f_2,\,\dots ,\, f_n\}$, there is a unique $G\left(\{f_1,\,f_2,\,\dots ,\, f_n\}\right)\in X$.
+Is this sequence, uniquely defined by $G:S\rightarrow X$ ? Yes, as $G$ is a mapping (a function), so for a given element $\{a_1,\,a_2,\,\dots ,\, a_n\}$, there is a unique $G\left(\{a_1,\,a_2,\,\dots ,\, a_n\}\right)\in X$.\\\\
+\textit{Note that the theorem does not say that the map $G$ is "well-behaved" i.e. can be expressed by an algebraic or analytic function.}
 $$\blacklozenge$$
 \subsection{}
 \begin{tcolorbox}

@@ -927,7 +927,8 @@ $d(y, z) \leq  \epsilon - d(x, z)$.\\
 \begin{tcolorbox}
 Suppose that $F$ is a finite subset of $\Breal^n$. Is $F$ necessarily closed in $\Breal^n$?
 \end{tcolorbox}
-Consider $\sim F$. Then, all $p\in F$ are limit points of $\sim F$. Indeed, we have, $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\subset \sim F$ and thus $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap \sim F\neq \emptyset$. Conclusion $p$ is a limit point of $\sim F$. and as $p\not\in \sim F$ we can rewrite this as $\forall \epsilon>0: N(p;\epsilon)\cap \sim F\neq \emptyset$. Also, consider an arbitrary point $z\in\sim F$. Be $E=\{|p_1-z|,|p_2-z|,,\dots, |p_n-z|\}$ where the $p_i$ are the element of $F$. Be $\delta = \min E$ and choose $\epsilon^{'} < \delta$, the we will have that $N(z;\epsilon^{'})\subset \sim F$ and thus $\sim F$ is an open subset and by theorem $\mathbf{39.2}$ $F$ is a closed subset.
+Consider $\sim F$. Then, all $p\in F$ are limit points of $\sim F$. Indeed, we have, $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\subset \sim F$ and thus $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap \sim F\neq \emptyset$.\\ Conclusion $p$ is a limit point of $\sim F$. \\
+And as $p\not\in \sim F$ we can rewrite this as $\forall \epsilon>0: N(p;\epsilon)\cap \sim F\neq \emptyset$. Also, consider an arbitrary point $z\in\sim F$. Be $E=\{|p_1-z|,|p_2-z|,,\dots, |p_n-z|\}$ where the $p_i$ are the elements of $F$. Be $\delta = \min E$ and choose $\epsilon^{'} < \delta$, the we will have that $N(z;\epsilon^{'})\subset \sim F$ and thus $\sim F$ is an open subset and by theorem $\mathbf{39.2}$ $F$ is a closed subset.
 $$\blacklozenge$$\\
 
 
@@ -1020,7 +1021,7 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Let $S$ be a subset of $\Breal^n$. Let $S^{'}= \{x:x \in \Breal^n \Et x \text{ is a limit point of } S\}$. Is $S^{'}$ necessarily a closed set?
 \end{tcolorbox}
-The proof is analog to the proof of Theorem $\mathbf{39.5}$.\\
+The proof is analogue to the proof of Theorem $\mathbf{39.5}$.\\
 Let $x$ be a limit point of $S^{'}$. We wish to show that $x \in \, S^{'}$.\\
 If $x \not \in \, S^{'}$, then  $x$ is not a limit point of $S$
     \textit{(This is because $S^{'}$, by definition, must contain all limit point of $S$).}\\
@@ -1053,7 +1054,7 @@ $$\blacklozenge$$\\
 Let $S$ be a subset of $\Breal^n$. Let $F$ consist of all points $p$ in $\Breal^n$ such that for each $\epsilon > 0, \, N(p; \epsilon)\cap S \neq \emptyset$ and $N(p;\epsilon)\cap \left(
 \sim S\right)  \neq \emptyset$. Is $F$ necessarily a closed set?
 \end{tcolorbox}
-Consider $S=\{p\}$ a set in $\Breal^n$ consisting of a single point. Then, $\forall \epsilon > 0, \, N(p; \epsilon)\cap S = \{p\}(\neq \emptyset)$, which implies that $p\in F$. Also, $N(p;\epsilon)\cap \left(\sim S\right)\neq \emptyset$ as $N(p;\epsilon)-\{p\}$ contains only elements of $\sim S$. Also, no other element $q$ of $\sim S$ can comply with the condition $\forall \epsilon > 0, \, N(q; \epsilon)\cap S \neq \emptyset$ and hence $F=S$. So $F$ has no limit point (and thus does not contain any), hence $F$ is not closed.
+Consider $S=\{p\}$ a set in $\Breal^n$ consisting of a single point. Then, $\forall \epsilon > 0, \, N(p; \epsilon)\cap S = \{p\}(\neq \emptyset)$, which implies that $p\in F$. Also, $N(p;\epsilon)\cap \left(\sim S\right)\neq \emptyset$ as $N(p;\epsilon)-\{p\}$ contains only elements of $\sim S$. Also, no other element $q$ of $\sim S$ can comply with the condition $\forall \epsilon > 0, \, N(q; \epsilon)\cap S \neq \emptyset$ and hence $F=S$. So $F$ has no limit point (and thus does not contain any), hence $F$ is closed \footnote{Because $\forall x\in\emptyset:P(x)$ is always true regardless of the proposition $P(x)$.}
 
 $$\blacklozenge$$\\
 
@@ -1208,7 +1209,21 @@ $$\blacklozenge$$\\
 For each $\epsilon > 0$, there is an integer $N$ such that $d(a_m, a_n) < \epsilon$
 for $m\geq N $ and $n\geq N$. Show that $(a_i$) is a bounded sequence.
 \end{tcolorbox}
-
+The given property of the sequence can be stated as
+\begin{align}
+\forall \epsilon >0, \, \exists\, N\in\Pee: d(a_m,a_n) <\epsilon,\, m\geq N\Et n\geq N
+\end{align}
+If the sequence is bounded then we have
+\begin{align}
+\exists M>0: d(a_m,a_n) \leq M,\,  \forall m,\, n \in \Pee
+\end{align}
+Note that by $(1)$, choosing an $\epsilon$ (giving a $N$), and putting $\epsilon = M$ the statement$(2)$ is true on a subsequence of $(a_n)$ i.e. when $ m\geq N\Et n\geq N$. What about the finite subsequence $(a_k): k< N$? Can we be sure that
+\begin{align}
+\exists M^{'}>0: d(a_m,a_n) \leq M^{'},\,  m< N  \Et n< N
+\end{align}
+Yes, as $K=\{(d(a_m,a_n) ,\,  m< N  \Et n< N\}$ is a finite subset of $\Breal$ and hence is a totally ordered finite set. Therefore (being finite) has a first and last element $L$ and $M^{'}$ with the property that $L\leq d(a_m,a_n)\leq M^{'}$
+ for all $d(a_m,a_n)$ in $K$. So $K$ is bounded by $L$ and $M^{'}$. \\
+ So, choosing $\hat{M}= \max (M,M^{'})$ the statement in $(2)$ is true.
 $$\blacklozenge$$\\
 
 
@@ -1218,7 +1233,22 @@ $$\blacklozenge$$\\
 Prove that if $(a_i)$ is a convergent sequence in $\Breal^n$, then for each
 subsequence $(a_{N_i})$ of $(a_i)$, $\lim (a_i) = \lim (a_{N_i})$.
 \end{tcolorbox}
-
+$\lim (a_i) = a$ means
+\begin{align*}
+\forall\epsilon >0,\exists N\in \Pee: d(a_k,a)<\epsilon,\, k\geq N
+\end{align*}
+For a chosen $\epsilon$ we will have a $N\in\Pee$ from which on the elements of the sequence will fulfil the condition $d(a_i,a)<\epsilon$. Let's choose an arbitrary strictly increasing sequence $L:\Pee \rightarrow\Pee: L(i)>L(j)\implies i>j$. Then the set of elements of $\{a_k:k<N\}$ is finite and thus countable. This means that there will exist a $P\in \Pee$ such that $L(P)=N$ (see figure).   
+\begin{figure}[H]%
+    \centering
+\input{./images/fig_2.41_Ex_3.tex}\\
+\caption{Converging subsequence of a convergent sequence, constructed with the strictly increasing sequence $L:\Pee \rightarrow\Pee: L(k)>L(j)\implies k>j$}
+\label{fig:fig_p8a}
+\end{figure}
+The sequence $L$ being strictly increasing and putting $(b_i)=(a_{L(i)})$ we will have 
+\begin{align*}
+\forall\epsilon >0,\exists P\in \Pee: d(b_i,a)<\epsilon,\, i\geq P
+\end{align*}
+proving the theorem.
 $$\blacklozenge$$\\
 
 \newpage
@@ -1229,10 +1259,18 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Give the details of the proof of $\mathbf{41.2}$.
 \end{tcolorbox}
-
+\textit{$\mathbf{41.2.}$ Theorem. Suppose that $x_i = (x_{i,1},x_{i,2},\,\dots,x_{i,n} )$ for each $i \in\Pee$ and
+$x_0 = (x_{0,1},x_{0,2},\,\dots,x_{0,n})$. Then $\lim (x_i) = x_0$ if and only $\displaystyle \lim_{ i \to \infty} x_{i,k}=x_{0,k}$ for each $k\in\Pee_n$.}\\\\
+By $\mathbf{36.3.}$ page 69, we know that 
+$$\forall k\in\Pee_n: |x_k-y_k|\leq d(x,y),\, \forall x,y\in\Breal^n$$
+$\lim (x_i) = x_0$ means
+$$\forall\epsilon>0,\, \exists N\in\Pee: d(x_i,x_0)<\epsilon,\, i\geq N$$
+As $|x_{i,k}-x_{0,k}|\leq d(x_i,x_0),\,  k\in\Pee_n$ and thus 
+$$\forall\epsilon>0,\, \exists N\in\Pee: |x_{i,k}-x_{0,k}|<\epsilon,\, i\geq N,\, k\in\Pee_n$$
+which means $$\displaystyle \lim_{ i \to \infty} x_{i,k}=x_{0,k},\quad \forall k\in\Pee_n$$
 $$\blacklozenge$$\\
 
-
+\newpage
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
@@ -1240,10 +1278,77 @@ Prove that a subset $S$ of $\Breal^n$ is closed and bounded if and only if
 every sequence in $S$ has a convergent subsequence whose limit
 is a point in $S$.
 \end{tcolorbox}
+$$\mathbf{\mathlarger{\implies}}$$
+We know that $S$ is bounded. Hence, any sequence $(a_i)$ with $a_i\in S$ will also be bounded and by theorem $\mathbf{41.4.}$ there is a subsequence $(a_{n_i})$ of $(a_i)$ that converges. So, the existence of a convergent subsequence has been proven.
+This means, if this subsequence converges to $a$:
+\begin{align}
+\forall \epsilon>0,\, \exists N\in\Pee: d(a_{n_i},a)<\epsilon,\, n_i\geq N
+\end{align}
+What is also given, is that $S$ is closed. This means that a limit point $p\in S$ (as $S$ is closed) exists for which yields
+\begin{align*}
+\forall\epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset
+\end{align*}
+Can we prove that $a$ must be a limit point of $S$?\\\\
+From $(1)$ we see that the set $A= \{a_{n_i}: n_i\geq N\}$ is a subset of $N(a;\epsilon)$ and as $A\subset S$ we will have
+\begin{align*}
+\forall\epsilon>0: N(a;\epsilon)\cap S\neq \emptyset
+\end{align*}
+ We can not conclude without further arguments that $N(a;\epsilon)-\{a\}\neq \emptyset$. Indeed consider the case where $a_{n_i}=a,\, n_i\geq N$ . But this case is trivial as $a_{n_i}=a,\, n_i\geq N$ is an element of $S$ and thus $a\in S$ (in this case, the requirement  $S$ is closed  is not necessary).\\\\
+Consider now the case $\exists n_k\in \Pee: a_{n_i}\neq a,\, n_k\geq N$. This implies that the $\epsilon$-neighbourhood $N(a;\epsilon)$ contains at least one element different from $a$ and thus we have indeed
+\begin{align*}
+\forall\epsilon>0: \left(N(a;\epsilon)-\{a\}\right)\cap S\neq \emptyset
+\end{align*}
+meaning that in that case $a$ is a limit point of $S$ and $S$ being closed, $a$ is a point of $S$, proving the proposed statement.\newpage
+$$\mathbf{\mathlarger{\Leftarrow}}$$
+We first prove that $S$ must be bounded.\\
+Suppose $S$ is unbounded. This means
+\begin{align}
+&\neg\left(\exists M\in\Breal:\forall x,y\in S,\, d(x,y)\leq M\right)\\
+\implies\quad &\forall M\in\Breal,\exists x,y\in S:\, d(x,y)> M
+\end{align}
+We know that $a\in S$ and so we can put $y=a$ and write  $(3)$ as 
+\begin{align*}
+\forall M\in\Breal,\exists x,\in S:\, d(a,x)> M
+\end{align*}
+In the supposition that $S$ in not bounded, we are able to consider the set $D=\{ x\in S|d(a,x)>M\}$ and construct a sequence $(a_i)\text{ with } a_i\in D$. This sequence has a convergent subsequence $(a_{n_i})$ for which we have 
+\begin{align*}
+\forall \epsilon>0,\exists N\in\Pee: d(a,a_{n_i})<\epsilon,\quad  n_i\geq N
+\end{align*}
+remember that the elements $(a_{n_i})$ are elements of $D$ for which we have 
+$$d(a,a_{n_i})>M$$
+with $M$ an arbitrary value in $\Breal$. This means that it also true for $\epsilon =M$. We get a contradiction as we would have at the same time $d(a,a_{n_i}) >M$ and $d(a,a_{n_i})<M$.\\\\
+\textbf{Conclusion: $S$ is bounded.}\\\\
+$$\lozenge$$
+We now want to prove that:\\\\
+If $z$ is a limit point of $S$ than we can find a sequence in $S$ such that a subsequence of it converges to $z$ or stated in another way: all limit points of $S$ are limits of sequences in $S$. \\
+(\textit{But the converse of the latter is not necessary true. Indeed, consider $S=\{p\}$ i.e. a singleton. Obviously, $S$ has no limit point - and thus is closed - yet, we can construct a convergent sequence $(a_i)$ with $a_i=a,\forall i\in \Pee$. This sequence converges to $a$ but $a$ is not a  limit point of $S$!})
+$$\bullet$$
 
+Suppose $z$ is a limit point of $S$. We will try to prove that then we can find a sequence in $S$ who has a subsequence that converges to $z$. As this limit of the sequence is in $S$ (by assumption), then $S$ will be closed .\\\\
+An element $z\in\Breal^n$ is a limit point of $S\subset \Breal^n$ provided that 
+\begin{align*}
+\forall \epsilon>0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq \emptyset
+\end{align*}
+We know (see Exercise $7$ page $71$) that $B=N(z;\epsilon)\cap S$ is an infinite set. Hence choose an arbitrary set $B^{'}\subset B$ and define a sequence $(b_i)$ out of the elements of $B$. We know that we then have a convergent subsequence $(b_{n_i})$ for which we have $\lim (b_{n_i}) = a$, which means
+\begin{align*}
+\forall\epsilon>0, \exists N\in\Pee: d(a,b_{n_i})< \epsilon ,\, n_i\geq N
+\end{align*}
+But we also know that by construction, the elements $b_{n_i}\in N(z;\epsilon)$ and thus 
+\begin{align}
+\forall\epsilon>0: d(z,b_{n_i})< \epsilon ,\, \forall\,  b_{n_i}
+\end{align}
+As $(4)$ is true for all $b_{n_i},\, n_i\in\Pee$, it will also be true for the $b_{n_i},\, n_i\geq N$ and get $d(z,b_{n_i})< \epsilon$ and $d(a,b_{n_i})< \epsilon$ and thus $a=z$. \\
+Indeed, suppose $a\ne z\,\implies\, d(a,z)=\delta >0$ and choose an arbitrary $\epsilon <\frac{\delta}{3}$ e.g. $\epsilon =\frac{\delta}{3}$, then
+\begin{align*}
+d(a,z)&\leq d(a,b_{n_i})+d(z,b_{n_i})\\
+\implies\quad\delta&<\frac{\delta}{3}+\frac{\delta}{3}\\
+\implies\quad 1&<\frac{2}{3}
+\end{align*}
+which is of course a false statement, so $\delta$ mus be zero and we conclude $a=z$. As $a$ is a limit of a sequence and by assumption an element of $S$ we may conclude that all limit points of  $S$ are also limits of a convergent sequence with a limit in $S$. \\\\\
+\textbf{Conclusion: $S$ is closed.}
 $$\blacklozenge$$\\
 
-
+\newpage
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}

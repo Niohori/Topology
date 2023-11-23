@@ -1356,7 +1356,34 @@ Suppose $(S_i)$ is a sequence of nonempty bounded and closed
 subsets of $\Breal^n$ such that for each $i\in \Pee,\, S_{i+1}\subset S_i$. Prove that there
 is at least one point $p\in\bigcap\{S_i:i\in \Pee\}$. (Note that this is a generalization of the nested interval theorem. After proving the proposition, see if your proof depended on some consequence of the nested interval theorem.)
 \end{tcolorbox}
-
+We know that each set $S_i$ is bounded and closed. By exercise $2.41.5$ we know that there will be a convergent (sub)sequence $(a^i_j),\, (a^i_j)\in S_i,\, \forall j\in\Pee$ whose limit
+is a point in $S_i$
+$$\lim (a^i_j)=\hat{a}_i,\quad \hat{a}_i\in S_i$$
+Consider now the same for the set $S_{i+1}$. We will have 
+$$\lim (a^{i+1}_j)=\hat{a}_{i+1},\quad\hat{a}_{i+1}\in S_{i+1}$$
+But we know that $i\in \Pee,\, S_{i+1}\subset S_i$. Thus we have
+$\hat{a}_{i+1}\in S_{i+1}$ and $\hat{a}_{i+1}\in S_{i}$ or 
+$$\hat{a}_{i+1}\in S_{i}\cap S_{i+1}$$ and by recursion
+$$\hat{a}_{i}\in S_1\cap S_2\cap \dots\cap S_{i}\cap S_{i}\quad \forall i\in \Pee$$
+which we can write
+$$\bigcap\{S_i:i\in \Pee\}\neq \emptyset$$ which proves the proposition.
+$$\lozenge$$
+The dependence on the nested interval theorem is :
+\begin{align*}
+\begin{array}{c l}
+33.1&\text{Nested interval theorem for }\Breal\\
+\downarrow&\\
+40.3&\text{Nested interval theorem for }\Breal^n\\
+\downarrow&\\
+40.4&\text{Bolzano-Weierstrass theorem}\\
+\downarrow&\\
+41.4&\text{Existance of a convergent subsequence of a bounded sequence}\\
+\downarrow&\\
+Ex. 2.41.5&\text{Existance of a convergent sequence with its limit in the set}\\
+\downarrow&\\
+Ex. 2.41.6&
+\end{array}
+\end{align*}
 $$\blacklozenge$$\\
 
 
@@ -1366,7 +1393,28 @@ $$\blacklozenge$$\\
 Suppose that $(a_i)$ and $(b_i)$ are sequences in $\Breal^n$. Suppose also that $c_i=a_i+b_i$ for $i\in\Pee$. Show that if two of the sequences
 $(a_i), (b_i), (c_i)$ converge, then so does the remaining one and further $\lim (c_i) = \lim (a_i) + \lim (b_i)$.
 \end{tcolorbox}
-
+Put $ \lim (a_i)= A$ and $ \lim (b_i)= B$.\\\\
+First we notice that for a certain $i\in\Pee$, we have$$d(A+B,a_i+b_i)=d(A-b_i,a_i-B)$$
+indeed
+\begin{align*}
+d^2(A+B,a_i+b_i)&=\sum_{j=1}^n \left(A_{,j}+B_{,j}-a_{i,j}-b_{i,j}\right)^2\\
+&=\sum_{j=1}^n \left(A_{,j}-b_{i,j}- (a_{i,j}-B_{,j})\right)^2\\
+&=d^2(A-b_i, a_i-B)
+\end{align*} 
+In the triangle inequality $d(x,y)\leq d(x,p)+d(p,y)$ put $x=A-b_i,\, y=  a_i-B$ and $p=A-B$. We get
+\begin{align*}
+d(A+B,a_i+b_i)&=d(A-b_i, a_i-B)\\
+&\leq d(A-b_i,A-B)+d(A-B,a_i-B)\\
+&= \sqrt{\sum_{j=1}^n \left(A_{,j}-b_{i,j}- (A_{,j}-B_{,j})\right)^2}+\sqrt{\sum_{j=1}^n \left(A_{,j}-B_{,j}-(a_{i,j}- B_{,j})\right)^2}\\
+&= \sqrt{\sum_{j=1}^n \left(B_{,j}-b_{i,j}\right)^2}+\sqrt{\sum_{j=1}^n \left(A_{,j}-(a_{i,j}\right)^2}\\
+&= d(A,a_i)+d(B,b_i)
+\end{align*}
+We know that $d(A,a_i)<\frac{\epsilon}{2}$ and $d(B,b_i)<\frac{\epsilon}{2}$ for all $\epsilon >0$ and for $i\geq max(N_a,N_b)$ where $N_a,\, N_b\in \Pee$ are the indices in the sequences from which on the inequalities are true. Hence we get 
+\begin{align*}
+d(A+B,a_i+b_i)&\leq d(A,a_i)+d(B,b_i)\\
+&<\epsilon\quad \forall\epsilon,\quad i\geq max(N_a,N_b)
+\end{align*}
+So $ \lim (a_i) + \lim (b_i)=\lim (c_i=a_i+b_i) $ if $(a_i)$ and $(b_i)$ converge. (In the case that we know that e.g. $(a_i)$ and $(c_i)$ converge it suffice to put $ \lim (a_i) + \lim (-c_i)=\lim (-b_i) $).
 $$\blacklozenge$$\\
 
 
@@ -1375,7 +1423,13 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Prove that $\lim (a_i) = a$ if and only if $\lim d(a_i,a)= 0$.
 \end{tcolorbox}
-
+As $\lim (a_i) = a$ we have
+\begin{align*}
+&\forall \epsilon>0,\, \exists N\in\Pee: d(a,a_i)<\epsilon,\, i\geq N\\
+\iff\quad&\forall \epsilon>0,\, \exists N\in\Pee: |d(a,a_i)-0|<\epsilon,\, i\geq N\\
+\end{align*}
+This is the definition a convergent sequence with elements in $\Breal$ and thus we conclude (as we have the $\iff$ predicate):
+$$\lim (a_i) = a \iff \lim d(a_i,a)= 0$$
 $$\blacklozenge$$\\
 \newpage
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -1388,7 +1442,75 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-
+Show directly from the definition that the sequence $\left(\frac{1}{i}\right)$ satisfies the Cauchy criterion.
+\end{tcolorbox}
+We have $d(a_{i+k}, a_{i})=|\frac{1}{i+k}-\frac{1}{i}|\leq \frac{1}{i+k}+\frac{1}{i} $.\\
+For a given $\epsilon>0$ chose an $N$ such that $\frac{1}{N}<\frac{\epsilon}{2} $. We then will also have $\frac{1}{N+1}<\frac{\epsilon}{2} $ and get $d(a_{i+k}, a_{i})<\frac{1}{i+1}+\frac{1}{i}<\epsilon,\quad i\geq N$. Hence  $\left(\frac{1}{i}\right)$ converges.
+$$\blacklozenge$$\\
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Define the sequence $(x_n)$ in $\Breal$ inductively as follows: Let $x_1=a,\, x_2=b,\,x_n=\half(x_{n-1}+x_{n-2}),\, n\geq3$. Show that $(x_n)$ converges.
+\end{tcolorbox}
+Be $k\in\Pee$, we have :
+\begin{align*}
+d(x_{n+k}, x_{n})&\leq d(x_{n+k}, x_{n+k-1})+d( x_{n+k-1}, x_{n})\\\\
+&\leq d(x_{n+k}, x_{n+k-1})+d( x_{n+k-1}, x_{n+k-2})+d( x_{n+k-2}, x_{n})\\\\
+&\leq d(x_{n+k}, x_{n+k-1})+d( x_{n+k-1}, x_{n+k-2})+d( x_{n+k-2}, x_{n+k-3})+d( x_{n+k-3}, x_{n})\\
+&\vdots\\\\
+&\leq \underbrace{d(x_{n+k}, x_{n+k-1})+d( x_{n+k-1}, x_{n+k-2})+\dots  +d( x_{n+2}, x_{n+1})+d( x_{n+1}, x_{n})}_{k\text{ terms}}\\
+\end{align*}
+giving
+\begin{align}
+d(x_{n+k}, x_{n})&\leq \sum_{i=0}^{k-1}d(x_{n+k-i}, x_{n+k-i-1})
+\end{align}
+\newpage
+Lemma : 
+\begin{align}
+d(x_{i}, x_{i-1})=\frac{1}{2^{i-2}}|b-a|
+\end{align}
+We prove this by induction:\\\\
+For $i= 2$ we have $\frac{1}{2^{i-2}}|b-a|=|b-a|$.\\\\
+Suppose that indeed : $d(x_{i-1}, x_{i-2})=\frac{1}{2^{i-3}}|b-a|$.\\
+Then
+\begin{align*}
+d(x_{i}, x_{i-1})&=\left|x_{i}-x_{i-1}\right|\\\\
+&=\left|\half(x_{i-1}+x_{i-2})-x_{i-1}\right|\\\\
+&=\half\underbrace{\left|x_{i-1}-x_{i-2})\right|}_{= d(x_{i-1}, x_{i-2})=\frac{1}{2^{i-3}}|b-a|}\\\\
+&=\frac{1}{2^{i-2}}|b-a|
+\end{align*}
+$$\lozenge$$
+Hence $(1)$ becomes
+\begin{align*}
+d(x_{n+k}, x_{n})&\leq \sum_{i=0}^{k-1}d(x_{n+k-i}, x_{n+k-i-1})\\\\
+&= \sum_{i=0}^{k-1}\frac{1}{2^{n+k-i-2}}|b-a|\\\\
+&= \frac{|b-a|}{2^{n-2}}\sum_{i=0}^{k-1}\frac{1}{2^{k-i}}\\\\
+&= \frac{|b-a|}{2^{n-2}}\half\sum_{j=1}^{k}\frac{1}{2^{j}}\\\\
+&= \frac{|b-a|}{2^{n-1}}\left(2-\frac{1}{2^{k-1}}\right)\\\\
+&< \frac{|b-a|}{2^{n-1}}\left(2\right)\\\\
+&= \frac{|b-a|}{2^{n}}\\\\
+\end{align*}
+So for a given $\epsilon>0$ it suffice to chose $n$ such that  $\frac{|b-a|}{2^{n}}<\epsilon$ and the Cauchy criterion is fulfilled.
+$$\blacklozenge$$\\
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $(x_i)$  is a sequence in $\Breal^n$. For each $i$,  let $x_i=(x_{i,1},x_{i,2},\dots , x_{i,n})$. Show that $(x_i)$ satisfies the Cauchy condition for $\Breal^n$ stated in $\mathbf{42.1(a)}$ if and only if for each $j \in\Pee_n$, the
+sequence $(x_{i,j})_{i=1}^{\infty}$ satisfies the condition for $\Breal$.
+\end{tcolorbox}
+By $\mathbf{36.3.}$ page 69, we know that 
+$$\forall k\in\Pee_n: |x_k-y_k|\leq d(x,y),\, \forall x,y\in\Breal^n$$
+$\lim (x_i) = x_0$ means
+$$\forall\epsilon>0,\, \exists N\in\Pee: d(x_i,x_0)<\epsilon,\, i\geq N$$
+As $|x_{i,k}-x_{0,k}|\leq d(x_i,x_0),\,  k\in\Pee_n$ and thus 
+$$\forall\epsilon>0,\, \exists N\in\Pee: |x_{i,k}-x_{0,k}|<\epsilon,\, i\geq N,\, k\in\Pee_n$$
+which means $$\displaystyle \lim_{ i \to \infty} x_{i,k}=x_{0,k},\quad \forall k\in\Pee_n$$
+$$\blacklozenge$$\\
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $(a_n)$ is a sequence in $\Breal^n$ that satisfies the following property.\\\\ There exists a $\theta$, where $0\leq\theta<1$, such that for each $n \in\Pee,\,  d(a_{n+1},a_{n+2})<\theta d(a_{n},a_{n+1})$. Show that $(a_n)$
+converges.
 \end{tcolorbox}
 
 $$\blacklozenge$$\\

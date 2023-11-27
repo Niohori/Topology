@@ -1482,13 +1482,13 @@ d(x_{i}, x_{i-1})&=\left|x_{i}-x_{i-1}\right|\\\\
 $$\lozenge$$
 Hence $(1)$ becomes
 \begin{align*}
-d(x_{n+k}, x_{n})&\leq \sum_{i=0}^{k-1}d(x_{n+k-i}, x_{n+k-i-1})\\\\
-&= \sum_{i=0}^{k-1}\frac{1}{2^{n+k-i-2}}|b-a|\\\\
-&= \frac{|b-a|}{2^{n-2}}\sum_{i=0}^{k-1}\frac{1}{2^{k-i}}\\\\
-&= \frac{|b-a|}{2^{n-2}}\half\sum_{j=1}^{k}\frac{1}{2^{j}}\\\\
-&= \frac{|b-a|}{2^{n-1}}\left(2-\frac{1}{2^{k-1}}\right)\\\\
-&< \frac{|b-a|}{2^{n-1}}\left(2\right)\\\\
-&= \frac{|b-a|}{2^{n}}\\\\
+d(x_{n+k}, x_{n})&\leq \sum_{i=0}^{k-1}d(x_{n+k-i}, x_{n+k-i-1})\\
+&= \sum_{i=0}^{k-1}\frac{1}{2^{n+k-i-2}}|b-a|\\
+&= \frac{|b-a|}{2^{n-2}}\sum_{i=0}^{k-1}\frac{1}{2^{k-i}}\\
+&= \frac{|b-a|}{2^{n-2}}\half\sum_{j=1}^{k}\frac{1}{2^{j}}\\
+&= \frac{|b-a|}{2^{n-1}}\left(2-\frac{1}{2^{k-1}}\right)\\
+&< \frac{|b-a|}{2^{n-1}}\left(2\right)\\
+&= \frac{|b-a|}{2^{n}}
 \end{align*}
 So for a given $\epsilon>0$ it suffice to chose $n$ such that  $\frac{|b-a|}{2^{n}}<\epsilon$ and the Cauchy criterion is fulfilled.
 $$\blacklozenge$$\\
@@ -1498,13 +1498,35 @@ $$\blacklozenge$$\\
 Suppose that $(x_i)$  is a sequence in $\Breal^n$. For each $i$,  let $x_i=(x_{i,1},x_{i,2},\dots , x_{i,n})$. Show that $(x_i)$ satisfies the Cauchy condition for $\Breal^n$ stated in $\mathbf{42.1(a)}$ if and only if for each $j \in\Pee_n$, the
 sequence $(x_{i,j})_{i=1}^{\infty}$ satisfies the condition for $\Breal$.
 \end{tcolorbox}
+$$\mathbf{\mathlarger{\implies}}$$
+Suppose $(x_i)$ satisfies the Cauchy condition for $\Breal^n$. This means
+\begin{align}
+\forall \epsilon>0,\,\exists M\in\Pee: d(x_m,x_p)<\epsilon,\quad m,\, p\geq M
+\end{align}
 By $\mathbf{36.3.}$ page 69, we know that 
 $$\forall k\in\Pee_n: |x_k-y_k|\leq d(x,y),\, \forall x,y\in\Breal^n$$
-$\lim (x_i) = x_0$ means
-$$\forall\epsilon>0,\, \exists N\in\Pee: d(x_i,x_0)<\epsilon,\, i\geq N$$
-As $|x_{i,k}-x_{0,k}|\leq d(x_i,x_0),\,  k\in\Pee_n$ and thus 
-$$\forall\epsilon>0,\, \exists N\in\Pee: |x_{i,k}-x_{0,k}|<\epsilon,\, i\geq N,\, k\in\Pee_n$$
-which means $$\displaystyle \lim_{ i \to \infty} x_{i,k}=x_{0,k},\quad \forall k\in\Pee_n$$
+Then from $(1)$ we get
+\begin{align*}
+&\forall k\in\Pee_n: |x_{m,k}-x_{p,k}|\leq d(x_m,x_p)<\epsilon,\quad m,\, p\geq M\\
+\implies\quad & \forall k\in\Pee_n: d(x_{m,k},x_{p,k})<\epsilon,\quad m,\, p\geq M
+\end{align*}
+which means that the sequence $(x_{i,k})$ converges for all $k\in\Pee_n$.
+$$\lozenge$$
+$$\mathbf{\mathlarger{\Leftarrow}}$$
+Suppose $(x_{i,k})$ satisfies the Cauchy condition for $\Breal$ and for all $k\in\Pee_n$. This means
+\begin{align*}
+\forall \, \frac{\epsilon}{\sqrt{n}}>0,\,\exists M\in\Pee: d(x_{m,k},x_{p,k})<\frac{\epsilon}{\sqrt{n}},\quad m,\, p\geq M
+\end{align*}
+For $\Breal$ we have $d(x_{m,k},x_{p,k})=\left|x_{m,k}-x_{p,k}\right|$ and all quantities being positive in both sides of the inequality we can write
+\begin{align*}
+\forall \frac{\epsilon}{\sqrt{n}},\,\exists M\in\Pee: d^2(x_{m,k},x_{p,k})=\left|x_{m,k}-x_{p,k}\right|^2<\frac{\epsilon^2}{n},\quad m,\, p\geq M
+\end{align*}
+Summing all these inequalities over $n$ gives
+\begin{align*}
+&\forall \frac{\epsilon}{\sqrt{n}},\,\exists M\in\Pee: \sum_{k=1}^{n}\left|x_{m,k}-x_{p,k}\right|^2<n\frac{\epsilon^2}{n},\quad m,\, p\geq M\\
+\implies\quad &\forall \frac{\epsilon}{\sqrt{n}},\,\exists M\in\Pee: \underbrace{\sqrt{\sum_{k=1}^{n}\left|x_{m,k}-x_{p,k}\right|^2}}_{=d(x_m,x_p)}<\epsilon,\quad m,\, p\geq M
+\end{align*}
+which means that the sequence $(x_{i})$ in $\Breal^n$ converges.
 $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
@@ -1512,7 +1534,34 @@ $$\blacklozenge$$\\
 Suppose that $(a_n)$ is a sequence in $\Breal^n$ that satisfies the following property.\\\\ There exists a $\theta$, where $0\leq\theta<1$, such that for each $n \in\Pee,\,  d(a_{n+1},a_{n+2})<\theta d(a_{n},a_{n+1})$. Show that $(a_n)$
 converges.
 \end{tcolorbox}
-
+From the property of $(a_n)$ we have for $n=1$
+$$d(a_{2},a_{3})<\theta d(a_{1},a_{2})$$
+Let's put $d(a_{1},a_{2})=\Delta$, then by iteration we see that 
+\begin{align}
+d(a_{n+1},a_{n+2})<\theta^n\Delta
+\end{align}
+In the Cauchy criterion, let's put for a given $a_n$, $a_m= a_{n+k}$ (as the distance is symmetric in both elements, we can switch $n$ and $m$ such that we always have $k\geq 0$).\\
+We have 
+\begin{align*}
+d(a_{n+1},a_{n+k})&\leq d(a_{n+1},a_{n+2})+d(a_{n+2},a_{n+k})\\
+&\leq d(a_{n+1},a_{n+2})+d(a_{n+2},a_{n+3})+d(a_{n+3},a_{n+k})\\
+&\vdots\\
+&\leq d(a_{n+1},a_{n+2})+d(a_{n+2},a_{n+3})+d(a_{n+3},a_{n+k})+\dots +d(a_{n+k-2},a_{n+k-1})+d(a_{n+k-1},a_{n+k}) 
+\end{align*}
+Using $(1)$ we get 
+\begin{align*}
+d(a_{n+1},a_{n+k})&<\theta^{n}\Delta+\theta^{n+1}\Delta+\dots + \theta^{n+k-3}\Delta+\theta^{n+k-2}\Delta\\
+&= \theta^n\Delta \left(\theta^{0}+\theta^{1}+\dots + \theta^{k-3}+\theta^{k-2}\right)
+\end{align*}
+Using 
+$$\sum_{i=0}^{m-1}x^i= \frac{1-x^{m}}{1-x}$$ we get 
+\begin{align*}
+d(a_{n+1},a_{n+k})&<\theta^n\Delta \frac{1-\theta^{k-1}}{1-\theta}
+\end{align*}
+For a given $\epsilon>0$ can we find a $n$ (for any $k\in\Pee$) such that $\theta^n\Delta \frac{1-\theta^{k-1}}{1-\theta}\leq \epsilon$?\\
+Note that $\frac{1-\theta^{k-1}}{1-\theta}$ is bounded as $\theta <1$. So is $\Delta$. Hence, it suffice to take 
+$$n\geq \left[\frac{\log {\epsilon}-\log{\Delta}-\log{(1-\theta^{k-1})}-\log {(1-\theta)}}{\log\theta}\right]$$
+and the sequence is convergent.
 $$\blacklozenge$$\\
 
 \newpage
@@ -1524,32 +1573,103 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
+Prove the theorems in this section.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white]
+$\mathbf{43.1.}$ \textbf{Theorem}. Let $D$ be the collection of all points $(x_1,x_2,\dots,x_n)$ in $\Breal^n$ such that for $i\in\Pee_n$, $x_i$ is rational. Then $D$ is dense in $\Breal^n$. Hence, $\Breal^n$ contains a countable dense subset.
+\end{tcolorbox}
+Consider an arbitrary nonempty open subset $P$ in $\Breal^n$. Be $p$ a point in $P$.
+We have
+$$\exists \epsilon>0: N(p;\epsilon)\subset P$$
+Consider another point $q$ in $N(p;\epsilon)$ such that for each $i\in\Pee_n$ we have $q_i=p_i-\frac{\epsilon}{n}$ (obvioulsy $d(p,q) = \frac{\epsilon}{\sqrt{n}}<\epsilon$).\\
+Suppose for a given $i\in\Pee_n$ we have $q_i<p_i$. Then by 
+ Theorem $\mathbf{30.5.}$ (Density of rationals in the reals) there is a rational number $r_i$ such that $q_i<r_i<p_i$.\\
+ The point $r= (r_1,r_2,\dots,r_n)$ will be in $N(p;\epsilon)$ and as  $N(p;\epsilon)\subset P$ we have $r\in P$. \\
+The theorem is proven as for an arbitrary nonempty open set in $\Breal^n$ we are able to find a point $(r_1,r_2,\dots,r_n)$ in $\Breal^n$ such that for $i\in\Pee_n$, $r_i$ is rational and thus $r$ is an element of $D$.
+$$\lozenge$$
+\newpage
 
+
+\begin{tcolorbox}[colback=white]
+$\mathbf{43.2.}$ \textbf{Theorem}. There exists a countable collection $\mathscr{B} = \{B_i:i\in\Pee\}$ of open subsets of $\Breal^n$ that have the following property.\\
+If $U$ is open in $\Breal^n$ and $p\in U$, then there is a $B_i\in  \mathscr{B}$ such that
+$$p\in B_i \subset U$$
+Hence, each open set $ U \subset \Breal^n$ is the union of a countable subcollection of $\mathscr{B}$.
+\end{tcolorbox}
+From theorem $\mathbf{43.1}$ page $79$ we know that  $D$, the collection of all points $(x_1,x_2,\dots,x_n)$ in $\Breal^n$ such that for $i\in\Pee_n$, $x_i$ is rational, is dense in $\Breal^n$. \\\\
+Consider the map $f:\Pee\rightarrow D\rightarrow \Breal^n$ such that $f(i)$ is an open  subset $A_i$ of $\Breal^n$ with $q_i\in D$ is also in $A_i$. Let's denote $\mathscr{A}=\{A_i:i\in\Pee\}$. By construction, $\mathscr{A}$ is countable.\\
+Be $U$ an open set in $\Breal^n$ with an element $p\in U$.  $U$ is an nonempty open set in $\Breal_n$ hence, as $D$ is dense, there will be at least one element $q$ of $D$ which is also in $U$. We can associate (with the map $f$) an open subset $A_i\in \mathscr{A}$  such that $q\in A_i$ and have $q\in U\cap A_i$. 
+Yet, $p$ is not necessary an element of $A_i$. We consider two cases:\\
+$U\subset A_i$. In that case we can replace $A_i$ by the set $B_i=U$. This set contains both $p$ and $q$ and $B_i\subset U$.
+\\\\
+If $A_i\not \subset U$, consider the set $B_i= U\cup(U\cap A_i)$. This set will contain both $p$ and $q$  (see figure).
+\begin{figure}[H]%
+    \centering
+\input{./images/fig_2.43.1.2.tex}\\
+\caption{$B_i= U\cup(U\cap A_i)$}
+\label{fig:fig_p8a}
+\end{figure}
+Hence, in both cases,  we are able to construct a countable collection of  subsets $B_i$ i.e. $\mathscr{B} = \{B_i:i\in\Pee\}$ such that $$p\in B_i\subset U$$
+$$\lozenge$$
+\newpage
+\begin{tcolorbox}[colback=white]
+$\mathbf{43.3.}$ \textbf{Lindelöf Theorem for }$\mathbf{\Breal^n}$. Let $X$ be a subset of $\Breal^n$. Suppose that $\mathscr{B} $ is a collection of open subsets of $\Breal^n$ such that $\bigcup \mathscr{B}\supset X$. Then for some countable subcollections $\mathscr{B}^{*}\subset \mathscr{B} $,  $\bigcup \mathscr{B}^{*}\supset X$.
+\end{tcolorbox}
+First note that if $X=\emptyset$ then the theorem is true as $\emptyset$ is a subset of any set.\\
+Also if $\mathscr{B}$ is a finite collection or countable, then it is countable and the theorem is anyway true with $\mathscr{B}^{*}=\mathscr{B}$.\\\\
+So, be $\mathscr{B}$ an infinite, non-countable, collection of open subsets $B\in \mathscr{B}$. Be $B^{*}$ an arbitrary element of $\mathscr{B}$. $B^{*}$ has at least one point in $X$ and by theorem $\mathbf{43.1}$ we know that we can find a point $q$ (with all rational numbers as coordinates), which is also a point of $B^{*}$. As $q\in D$ with $D$ countable, there is a bijection $f:\Pee\rightarrow D$  and can find a unique $i\in\Pee$ such that $f(i)=q$ and can label the set $B^{*}$ and put $B^{*}_i= B^{*}$. Consider now $X_i= X- B^{*}_i$. 
+\begin{figure}[H]%
+    \centering
+\centering
+    \subfloat[ ]{\input{./images/fig_2.43.1.3_a.tex}}
+    \subfloat[$X_i= X-B^{*}_i$ ]{\input{./images/fig_2.43.1.3_b.tex}}\\
+    \subfloat[$X_j= X_i-(B^{*}_j\cup B^{*}_j)$ ]{\input{./images/fig_2.43.1.3_c.tex}}
+        \subfloat[$X_k= X_i-(B^{*}_j\cup B^{*}_j\cup B^{*}_k) $ ]{\input{./images/fig_2.43.1.3_d.tex}}
+\caption{Lindelöf Theorem for $\Breal^n$}
+\label{fig:fig_p8a}
+\end{figure}
+Choose an arbitrary point $p^{'}\in X_i$ and a $B^{**}$ such that $p^{'}\in B^{**}$. Consider the subset $ B^{**}-B^{*}_i$. As previously seen (notice that $p^{'}\not \in B^{*}_i$), this subset will contain an element $q_j\in D$ and can label the set $B^{**}$ and put $B^{*}_j= B^{**}$. The next step is than to consider $X_j= X_i-(B^{*}_i\cup B^{*}_j)$ and repeat the procedure i.e. choose an arbitrary point $p^{"}$ and a $B^{***}\in\mathscr{B}$ such that $p^{"}\in B^{***}$. Consider the set $B^{***}- (B^{*}_i\cup B^{*}_j)$. There will be a $q_k\in D \Et \in B^{***}- (B^{*}_i\cup B^{*}_j)$ and we label $B^{*}_k= B^{***}$. Doing that recursively (see figure as illustration), as at each step $X$ is reduced in elements, and knowing that every point in $X$ is covered by a open subset $B\in\mathscr{B}$, we will be able to "cover" $X$ with open subsets $B^{*}_m\in \mathscr{B}$ but for each of these subsets we can map a $m\in \Pee$ such that $\bigcup \mathscr{B^{*}}$ covers $X$ and hence
+
+$$\mathscr{B^{*}}\text{ is countable and } X\subset \bigcup \mathscr{B^{*}}$$
+$$\lozenge$$
+\newpage
+\begin{tcolorbox}[colback=white]
+$\mathbf{43.4.}$ \textbf{Heine-Borel Theorem}. Suppose that  $X$ is a bounded and closed subset of $\Breal^n$. Let $\mathscr{K} $ be  a collection of open subsets of $\Breal^n$ that covers $X$. Then some finite subscollection of  $\mathscr{K}$ also covers $X$.
 \end{tcolorbox}
 
-$$\blacklozenge$$\\
-
-\mysection{44}{Some further remarks about $\Breal^n$ and Review exercises}
-
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\setcounter{subsection}{0}
+$$\lozenge$$
+\newpage
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
+Suppose $\mathscr{B}$ is a collection of pairwise disjoint open subsets of $\Breal^n$. Show that $\mathscr{B}$ is a countable collection.
+\end{tcolorbox}
+$$\blacklozenge$$\\
 
+
+\mysection{44}{Some further remarks about $\Breal^n$ and Review exercises}
+
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{1}}
+%\setcounter{subsection}{0}
+
+\subsection{}
+%\subsubsection{}{}
+\begin{tcolorbox}
+Suppose that $K$ is an uncountable collection of real numbers.
+Prove that there exists at least one $z \in K$ such that $z$ is a limit point of $K$. Prove that there is an uncountable collection of limit points of $K$ in $K$.
 \end{tcolorbox}
 
 $$\blacklozenge$$\\
 
 \newpage
 
- \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{1}}
+ \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{2}}
 
 
 
- \subsubsection{}
+ \subsection{}
 \begin{tcolorbox}
-
+Suppose that $S\subset \Breal$ , $S\neq \emptyset$ and $S\neq \Breal$. Prove that $S$ is not both open and closed.
 \end{tcolorbox}
 
 $$\blacklozenge$$
@@ -1557,11 +1677,51 @@ $$\blacklozenge$$
 
 
 
-\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{2}}
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{3}}
 \subsection{}
-\subsubsection{}
-\begin{tcolorbox}
 
+\begin{tcolorbox}
+Suppose that $\{K_i:i\in\Pee\}$ is a collection of nonempty bounded and closed subsets of $\Breal_n$ such that $K_{i+1}\subset K_i$, for $i\in \Pee$. Is $\bigcap\{K_i:i\in\Pee\}$ necessarily nonempty?
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{4}}
+\subsection{}
+
+\begin{tcolorbox}
+Suppose that $K$ is a nonempty closed and bounded subset of $\Breal$. Do there exist points $x$ and $y$ in $K$  such that $d(x,y)) = diam (K)$?
+
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{5}}
+\subsection{}
+
+\begin{tcolorbox}
+Suppose that $M$ is a countable subset of $\Breal^2$ and $p\in \Breal^2-M$. Does there necessarily exist a line $L \subset\Breal^2$ such that $p\in L\subset \Breal^2-M$
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{6}}
+\subsection{}
+
+\begin{tcolorbox}
+Suppose that $A$ and $B$ are subsets of $\Breal^n$.\\ Is $cl(A \cup B)= cl(A)\cup cl(B)$(see 39.4)?\\ Is $cl(A)\cap cl(B)=cl(A \cap B)$?
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{7}}
+\subsection{}
+
+\begin{tcolorbox}
+Determine whether the following proposition is correct.\\\\
+Suppose that $X$ is a bounded subset of $\Breal^n$, and $\epsilon>0$.\\
+Then there exists a finite set $F\subset X$  such that
+$$X\subset \bigcup\{ N(x;\epsilon):x\in F\}$$
 \end{tcolorbox}
 
 $$\blacklozenge$$

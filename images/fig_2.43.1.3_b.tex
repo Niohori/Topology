@@ -1,43 +1,28 @@
 \begin{tikzpicture}
-\draw [ thick] plot[smooth cycle, tension=.7] coordinates {(-4.107,4.0707) (-2.5611,5.562) (-1,7) (1.2182,5.305) (1.7413,3.9553) (1.1256,1.7374)   (-3.4205,2.8821) };
+\draw [fill=gray!10, thick] plot[smooth cycle, tension=.7] coordinates {(-4.107,4.0707) (-2.5611,5.562) (-1,7) (1.2182,5.305) (1.7413,3.9553) (1.1256,1.7374)   (-3.4205,2.8821) };
 
     % To shade the correct part of the Venn diagram
     \begin{scope}
-     \clip plot[smooth cycle, tension=.7]  coordinates{(-1.8,2) (-0.8,2.2) (-1,2.8)(-1.7,2.9)  (-1.9,2.5) };
-      %\draw [ very thick]  plot[smooth cycle, tension=.7] coordinates {(-1.8,2) (-0.8,2.2) (-1,2.8)(-1.7,2.9)  (-1.9,2.5) };
+     \clip plot[smooth cycle, tension=.7] coordinates {(-1.8,2) (0.3801,2.2271) (-0.4326,3.3366)(-1.7,2.9)  (-1.9,2.5) };
       \draw[white,ultra thick, fill =gray!10] plot[smooth cycle, tension=.7] coordinates {(-4.107,4.0707) (-2.5611,5.562) (-1,7) (1.2182,5.305) (1.7413,3.9553) (1.1256,1.7374)   (-3.4205,2.8821) };
 	\end{scope}
-    %\draw [very thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-0.4047,2.84) (-2,3) (-2.0261,2.1519) (-2.5,1) (-1,0) (0,0) (0.1302,0.843) (0.3289,1.4282) (0.4032,2.2084) (0.0503,2.487) };
     \begin{scope}
      \clip plot[smooth cycle, tension=.7]   coordinates {(-4.107,4.0707) (-2.5611,5.562) (-1,7) (1.2182,5.305) (1.7413,3.9553) (1.1256,1.7374)   (-3.4205,2.8821) };
-	
-      %\draw [ very thick]  plot[smooth cycle, tension=.7] coordinates {(-1.8,2) (-0.8,2.2) (-1,2.8)(-1.7,2.9)  (-1.9,2.5) };
-      \draw[white,ultra thick, fill =gray!30] plot[smooth cycle, tension=.7] coordinates{(-1.8,2) (-0.8,2.2) (-1,2.8)(-1.7,2.9)  (-1.9,2.5) };
+	\path[ fill =white] plot[smooth cycle, tension=.7]coordinates {(-1.8,2) (0.3801,2.2271) (-0.4326,3.3366)(-1.7,2.9)  (-1.9,2.5) };
 	\end{scope}
 
 \coordinate (S) at (-1.3799,6.9342) {} {};
-\node[{anchor=north west }] at (S){$X_i$};
+\node[{anchor=north west }] at (S){$X_{2,i}$};
 
 \draw [thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-1.1,2.7) (-2.1,3.7) (-2.4,2)(0,1) (0,2.3) };
 \draw [ thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-0.9,3.4) (-3,3) (-3.2162,1.6137)  (-0.5,2) };
-%\draw [ thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-1.8,2) (-0.8,2.2) (-1,2.8)(-1.7,2.9)  (-1.9,2.5) };
-
-
 
 \draw [thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-3.502,4.9926) (-3.8054,4.708) (-3.5483,4.4576)(-3.3207,4.5465) (-3.1499,4.8536) };
 \draw [ thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-1.7736,6.1636) (1.3735,4.2485) (1.6328,3.0001)  (-3.0857,5.1744) };
 \draw [ thick,dashed]  plot[smooth cycle, tension=.7] coordinates {(-1.3019,5.5919) (-0.6223,6.2606) (-0.0187,5.8136)  (-0.7827,5.0761) };
 
-
-\coordinate (N2) at (-1.6463,2.4166) {} {} {} {} {} {} {} {};
-%\node[right] at (N2){\tiny$q_i$};;
-%\draw[fill=black]  (N2) circle (0.05);
-
-\coordinate (p1) at (-1.7,2.7) {} {} {} {} {} {} {};
-%\node[right] at (p1){\tiny$p$};;
-%\draw[fill=black]  (p1) circle (0.05);
 \coordinate (p2) at (-2.2,2.8) {} {} {} {} {} {};
-\node[right] at (p2){\tiny$p^{'}$};;
+\node[right] at (p2){\tiny$p{'}$};;
 \draw[fill=white]  (p2) circle (0.05);
 \coordinate (N) at (-2.1154,3.1688) {} {} {} {} {} {} {} {};
 \draw[fill=white]  (N) circle (0.05);
@@ -47,9 +32,5 @@
 \node[left] at (L){\tiny$B^{*}_j$};;
 \draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(L) (-2.7823,1.0049)(-2.2382,1.1123) (-2.1202,1.5811)};
 \coordinate (L2) at (-9.2721,0.8803) {} {} {} {} {} {} {};
-%\node[below] at (L2){\tiny$B_i= U\cup (U\cap A_i)$};;
-%\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(L2) (-12.5,1)(-11,2) (-8,3)};
-
-
-\draw[thick] (-1.8894,2.3238) .. controls (-1.9027,2.3238) and (-1.9094,2.6847) .. (-1.7824,2.825) .. controls (-1.622,2.8986) and (-1.4215,2.9052) .. (-1.1876,2.8518) .. controls (-0.967,2.7448) and (-0.8601,2.6245) .. (-0.7799,2.4307) .. controls (-0.7197,2.1901) and (-1.1475,2.0898) .. (-1.1141,2.0765);
+\draw[thick]  plot[smooth, tension=.7] coordinates {(-1.9869,2.3209) (-1.9424,2.3209) (-1.8916,2.4225) (-1.8662,2.6256) (-1.8662,2.7145) (-1.771,2.8098) (-1.5107,2.9685) (-1.3012,3.0891) (-1.0472,3.2097) (-0.9012,3.2796) (-0.6726,3.3304) (-0.5584,3.324) (-0.3806,3.2732) (-0.2155,3.1716) (0.0067,3.0066) (0.1654,2.8161) (0.3051,2.651) (0.3813,2.4796) (0.3876,2.3082) (0.2352,2.1812) (0.0067,2.105) (-0.2409,2.0669) (-0.552,2.0416) (-0.8123,2.0225) (-0.9393,2.0035) (-0.9012,1.9908)};
 \end{tikzpicture}

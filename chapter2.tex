@@ -1656,9 +1656,9 @@ ii) by $(1)$ each element $p_{n_m}\in X_{n_m}\cap K^{*}_{n_m}$  must also be in 
 \end{align}
 iii) from $(2)$ and $(3)$ we can conclude that for a given $\epsilon>0$ and a $N\in\Pee$ we will have
 \begin{align}
-\left\{\begin{array}{l l}
-p\in N(p_{n_m};\epsilon)\implies p\in  K^{*}_{n_m}&\\
-&\text{for }n_m\geq N \\
+p\in N(p_{n_m};\epsilon) \text{  for }n_m\geq N \implies
+\left\{\begin{array}{l }
+ p\in  K^{*}_{n_m}\\
 p_{n_m}\in N(p_{};\epsilon)
 \end{array}\right.
 \end{align}
@@ -1680,6 +1680,20 @@ We also notice that $p$ is a limit point of $X_{n_{m}},\, n_m\geq N$. Indeed, we
 \end{align*}
 confirming that $p$ is not only the limit of the sequence $(p_{n_m})$ but also a limit point of $X^{}_{n_m}$ but not an element of it. Hence, $X^{}_{n_m}$ must be an open subset.\\
 We know that $p\in K^{*}_{n_m},\, n_m\geq N$ and for the element $p_{n_m}$ we have $p\in N(p_{n_m};\epsilon)$ but we concluded that $X^{}_{n_m}$ is open subset with $p$ as a limit point but not an element of it, meaning that for the point $p_{n_m}\in X_{n_m}\cap K^{*}_{n_m}$ we have $\exists  \epsilon>0: N(p_{n_m};\epsilon)\subset X_{n_m}$. But $p\in N(p_{n_m};\epsilon)$. We get a contradiction as $p$ becomes a point of $X_{n_m} $ which we proved could not be.\\
+As a matter of fact $X_{n_m}$ becomes an empty set as illustrated hereunder (starting with $X_{n_{m-1}}$, a closed susbet).
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\input{./images/fig_2.43.1.4.tex}& \input{./images/fig_2.43.1.4_b.tex}& \input{./images/fig_2.43.1.4_a.tex} & \input{./images/fig_2.43.1.4_c.tex} & \input{./images/fig_2.43.1.4_d.tex}\\ 
+\hline
+ $X_{n_{m-1}}\cap K^{*}_{n_{m-1}}$ &  $=X_{n_{m-1}}$ (closed) &    $=K^{*}_{n_{m-1}}$ (open)& $\neq\emptyset$ (open) &  $=\emptyset$  (open/closed)\\ 
+ \hline
+ $X_{n_{m-1}}-(X_{n_{m-1}}\cap K^{*}_{n_{m-1}})$& $\emptyset$& \input{./images/fig_2.43.1.4_b2.tex} & \input{./images/fig_2.43.1.4_c2.tex} & \input{./images/fig_2.43.1.4_d2.tex}\\ 
+\hline
+ $X_{n_{m}}$  &  open/closed &    closed & closed &  closed\\ \hline
+\end{tabular}
+\end{table}
 Conclusion: our assumption that the sequences $(X_m)$, $(p_m)$ and $(K^{*}_m)$ are infinite is incorrect and there must be some finite subcollection of  $\mathscr{K}$ that also covers $X$.
 
 $$\blacklozenge$$
@@ -1691,6 +1705,9 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Suppose $\mathscr{B}$ is a collection of pairwise disjoint open subsets of $\Breal^n$. Show that $\mathscr{B}$ is a countable collection.
 \end{tcolorbox}
+We know from Theorem $\mathbf{43.1}$ that $\Qiuu^n$ is dense in $\Breal^n$.  This means:
+$$\forall B\in\mathscr{B},\, \exists q\in \Qiuu^n: q\in B$$
+As $\forall B,\, B^{'}\in\mathscr{B}: B\cap B^{'}=\emptyset$ it follows that if $q\in B$ then $q\not \in B^{'}$. We conclude that we can associate with each $B\in\mathscr{B}$ a unique element $q\in\Qiuu^n$ and as $\Qiuu^n$ is countable, $\mathscr{B}$ is countable.
 $$\blacklozenge$$\\
 
 

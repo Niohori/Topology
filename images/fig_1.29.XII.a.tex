@@ -5,12 +5,12 @@
 \node (v3) at (-12.,5.8) {};
 \node (v4) at (-5.2,5.8) {};
 \node (v5) at (-6.2,5.8) {};
-
+\node (v9) at (-10.4,1.8) {};
 
 \draw[thick]  plot[smooth cycle, tension=.7] coordinates { (-10.5,4.5) (-7.5,4) (-5,1) (-7.5,-1)  (-13.5,-0.5) (-15,1.5) (-14,3.5) };
 \fill [white] (-15,1.5)  circle (10pt);: 
 \node[] at  (-15,1.5) {$\mathscr{F}$};
-\draw[thick,dashed]    plot[smooth cycle, tension=.7] coordinates {(-13.269,2.6498) (-12.975,2.8927)  (-12.6528,2.799)(-12.4,2.8)  (-10,3) (-10.2,1) (-11.6,1.4) (-12.2,1.6) (-12.3892,2.5648)(-12.6633,2.6988)(-12.8376,2.1174)
+\draw[very thick]    plot[smooth cycle, tension=.7] coordinates {(-13.269,2.6498) (-12.975,2.8927)  (-12.6528,2.799)(-12.4,2.8)  (-10,3) (-10.2,1) (-11.6,1.4) (-12.2,1.6) (-12.3892,2.5648)(-12.6633,2.6988)(-12.8376,2.1174)
 (-13.31,2.3029)};
 \fill [white]  (-12.2,1.6)  circle (10pt);: 
 
@@ -18,12 +18,12 @@
 \draw[thick,dashed]    plot[smooth cycle, tension=.7] coordinates {(-11.5,1.5) (-11.5,0) (-9,-0.5) (-8,0.5) (-8.5,2) (-9.5,2.5) (-11,2)};
 \fill [white]   (-9,-0.5)circle (10pt);: 
 \node[] at    (-9,-0.5)  {$\mathscr{F}_z$};
-\draw[thick,dashed]    plot[smooth cycle, tension=.7] coordinates {(-11,3.5) (-12,2.5) (-11,1.5) (-9.5,1.5) (-9,2.5) (-9.5,3.5) };
+\draw[very thick,dashdotted]    plot[smooth cycle, tension=.7] coordinates {(-11,3.5) (-12,2.5) (-11,1.5) (-9.5,1.5) (-9,2.5) (-9.5,3.5) };
 \fill [white]  (-9.5,3.5)circle (10pt);: 
 \node[] at    (-9.5,3.5){$\mathscr{F}_y$};
-\draw [thick,dashed]   plot[smooth cycle, tension=.7] coordinates {(-8.5,3) (-7.5,2) (-7,2) (-7,3) (-8,3.5)};
-\fill [white]   (-7.5,2)circle (10pt);: 
-\node[] at   (-7.5,2){$\mathscr{F}_u$};
+\draw [thick,dotted]   plot[smooth cycle, tension=.7] coordinates {(-8.5,0.5) (-7,0) (-6,0) (-6.5,1) (-7.5,1.5)};
+\fill [white]   (-7,0)circle (10pt);: 
+\node[] at (-7,0) {$\mathscr{F}_u$};
 \draw  plot[->] coordinates {  (-15.6,5.8) };
 \draw[very thick,decoration={
     markings,
@@ -36,22 +36,22 @@
   \node[above] at  (v3) {$y$};
   \node[above] at  (v4) {$1$};
  \node[above] at  (v5) {$u$};
-\draw [very thick,dashed,decoration={
+\draw [very thick,decoration={
     markings,
     mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
     ]      plot[smooth, tension=.7] coordinates {(v1) (-13.5,4.5)(-13.269,2.6498) };
-\draw   [very thick,dashed,decoration={
+\draw   [thick,dashed,decoration={
     markings,
     mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
     ]   plot[smooth, tension=.7] coordinates {(v2) (-9.6,4.8) (-8.6,2.8) (-8.5,2)};
-\draw    [very thick,dashed,decoration={
+\draw    [very thick,dashdotted,decoration={
     markings,
     mark=at position 0.75 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
     ]    plot[smooth, tension=.7] coordinates {(-11,3.5) (-12,4.5) (v3)};
-\draw  [very thick,dashed,decoration={
+\draw  [thick,dotted,decoration={
     markings,
     mark=at position 0.5 with {\arrow[scale=1.5,>=stealth]{<}}},postaction={decorate}
-    ]   plot[smooth, tension=.7] coordinates {(v5) (-6.5,4.5) (-7,3)};
+    ]   plot[smooth, tension=.7] coordinates {(v5) (-6,4) (-6.5,1)};
 \draw  plot[smooth cycle, tension=.7] coordinates {(-1,-4)};
 
 \node[right] (v8) at (-13.3156,2.4109) {$f_x^*$};
@@ -59,29 +59,37 @@
 \node[left] (v7) at (-10.4,1.8) {$f_x^{'}$};
 
 \node[right] (v6) at (-11.6,2.2) {$f_y^{}$};
-\draw [thin,dotted,decoration={
+
+\draw [thin,dashdotted,decoration={
     markings,
     mark=at position 0.7 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
     ]   plot[smooth, tension=.7] coordinates {(-11.6,2.2)  (-12.6,4) (v1)};
-\draw[thin,dotted,decoration={
+\draw[thin,decoration={
     markings,
     mark=at position 0.55 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
     ]   plot[smooth, tension=.7] coordinates {(-10.4,1.8) (-10.2,4) (v3)};
-\draw[thin,dashed,decoration={
+\draw[thin,decoration={
     markings,
     mark=at position 0.65 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
     ]   plot[smooth, tension=.7] coordinates {(-12.9466,2.7306) (-13.2,4.4) (v1)};
-\draw[thin,dotted,decoration={
+\draw[thin,dashdotted,decoration={
     markings,
     mark=at position 0.65 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
     ]    plot[smooth, tension=.7] coordinates {(-11.6,2.2) (-10.6,3.8) (v3)};
-\draw[thin,dotted,decoration={
+\draw[thin,decoration={
     markings,
     mark=at position 0.65 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
     ]      plot[smooth, tension=.7] coordinates {(-10.4,1.8) (-12,3.6) (v1)};
-\draw[fill=white](-12.958,2.7533)circle (1pt);
-\draw[fill=white](-11.6,2.2)circle (1pt);
-\draw[fill=white](-10.4,1.8)circle (1pt);
+
+\draw[thin,decoration={
+    markings,
+    mark=at position 0.765 with {\arrow[scale=1.5,>=stealth]{>}}},postaction={decorate}
+    ]     plot[smooth, tension=.7] coordinates {(v9) (-7.5,2) (v5)};
+    
+    
+\draw[fill=white](-12.958,2.7533)circle (2pt);
+\draw[fill=white](-11.6,2.2)circle (2pt);
+\draw[fill=black](v9) circle (2pt);
 \draw[fill=black](v0) circle (2pt);
 \draw[fill=white](v1) circle (2pt);
 \draw[fill=white](v2) circle (2pt);
@@ -89,4 +97,5 @@
 \draw[fill=black](v4) circle (2pt);
 \draw[fill=white](v5) circle (2pt);
 
+    
 \end{tikzpicture}

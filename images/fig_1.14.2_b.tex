@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=1]
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-4.5,
+xmax=5.9,
+ymin=-5.5,
+ymax=6.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+
+
+\addplot [domain=0:6, ultra thick, black, smooth]{x};
+\addplot [domain=-6:0, ultra thick, black, smooth]{2};
+\draw [fill= white] (axis cs:0,2) circle [radius=10.05];
+\node[right] at (axis cs:0,2) {${2}$};
+\end{axis};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+%\path (2.5,20.7) node {\footnotesize \(f(x)\)};
+
+\begin{scope}[transform shape,shift ={(2,19.2)}]
+
+\draw[line width=0.03cm,->,>=stealth] (-4.5,0) -- (4.5,0) node[anchor=north] {\footnotesize \(x\)};
+\draw[line width=0.03cm,->,>=stealth] (0,0) -- (0,3.5) node[anchor=east] {\footnotesize \(y\)};
+
+\foreach \i in {-4,-3,-2,-1,0,...,3,4}\node[below ] at (\i,0) {\footnotesize$\i$};
+%\foreach \i in {1,...,2}\node[above left] at (0,\i) {\footnotesize$\i$};
+
+\foreach \i in {1,2,3,4}
+\filldraw[fill=black](\i,2*2^(-\i*\i/5) circle (0.08);
+\foreach \i in {-4,-3,-2,-1}
+\filldraw[fill=black](\i,-2*2^(-\i*\i/5) circle (0.08);
+\foreach \i in {-4,-3,-2,-1,1,2,3,4}
+\filldraw[fill=black](\i,0) circle (0.08);
+\foreach \i in {1,2,3,4}
+\draw[thick](\i,0) --(\i,2*2^-\i*\i/5);
+\foreach \i in {-4,-3,-2,-1}
+\draw[thick](\i,0) --(\i,-2*2^(-\i*\i/5);
+\node[left] at (-2,2) {$\mathscr{K}_{-}$};
+\node[right] at (2,2) {$\mathscr{K}_{+}$};
+\end{scope}
+\end{tikzpicture}

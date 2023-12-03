@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\begin{axis}[ 
+xlabel=$x$,
+ylabel=$y$,
+axis x line=center, xlabel style={anchor=north west},
+axis y line=center, ylabel style={anchor=south west},
+xmin=-2,
+xmax=2,
+ymin=-4,
+ymax=4.5,
+axis line style={thick, shorten > = -0.5cm, shorten < = -0.5cm},
+samples=50,
+unit vector ratio*=1 1,
+font=\tiny
+]
+
+
+
+\addplot [domain=-1.5:1.5, ultra thick, black, smooth]{3 *x-1};
+
+\node[right] at (axis cs:0.2,4) {$y=3x-1$};
+\end{axis};
+\end{tikzpicture}

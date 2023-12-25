@@ -4,7 +4,7 @@
 \mysection{30}{Algebraic structure of $\Breal$ }
 \subsection*{Remark on the Archimedean principle}
 The Archimedean principle is sometimes stated as :\\
-If $x,\,y\in \Breal$ with $y>0$, then $\exists n\in \Zed: (n-1)y\leq x < ny$.\\\\
+If $x,\,y\in \Breal$ with $y>0$, then $\exists\, n\in \Zed: (n-1)y\leq x < ny$.\\\\
 On page $25$, we have \\\\
 $\mathbf{30.6}$ \textbf{The least upper bound axiom for the real number system} $\mathbf{\Breal}$.\\
 If $S$ is a nonempty subset of $\Breal$ and $S$ has an upper bound, then $S$ has a least upper bound in $\Breal$.\\\\
@@ -76,9 +76,9 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Prove the following statement: If $a = l.u.b. (A)$, then for each $\epsilon > 0$ , there is an $x \in  A$ such that $a-\epsilon < x \leq a$. State and prove an analogous proposition for $g.l.b. (A)$. 
 \end{tcolorbox}
-Suppose for a given $\epsilon$,  $\not\exists\, x\in A:\, a-\epsilon < x$, then, $x\leq a-\epsilon$. Thus $a-\epsilon$ is a lower bound which is smaller than $l.u.b.(S)$. We have a contradiction and thus $\forall\epsilon\in\Breal, \exists\, x\in A:\, a-\epsilon < x \leq a$.\\\\
-For $b= g.l.b. (A)$, the statement becomes $$\forall\epsilon\in\Breal, \exists\, x\in A:\, b\leq  x < b+\epsilon$$
-Suppose for a given $\epsilon$,  $\not\exists\, x\in A:\, x < b+\epsilon$, then, $x \leq b+\epsilon$. Thus $b+\epsilon$ is a upper bound which is greater than $g.l.b.(S)$. We have a contradiction and thus $\forall\epsilon\in\Breal, \exists\, x\in A:\, b\leq  x < b+\epsilon$.
+Suppose for a given $\epsilon$,  $\not\exists\,\, x\in A:\, a-\epsilon < x$, then, $x\leq a-\epsilon$. Thus $a-\epsilon$ is a lower bound which is smaller than $l.u.b.(S)$. We have a contradiction and thus $\forall\epsilon\in\Breal, \exists\,\, x\in A:\, a-\epsilon < x \leq a$.\\\\
+For $b= g.l.b. (A)$, the statement becomes $$\forall\epsilon\in\Breal, \exists\,\, x\in A:\, b\leq  x < b+\epsilon$$
+Suppose for a given $\epsilon$,  $\not\exists\,\, x\in A:\, x < b+\epsilon$, then, $x \leq b+\epsilon$. Thus $b+\epsilon$ is a upper bound which is greater than $g.l.b.(S)$. We have a contradiction and thus $\forall\epsilon\in\Breal, \exists\,\, x\in A:\, b\leq  x < b+\epsilon$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -99,8 +99,8 @@ $$\blacklozenge$$
 Prove that if $A$ and $B$ are nonempty subsets of $\Breal$ and $A \subset B$, then $g.l.b. (B) \leq g.l.b. (A)\leq  l.u.b. (A) \leq l.u.b. (B)$. 
 \end{tcolorbox}
 From $\mathbf{2.30.8}$ we know that $l.u.b.(A)\leq g.l.b.(A)$ and $l.u.b.(B)\leq g.l.b.(B)$. \\\\
-Suppose we have $g.l.b.(A)< g.l.b.(B)$. This implies that $\exists x\in A: x\not \in B$. We have a contradiction as $A\subset B$ and thus we must have $g.l.b.(B)\leq g.l.b.(A)$.\\
-In the same vein, suppose we have $l.u.b.(B)< l.u.b.(A)$. This implies that $\exists x\in A: x\not \in B$. We have a contradiction as $A\subset B$ and thus we must have $l.u.b.(A)\leq l.u.b.(B)$. \\
+Suppose we have $g.l.b.(A)< g.l.b.(B)$. This implies that $\exists\, x\in A: x\not \in B$. We have a contradiction as $A\subset B$ and thus we must have $g.l.b.(B)\leq g.l.b.(A)$.\\
+In the same vein, suppose we have $l.u.b.(B)< l.u.b.(A)$. This implies that $\exists\, x\in A: x\not \in B$. We have a contradiction as $A\subset B$ and thus we must have $l.u.b.(A)\leq l.u.b.(B)$. \\
 Putting this all together we get indeed
 $$g.l.b. (B) \leq g.l.b. (A)\leq  l.u.b. (A) \leq l.u.b. (B)$$
 $$\blacklozenge$$
@@ -254,8 +254,8 @@ If a sequence $(a_i)$ has a limit, it is unique.
 \end{tcolorbox}
 Suppose we have for an arbitrary $\epsilon$
 \begin{align*}
-&\exists n_1,\, |a_n-A|<\epsilon,\, \forall n>n_1\\
-&\exists n_2,\, |a_n-A^{'}|<\epsilon,\, \forall n>n_2
+&\exists\, n_1,\, |a_n-A|<\epsilon,\, \forall n>n_1\\
+&\exists\, n_2,\, |a_n-A^{'}|<\epsilon,\, \forall n>n_2
 \end{align*}
 
 Suppose that $A \neq A^{'}$. Let $\epsilon = \frac{|A - A^{'}|}{2} $. By hypothesis there exists a $n_1 \in \Pee$ such that 
@@ -324,8 +324,8 @@ But we know $a_n\leq A\Et b_n\geq B,\, \forall n\in \Pee$ and so we get
 $$a_n\leq A\leq x\leq B\leq b_n$$
 and thus $x\in [a_n,b_n]$ and conclude 
 $$[A,B]\subset [a_n,b_n],\,  \forall n \in \Pee$$ and we can state
-$$\exists x\in  \bigcap^{\infty}_{i=1}[a_i,b_i]$$ and thus
-$$\bigcap^{\infty}_{i=1}[a_i,b_i]\neq \emptyset$$
+$$\exists\, x\in  \bigcap^{\infty}_{i=1}[a_i,b_i]$$ and thus
+$$\bigcap^{\infty}_{i=1}[a_i,b_i]\neq \varnothing$$
 \\\\
 We now prove that if $\lim \left(|b_i -a_i|\right)=0$ then $\bigcap^{\infty}_{i=1}[a_i,b_i]$ has exactly one element.\\
 Suppose $x,\, y\in \bigcap^{\infty}_{i=1}[a_i,b_i]$, two different elements. Then $| b_i-a_i| \geq |x-y| >0,\, \forall i\in \Pee$ as $x\neq y$. Choose $\epsilon=\frac{|x-y|}{2}$, then 
@@ -336,10 +336,10 @@ $$\blacklozenge$$
 %\subsubsection{}{}
 \begin{tcolorbox}
 Give an example of nonempty intervals $I_i$ (see $\mathbf{33.2}$) such that 
-$$I_1\supset I_2 \supset \dots \supset I_n\supset \dots  \Et \bigcap^{\infty}_{i=1}I_i=\emptyset $$
+$$I_1\supset I_2 \supset \dots \supset I_n\supset \dots  \Et \bigcap^{\infty}_{i=1}I_i=\varnothing $$
 \end{tcolorbox}
 Choose $I_i=(0,\, 2^{-i})$. Suppose there exists $x\in \bigcap^{\infty}_{i=1}I_i$, then for any $i\in \Pee$, there exists a $n > i$ such that $x\geq 2^{-n}$ and thus $x\not\in I_n$ and hence $x\not\in \bigcap^{\infty}_{i=1}I_i$.\\\\
-Thus $$\bigcap^{\infty}_{i=1}I_i=\emptyset $$
+Thus $$\bigcap^{\infty}_{i=1}I_i=\varnothing $$
 
 $$\blacklozenge$$
 
@@ -382,7 +382,7 @@ Obviously, the collection of $I_n$ is countable as $n\in \Pee$ and $\Pee$ is cou
 \\\\
 We now prove that 
 $$I=\bigcup^{\infty}_{i=1}I_i $$
-Suppose we have $x\in I$, then, $$\exists \hat{n}\in \Pee,\, \frac{p}{2^{\hat{n}}}\leq x\leq \frac{p+2^{\hat{n}}-1}{2^{\hat{n}}}$$
+Suppose we have $x\in I$, then, $$\exists\, \hat{n}\in \Pee,\, \frac{p}{2^{\hat{n}}}\leq x\leq \frac{p+2^{\hat{n}}-1}{2^{\hat{n}}}$$
 Indeed, it suffice to take $\hat{n}= max(\log_2 \frac{p}{x},\, \log_2 \frac{1-p}{1-x})$ with $\hat{n}\in\Pee$.\\
 So, for every $x\in I$ we can find a closed interval containing $x$ and thus $$I\subset  \bigcup^{\infty}_{i=1}I_i$$
 and as $I_i\subset I,\, \forall i\in \Pee$ we have also 
@@ -395,18 +395,18 @@ $$\blacklozenge$$
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Suppose that $\mathscr{K}$ is a collection of intervals such that $\bigcap\mathscr{K}\neq \emptyset$. Is $\bigcup\mathscr{K}$ necessarily an interval?
+Suppose that $\mathscr{K}$ is a collection of intervals such that $\bigcap\mathscr{K}\neq \varnothing$. Is $\bigcup\mathscr{K}$ necessarily an interval?
 \end{tcolorbox}
 Be $a\in \bigcup \mathscr{K}\Et b\in \bigcup \mathscr{K}$. Consider the closed interval $[a,\, b]$. Is it possible that $[a,\, b]\not \subset \bigcup \mathscr{K}$?\\\\
-$[a,\, b]\not \subset \bigcup \mathscr{K}$ would mean that $\exists x\in [a,\, b]$ such that $x\not\in \bigcup \mathscr{K}$.\\
-As $a\in \bigcup \mathscr{K}$ there exists at least one interval $K_a\in \mathscr{K}$ such that $a\in K_a$. In the same way $\exists K_b\in\mathscr{K}$ for which we have $b\in K_b$.\\\\
+$[a,\, b]\not \subset \bigcup \mathscr{K}$ would mean that $\exists\, x\in [a,\, b]$ such that $x\not\in \bigcup \mathscr{K}$.\\
+As $a\in \bigcup \mathscr{K}$ there exists at least one interval $K_a\in \mathscr{K}$ such that $a\in K_a$. In the same way $\exists\, K_b\in\mathscr{K}$ for which we have $b\in K_b$.\\\\
 If we have $a\in K_a$ and also $b\in K_a$, then we can put $K_a=K_b$ with the consequence that  $x\in K_a$ as $K_a$ is an interval and hence $\forall a,\, b\in K_a, [a,\, b]\subset K_a$.\\
 Hence, $x$ will also be an element of $\bigcup \mathscr{K}$ and we get $[a,\, b]\subset \bigcup \mathscr{K}$.\\\\
 Suppose now, $K_a\neq K_b$. As we suppose $x\in [a,\, b]$, but $x\not\in K_a$ and $x\not\in K_b$ we will have 
 $$a<x<b\quad(\text{compared to } a\leq x\leq b)$$
-As $a$ and $b$ are arbitrary (insofar $a\in K_a$ and $b\in K_b$) and $x\not \in K_a\cup K_b$, we get $$K_a\cap K_b=\emptyset$$
-This is not possible as we have $\bigcap\mathscr{K}\neq \emptyset$ and thus $x$ must be an element of $\bigcup \mathscr{K}$ implying $[a,\, b]\subset \bigcup \mathscr{K}$.\\\\
-\textbf{Conclusion}: Provided that we have $\bigcap\mathscr{K}\neq \emptyset$ , $\bigcup \mathscr{K}$ is indeed an interval 
+As $a$ and $b$ are arbitrary (insofar $a\in K_a$ and $b\in K_b$) and $x\not \in K_a\cup K_b$, we get $$K_a\cap K_b=\varnothing$$
+This is not possible as we have $\bigcap\mathscr{K}\neq \varnothing$ and thus $x$ must be an element of $\bigcup \mathscr{K}$ implying $[a,\, b]\subset \bigcup \mathscr{K}$.\\\\
+\textbf{Conclusion}: Provided that we have $\bigcap\mathscr{K}\neq \varnothing$ , $\bigcup \mathscr{K}$ is indeed an interval 
 $$\blacklozenge$$
 \newpage
 
@@ -702,10 +702,10 @@ Verify Examples $37.2, 37.3, 37.4, \Et 37.5$. Let $p \in \Breal^n$ and let $\eps
 \end{tcolorbox}
 $\mathbf{37.2}$\\\\
 
-i) $\emptyset$\\
-As there is no $p$ such that there exist a $N(p;\epsilon)$, we have $N(p;\epsilon)=\emptyset\subset \emptyset$.\\
+i) $\varnothing$\\
+As there is no $p$ such that there exist a $N(p;\epsilon)$, we have $N(p;\epsilon)=\varnothing\subset \varnothing$.\\
 ii) $\Breal^n$\\
-For every $p\in \Breal^n$ there exist a $\epsilon>0$ such that $\exists q\in\Breal^n\in N(p;\epsilon)$ and thus $N(p;\epsilon)\subset \Breal^n$.\\\\
+For every $p\in \Breal^n$ there exist a $\epsilon>0$ such that $\exists\, q\in\Breal^n\in N(p;\epsilon)$ and thus $N(p;\epsilon)\subset \Breal^n$.\\\\
 $\mathbf{37.3}$ $\Breal^n\times \{0\}$\\\\
 $\Breal^n\times \{0\}$ is a subset of $\Breal^{n+1}$ and any $\epsilon$-neighbourhood of a point $p\in \Breal^n\times \{0\}$ will contain points of the form $(x_1,\ x_2,\, \dots x_n,\ x_{n+1})$ with $x_{n+1}$ not necessarily $0$, hence the neighbourhood will not be a subset of $\Breal^n\times \{0\}$.\\\\
 $\mathbf{37.4}$ $ S=\{(x,\, y): x+y<2\}$\\
@@ -728,8 +728,8 @@ $$\blacklozenge$$\\
 Prove that if $A$ and $B$ are open subsets of $\Breal^{n}$, then $A\cup B$ and $A\cap B$ are open subsets of $\Breal^n$.
 \end{tcolorbox}
 $\mathbf{A\cap B}$ \textbf{is an open subset}:\\
- Even if $A\cap B=\emptyset$ as $\emptyset$ is a open set (see $\mathbf{37.2}$).\\
-If  $A\cap B\neq\emptyset$,  then for a $p\in  A\cap B$, we have   $p\in A$ and $p\in B$ and as $A$ and $B$ are open sets, there exist a $\epsilon_a$-neighbourhood of $p$ which is a subset of $A$ and a $\epsilon_b$-neighbourhood of $p$ which is a subset of $B$. Take $\epsilon = \min (\epsilon_a,\, \epsilon_b)$ and we have $N(p;\epsilon)\subset A\cap B$.\\\\
+ Even if $A\cap B=\varnothing$ as $\varnothing$ is a open set (see $\mathbf{37.2}$).\\
+If  $A\cap B\neq\varnothing$,  then for a $p\in  A\cap B$, we have   $p\in A$ and $p\in B$ and as $A$ and $B$ are open sets, there exist a $\epsilon_a$-neighbourhood of $p$ which is a subset of $A$ and a $\epsilon_b$-neighbourhood of $p$ which is a subset of $B$. Take $\epsilon = \min (\epsilon_a,\, \epsilon_b)$ and we have $N(p;\epsilon)\subset A\cap B$.\\\\
 $\mathbf{A\cup B}$ \textbf{is an open subset}:\\
 As $A$ and $B$ are open sets, there exist a $\epsilon_a$-neighbourhood of $p$ which is a subset of $A$ and a $\epsilon_b$-neighbourhood of $p$ which is a subset of $B$ and thus we have a $\epsilon>0$ so that $\forall p\in A: N(p;\epsilon)\subset A \Ou \forall p\in B: N(p;\epsilon)\subset B$ as $p\in A\cup B$ ans thus $p\in A\Ou p\in B$.\\\\
 
@@ -747,10 +747,10 @@ has proved the following very important theorem. \\
 \end{tcolorbox}
 The proof is nearly similar to the previous exercise.\\\\
 $\bigcup\mathscr{K}$ \textbf{is an open subset}:\\
-As every $K\in\mathscr{K}$ is an open set, there exist a $\epsilon_K$-neighbourhood ,for every $p\in K$, which is a subset of $K$. Thus $\forall p\in \bigcup\mathscr{K},\, \exists \epsilon: N(p;\epsilon)\subset \bigcup\mathscr{K}$ proving that $\bigcup\mathscr{K}$ is an open set.\\\\
+As every $K\in\mathscr{K}$ is an open set, there exist a $\epsilon_K$-neighbourhood ,for every $p\in K$, which is a subset of $K$. Thus $\forall p\in \bigcup\mathscr{K},\, \exists\, \epsilon: N(p;\epsilon)\subset \bigcup\mathscr{K}$ proving that $\bigcup\mathscr{K}$ is an open set.\\\\
 $\bigcap\mathscr{K}$ \textbf{is an open subset} provided that $\mathscr{K}$ is a finite set:\\\\
-\textbf{i)} Even if $\bigcap\mathscr{K}=\emptyset$, $\bigcap\mathscr{K}=\emptyset$ is an open set as $\emptyset$ is a open set (see $\mathbf{37.2}$).\\\\
-\textbf{ii) }If  $\bigcap\mathscr{K}\neq\emptyset$,  then for a $p\in  \bigcap\mathscr{K}$,  $p$ is an element of all $K_n\in \mathscr{K}$ and as all $K_n$ are open sets, there exist for every $K_n$ an  $\epsilon_n$-neighbourhood of $p$ which is a subset of $K_n$. As $\mathscr{K}$ is finite, it is countable and can form the set $E=\{\epsilon_1,\epsilon_2,\, \dots \epsilon_N\}$. Take $\epsilon = \min (E)$ and we have $N(p;\epsilon)\subset A\cap B$.\\\\
+\textbf{i)} Even if $\bigcap\mathscr{K}=\varnothing$, $\bigcap\mathscr{K}=\varnothing$ is an open set as $\varnothing$ is a open set (see $\mathbf{37.2}$).\\\\
+\textbf{ii) }If  $\bigcap\mathscr{K}\neq\varnothing$,  then for a $p\in  \bigcap\mathscr{K}$,  $p$ is an element of all $K_n\in \mathscr{K}$ and as all $K_n$ are open sets, there exist for every $K_n$ an  $\epsilon_n$-neighbourhood of $p$ which is a subset of $K_n$. As $\mathscr{K}$ is finite, it is countable and can form the set $E=\{\epsilon_1,\epsilon_2,\, \dots \epsilon_N\}$. Take $\epsilon = \min (E)$ and we have $N(p;\epsilon)\subset A\cap B$.\\\\
 
 $$\blacklozenge$$\\
 
@@ -770,7 +770,7 @@ $$\blacklozenge$$\\
 Be $F=\{p_1,\, p_2,\, \dots ,\, p_N\}$ the finite set. Define 
 $$E=\{|p_i-p_j|,\, i,\, j\in \Pee_N,\, i\neq j\}$$
 Then we can find $\epsilon=\min E$ and therefore $N(p_i;\frac{\epsilon}{2})-\{p_i\}$ will not be a subset of $F$ and thus  \\
-$$\exists \,\epsilon^{'}: \left(N(p_i;\epsilon^{'})-\{p_i\}\right)\cap F=\emptyset$$
+$$\exists\, \,\epsilon^{'}: \left(N(p_i;\epsilon^{'})-\{p_i\}\right)\cap F=\varnothing$$
 $$\blacklozenge$$\\
 
 
@@ -799,9 +799,9 @@ $$\blacklozenge$$\\
 Suppose $S$ is a nonempty open subset of $\Breal^n$. Is every point of $S$ a limit point of $S$? Give an example of an open nonempty subset of $\Breal^n$ that contains all of its limit points.
 \end{tcolorbox}
 $S$ is a nonempty open subset of $\Breal^n$ so we have for any $p\in S$,
-$$\exists \, \epsilon>0: N(p;\epsilon)\subset S$$
+$$\exists\, \, \epsilon>0: N(p;\epsilon)\subset S$$
 We prove that 
-$$\forall p\in S, \exists \, \epsilon>0: N(p;\epsilon)\subset S \implies \forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S\neq \emptyset $$
+$$\forall p\in S, \exists\, \, \epsilon>0: N(p;\epsilon)\subset S \implies \forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S\neq \varnothing $$
 Be an arbitrary $\epsilon^{'}>0$ . Besides the obvious case $\epsilon^{'}=\epsilon$, we examine the two cases $\epsilon^{'}>\epsilon$ and $\epsilon^{'}<\epsilon$.\\\begin{figure}[H]%
     \centering
 \input{./images/fig_2.38.4.tex}\\
@@ -809,17 +809,17 @@ Be an arbitrary $\epsilon^{'}>0$ . Besides the obvious case $\epsilon^{'}=\epsil
 \label{fig:fig_p8a}
 \end{figure}
 $i)\quad \mathbf{\epsilon^{'}>\epsilon}$\\\\
-In that case we will have $N(p;\epsilon)\subset N(p;\epsilon^{'})$. This means that $N(p;\epsilon)\cap S \subset N(p;\epsilon^{'})\cap S$ and as $N(p;\epsilon)\cap S = N(p;\epsilon)\neq \emptyset$ we conclude $N(p;\epsilon^{'})\cap S\neq \emptyset$.\\\\
+In that case we will have $N(p;\epsilon)\subset N(p;\epsilon^{'})$. This means that $N(p;\epsilon)\cap S \subset N(p;\epsilon^{'})\cap S$ and as $N(p;\epsilon)\cap S = N(p;\epsilon)\neq \varnothing$ we conclude $N(p;\epsilon^{'})\cap S\neq \varnothing$.\\\\
 $ii)\quad \mathbf{\epsilon}>\epsilon^{'}$\\\\
-In that case we will have $N(p;\epsilon^{'})\subset N(p;\epsilon)$. As $N(p;\epsilon)\subset S$ we also have $N(p;\epsilon^{'})\subset S$ and conclude $N(p;\epsilon^{'})\cap S\neq \emptyset$.\\\\
+In that case we will have $N(p;\epsilon^{'})\subset N(p;\epsilon)$. As $N(p;\epsilon)\subset S$ we also have $N(p;\epsilon^{'})\subset S$ and conclude $N(p;\epsilon^{'})\cap S\neq \varnothing$.\\\\
 So, for all cases of $\epsilon^{'}$ we get the conclusion 
-$$\forall p\in S, \forall\, \epsilon^{'}>0: N(p;\epsilon^{'})\cap S\neq \emptyset $$ Can we prove that also
+$$\forall p\in S, \forall\, \epsilon^{'}>0: N(p;\epsilon^{'})\cap S\neq \varnothing $$ Can we prove that also
 \begin{align}
-\forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S\neq \emptyset
+\forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S\neq \varnothing
 \end{align}
 Suppose, 
-$$\forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S= \emptyset $$
-This means that $p$ would be the only element common to $N(p;\epsilon^{'})$ and $S$. This is not possible as $\epsilon^{'}$ being greater than $0$ means that $N(p;\epsilon^{'})$ contains other elements than $p$ and as $N(p;\epsilon^{'})\subset S$ these other elements must also belong to $S$, hence $\left(N(p;\epsilon^{'})-\{p\}\right)\cap S \neq \emptyset $ and conclude that $(1)$ is a true statement and thus $p$ is a limit point of $S$. As $p$ was arbitrary chosen, this yields for all elements of $S$ and thus every point of $S$ is a limit point of $S$.  
+$$\forall p\in S, \forall\, \epsilon^{'}>0: \left(N(p;\epsilon^{'})-\{p\}\right)\cap S= \varnothing $$
+This means that $p$ would be the only element common to $N(p;\epsilon^{'})$ and $S$. This is not possible as $\epsilon^{'}$ being greater than $0$ means that $N(p;\epsilon^{'})$ contains other elements than $p$ and as $N(p;\epsilon^{'})\subset S$ these other elements must also belong to $S$, hence $\left(N(p;\epsilon^{'})-\{p\}\right)\cap S \neq \varnothing $ and conclude that $(1)$ is a true statement and thus $p$ is a limit point of $S$. As $p$ was arbitrary chosen, this yields for all elements of $S$ and thus every point of $S$ is a limit point of $S$.  
 $$\lozenge$$
 Example of an open nonempty subset of $\Breal^n$ that contains all of its limit points.\\\\
 $$S=\Breal^n$$
@@ -842,7 +842,7 @@ We give a counterexample to prove this is not true.\\\
 In $\Breal^2$, take the open subsets $K_n=\{x:|x-(\half,0)|<\frac{2^n-1}{2^{n+1}},\, n\in \Pee\}$ and $\mathscr{K}=\{K_n,\,n\in \Pee \}$. This set for $\Breal^2$ is illustrated in the figure above.\\\\
 $\hat{O}=(0,0)$ is a limit point for $\bigcup \mathscr{K}$. \\
 Indeed, choose an arbitrary $\epsilon >0$. If $\hat{O}$ is a limit point of $\bigcup \mathscr{K}$, then we must have 
-$$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$ Consider a point $(x,0)\in K_n\subset \bigcup \mathscr{K} $. We have $|x-\half|<\frac{2^n-1}{2^{n+1}}$ or 
+$$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \varnothing$$ Consider a point $(x,0)\in K_n\subset \bigcup \mathscr{K} $. We have $|x-\half|<\frac{2^n-1}{2^{n+1}}$ or 
 \begin{align}
 -\frac{2^n-1}{2^{n+1}}<&x-\half<\frac{2^n-1}{2^{n+1}}\\
 \Leftrightarrow\quad  \frac{1}{2^{n+1}}<&x<1-\frac{1}{2^{n+1}}
@@ -855,8 +855,8 @@ and for $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$, considering only the pos
 \begin{align}
 0<&x^{'}<\epsilon
 \end{align}
-Considering $(2)$ and $(3)$, we can always find a $n$ such that $\frac{1}{2^{n+1}}<\epsilon$. Hence  $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap K_n= \left(\frac{1}{2^{n+1}},\epsilon\right)\neq \emptyset$ and thus as $K_n\subset  \bigcup \mathscr{K}$ we have
-$$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$.\\\\
+Considering $(2)$ and $(3)$, we can always find a $n$ such that $\frac{1}{2^{n+1}}<\epsilon$. Hence  $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap K_n= \left(\frac{1}{2^{n+1}},\epsilon\right)\neq \varnothing$ and thus as $K_n\subset  \bigcup \mathscr{K}$ we have
+$$\forall \epsilon :\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)\cap \bigcup \mathscr{K}\neq \varnothing$$.\\\\
 On the other hand, for a given $K_n\in \mathscr{K}$ it is clear that $\hat{O}$ is not a limit point as we can always find an $\epsilon < \frac{1}{2^{n+1}}$, meaning that $K_n$ and $\left(N(\hat{O};\epsilon)-\{\hat{O}\}\right)$ have no common points, hence, $\hat{O}$ is not a limit point of $K_n$.
 $$\blacklozenge$$\\
 
@@ -867,11 +867,11 @@ $$\blacklozenge$$\\
 If your answer to Exercise $5$ is no, prove the following: Suppose that $\mathscr{K}$ is a finite collection of subsets of $\Breal^n$. If $p$ is a limit point of $\bigcup \mathscr{K}$ , then $p$ is a limit point of at least one $A \in \mathscr{K}$.
 \end{tcolorbox}
 Be $p$ a limit point of $\bigcup \mathscr{K}$. This means
-$$\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$$
+$$\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap \bigcup \mathscr{K}\neq \varnothing$$
 
-Be $S=\left(N(p;\epsilon)-\{p\}\right)\cap \bigcup \mathscr{K}\neq \emptyset$. This means $\exists x\in\Breal^n$ such that $ x\in S\Et x\in \bigcup\mathscr{K}$, the latter means that $x$ must be an element of at least one $A^{*}\in \mathscr{K}$.\\
+Be $S=\left(N(p;\epsilon)-\{p\}\right)\cap \bigcup \mathscr{K}\neq \varnothing$. This means $\exists\, x\in\Breal^n$ such that $ x\in S\Et x\in \bigcup\mathscr{K}$, the latter means that $x$ must be an element of at least one $A^{*}\in \mathscr{K}$.\\
 But $x$ must also be an element of $\left(N(p;\epsilon)-\{p\}\right)$ so we have 
-$$\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap A^{*}\neq \emptyset$$
+$$\forall  \epsilon >0, \left(N(p;\epsilon)-\{p\}\right)\cap A^{*}\neq \varnothing$$
 Hence, there exists at least one $A^*$ for which $p$ is a limit point.
 $$\blacklozenge$$\\
 
@@ -882,12 +882,12 @@ Let $S\subset \Breal^n$  and let $z$ be a limit point of $S$. Show that for ever
 \end{tcolorbox}
 We have 
 \begin{align}
-&\forall  \epsilon >0, \left(N(z;\epsilon)-\{z\}\right)\cap S\neq \emptyset\\
-\implies \quad &\forall  \epsilon >0, N(z;\epsilon)\cap S\neq \emptyset
+&\forall  \epsilon >0, \left(N(z;\epsilon)-\{z\}\right)\cap S\neq \varnothing\\
+\implies \quad &\forall  \epsilon >0, N(z;\epsilon)\cap S\neq \varnothing
 \end{align}
 Suppose $K=N(z;\epsilon)\cap S$ is a finite set. Be $K=\{x_1,\, x_2,\, \dots ,\, x_N\}$ and $E=\{|x_1-z|,\, |x_2-z|,\, \dots ,\, |x_N-z|\}$. Put $\delta = \min{E}$. Then for any $\epsilon^{'}<\delta $ we have 
 \begin{align}
-N(z;\epsilon^{'})\cap S=\emptyset\quad , \epsilon^{'}<\delta 
+N(z;\epsilon^{'})\cap S=\varnothing\quad , \epsilon^{'}<\delta 
 \end{align}
 We get a contradiction as $(3)$ puts a constraint on the requirement ($\forall$) in  $(2)$  and thus we conclude \\
 $$N(z;\epsilon^{'})\cap S\text{ is a infinite set.}$$
@@ -905,10 +905,10 @@ Proof. \\
     \textit{$\bullet\quad$(This is because $cl(S)$ by definition must contain all limit point of $S$).}\\
 (d) Hence, there is an $\epsilon  > 0$
 such that $N(x; \epsilon)\subset \Breal^n- S$. \\
-\textit{$\bullet\quad$(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$. As $x$ is not a limit point of $S$ (see (b)) $(N(x; \epsilon)-\{x\})\cap S= \emptyset$ and thus all elements of $N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
+\textit{$\bullet\quad$(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \varnothing$. As $x$ is not a limit point of $S$ (see (b)) $(N(x; \epsilon)-\{x\})\cap S= \varnothing$ and thus all elements of $N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
 (e) However, since $x$ is a limit point of $cl (S)$, there is a
 point $z \in \,  cl (S)$ such that $0 < d(x, z) < \epsilon$.\\
-\textit{$\bullet\quad$(This follows from the definition of a limit point $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$ and thus there must be at least one $z\in(N(x; \epsilon)-\{x\})\cap S$ ).}\\
+\textit{$\bullet\quad$(This follows from the definition of a limit point $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \varnothing$ and thus there must be at least one $z\in(N(x; \epsilon)-\{x\})\cap S$ ).}\\
 (f) Then since $z\not\in S$, $z$ is a limit point of $S$.\\
 \textit{$\bullet\quad$(This is because $cl(S)$ by definition must contain all limit point of $S$).}\\
 (g) Since $\epsilon - d(x, z) > 0$ and $z$ is a limit point of $S$, there is a point $y\in S$ such that
@@ -927,8 +927,8 @@ $d(y, z) \leq  \epsilon - d(x, z)$.\\
 \begin{tcolorbox}
 Suppose that $F$ is a finite subset of $\Breal^n$. Is $F$ necessarily closed in $\Breal^n$?
 \end{tcolorbox}
-Consider $\sim F$. Then, all $p\in F$ are limit points of $\sim F$. Indeed, we have, $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\subset \sim F$ and thus $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap \sim F\neq \emptyset$.\\ Conclusion $p$ is a limit point of $\sim F$. \\
-And as $p\not\in \sim F$ we can rewrite this as $\forall \epsilon>0: N(p;\epsilon)\cap \sim F\neq \emptyset$. Also, consider an arbitrary point $z\in\sim F$. Be $E=\{|p_1-z|,|p_2-z|,,\dots, |p_n-z|\}$ where the $p_i$ are the elements of $F$. Be $\delta = \min E$ and choose $\epsilon^{'} < \delta$, the we will have that $N(z;\epsilon^{'})\subset \sim F$ and thus $\sim F$ is an open subset and by theorem $\mathbf{39.2}$ $F$ is a closed subset.
+Consider $\sim F$. Then, all $p\in F$ are limit points of $\sim F$. Indeed, we have, $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\subset \sim F$ and thus $\forall \epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap \sim F\neq \varnothing$.\\ Conclusion $p$ is a limit point of $\sim F$. \\
+And as $p\not\in \sim F$ we can rewrite this as $\forall \epsilon>0: N(p;\epsilon)\cap \sim F\neq \varnothing$. Also, consider an arbitrary point $z\in\sim F$. Be $E=\{|p_1-z|,|p_2-z|,,\dots, |p_n-z|\}$ where the $p_i$ are the elements of $F$. Be $\delta = \min E$ and choose $\epsilon^{'} < \delta$, the we will have that $N(z;\epsilon^{'})\subset \sim F$ and thus $\sim F$ is an open subset and by theorem $\mathbf{39.2}$ $F$ is a closed subset.
 $$\blacklozenge$$\\
 
 
@@ -941,29 +941,29 @@ $$ $$
 $\mathbf{39.2}$ Let $S\subset \Breal^n$. Then $S$ is closed if and only if its complement is open in $\Breal^n$.
 $$\implies$$
 \textbf{$\mathbf{S}$ is closed.}\\
-Be $p\in \, \sim S$. Then, $p\not \in  S$ and thus $p$ can not be a limit point of $S$. Hence, the statement $\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset$ is false. We have,
+Be $p\in \, \sim S$. Then, $p\not \in  S$ and thus $p$ can not be a limit point of $S$. Hence, the statement $\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \varnothing$ is false. We have,
 \begin{align*}
-&\neg\left(\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset\right)\\
-\Leftrightarrow\quad &\exists\, \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S= \emptyset\\
-\Leftrightarrow\quad &\exists\, \epsilon >0,N(p;\epsilon)\cap S= \emptyset
+&\neg\left(\forall \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S\neq \varnothing\right)\\
+\Leftrightarrow\quad &\exists\,\, \epsilon >0,\left(N(p;\epsilon)-\{p\}\right)\cap S= \varnothing\\
+\Leftrightarrow\quad &\exists\,\, \epsilon >0,N(p;\epsilon)\cap S= \varnothing
 \end{align*}
 The last statement follows from the fact that $p\not\in S$, hence the presence of $p$ in $N(p;\epsilon)$ is of no object for the statement.
 By the last statement , $N(p;\epsilon)\not\subset S$ and thus $N(p;\epsilon)$ lies completely in the complement of $S$ and we get for any arbitrary $p\in(\sim S)$:
-$$\exists\, \epsilon >0,N(p;\epsilon)\subset (\sim S)$$
+$$\exists\,\, \epsilon >0,N(p;\epsilon)\subset (\sim S)$$
 proving that $\sim S$ is an open set.
 $$\lozenge$$\\\\
 $$\Leftarrow$$
 \textbf{$\mathbf{\sim S}$ is open.}\\
-Be $q$ a limit point of $S$ but not in $S$, then $q\in(\sim S)$. As $\sim S$ is an open set we have $\exists\,\epsilon >0, N(q;\epsilon)\subset (\sim S)$ and thus $\exists\,\epsilon >0, N(q;\epsilon)\not \subset S$ giving $\exists\,\epsilon >0, N(q;\epsilon) \cap S=\emptyset$. The presence of $q$ in $N(q;\epsilon)$ does not change the last statement and we have
-$$\exists\,\epsilon >0, \left(N(q;\epsilon)-\{q\}\right)\cap S=\emptyset$$
+Be $q$ a limit point of $S$ but not in $S$, then $q\in(\sim S)$. As $\sim S$ is an open set we have $\exists\,\,\epsilon >0, N(q;\epsilon)\subset (\sim S)$ and thus $\exists\,\,\epsilon >0, N(q;\epsilon)\not \subset S$ giving $\exists\,\,\epsilon >0, N(q;\epsilon) \cap S=\varnothing$. The presence of $q$ in $N(q;\epsilon)$ does not change the last statement and we have
+$$\exists\,\,\epsilon >0, \left(N(q;\epsilon)-\{q\}\right)\cap S=\varnothing$$
 We have a contradiction as we supposed that $q$ was a limit point of $S$, hence the supposition that $q$ is not in $S$ is wrong. So a limit point of $S$ must be in $S$ and thus $S$ is closed.
 $$\lozenge$$
 $\mathbf{39.3}$\\ 
 $\mathbf{(a)}$ \textbf{The empty set and $\Breal^n$ are closed subsets of $\Breal^n$.\\\\}
 We use in both case theorem $\mathbf{39.2}$ \textit{(Let $S \subset \Breal^n$. Then $S$ is closed if and only if its complement
 is open in $\Breal^n$)}.\\\\
-$\bullet$ As $\emptyset=\sim \Breal^n$ and from $\mathbf{37.2}$ we know that  $\Breal^n$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\emptyset$ is closed. \\\\
-$\bullet$ As $\Breal^n =\sim \emptyset $ and from $\mathbf{37.2}$ we know that  $\emptyset$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\Breal^n$ is closed. 
+$\bullet$ As $\varnothing=\sim \Breal^n$ and from $\mathbf{37.2}$ we know that  $\Breal^n$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\varnothing$ is closed. \\\\
+$\bullet$ As $\Breal^n =\sim \varnothing $ and from $\mathbf{37.2}$ we know that  $\varnothing$ is an open set. By theorem $\mathbf{39.2}$ we then know that it's complement is closed. Hence, $\Breal^n$ is closed. 
 $$\lozenge$$
 For the following statements we use the De Morgan's laws
 \begin{align}
@@ -1003,7 +1003,7 @@ $$\blacklozenge$$\\
 \begin{tcolorbox}
 Is the set in Example $\mathbf{37.3 }$ a closed set?
 \end{tcolorbox}
-Consider $S=\Breal\times\{0\}$. Then, $\sim S=\emptyset\times \Breal_{0}$. We know that $\emptyset$ is open. Also $\Breal_{0}$ is open (choose for any $p\in \Breal_{0}$ an $\epsilon<\frac{|p|}{2}$, giving $N(p;\epsilon)\subset \Breal_{0}$.)\\
+Consider $S=\Breal\times\{0\}$. Then, $\sim S=\varnothing\times \Breal_{0}$. We know that $\varnothing$ is open. Also $\Breal_{0}$ is open (choose for any $p\in \Breal_{0}$ an $\epsilon<\frac{|p|}{2}$, giving $N(p;\epsilon)\subset \Breal_{0}$.)\\
 So $\sim S$ is open and by theorem $\mathbf{39.2}$ we conclude that $S$ is a closed subset of $\Breal^2$.
 $$\blacklozenge$$\\
 
@@ -1027,10 +1027,10 @@ If $x \not \in \, S^{'}$, then  $x$ is not a limit point of $S$
     \textit{(This is because $S^{'}$, by definition, must contain all limit point of $S$).}\\
 Hence, there is an $\epsilon  > 0$
 such that $N(x; \epsilon)\subset \Breal^n- S$ 
-\textit{(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$. As $x$ is not a limit point of $S$ , there exists an $\epsilon$ such that  $(N(x; \epsilon)-\{x\})\cap S= \emptyset$ and thus all elements of $N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
+\textit{(This is by the definition of a limit point i.e. $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \varnothing$. As $x$ is not a limit point of $S$ , there exists an $\epsilon$ such that  $(N(x; \epsilon)-\{x\})\cap S= \varnothing$ and thus all elements of $N(x; \epsilon)$ must be an element of the complement of $S$ i.e. $\Breal^n-S$).}\\
 However, since $x$ is a limit point of $S^{'}$, there is a
 point $z \in \,  S^{'}$ such that $0 < d(x, z) < \epsilon$ 
-\textit{( This follows from the definition of a limit point $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \emptyset$ and thus there must be at least one $z\in(N(x; \epsilon)-\{x\})\cap S$ ).}\\
+\textit{( This follows from the definition of a limit point $\forall\epsilon>0, (N(x; \epsilon)-\{x\})\cap S\neq \varnothing$ and thus there must be at least one $z\in(N(x; \epsilon)-\{x\})\cap S$ ).}\\
 Then since $z\in S^{'}$, $z$ is a limit point of $S$ 
 \textit{(This is because $S^{'}$ by definition must contain all limit point of $S$).}\\
 Since $\epsilon - d(x, z) > 0$ and $z$ is a limit point of $S$, there is a point $y\in S$ such that
@@ -1051,10 +1051,10 @@ $$\blacklozenge$$\\
 \subsection{}
 %\subsubsection{}{}
 \begin{tcolorbox}
-Let $S$ be a subset of $\Breal^n$. Let $F$ consist of all points $p$ in $\Breal^n$ such that for each $\epsilon > 0, \, N(p; \epsilon)\cap S \neq \emptyset$ and $N(p;\epsilon)\cap \left(
-\sim S\right)  \neq \emptyset$. Is $F$ necessarily a closed set?
+Let $S$ be a subset of $\Breal^n$. Let $F$ consist of all points $p$ in $\Breal^n$ such that for each $\epsilon > 0, \, N(p; \epsilon)\cap S \neq \varnothing$ and $N(p;\epsilon)\cap \left(
+\sim S\right)  \neq \varnothing$. Is $F$ necessarily a closed set?
 \end{tcolorbox}
-Consider $S=\{p\}$ a set in $\Breal^n$ consisting of a single point. Then, $\forall \epsilon > 0, \, N(p; \epsilon)\cap S = \{p\}(\neq \emptyset)$, which implies that $p\in F$. Also, $N(p;\epsilon)\cap \left(\sim S\right)\neq \emptyset$ as $N(p;\epsilon)-\{p\}$ contains only elements of $\sim S$. Also, no other element $q$ of $\sim S$ can comply with the condition $\forall \epsilon > 0, \, N(q; \epsilon)\cap S \neq \emptyset$ and hence $F=S$. So $F$ has no limit point (and thus does not contain any), hence $F$ is closed \footnote{Because $\forall x\in\emptyset:P(x)$ is always true regardless of the proposition $P(x)$.}
+Consider $S=\{p\}$ a set in $\Breal^n$ consisting of a single point. Then, $\forall \epsilon > 0, \, N(p; \epsilon)\cap S = \{p\}(\neq \varnothing)$, which implies that $p\in F$. Also, $N(p;\epsilon)\cap \left(\sim S\right)\neq \varnothing$ as $N(p;\epsilon)-\{p\}$ contains only elements of $\sim S$. Also, no other element $q$ of $\sim S$ can comply with the condition $\forall \epsilon > 0, \, N(q; \epsilon)\cap S \neq \varnothing$ and hence $F=S$. So $F$ has no limit point (and thus does not contain any), hence $F$ is closed \footnote{Because $\forall x\in\varnothing:P(x)$ is always true regardless of the proposition $P(x)$.}
 
 $$\blacklozenge$$\\
 
@@ -1068,10 +1068,10 @@ First note that, for polygons, by theorem $\mathbf{39.3 (c)}$ (\textit{The
 union of a finite collection of closed sets is closed}) it suffice to prove that a line is a closed subset as a polygon is the union of a finite number of line segments and the union of a finite collection of closed sets is closed.\\
 Recall the definition of a line segment $L(a,b)$ determined by $a \Et b$:\\
 $$L=\{x:x=(1-t)a+tb,\, t\in \Breal_{[0,1]}\}$$
-Be a $p$ a limit point of the line $L(a,b)$. Then, $\forall \epsilon: \left( N(p;\epsilon)-\{p\}\right)\cap L(a,b)\neq \emptyset$. This means that $\exists x\in L(a,b)$ which is also an element of $N(p;\epsilon)$. This implies 
+Be a $p$ a limit point of the line $L(a,b)$. Then, $\forall \epsilon: \left( N(p;\epsilon)-\{p\}\right)\cap L(a,b)\neq \varnothing$. This means that $\exists\, x\in L(a,b)$ which is also an element of $N(p;\epsilon)$. This implies 
 $$ d(p;x)<\epsilon$$
 Suppose that $p\not\in L(a,b)$. This implies
-$$\not\exists\, t\in\Breal : p= (1-t)a+bt$$
+$$\not\exists\,\, t\in\Breal : p= (1-t)a+bt$$
 Consider the set $$D=\{d=d(p;x):x= (1-t)a+bt,\forall t\in\Breal \}$$
 As $p\not\in L(a,b)$, the ordered set $(D,\leq)\subset (\Breal,\leq)$ does not contain the element $d=0$, hence $D$ has a lower bound $=0\not \in D$.\
 By the least upper bound axiom on page $\mathbf{61}$ and it's corollary (exercise $2$ page $62$) $D$ has a greatest lower bound. Be $g.l.b\,  D=\delta$. We have 
@@ -1091,7 +1091,7 @@ $$\blacklozenge$$\\
 \caption{The Bolzano-Weierstrass Theorem}
 \label{fig:fig_p8a}
 \end{figure}
-The succcesive partition of the close interval $K^{(p)}_i$ in equal $n^2$ closed intervals $K^{(q)}_{i+1}(q=1,2,\dots 2^n)$  makes that we can always choose one of this intervals such that $S\cap K^{(q^{'})}_{i+1}\neq \emptyset$
+The succcesive partition of the close interval $K^{(p)}_i$ in equal $n^2$ closed intervals $K^{(q)}_{i+1}(q=1,2,\dots 2^n)$  makes that we can always choose one of this intervals such that $S\cap K^{(q^{'})}_{i+1}\neq \varnothing$
 \newpage
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \setcounter{subsection}{0}
@@ -1150,12 +1150,12 @@ chosen that $(a_{n_i} )$ is a subsequence of $(a_{i} )$ and that $\lim (a_{n_i})
 Prove that if $S$ is a subset of $\Breal^n$ and $z \in \Breal^n$, then $z$ is a limit point of $S$ if and only if there exists a sequence $(a_i)$ in $S$ that converges to $z$ and which is such that $a_i\neq a_j$ for $i\neq j$.
 \end{tcolorbox}
 We have to prove
-$$\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\emptyset\quad \iff\quad \exists \quad(a_i)\text{ in } S: a_i\neq a_j \text{ for } i\neq j \Et \lim a_i= z$$\\\\
+$$\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\varnothing\quad \iff\quad \exists\, \quad(a_i)\text{ in } S: a_i\neq a_j \text{ for } i\neq j \Et \lim a_i= z$$\\\\
 $$\lozenge$$\\
 $$\mathbf{\mathlarger{\implies}}$$
 We have that $z$ is a limit point. So, 
 \begin{align}
-\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\emptyset
+\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\varnothing
 \end{align}
 Let's put $\epsilon =1$ and denote 
 $$D_1=\left(N(z;1)-\{z\}\right)\cap S$$
@@ -1179,7 +1179,7 @@ Then we can write $D_1$ as
  \{(1,a_1), (2,a_2),\dots, (i,a_i),\dots\}\text{ such that }0< d(a_i,z)<\frac{1}{i}\text{ for } i\in \Pee 
  \end{align}
 The definition of convergence of a sequence $(a_i)$ to $z$  is:
-$$\forall\epsilon > 0, \exists N\in\Pee:\, d(a_k,z) <\epsilon \text{ whenever } k \geq N $$
+$$\forall\epsilon > 0, \exists\, N\in\Pee:\, d(a_k,z) <\epsilon \text{ whenever } k \geq N $$
 If we choose an arbitrary $\epsilon>0$ it suffice in $(5)$ to put $\frac{1}{i}\leq \epsilon$ or $i\geq \frac{1}{\epsilon}$ to see that the sequence in $(5)$ converges to $z$.\\\\
 Finally, by the way we constructed  the sequence by defining the different subsets $D_k$ as $$D_k=\{ x\in S: 0<d(x,z)<\frac{1}{k}\}-\{a_1,\dots,a_{k-1}\}  $$ we are assured that $a_i\neq a_j$ for $i\neq j$.
 $$\lozenge$$\\
@@ -1190,15 +1190,15 @@ We know that for the sequence $(a_i)$ we have
 \end{align}
 this implies
 \begin{align}
-\forall\epsilon > 0, \exists N\in\Pee:\, d(a_k,z) <\epsilon \text{ whenever } k \geq N
+\forall\epsilon > 0, \exists\, N\in\Pee:\, d(a_k,z) <\epsilon \text{ whenever } k \geq N
 \end{align}
 The requirement $a_i\neq a_j \text{ for } i\neq j$ in $(6)$ makes that if $z$ occurs in the sequence, it can only occur once. Be $M$ the position in the sequence were $z$ occurs, then the subsequence $(a_k):k> M$ will still converges to $z$ (construct the subsequence $(i,a_i): i>M$ and replace $N$ in $(7)$ by $N-M$).\\
 So, $(7)$ can be replaced by 
 \begin{align}
-\forall\epsilon > 0, \exists N\in\Pee:\, 0< d(a_k,z) <\epsilon \text{ whenever } k \geq N
+\forall\epsilon > 0, \exists\, N\in\Pee:\, 0< d(a_k,z) <\epsilon \text{ whenever } k \geq N
 \end{align}
 which is equivalent to state as 
-$\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\emptyset$
+$\forall \epsilon >0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq\varnothing$
 $$\blacklozenge$$\\
 
 
@@ -1211,15 +1211,15 @@ for $m\geq N $ and $n\geq N$. Show that $(a_i$) is a bounded sequence.
 \end{tcolorbox}
 The given property of the sequence can be stated as
 \begin{align}
-\forall \epsilon >0, \, \exists\, N\in\Pee: d(a_m,a_n) <\epsilon,\, m\geq N\Et n\geq N
+\forall \epsilon >0, \, \exists\,\, N\in\Pee: d(a_m,a_n) <\epsilon,\, m\geq N\Et n\geq N
 \end{align}
 If the sequence is bounded then we have
 \begin{align}
-\exists M>0: d(a_m,a_n) \leq M,\,  \forall m,\, n \in \Pee
+\exists\, M>0: d(a_m,a_n) \leq M,\,  \forall m,\, n \in \Pee
 \end{align}
 Note that by $(1)$, choosing an $\epsilon$ (giving a $N$), and putting $\epsilon = M$ the statement$(2)$ is true on a subsequence of $(a_n)$ i.e. when $ m\geq N\Et n\geq N$. What about the finite subsequence $(a_k): k< N$? Can we be sure that
 \begin{align}
-\exists M^{'}>0: d(a_m,a_n) \leq M^{'},\,  m< N  \Et n< N
+\exists\, M^{'}>0: d(a_m,a_n) \leq M^{'},\,  m< N  \Et n< N
 \end{align}
 Yes, as $K=\{(d(a_m,a_n) ,\,  m< N  \Et n< N\}$ is a finite subset of $\Breal$ and hence is a totally ordered finite set. Therefore (being finite) has a first and last element $L$ and $M^{'}$ with the property that $L\leq d(a_m,a_n)\leq M^{'}$
  for all $d(a_m,a_n)$ in $K$. So $K$ is bounded by $L$ and $M^{'}$. \\
@@ -1235,7 +1235,7 @@ subsequence $(a_{N_i})$ of $(a_i)$, $\lim (a_i) = \lim (a_{N_i})$.
 \end{tcolorbox}
 $\lim (a_i) = a$ means
 \begin{align*}
-\forall\epsilon >0,\exists N\in \Pee: d(a_k,a)<\epsilon,\, k\geq N
+\forall\epsilon >0,\exists\, N\in \Pee: d(a_k,a)<\epsilon,\, k\geq N
 \end{align*}
 For a chosen $\epsilon$ we will have a $N\in\Pee$ from which on the elements of the sequence will fulfil the condition $d(a_i,a)<\epsilon$. Let's choose an arbitrary strictly increasing sequence $L:\Pee \rightarrow\Pee: L(i)>L(j)\implies i>j$. Then the set of elements of $\{a_k:k<N\}$ is finite and thus countable. This means that there will exist a $P\in \Pee$ such that $L(P)=N$ (see figure).   
 \begin{figure}[H]%
@@ -1246,7 +1246,7 @@ For a chosen $\epsilon$ we will have a $N\in\Pee$ from which on the elements of 
 \end{figure}
 The sequence $L$ being strictly increasing and putting $(b_i)=(a_{L(i)})$ we will have 
 \begin{align*}
-\forall\epsilon >0,\exists P\in \Pee: d(b_i,a)<\epsilon,\, i\geq P
+\forall\epsilon >0,\exists\, P\in \Pee: d(b_i,a)<\epsilon,\, i\geq P
 \end{align*}
 proving the theorem.
 $$\blacklozenge$$\\
@@ -1264,9 +1264,9 @@ $x_0 = (x_{0,1},x_{0,2},\,\dots,x_{0,n})$. Then $\lim (x_i) = x_0$ if and only $
 By $\mathbf{36.3.}$ page 69, we know that 
 $$\forall k\in\Pee_n: |x_k-y_k|\leq d(x,y),\, \forall x,y\in\Breal^n$$
 $\lim (x_i) = x_0$ means
-$$\forall\epsilon>0,\, \exists N\in\Pee: d(x_i,x_0)<\epsilon,\, i\geq N$$
+$$\forall\epsilon>0,\, \exists\, N\in\Pee: d(x_i,x_0)<\epsilon,\, i\geq N$$
 As $|x_{i,k}-x_{0,k}|\leq d(x_i,x_0),\,  k\in\Pee_n$ and thus 
-$$\forall\epsilon>0,\, \exists N\in\Pee: |x_{i,k}-x_{0,k}|<\epsilon,\, i\geq N,\, k\in\Pee_n$$
+$$\forall\epsilon>0,\, \exists\, N\in\Pee: |x_{i,k}-x_{0,k}|<\epsilon,\, i\geq N,\, k\in\Pee_n$$
 which means $$\displaystyle \lim_{ i \to \infty} x_{i,k}=x_{0,k},\quad \forall k\in\Pee_n$$
 $$\blacklozenge$$\\
 
@@ -1282,37 +1282,37 @@ $$\mathbf{\mathlarger{\implies}}$$
 We know that $S$ is bounded. Hence, any sequence $(a_i)$ with $a_i\in S$ will also be bounded and by theorem $\mathbf{41.4.}$ there is a subsequence $(a_{n_i})$ of $(a_i)$ that converges. So, the existence of a convergent subsequence has been proven.
 This means, if this subsequence converges to $a$:
 \begin{align}
-\forall \epsilon>0,\, \exists N\in\Pee: d(a_{n_i},a)<\epsilon,\, n_i\geq N
+\forall \epsilon>0,\, \exists\, N\in\Pee: d(a_{n_i},a)<\epsilon,\, n_i\geq N
 \end{align}
 What is also given, is that $S$ is closed. This means that a limit point $p\in S$ (as $S$ is closed) exists for which yields
 \begin{align*}
-\forall\epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap S\neq \emptyset
+\forall\epsilon>0: \left(N(p;\epsilon)-\{p\}\right)\cap S\neq \varnothing
 \end{align*}
 Can we prove that $a$ must be a limit point of $S$?\\\\
 From $(1)$ we see that the set $A= \{a_{n_i}: n_i\geq N\}$ is a subset of $N(a;\epsilon)$ and as $A\subset S$ we will have
 \begin{align*}
-\forall\epsilon>0: N(a;\epsilon)\cap S\neq \emptyset
+\forall\epsilon>0: N(a;\epsilon)\cap S\neq \varnothing
 \end{align*}
- We can not conclude without further arguments that $N(a;\epsilon)-\{a\}\neq \emptyset$. Indeed consider the case where $a_{n_i}=a,\, n_i\geq N$ . But this case is trivial as $a_{n_i}=a,\, n_i\geq N$ is an element of $S$ and thus $a\in S$ (in this case, the requirement  $S$ is closed  is not necessary).\\\\
-Consider now the case $\exists n_k\in \Pee: a_{n_i}\neq a,\, n_k\geq N$. This implies that the $\epsilon$-neighbourhood $N(a;\epsilon)$ contains at least one element different from $a$ and thus we have indeed
+ We can not conclude without further arguments that $N(a;\epsilon)-\{a\}\neq \varnothing$. Indeed consider the case where $a_{n_i}=a,\, n_i\geq N$ . But this case is trivial as $a_{n_i}=a,\, n_i\geq N$ is an element of $S$ and thus $a\in S$ (in this case, the requirement  $S$ is closed  is not necessary).\\\\
+Consider now the case $\exists\, n_k\in \Pee: a_{n_i}\neq a,\, n_k\geq N$. This implies that the $\epsilon$-neighbourhood $N(a;\epsilon)$ contains at least one element different from $a$ and thus we have indeed
 \begin{align*}
-\forall\epsilon>0: \left(N(a;\epsilon)-\{a\}\right)\cap S\neq \emptyset
+\forall\epsilon>0: \left(N(a;\epsilon)-\{a\}\right)\cap S\neq \varnothing
 \end{align*}
 meaning that in that case $a$ is a limit point of $S$ and $S$ being closed, $a$ is a point of $S$, proving the proposed statement.\newpage
 $$\mathbf{\mathlarger{\Leftarrow}}$$
 We first prove that $S$ must be bounded.\\
 Suppose $S$ is unbounded. This means
 \begin{align}
-&\neg\left(\exists M\in\Breal:\forall x,y\in S,\, d(x,y)\leq M\right)\\
-\implies\quad &\forall M\in\Breal,\exists x,y\in S:\, d(x,y)> M
+&\neg\left(\exists\, M\in\Breal:\forall x,y\in S,\, d(x,y)\leq M\right)\\
+\implies\quad &\forall M\in\Breal,\exists\, x,y\in S:\, d(x,y)> M
 \end{align}
 We know that $a\in S$ and so we can put $y=a$ and write  $(3)$ as 
 \begin{align*}
-\forall M\in\Breal,\exists x,\in S:\, d(a,x)> M
+\forall M\in\Breal,\exists\, x,\in S:\, d(a,x)> M
 \end{align*}
 In the supposition that $S$ in not bounded, we are able to consider the set $D=\{ x\in S|d(a,x)>M\}$ and construct a sequence $(a_i)\text{ with } a_i\in D$. This sequence has a convergent subsequence $(a_{n_i})$ for which we have 
 \begin{align*}
-\forall \epsilon>0,\exists N\in\Pee: d(a,a_{n_i})<\epsilon,\quad  n_i\geq N
+\forall \epsilon>0,\exists\, N\in\Pee: d(a,a_{n_i})<\epsilon,\quad  n_i\geq N
 \end{align*}
 remember that the elements $(a_{n_i})$ are elements of $D$ for which we have 
 $$d(a,a_{n_i})>M$$
@@ -1327,11 +1327,11 @@ $$\bullet$$
 Suppose $z$ is a limit point of $S$. We will try to prove that then we can find a sequence in $S$ who has a subsequence that converges to $z$. As this limit of the sequence is in $S$ (by assumption), then $S$ will be closed .\\\\
 An element $z\in\Breal^n$ is a limit point of $S\subset \Breal^n$ provided that 
 \begin{align*}
-\forall \epsilon>0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq \emptyset
+\forall \epsilon>0: \left(N(z;\epsilon)-\{z\}\right)\cap S\neq \varnothing
 \end{align*}
 We know (see Exercise $7$ page $71$) that $B=N(z;\epsilon)\cap S$ is an infinite set. Hence choose an arbitrary set $B^{'}\subset B$ and define a sequence $(b_i)$ out of the elements of $B$. We know that we then have a convergent subsequence $(b_{n_i})$ for which we have $\lim (b_{n_i}) = a$, which means
 \begin{align*}
-\forall\epsilon>0, \exists N\in\Pee: d(a,b_{n_i})< \epsilon ,\, n_i\geq N
+\forall\epsilon>0, \exists\, N\in\Pee: d(a,b_{n_i})< \epsilon ,\, n_i\geq N
 \end{align*}
 But we also know that by construction, the elements $b_{n_i}\in N(z;\epsilon)$ and thus 
 \begin{align}
@@ -1366,7 +1366,7 @@ $\hat{a}_{i+1}\in S_{i+1}$ and $\hat{a}_{i+1}\in S_{i}$ or
 $$\hat{a}_{i+1}\in S_{i}\cap S_{i+1}$$ and by recursion
 $$\hat{a}_{i}\in S_1\cap S_2\cap \dots\cap S_{i}\cap S_{i}\quad \forall i\in \Pee$$
 which we can write
-$$\bigcap\{S_i:i\in \Pee\}\neq \emptyset$$ which proves the proposition.
+$$\bigcap\{S_i:i\in \Pee\}\neq \varnothing$$ which proves the proposition.
 $$\lozenge$$
 The dependence on the nested interval theorem is :
 \begin{align*}
@@ -1425,8 +1425,8 @@ Prove that $\lim (a_i) = a$ if and only if $\lim d(a_i,a)= 0$.
 \end{tcolorbox}
 As $\lim (a_i) = a$ we have
 \begin{align*}
-&\forall \epsilon>0,\, \exists N\in\Pee: d(a,a_i)<\epsilon,\, i\geq N\\
-\iff\quad&\forall \epsilon>0,\, \exists N\in\Pee: |d(a,a_i)-0|<\epsilon,\, i\geq N\\
+&\forall \epsilon>0,\, \exists\, N\in\Pee: d(a,a_i)<\epsilon,\, i\geq N\\
+\iff\quad&\forall \epsilon>0,\, \exists\, N\in\Pee: |d(a,a_i)-0|<\epsilon,\, i\geq N\\
 \end{align*}
 This is the definition a convergent sequence with elements in $\Breal$ and thus we conclude (as we have the $\iff$ predicate):
 $$\lim (a_i) = a \iff \lim d(a_i,a)= 0$$
@@ -1501,7 +1501,7 @@ sequence $(x_{i,j})_{i=1}^{\infty}$ satisfies the condition for $\Breal$.
 $$\mathbf{\mathlarger{\implies}}$$
 Suppose $(x_i)$ satisfies the Cauchy condition for $\Breal^n$. This means
 \begin{align}
-\forall \epsilon>0,\,\exists M\in\Pee: d(x_m,x_p)<\epsilon,\quad m,\, p\geq M
+\forall \epsilon>0,\,\exists\, M\in\Pee: d(x_m,x_p)<\epsilon,\quad m,\, p\geq M
 \end{align}
 By $\mathbf{36.3.}$ page 69, we know that 
 $$\forall k\in\Pee_n: |x_k-y_k|\leq d(x,y),\, \forall x,y\in\Breal^n$$
@@ -1515,16 +1515,16 @@ $$\lozenge$$
 $$\mathbf{\mathlarger{\Leftarrow}}$$
 Suppose $(x_{i,k})$ satisfies the Cauchy condition for $\Breal$ and for all $k\in\Pee_n$. This means
 \begin{align*}
-\forall \, \frac{\epsilon}{\sqrt{n}}>0,\,\exists M\in\Pee: d(x_{m,k},x_{p,k})<\frac{\epsilon}{\sqrt{n}},\quad m,\, p\geq M
+\forall \, \frac{\epsilon}{\sqrt{n}}>0,\,\exists\, M\in\Pee: d(x_{m,k},x_{p,k})<\frac{\epsilon}{\sqrt{n}},\quad m,\, p\geq M
 \end{align*}
 For $\Breal$ we have $d(x_{m,k},x_{p,k})=\left|x_{m,k}-x_{p,k}\right|$ and all quantities being positive in both sides of the inequality we can write
 \begin{align*}
-\forall \frac{\epsilon}{\sqrt{n}},\,\exists M\in\Pee: d^2(x_{m,k},x_{p,k})=\left|x_{m,k}-x_{p,k}\right|^2<\frac{\epsilon^2}{n},\quad m,\, p\geq M
+\forall \frac{\epsilon}{\sqrt{n}},\,\exists\, M\in\Pee: d^2(x_{m,k},x_{p,k})=\left|x_{m,k}-x_{p,k}\right|^2<\frac{\epsilon^2}{n},\quad m,\, p\geq M
 \end{align*}
 Summing all these inequalities over $n$ gives
 \begin{align*}
-&\forall \frac{\epsilon}{\sqrt{n}},\,\exists M\in\Pee: \sum_{k=1}^{n}\left|x_{m,k}-x_{p,k}\right|^2<n\frac{\epsilon^2}{n},\quad m,\, p\geq M\\
-\implies\quad &\forall \frac{\epsilon}{\sqrt{n}},\,\exists M\in\Pee: \underbrace{\sqrt{\sum_{k=1}^{n}\left|x_{m,k}-x_{p,k}\right|^2}}_{=d(x_m,x_p)}<\epsilon,\quad m,\, p\geq M
+&\forall \frac{\epsilon}{\sqrt{n}},\,\exists\, M\in\Pee: \sum_{k=1}^{n}\left|x_{m,k}-x_{p,k}\right|^2<n\frac{\epsilon^2}{n},\quad m,\, p\geq M\\
+\implies\quad &\forall \frac{\epsilon}{\sqrt{n}},\,\exists\, M\in\Pee: \underbrace{\sqrt{\sum_{k=1}^{n}\left|x_{m,k}-x_{p,k}\right|^2}}_{=d(x_m,x_p)}<\epsilon,\quad m,\, p\geq M
 \end{align*}
 which means that the sequence $(x_{i})$ in $\Breal^n$ converges.
 $$\blacklozenge$$\\
@@ -1580,7 +1580,7 @@ $\mathbf{43.1.}$ \textbf{Theorem}. Let $D$ be the collection of all points $(x_1
 \end{tcolorbox}
 Consider an arbitrary nonempty open subset $P$ in $\Breal^n$. Be $p$ a point in $P$.
 We have
-$$\exists \epsilon>0: N(p;\epsilon)\subset P$$
+$$\exists\, \epsilon>0: N(p;\epsilon)\subset P$$
 Consider another point $q$ in $N(p;\epsilon)$ such that for each $i\in\Pee_n$ we have $q_i=p_i-\frac{\epsilon}{n}$ (obvioulsy $d(p,q) = \frac{\epsilon}{\sqrt{n}}<\epsilon$).\\
 Suppose for a given $i\in\Pee_n$ we have $q_i<p_i$. Then by 
  Theorem $\mathbf{30.5.}$ (Density of rationals in the reals) there is a rational number $r_i$ such that $q_i<r_i<p_i$.\\
@@ -1616,9 +1616,9 @@ $$\lozenge$$
 \begin{tcolorbox}[colback=white]
 $\mathbf{43.3.}$ \textbf{Lindelöf Theorem for }$\mathbf{\Breal^n}$. Let $X$ be a subset of $\Breal^n$. Suppose that $\mathscr{B} $ is a collection of open subsets of $\Breal^n$ such that $\bigcup \mathscr{B}\supset X$. Then for some countable subcollections $\mathscr{B}^{*}\subset \mathscr{B} $,  $\bigcup \mathscr{B}^{*}\supset X$.
 \end{tcolorbox}
-First note that if $X=\emptyset$ then the theorem is true as $\emptyset$ is a subset of any set.\\
+First note that if $X=\varnothing$ then the theorem is true as $\varnothing$ is a subset of any set.\\
 Also if $\mathscr{B}$ is a finite collection or countable, then it is countable and the theorem is anyway true with $\mathscr{B}^{*}=\mathscr{B}$.\\
-So, be $\mathscr{B}$ an infinite, non-countable, collection of open subsets $B\in \mathscr{B}$. Be $B^{*}$ an arbitrary element of $\mathscr{B}$ such that $X\cap B^{*}\neq \emptyset$. $X\cap B^{*}$ has at least one point in $X$ and by theorem $\mathbf{43.1}$ we know that we can find a point $q$ (with all rational numbers as coordinates), which is also a point of $B^{*}$. As $q\in \Qiuu^n$ with $\Qiuu^n$ countable, there is a bijection $f:\Pee\rightarrow \Qiuu^n$  and can find a unique $i\in\Pee$ such that $f(i)=q$ and can label the set $B^{*}$ and put $B^{*}_i= B^{*}$. Let's put $X_{1,}=X$. Consider now $X_{2,i}= X_{1,}- ( X_{1,}\cap B^{*}_i)$. 
+So, be $\mathscr{B}$ an infinite, non-countable, collection of open subsets $B\in \mathscr{B}$. Be $B^{*}$ an arbitrary element of $\mathscr{B}$ such that $X\cap B^{*}\neq \varnothing$. $X\cap B^{*}$ has at least one point in $X$ and by theorem $\mathbf{43.1}$ we know that we can find a point $q$ (with all rational numbers as coordinates), which is also a point of $B^{*}$. As $q\in \Qiuu^n$ with $\Qiuu^n$ countable, there is a bijection $f:\Pee\rightarrow \Qiuu^n$  and can find a unique $i\in\Pee$ such that $f(i)=q$ and can label the set $B^{*}$ and put $B^{*}_i= B^{*}$. Let's put $X_{1,}=X$. Consider now $X_{2,i}= X_{1,}- ( X_{1,}\cap B^{*}_i)$. 
 \begin{figure}[H]%
     \centering
 \centering
@@ -1642,17 +1642,17 @@ Remember that in the proof of this theorem (see previous exercises) we had to ch
 X_{m+1}= X_m-\left(X_m\cap K^{*}_m \right),\quad p_m\in X_m\cap K^{*}_m,\ \quad 
 \end{align}
 Assumption: the sequences $(X_m)$, $(p_m)$ and $(K^{*}_m)$ are infinite.\\
-\textit{( This means that $\forall m\in\Pee: X_{m} \neq\emptyset$ as otherwise the sequence by construction, would be finite.)}\\
+\textit{( This means that $\forall m\in\Pee: X_{m} \neq\varnothing$ as otherwise the sequence by construction, would be finite.)}\\
 
 We know that $X$ is bounded, hence the sequence $\left(p_{m}\right)$ will also be bounded and from theorem $\mathbf{41.4}$ page $76$ we know that there is a subsequence $\left(p_{n_m}\right)$ of $\left(p_{m}\right)$ that converges. Moreover, as $X$ is bounded and closed, by exercise $\mathbf{2.41.5}$ page $77$, we also know that the limit of this sequence will be in $X$.
 So we have, considering the sub-sequences $(X_{n_m}),\, (p_{n_m})\Et (K^{*}_{n_m})$ (with $n_m$ a strictly increasing sequence of positive integers):\\\\
 i) $\lim (p_{n_m})=p\in X$ means that we have
 \begin{align}
-\forall \epsilon>0,\, \exists N\in \Pee: d(p_{n_m},p)<\epsilon,\, n_m\geq N
+\forall \epsilon>0,\, \exists\, N\in \Pee: d(p_{n_m},p)<\epsilon,\, n_m\geq N
 \end{align}
 ii) by $(1)$ each element $p_{n_m}\in X_{n_m}\cap K^{*}_{n_m}$  must also be in the open subset $K^{*}_{n_m}\in \mathscr{K}^{*}$, so:
 \begin{align}
-\exists\, \epsilon >0: N(p_{n_m};\epsilon)\subset K^{*}_{n_m}
+\exists\,\, \epsilon >0: N(p_{n_m};\epsilon)\subset K^{*}_{n_m}
 \end{align}
 iii) from $(2)$ and $(3)$ we can conclude that for a given $\epsilon>0$ and a $N\in\Pee$ we will have
 \begin{align}
@@ -1676,10 +1676,10 @@ p\not \in  X^{}_{n_m}
 \end{align*}
 We also notice that $p$ is a limit point of $X_{n_{m}},\, n_m\geq N$. Indeed, we know that for $n_m\geq N$ we have by $(1)$ and $(4)$:
 \begin{align*}
-\forall\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap X_{n_m}=\{p_{n_m},\, \dots \}\neq \emptyset,\, n_m\geq N
+\forall\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap X_{n_m}=\{p_{n_m},\, \dots \}\neq \varnothing,\, n_m\geq N
 \end{align*}
 confirming that $p$ is not only the limit of the sequence $(p_{n_m})$ but also a limit point of $X^{}_{n_m}$ but not an element of it. Hence, $X^{}_{n_m}$ must be an open subset.\\
-We know that $p\in K^{*}_{n_m},\, n_m\geq N$ and for the element $p_{n_m}$ we have $p\in N(p_{n_m};\epsilon)$ but we concluded that $X^{}_{n_m}$ is open subset with $p$ as a limit point but not an element of it, meaning that for the point $p_{n_m}\in X_{n_m}\cap K^{*}_{n_m}$ we have $\exists  \epsilon>0: N(p_{n_m};\epsilon)\subset X_{n_m}$. But $p\in N(p_{n_m};\epsilon)$. We get a contradiction as $p$ becomes a point of $X_{n_m} $ which we proved could not be.\\
+We know that $p\in K^{*}_{n_m},\, n_m\geq N$ and for the element $p_{n_m}$ we have $p\in N(p_{n_m};\epsilon)$ but we concluded that $X^{}_{n_m}$ is open subset with $p$ as a limit point but not an element of it, meaning that for the point $p_{n_m}\in X_{n_m}\cap K^{*}_{n_m}$ we have $\exists\,  \epsilon>0: N(p_{n_m};\epsilon)\subset X_{n_m}$. But $p\in N(p_{n_m};\epsilon)$. We get a contradiction as $p$ becomes a point of $X_{n_m} $ which we proved could not be.\\
 As a matter of fact $X_{n_m}$ becomes an empty set as illustrated hereunder (starting with $X_{n_{m-1}}$, a closed susbet).
 \begin{table}[H]
 \centering
@@ -1687,9 +1687,9 @@ As a matter of fact $X_{n_m}$ becomes an empty set as illustrated hereunder (sta
 \hline
 \input{./images/fig_2.43.1.4.tex}& \input{./images/fig_2.43.1.4_b.tex}& \input{./images/fig_2.43.1.4_a.tex} & \input{./images/fig_2.43.1.4_c.tex} & \input{./images/fig_2.43.1.4_d.tex}\\ 
 \hline
- $X_{n_{m-1}}\cap K^{*}_{n_{m-1}}$ &  $=X_{n_{m-1}}$ (closed) &    $=K^{*}_{n_{m-1}}$ (open)& $\neq\emptyset$ (open) &  $=\emptyset$  (open/closed)\\ 
+ $X_{n_{m-1}}\cap K^{*}_{n_{m-1}}$ &  $=X_{n_{m-1}}$ (closed) &    $=K^{*}_{n_{m-1}}$ (open)& $\neq\varnothing$ (open) &  $=\varnothing$  (open/closed)\\ 
  \hline
- $X_{n_{m-1}}-(X_{n_{m-1}}\cap K^{*}_{n_{m-1}})$& $\emptyset$& \input{./images/fig_2.43.1.4_b2.tex} & \input{./images/fig_2.43.1.4_c2.tex} & \input{./images/fig_2.43.1.4_d2.tex}\\ 
+ $X_{n_{m-1}}-(X_{n_{m-1}}\cap K^{*}_{n_{m-1}})$& $\varnothing$& \input{./images/fig_2.43.1.4_b2.tex} & \input{./images/fig_2.43.1.4_c2.tex} & \input{./images/fig_2.43.1.4_d2.tex}\\ 
 \hline
  $X_{n_{m}}$  &  open/closed &    closed & closed &  closed\\ \hline
 \end{tabular}
@@ -1706,11 +1706,11 @@ $$\blacklozenge$$
 Suppose $\mathscr{B}$ is a collection of pairwise disjoint open subsets of $\Breal^n$. Show that $\mathscr{B}$ is a countable collection.
 \end{tcolorbox}
 We know from Theorem $\mathbf{43.1}$ that $\Qiuu^n$ is dense in $\Breal^n$.  This means:
-$$\forall B\in\mathscr{B},\, \exists q\in \Qiuu^n: q\in B$$
-As $\forall B,\, B^{'}\in\mathscr{B}: B\cap B^{'}=\emptyset$ it follows that if $q\in B$ then $q\not \in B^{'}$. We conclude that we can associate with each $B\in\mathscr{B}$ a unique element $q\in\Qiuu^n$ and as $\Qiuu^n$ is countable, $\mathscr{B}$ is countable.
+$$\forall B\in\mathscr{B},\, \exists\, q\in \Qiuu^n: q\in B$$
+As $\forall B,\, B^{'}\in\mathscr{B}: B\cap B^{'}=\varnothing$ it follows that if $q\in B$ then $q\not \in B^{'}$. We conclude that we can associate with each $B\in\mathscr{B}$ a unique element $q\in\Qiuu^n$ and as $\Qiuu^n$ is countable, $\mathscr{B}$ is countable.
 $$\blacklozenge$$\\
 
-
+\newpage
 \mysection{44}{Some further remarks about $\Breal^n$ and Review exercises}
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{1}}
@@ -1722,50 +1722,128 @@ $$\blacklozenge$$\\
 Suppose that $K$ is an uncountable collection of real numbers.
 Prove that there exists at least one $z \in K$ such that $z$ is a limit point of $K$. Prove that there is an uncountable collection of limit points of $K$ in $K$.
 \end{tcolorbox}
+Let's consider the statement 
+$$\exists\, p\in\Breal:\forall\epsilon>0:\left(N(p;\epsilon)-\{p\}\right)\cap K\neq\varnothing$$
+i.e. $K$ has at least one limit point.\\
+Suppose $K$ has no limit point, then 
+\begin{align*}
+\neg\left(  \exists\, p\in\Breal:\forall\epsilon>0:\left(N(p;\epsilon)-\{p\}\right)\cap K\neq\varnothing\right)\\
+\implies\quad \forall  p\in\Breal:\exists\,\epsilon>0:\left(N(p;\epsilon)-\{p\}\right)\cap K=\varnothing
+\end{align*}
+As this is for all $p\in\Breal$, choose an arbitrary point $p_1\in K\subset \Breal$. This means that there exists $\epsilon_1>0$ such that $N(p_1;\epsilon_1)$ does not contain other points of $K$ except $p_1$.\\
+Let's put $K^*_1=N(p_1;\epsilon_1)$. All other points of $K$ will be in the set $K-K^*_1$.\\
+Be 
+$$p_2\in K-K^*_1 \text{ such that } p_2=\max(K^*_1\cap \left(-\infty, p_1)\right)$$
+and 
+$$p_3\in K-K^*_1\text{ such that }p_3=\min(K^*_1\cap \left(p_1,+\infty, )\right)$$
+(i.e. choose the closest point left and right of $p_1$ that are elements of $K$).\\
+As $p_2,\, p_3$ can't be limit points of of $K$ (by assumption), they also will have $\epsilon$-neighbourhoods that only contain themselves.\\
+Put $$K^*_2=N(p_2;\epsilon_2)\Et K^*_3=N(p_3;\epsilon_3)$$
+Continuing that way with 
+$$p_4=\max\left( K-\left(K^*_1\cup K^*_2\cup K^*_3\right)\cap(-\infty,p_2)\right) \Et p_5=\min\left( K-\left(K^*_1\cup K^*_2\cup K^*_3\right)\cap(p_3,-\infty)\right)$$
+we are able to construct a countable collection $\mathscr{K}=\{K^*_i:i\in\Pee\}$ of set, each containing only $1$ point of $K$. 
+ \begin{figure}[H]%
+    \centering
+\input{./images/fig_2.44.1.tex}\\
+\caption{$p_{2i}=\max\left( K-\left(K^*_1\cup K^*_2\cup \dots \cup K^*_{2i-1}\right)\cap(-\infty,p_{2i-2})\right) $}
+\label{fig:fig_p8a}
+\end{figure}
+We prove that $\bigcup \mathscr{K}= K$.\\
+Suppose $$\exists\, q_1\in K: q_1\not\in \bigcup \mathscr{K}$$
+As $q_1$ can't be a limit point of $K$, $q_1$ has also an $\epsilon$-neighbourhood that contains no other point of $K$, except itself.\\
+$q_1$ can not be between two points $p_i,\, p_k$ as constructed. Indeed, without loss of generality, suppose $p_i < q_1 < p_k$. Then there will be a $p_{k-1}\in \bigcup \mathscr{K}$ such that 
+$p_i < q_1 < p_{k-1}< p_k$ as otherwise $q_1$ would have been the closest point to $p_k$ which was not an element of the $\epsilon$-neighbourhood of $p_k$ and hence, by construction would be an element of $\bigcup \mathscr{K}$.  Continuing that way we will arrive at a point where $p_i < q_1 < p_{i+1}$ which is not possible as otherwise $q_1$ would be the closest element near $p_{i+1}$ and again by construction would have been an element of $\bigcup \mathscr{K}$ and we conclude that $q_1$ can not be between two element of $\bigcup \mathscr{K}$. So $q_1$ must be either left or right of all elements of $\bigcup \mathscr{K}$.\\
+Suppose $q_1$ is on the left of all point of $\bigcup \mathscr{K}$. As $q_1\in K$, $q_1$ is not a limit point (by assumption, $K$ has none) and so there exists an $\epsilon$-neighbourhood of $q_1$ that has only one element of $K$ i.e. $q_1$ itself. Furthermore, there must be another $q_2$ at the right of $q_1$ that is not an element of $\bigcup \mathscr{K}$ as otherwise $q_1$ would have been the closest element to one element of $\bigcup \mathscr{K}$. Continuing that way, as $K$ is infinite (uncountable), we can generate an infinite subset $Q=\{q_1,\, q_2,\, \dots\}$ that is bounded by all elements of $\bigcup \mathscr{K}$. By the Bolzano-Weierstrass theorem, this subset must have at least one limit point. But $Q\subset K$ which means that $Q$ can't have a limit point and we get a first contradiction and conclude $\nexists q_1\in K:\,  q_1 \not\in  \bigcup \mathscr{K}$ and thus 
+$$\bigcup \mathscr{K}= K$$
+and get the final contradiction as $K$ is uncountable while by construction $\bigcup \mathscr{K}= K$ is, so our  initial assumption that $K$ had no limit points was wrong.\\
+\textbf{Conclusion:} $K$ has at least one limit point.
+$$\lozenge$$
+We have now to prove that some of the limit point are in $K$ and that there is an uncountable set of limit points of $K$ in $K$.\\
 
-$$\blacklozenge$$\\
+Let $\tilde{K}$ be the set of elements of $K$ that are not limit points of $K$ (which means that $K-\tilde{K}$ contains only limit points of  $K$ or is the empty set). Then for each $x \in \tilde{K}$ there exists $\epsilon_x > 0$ such that the neighbourhood $N(x;\,\epsilon_x)$ contains no other points of $K$ but $x$. The elements of the set of neighbourhoods $\{N(x;\,\epsilon_x) | x\in \tilde{K}\}$ are disjoint, and each contains a rational number (see $\mathbf{30.5}$ page $60$ - Density of rationals in the reals), so there can only be a countable number of them.\\
+Hence $\tilde{K}$ is countable, and the set of limit points of $K$, which contains $K-\tilde{K}$, is uncountable.\\
+Note that this also leads to the conclusion that $K-\tilde{K}\neq \varnothing$ as otherwise $K=\tilde{K}$ and $K$ would then be countable, which leads to a contradiction.\\\\
+\textbf{Conclusion}: There is an uncountable collection of limit points of $K$ in $K$.
+$$\blacklozenge$$
 
 \newpage
 
- \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{2}}
+\renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{2}}
 
 
 
  \subsection{}
 \begin{tcolorbox}
-Suppose that $S\subset \Breal$ , $S\neq \emptyset$ and $S\neq \Breal$. Prove that $S$ is not both open and closed.
+Suppose that $S\subset \Breal$ , $S\neq \varnothing$ and $S\neq \Breal$. Prove that $S$ is not both open and closed.
 \end{tcolorbox}
-
+Suppose $S \subset \Breal$ is nonempty and $S\neq \Breal$. Suppose further that $S$ is open and closed.\\ Let $p \in S$.  As $S \neq \Breal$, then there is some $q \in \sim S$.  Whithout loss of generality,  we can assume that $q > p$. Then the set $\tilde{S} = \{ x \in\, \sim S : x > p \}$ is bounded below (by $p$) and nonempty ($q \in \tilde S$). Therefore $\tilde{S}$ has a g.l.b. $m$ (see Exercise $2.30.1$ page $62$).\\\\
+Can $m$ be in $S$ ?  Since $S$ is open, it contains an open neighbourhood $N(m;\epsilon)$. This contradicts the definition of $m = g.l.b. \, \tilde S$ , because $[m, m + \epsilon) \subset S$ and thus $m$ would not be the g.l.b. of $\tilde S$ \\\\
+Suppose $m \not \in S$. Then since $S$ is closed, its complement $\sim S$ is open with $m\in\sim S $, therefore there is an open neighbourhood $N(m;\epsilon)$ contained in $\sim S$. Then $(m - \frac{\epsilon}{2},m]\subset N(m;\epsilon)$ contradicts the $g.l.b$ definition of $m$ as $m-\frac{\epsilon}{2}\not \in S$ and $> p$ (as otherwise $p$ would be in $N(m;\epsilon)$ which is not possible as $p\not\in \sim S$) and thus $m$ would not be the g.l.b. of $\tilde S$\\\\
+It follows that $S = \Breal$.
 $$\blacklozenge$$
-
-
 
 
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{3}}
 \subsection{}
 
 \begin{tcolorbox}
-Suppose that $\{K_i:i\in\Pee\}$ is a collection of nonempty bounded and closed subsets of $\Breal_n$ such that $K_{i+1}\subset K_i$, for $i\in \Pee$. Is $\bigcap\{K_i:i\in\Pee\}$ necessarily nonempty?
+Suppose that $\{K_i:i\in\Pee\}$ is a collection of nonempty bounded and closed subsets of $\mathbb{R}^n$ such that $K_{i+1}\subset K_i$, for $i\in \in\Pee$. Is $\bigcap\{K_i:i\in\Pee\}$ necessarily nonempty?
 \end{tcolorbox}
-
+Yes, it is necessarily nonempty (see exercise $6$ page $77$).
 $$\blacklozenge$$
-
+\newpage
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{4}}
 \subsection{}
 
 \begin{tcolorbox}
 Suppose that $K$ is a nonempty closed and bounded subset of $\Breal$. Do there exist points $x$ and $y$ in $K$  such that $d(x,y)) = diam (K)$?
-
 \end{tcolorbox}
-
+As $K$ is closed, by exercise $1$ page $77$, there exist sequences in $K$ that converge to a limit point (element of $K$).\\
+Be $\tilde{x}_k,,\ \tilde{x}_m $ two limits points then
+$$\begin{cases}
+\lim x_k=\tilde{x}_k\\
+\lim x_m=\tilde{x}_m\\
+\end{cases}$$
+We first prove that $$\lim d(x_k,x_m)= d(\tilde{x}_k ,\tilde{x}_m )$$
+By the triangle inequality , we have 
+\begin{align*}
+&\begin{cases}
+d(x_k,x_m)\leq d(x_k,\tilde{x}_k)+d(\tilde{x}_k,\tilde{x}_m)+d(\tilde{x}_m,x_m)\\
+d(\tilde{x}_k,\tilde{x}_m)\leq d(\tilde{x}_k,x_k)+d(x_k,x_m)+d(x_m,\tilde{x}_m)
+\end{cases}\\
+\implies\quad
+&\begin{cases}
+d(x_k,x_m)-d(\tilde{x}_k,\tilde{x}_m)\leq d(x_k,\tilde{x}_k)+d(\tilde{x}_m,x_m)\\
+d(x_k,x_m)-d(\tilde{x}_k,\tilde{x}_m)\geq -\left[ d(\tilde{x}_k,x_k)+d(x_m,\tilde{x}_m)\right]
+\end{cases}\\
+\implies\quad & \left|d(x_k,x_m)-d(\tilde{x}_k,\tilde{x}_m)\right| \leq d(x_k,\tilde{x}_k)+d(\tilde{x}_m,x_m)
+\end{align*}
+By the definition of the limit:
+$$\forall\epsilon,\,\exists\, N\in\Pee: d(x_k,\tilde{x}_k)<\frac{\epsilon}{2}\Et d(x_m,\tilde{x}_m)<\frac{\epsilon}{2},\, k,\, m \geq N$$
+and thus
+$$\left|d(x_k,x_m)-d(\tilde{x}_k,\tilde{x}_m)\right| < \epsilon\quad k,\, m \geq N$$
+and thus $d(x_k,x_m) $ converges to $d(\tilde{x}_k,\tilde{x}_m)$.\\
+Consider the set $P=\{d(\tilde{x}_k,\tilde{x}_m)\}$. This set is a totally ordered set (with elements in $\Breal$) and bounded (by $diam\, K$) and thus has a maximal element $d(\tilde{x}_p,\tilde{x}_q)$.\\
+Suppose $d(\tilde{x}_p,\tilde{x}_q)\neq \, diam \, K$, then as $diam\, K= l.u.b.\, d(x,y),\, x,y\in K$ there must be two element in $K$ such that
+$$d(\tilde{x}_p,\tilde{x}_q)<d(x,y)\leq \, diam \, K$$
+If $d(x,y)= \, diam \, K$, we are done. \\
+If $d(x,y)\neq \, diam \, K$ then there must be other elements $x^{'},y^{'}$ such that 
+$$d(\tilde{x}_p,\tilde{x}_q)<d(x,y)<d(x^{'},y^{'})\leq \, diam \, K$$
+as long as $d(x^{'},y^{'})\neq \, diam \, K$ we will have 
+$$d(\tilde{x}_p,\tilde{x}_q)<d(x,y)<d(x^{'},y^{'})<d(x^{''},y^{''})<\cdots \leq \, diam \, K$$
+So we get a sequence in $\Breal$ such that $a_n<a_{n+1}$ and that is  bounded above. By Exercise $1$ page $64$, this sequence has a limit $d(x_0,y_0)= \, diam \, K$ meaning that $x_0\Et  y_0$  are limits of sequences of elements in $K$ so $x_0\Et  y_0$ are limits points of $K$ (by Exercise $1$ page $77$). As $K$ is closed, $x_0\Et y_0\, \in K$ en we can conclude that $$\exists x_0,\, y_0\,\in K: d(x_0, y_0)= \, diam\, K$$
 $$\blacklozenge$$
-
 \renewcommand{\thesubsection}{\thesection.\RomanNumeralCaps{5}}
 \subsection{}
 
 \begin{tcolorbox}
 Suppose that $M$ is a countable subset of $\Breal^2$ and $p\in \Breal^2-M$. Does there necessarily exist a line $L \subset\Breal^2$ such that $p\in L\subset \Breal^2-M$
 \end{tcolorbox}
+Yes, it exists.\\
+By exercise $4$ page $51$ we know that if two sets $M_1$ and $M_2$ are countable sets than $M=M_1\times M_2$ is countable. So we can construct the given countable set $M\subset \Breal^2$ with two countable subset $M1,\, M2$ which are subsets of $\Breal$. \\
+A line $L\subset\,  \sim M$ exists, it will be a subset of $(\sim M_1)\times\,  (\sim M_2)$, $(\sim M_1)\times \Breal$ or $\Breal\times \, (\sim M_2)$.\\
+Choose $p=(p_1,\, p_2): p_1\in \,\Breal\Et p_2 \in \,\sim M_2$. Obviously, the line will contain no point of $M$ because $L\subset \Breal\times \,( \sim M_2)$ and thus $L\subset\, (\sim M)$.
+
 
 $$\blacklozenge$$
 
@@ -1773,7 +1851,7 @@ $$\blacklozenge$$
 \subsection{}
 
 \begin{tcolorbox}
-Suppose that $A$ and $B$ are subsets of $\Breal^n$.\\ Is $cl(A \cup B)= cl(A)\cup cl(B)$(see 39.4)?\\ Is $cl(A)\cap cl(B)=cl(A \cap B)$?
+Suppose that $A$ and $B$ are subsets of $\Breal^n$.\\ Is $cl(A \cup B)= cl(A)\cup cl(B)$ (see 39.4)?\\ Is $cl(A)\cap cl(B)=cl(A \cap B)$?
 \end{tcolorbox}
 
 $$\blacklozenge$$
@@ -1782,7 +1860,7 @@ $$\blacklozenge$$
 \subsection{}
 
 \begin{tcolorbox}
-Determine whether the following proposition is correct.\\\\
+Determine whether the following proposition is correct.\\
 Suppose that $X$ is a bounded subset of $\Breal^n$, and $\epsilon>0$.\\
 Then there exists a finite set $F\subset X$  such that
 $$X\subset \bigcup\{ N(x;\epsilon):x\in F\}$$

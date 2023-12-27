@@ -1,0 +1,84 @@
+\begin{tikzpicture}
+\coordinate (O) at (-0.8,0);
+\coordinate (X1) at (7,0) {};
+\coordinate (X2) at (-0.8,7) {};
+\node[right] at (X1){\tiny$X_1$};
+\node[above] at (X2){\tiny$X_2$};
+\draw[ thick ]   (O)--(X1) ;
+\draw[ thick ]  (O)--(X2);
+%\fill[thick,pattern=north west lines, pattern color=gray!50] (0.8,5.6)rectangle (4.8,1.6);
+\coordinate (S) at (1.3082,5.3918) {} {} {};
+\fill[fill=white](S) circle (0.2);
+\node[] at (S){\tiny$X$};
+
+\draw[dashed](0.8,5.6) node (v2) {} rectangle (4.8,1.6) node (v4) {};
+
+\node[below] (v5) at (0.8,0) {\tiny$\alpha$};
+\node[below] (v6) at (4.8,0) {\tiny$\beta$};
+\node[left] (v3) at (-0.8,1.6) {\tiny$\alpha$};
+\node[left] (v1) at (-0.8,5.6) {\tiny$\beta$};
+\draw[dashed]  (v1) -- (v2);
+\draw[dashed]   (v3) -- (v4);
+\draw [dashed]  (v2) -- (v5);
+\draw[dashed]   (v4) -- (v6);
+\coordinate (v8) at (4.8,3.6) {};
+\coordinate (v7) at (0.8,3.6) {};
+\coordinate (v9) at (2.8,5.6) {};
+\coordinate (v10) at (2.8,1.6) {};
+\draw[dashed,]  (v7) -- (v8);
+\draw[dashed]   (v9) -- (v10);
+\coordinate (j1) at (2.8,2.6) {} {} {} {};
+\coordinate (j2) at (3.9091,4.7436) {} {} {} {} {};
+\node[{anchor= south west}] at (j1) {\tiny$p_{(n,k)}$};
+\node[left] at (j2) {\tiny$p_{(m,k)}$};
+\draw[fill=white]  (j1) circle(0.05);
+\draw[fill=white]  (j2) circle(0.05);
+\draw[dotted,  thick]  (j2) circle(1.4142);
+\draw[dotted]  (j1) circle(1.4142);
+\coordinate (j1c) at (1.8,1.6) {} {} {} {} {};
+\coordinate (j2c) at (4.7941,5.818) {} {} {} {} {};
+\draw[dashed]  (j2) -- (j2c);
+\draw[dashed]  (j1) -- (j1c);
+%\fill[thick,pattern=north east lines, pattern color=gray!50] (2.8,5.6) rectangle (4.8,3.6);
+
+
+\draw [thick,decorate,
+	decoration = {brace,raise=5pt}] (0.8,5.6) --  (1.8,5.6);
+\draw [thick,decorate,
+	decoration = {brace,mirror,raise=5pt}] (0.8,5.6) --  (0.8,4.6);
+
+\coordinate (pj1)at (0.8,4.6) {};
+\coordinate (pj2) at (4.8,4.6) {};
+\coordinate (pj3)at (3.8,5.6) {};
+\coordinate (pj4) at (3.8,1.6) {};
+
+\draw[dashed]  (pj1) -- (pj2);
+\draw[dashed]   (pj3) -- (pj4);
+
+
+\coordinate (pk1)at (1.8,5.6) {};
+\coordinate (pk2) at (1.8,1.6) {};
+\coordinate (pk3)at (4.8,2.6) {};
+\coordinate (pk4) at (0.8,2.6) {};
+
+\draw[dashed]  (pk1) -- (pk2);
+\draw[dashed]   (pk3) -- (pk4);
+
+\coordinate (d1) at (3.8033,1.5877) {} {};
+\coordinate (d2) at (4.7854,2.5698) {} {};
+%\draw[dashed]  (d1) -- (d2);
+
+
+\coordinate (lab1) at (1.3,6) {};
+\coordinate (lab2) at (-0.349,5.1738) {} {} {};
+\node[above] at (lab1) {\tiny$\frac{|\beta-\alpha|}{2^k}$};
+\node[right] at (lab2) {\tiny$\frac{|\beta-\alpha|}{2^k}$};
+
+\coordinate (L2) at (3.3564,0.8864) {} {} {} ;
+\node (v15) at (2.3183,2.144) {};
+\draw[-{Latex[length=1.3mm]}]  plot[smooth, tension=.7] coordinates {(L2) (3.2298,1.2329) (2.5903,1.4927) (v15)};
+\node[below] at (L2) {\tiny$diam\,= \sqrt{n}\frac{\beta-\alpha}{2^k}$};
+\draw[thick]  plot[smooth cycle, tension=.7] coordinates { (4.2551,4.3997)  (4.1525,2.6636)   (3.1345,1.7953) (2.227,1.6929)   (1.8087,2.1584) (2.3138,2.8529) (2.0849,3.8078)   (1.501,5.2836) (2.1481,5.5678)  (3.4249,5.2437) };
+\draw[-{Latex[length=2mm]}]  plot[smooth, tension=.7] coordinates {(2.7032,6.8246) (3.1034,6.5775) (3.4695,6.0966)};
+\node[above] at (2.6579,6.7952) {\tiny$N\left(p_{(m,k)};\epsilon\right)$};
+\end{tikzpicture}

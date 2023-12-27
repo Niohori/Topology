@@ -1853,6 +1853,44 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Suppose that $A$ and $B$ are subsets of $\Breal^n$.\\ Is $cl(A \cup B)= cl(A)\cup cl(B)$ (see 39.4)?\\ Is $cl(A)\cap cl(B)=cl(A \cap B)$?
 \end{tcolorbox}
+a) $cl(A \cup B)= cl(A)\cup cl(B)$\\\\
+We first prove that $cl(A \cup B)\subset cl(A)\cup cl(B)$.\\
+\textbf{i)} Suppose $z\in cl(A\cup B) \Et z\not \in cl(A\cup B)- (A\cup B)$ then $z\in A\cup B$,  which implies 
+\begin{align*}
+&z\in  A\Ou z\in B\\
+\implies \quad & z\in  cl(A)\Ou z\in cl(B)\\
+\implies \quad & z\in  cl(A)\cup  z\in cl(B)
+\end{align*}
+\textbf{ii)} Suppose $z\in cl(A\cup B) \Et z\not \in A\cup B$ ,  which implies that $z$ is a limit point of $A\cup B$, and thus 
+\begin{align*}
+&\forall\epsilon>0: \left(N(z;\epsilon)-\{z\}\right)\cap \left(A\cup B\right)\neq\varnothing\\
+\scriptscriptstyle X\cap\left(A\cup B\right) = \left(X\cap A\right)\cup \left(X\cap B\right)\quad \displaystyle\implies\quad &\forall\epsilon>0: \left(\left(N(z;\epsilon)-\{z\}\right)\cap A\right)\cup\left(\left(N(z;\epsilon)-\{z\}\right)\cap B\right)\neq\varnothing\\
+\implies\quad &\forall\epsilon>0: \left(\left(N(z;\epsilon)-\{z\}\right)\cap A\right)\cup\left(\left(N(z;\epsilon)-\{z\}\right)\cap B\right)\neq\varnothing\\
+\implies\quad &\forall\epsilon>0: \left(\left(N(z;\epsilon)-\{z\}\right)\cap A\right)\Ou \left(\left(N(z;\epsilon)-\{z\}\right)\cap B\right)\neq\varnothing
+\end{align*}
+which means that $z$ must be a limit point of $A$ or $B$ and thus an element of $cl(A)\Ou cl(B)\quad\implies\quad z\in cl(A)\cup cl(B)$.\\
+By \textbf{i)} and \textbf{ii)} we come to the conclusion
+$$ cl(A \cup B)\subset cl(A)\cup cl(B)$$\\
+We now prove that $cl(A \cup B)\supset cl(A)\cup cl(B)$.\\\\
+Suppose $z\in cl(A)$ (without any assertion about $z$ being an element of  $cl(B)$), then $z\in cl(A)\cup cl(B)$.\\
+\textbf{i)} If $z\not \in cl(A)-A$ then we must have $z \in A$ and thus $z\in A\cup B\implies\quad z\in cl(A\cup B)$.\\\\
+\textbf{ii)} If $z\in cl(A)-A$ then $z$ must be a limit point of $A$ which implies 
+\begin{align*}
+&\forall\epsilon>0: \left(N(z;\epsilon)-\{z\}\right)\cap A\neq\varnothing\\
+\implies\quad &\forall\epsilon>0: \left(\left(N(z;\epsilon)-\{z\}\right)\cap A\right)\cup\left(\left(N(z;\epsilon)-\{z\}\right)\cap B\right)\neq\varnothing\\
+\scriptscriptstyle X\cap\left(A\cup B\right) = \left(X\cap A\right)\cup \left(X\cap B\right)\quad \displaystyle\implies\quad &\forall\epsilon>0:\left(N(z;\epsilon)-\{z\}\right)\cap \left(A\cup B\right)\neq\varnothing
+\end{align*}
+so, $z$ is a limit point of $A\cup B$ and thus an element of its closure $cl(A\cup B)$ and conclude 
+$$cl(A \cup B)\supset cl(A)\cup cl(B)$$
+Combining the two previous conclusion we get 
+$$cl(A \cup B)= cl(A)\cup cl(B)$$
+$$\lozenge$$
+b) Is $cl(A)\cap cl(B)=cl(A \cap B)$?
+The answer is no as can be seen by this counterexample in $\Breal$:\\\\
+Be $A= (-1,0)$ and $B=(0,1)$. Obviously $A\cap B= \varnothing$ so $cl\left( A\cap B\right) =\varnothing$.\\
+On the other hand $cl(A)= [-1,0]$ and $cl(B)=[0,1]$ and thus $cl(A)\cap cl({B})=\{0\}\neq\varnothing$
+and conclude that in general 
+$$cl(A)\cap cl(B)\neq cl(A \cap B)$$
 
 $$\blacklozenge$$
 
@@ -1865,5 +1903,16 @@ Suppose that $X$ is a bounded subset of $\Breal^n$, and $\epsilon>0$.\\
 Then there exists a finite set $F\subset X$  such that
 $$X\subset \bigcup\{ N(x;\epsilon):x\in F\}$$
 \end{tcolorbox}
-
+We proceed in the same vein as in the proof of the Bolzano-Weierstrass Theorem (see $\mathbf{40.4.}$ page $75$ and see figure 2.11. as illustration).  \\
+As $X$ is bounded, there is a closed interval $K_0$ in $\Breal^n$ that contains $X$ and that can be taken such that all sides have equal length (let's say $|\beta-\alpha|$). We further partition this closed interval in $\Breal^n$ by subdividing each side of the interval in two equal subintervals in $\Breal$. This gives us $2^n$ subintervals in $\Breal^n$. We continue this process. After $k$ steps the length of the sides of the subintervals will have a length of $\frac{|\beta-\alpha|}{2^k}$ and get $2^{nk}$ subintervals. These intervals $K_k$ are bounded with a diameter of $diam\,  K_k = \sqrt{n}\frac{|\beta-\alpha|}{2^k}$. We proceed further until we get $diam \, K_k\, < \epsilon$ (the latter being given).
+ \begin{figure}[H]%
+    \centering
+\input{./images/fig_2.44.7.tex}\\
+\caption{Countable covering of a bounded subset in $\Breal^2$}
+\label{fig:fig_p8a}
+\end{figure}
+Be $\mathscr{K}= \{K_{i,k}:\, i=1,\cdots, 2^{nk}\} $ the collection of  subintervals created that way. We have $\bigcup \mathscr{K}= K_0$ and thus $X\subset \bigcup \mathscr{K}$. \\ For each $i$ we choose a point $p_{(i,k)} \in X$ such that $p_{(i,k)}\in X\cap K_{i,k}$ (if $ X\cap K_{i,k}=\varnothing$ we skip that interval) and get a set of points $F= \{p_{(i,k)}: p_{(i,k)} \in X\cap K_{i,k},\, i\leq  2^{nk}\}$. For each of these points in $P$, consider the $\epsilon$-neighbourhoods $N(p_{(i,k)};\epsilon)$. These neighbourhoods will each contain the set $X\cap K_{i,k}$ as $diam\, K_{i,k}< \epsilon$. So we have $X\cap K_{i,k}\subset N(p_{(i,k)};\epsilon)$.\\
+ Hence, the collection $\mathscr{N}=\{N(p_{(i,k)};\epsilon):  i\leq  2^{nk}\}$ will cover the subset $X$ as $\bigcup \mathscr{K}$ covers $X$ and $N(p_{(i,k)};\epsilon)\supset K_{i,k},\, \forall i \leq  2^{nk}$.\\
+ The set $F$ is finite with less than $\log_2\left( \frac{\sqrt{n}}{\epsilon}|\beta-\alpha|\right)$ elements and conclude that there is a finite set $F\subset X$  such that
+$$X\subset \bigcup\{ N(x;\epsilon):x\in F\}$$
 $$\blacklozenge$$

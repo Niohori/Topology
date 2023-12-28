@@ -1,0 +1,192 @@
+\chapter{Metric Spaces: Introduction}
+\pagebreak[4]
+
+\mysection{45}{Distance function and metric spaces}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\subsection{}
+\begin{tcolorbox}
+Verify that the functions given in $45.2$ through $45.6$ are metrics.
+\end{tcolorbox}
+
+$\mathbf{45.2.}$ Let $k > 0$ and $\rho :\Breal^n\times\Breal^n\rightarrow \Breal$ be given by
+$$\rho(x, y) = k |x-y| \text{ for all } x \Et y \text{ in }\Breal^n$$
+$$\triangledown$$
+\begin{align*}
+\begin{array}{l l l l l}
+ 45.1(a).& d(x, y) = 0 \Iff  x =y&:&\rho(x, x)& = k |x-x| = 0\\
+ 45.1(b). &d(x, y) = d(y, x)&:&\rho(x, y)& = k |x-y| = k |y-x|=\rho(y, x)\\
+45.1 (c). &d(x,y) + d(y, z)\geq d(x, z)&:&\rho(x, z)&= k |x-y|\\
+& & & &= k |x-z + z-y|\\
+& & & &\leq k |x-z| + k|z-y|\\
+& & & &= \rho(x, y) + \rho(y, z)
+\end{array}
+\end{align*}
+$$\lozenge$$
+$\mathbf{45.3.}$ The function $g:\Breal^2\times\Breal^2\rightarrow\Breal$ given by
+$$g(x, y) = |x_1 -y_1| + |x_2 -y_2|$$
+where $x=(x_1,x_2)$ and $y=(y_1,y_2)$
+
+$$\triangledown$$
+\begin{align*}
+\begin{array}{l l l l l}
+ 45.1(a).& d(x, y) = 0 \Iff  x =y&:&g(x, x)& =|x_1 -x_1| + |x_2 -x_2| = 0\\
+ 45.1(b). &d(x, y) = d(y, x)&:&g(x, y)&=|x_1 -y_1| + |x_2 -y_2|\\
+ &&&&=|y_1 -x_1| + |y_2 -x_2|\\
+  &&&&=g(y,x)\\
+45.1 (c). &d(x,y) + d(y, z)\geq d(x, z)&:&g(x, z)&=|x_1 -z_1| + |x_2 -z_2|\\
+ &&&&=|x_1 -y_1+y_1-z_1| + |x_2-y_2+y_2 -z_2|\\
+ &&&&\leq|x_1 -y_1|+|y_1-z_1| + |x_2-y_2|+|y_2 -z_2|\\
+ &&&&=|x_1 -y_1|+ |x_2-y_2|+|y_1-z_1| +|y_2 -z_2|\\
+ &&&&=g(x,y)+g(y,z)
+\end{array}
+\end{align*}
+$$\lozenge$$
+$\mathbf{45.4.}$  Let $X$ be an arbitrary set. Define $m: X \times X \rightarrow \Breal$ as follows:
+\begin{align*}
+m(x,y) = 0 \text{ if } x=y\\
+m(x,y)=1\text{ if } x\neq y 
+\end{align*}
+
+$$\triangledown$$
+\begin{align*}
+\begin{array}{l l l l l}
+ 45.1(a).& d(x, y) = 0 \Iff  x =y&:&m(x, x)& = 0\text{ (by definition)}\\
+ 45.1(b). &d(x, y) = d(y, x)&:&m(x, y)&=1\\
+ &&&&=m(x, y)\text{ (by definition)}\\
+45.1 (c). &d(x,y) + d(y, z)\geq d(x, z)&:&m(x, z)&=1 \text{ if } x\neq z\\
+&&&&\leq 1+1\\
+&&&&= m(x, y)+m(y, z)\text{ if } y\neq x\Et y\neq z\\
+&&&m(x, z)&=1 \text{ if } x\neq z\\
+&&&&= 1+0\\
+&&&&= m(x, y)+m(y, z)\text{ if } y\neq x\Et y= z\\
+&&&m(x, z)&=0 \text{ if } x= z\\
+&&&&\leq 1+1\\
+&&&&= m(x, y)+m(y, z)\text{ if } y\neq x\Et y\neq z\\
+&&&m(x, z)&=0 \text{ if } x= z\\
+&&&&\leq 1+0\\
+&&&&= m(x, y)+m(y, z)\text{ if } y\neq x\Et y=z
+\end{array}
+\end{align*}
+$$\lozenge$$
+$\mathbf{45.5.}$ Let $p$ be the real-valued function defined on $\Breal^2\times\Breal^2$ by 
+$$p(x,y)= \max{\{|x_i-y_i|: i=1,2\}}$$
+where $x=(x_1,x_2)$ and $y=(y_1,y_2)$. The function $p$ is a metric for $\Breal^2$.
+
+$$\triangledown$$
+\begin{align*}
+\begin{array}{l l l l l}
+ 45.1(a).& d(x, y) = 0 \Iff  x =y&:&p(x, x)& =\max{\{|x_i-x_i|: i=1,2\}}\\
+ &&&&=\max{\{0,\, 0\}}\\
+ &&&&=0\\
+ 45.1(b). &d(x, y) = d(y, x)&:&p(x, y)&=\max{\{|x_i-y_i|: i=1,2\}}\\
+ &&&&=\max{\{|y_i-x_i|: i=1,2\}}\\
+  &&&&=p(y,x)\\
+45.1 (c). &d(x,y) + d(y, z)\geq d(x, z)&:&p(x, z)&=\max{\{|x_i-z_i|: i=1,2\}}\\
+&&&&=\max{\{|x_i-y_i+y_i-z_i|: i=1,2\}}\\
+&&&&\leq\max{\{|x_i-y_i|+|y_i-z_i|: i=1,2\}}\\
+&&&&\leq\max{\{\max{\{|x_i-y_i|\}}+\max{\{|y_i-z_i|\}}: i=1,2\}}\\
+&&&&=\max{\{|x_i-y_i|: i=1,2\}}+\max{\{|y_i-z_i|: i=1,2\}}\\
+&&&&= p(x,y)+p(y,z)
+\end{array}
+\end{align*}
+$$\lozenge$$
+$\mathbf{45.6.}$ Let the function $h$ be defined as follows: For all $x$ and $y$ in $\Breal^2$, let
+$$h(x,y)=\frac{|x-y|}{1+|x-y|}$$
+The function is a metric for $\Breal^2$
+$$\triangledown$$
+\begin{align*}
+\begin{array}{l l l l l}
+ 45.1(a).& d(x, y) = 0 \Iff  x =y&:&h(x, x)& =\frac{|x-x|}{1+|x-x|}\\
+ &&&&=0\\
+ 45.1(b). &d(x, y) = d(y, x)&:&h(x, y)&=\frac{|x-y|}{1+|x-y|}\\
+ &&&&=\frac{|y-x|}{1+|y-x|}\\
+ &&&&= h(y,x)\\
+45.1 (c). &d(x,y) + d(y, z)\geq d(x, z)&:&h(x, z)&=\frac{|x-z|}{1+|x-z|}
+\end{array}
+\end{align*}
+For this last requirement, consider the function  $g(t)= \frac{t}{1+t},\, t\geq 0$. Its derivative is $g{'}(t)= \frac{t}{(1+t)^2},\, t\geq 0$. As $g{'}(t)>0,\, t>0$, $g(t)$ is a monotone increasing function and thus, using this fact in our function $h(x,y)$ we find that
+\begin{align*}
+h(x, z)&=\frac{|x-z|}{1+|x-z|}\\
+&=\frac{|x-y+y-z|}{1+|x-y+y-z|}\\
+&\leq\frac{|x-y|+|y-z|}{1+|x-y|+|y-z|}\quad (\text{ because }|x-y|+|y-z|\geq |x-z|)\\
+&=\frac{|x-y|}{1+|x-y|+|y-z|}+\frac{|y-z|}{1+|x-y|+|y-z|}\\
+&\leq \frac{|x-y|}{1+|x-y|}+\frac{|y-z|}{1+|y-z|}\\
+&=h(x,y)+h(y,z)
+\end{align*}
+$$\blacklozenge$$
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+%\setcounter{subsection}{0}
+\subsection{}
+\begin{tcolorbox}
+Let $(X, d)$ be a metric space. Define $d^*:X \times X \rightarrow \Breal$ as follows:
+$$d^*(x,y) = \min{\{1, d(x, y)\}}$$
+for all $x$ and $y$ in $X$. Show that $d^*$ is a metric for $X$.
+\end{tcolorbox}
+\begin{align*}
+\begin{array}{l l l l l}
+ 45.1(a).& d(x, y) = 0 \Iff  x =y&:&d^*(x, x)& =\min{\{1, d(x, x)\}}\\
+ &&&&=\min{\{1, 0\}}\\
+ &&&&=0\\
+ 45.1(b). &d(x, y) = d(y, x)&:&d^*(y, x)&=\min{\{1, d(x, y)\}}\\
+ &&&&=\min{\{1, d(y, x)\}}\\
+ &&&&=d^*(x, y)\\
+45.1 (c). &d(x,y) + d(y, z)\geq d(x, z)&:&d^*(x, z)&=\min{\{1, d(x, z)\}}
+\end{array}
+\end{align*}
+For this last requirement, let's consider the following cases\\
+i) $d(x, z)\leq 1$. Then we have $d^*(x, z)=d(x, z)$ and thus $d^*(x, z)\leq 1$.\\
+ As $d(x, z)\leq d(x, y)+d(y, z)$ we have $d^*(x, z)\leq d(x, y)+d(y, z)$.\\
+ Let's examine the following possibilities:
+\begin{align*}
+\begin{array}{l c  l}
+d(x, y)\Et d(y, z)\geq 1&: &d^*(x, y)+d^*(y, z)=2>d^*(x, z)\\
+d(x, y)\leq 1\Et d(y, z)\geq 1&: &d^*(x, y)+d^*(y, z)=1+d(x, y)\geq 1 \geq d^*(x, z)\\
+d(x, y)\geq 1 \Et d(y, z)\leq 1&: &d^*(x, y)+d^*(y, z)=1+d(y, z)\geq 1\geq d^*(x, z)\\
+d(x, y)\Et d(y, z)\leq 1&: &d^*(x, y)+d^*(y, z)=d(x, y)+d(y, z)\geq d^*(x, z)
+\end{array}
+\end{align*}
+and can conclude $$d^*(x, z)\leq d^*(x, z)+d^*(x, z)$$
+ii) $d(x, z)\geq 1$. Then we have $d^*(x, z)=1$. By the triangle inequality we have $d(x, z)\leq d(x, y)+d(y, z)$ and as $d(x, z)\geq 1$, we are sure that $d(x, y)+d(y, z)\geq 1$.\\
+Let's examine the following possibilities:
+\begin{align*}
+\begin{array}{l c  l}
+d(x, y)\Et d(y, z)\geq 1&: &d^*(x, y)+d^*(y, z)=2>1\\
+d(x, y)\leq 1\Et d(y, z)\geq 1&: &d^*(x, y)+d^*(y, z)=1+d(x, y)\geq 1\\
+d(x, y)\geq 1 \Et d(y, z)\leq 1&: &d^*(x, y)+d^*(y, z)=1+d(y, z)\geq 1
+\\
+d(x, y)\Et d(y, z)\leq 1&: &d^*(x, y)+d^*(y, z)=d(x, y)+d(y, z)\geq 1
+\end{array}
+\end{align*}
+and get, as $d^*(x, z)=1$, $$d^*(x, z)\leq d^*(x, z)+d^*(x, z)$$
+$$\blacklozenge$$
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+%\setcounter{subsection}{0}
+\subsection{}
+\begin{tcolorbox}
+Let $d^*:X \times X \rightarrow \Breal$ be a function that satisfies the following:
+\begin{align*}
+&d(x,y)=0 \text{ if and only if } x=y\\
+&d(z,x)+d(z,y)\geq d(x,y)
+\end{align*}
+Show that for ll $x$ and $y$ in $X$, $d(z,y)\geq 0$ and $d(x,y)=d(y,x)$. (Hence, a function satisfying the two given properties is a metric for $X$.)
+\end{tcolorbox}
+
+$$\blacklozenge$$
+\newpage
+
+\mysection{46}{Open sets and closed sets}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
+\subsection{}
+\begin{tcolorbox}
+
+\end{tcolorbox}
+
+$$\blacklozenge$$
+
+\newpage
+

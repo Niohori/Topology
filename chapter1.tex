@@ -260,7 +260,7 @@ Let $A,\, B,\,C$ as follows: $A=\{(x,y):x+y\le 5\}$, $ B=\{(x,y):x+y\ge 3\}$, $C
 \begin{figure}[H]%
     \centering
     \subfloat[$(A\cap B)\cap C$ ]{\input{./images/fig_1.4.3_a.tex}}
-    \subfloat[$( (A\cap B)\cap C)\cap D =\emptyset$]{\input{./images/fig_1.4.3_b.tex}}\\
+    \subfloat[$( (A\cap B)\cap C)\cap D =\varnothing$]{\input{./images/fig_1.4.3_b.tex}}\\
 %\caption{}
 \label{fig:fig_p8b}
 \end{figure}
@@ -305,7 +305,7 @@ Sketch each of the following sets: (the sets $A,\, B,\, C$ are defined as in exe
 \begin{figure}[H]%
     \centering
     \subfloat[$(\sim A)\cup(\sim B)$ ]{\input{./images/fig_1.5.1_g.tex}}
-    \subfloat[$(\sim A)\cap (A)= \emptyset$]{\input{./images/fig_1.5.1_h.tex}}\\
+    \subfloat[$(\sim A)\cap (A)= \varnothing$]{\input{./images/fig_1.5.1_h.tex}}\\
     \subfloat[$C-(A \cup B) $]{\input{./images/fig_1.5.1_i.tex}}
     \subfloat[$(C-A)\cap (C-B)$]{\input{./images/fig_1.5.1_j.tex}}\\
     \subfloat[$\sim(\sim A)$]{\input{./images/fig_1.5.1_k.tex}}
@@ -324,7 +324,7 @@ On the basis of the sketches made in the previous exeercise, formulate a proposi
  1.4.2\, (b)\Et (c)& A\cap(B\cup C)= (A\cap B)\cup (A\cap C)\\
  1.4.2(e)\,\Et (f) &A\cup (B\cap C)= (A\cup B)\cap (A\cup C)\\
   1.5.1(a)\,\Et (g) &\sim(A\cap B)=(\sim A)\cup(\sim B)\\
-  1.5.1(h)&(\sim A)\cap A=\emptyset\\
+  1.5.1(h)&(\sim A)\cap A=\varnothing\\
   1.5.1(i)\,\Et (j) &C-(A\cup B) = (C-A)\cap (C-B)\\
     1.5.1(k)&\sim (\sim A)=A\\
 \end{array}
@@ -364,24 +364,24 @@ $$\blacklozenge$$
 Verify that each of the following is an an identity:
 \begin{align*}
 \begin{array}{ll}
-(a)&A\cup \emptyset = A\\
-(b)& A\cap \emptyset = \emptyset\\
+(a)&A\cup \varnothing = A\\
+(b)& A\cap \varnothing = \varnothing\\
 (c) &A \cap A = A\\
 (d) &A \cup A =A\\
 (e)&(A\cup B)\cup C= A\cup(B\cup C) \\
 (f)& (A\cap B)\cap C= A\cap(B\cap C)\\
 (g) &A\cup (B\cap C)= (A\cup B)\cap (A\cup C)\\
 (h) &X-(A\cup B) = (X-A)\cap (X-B)\\
-(i)&A\, \cap \, \sim A = \emptyset\\
+(i)&A\, \cap \, \sim A = \varnothing\\
 (j)& A\, \cup \, \sim A = U\\
 \end{array}
 \end{align*}
 \end{tcolorbox}
-\textbf{a)}$\quad A\cup \emptyset = A $\\\\
-This is a consequence of remark 3.3 page 7: the empty set $\emptyset$ is a subset of every set. So, $\emptyset\subset A$ giving the asked identity. \\\\
+\textbf{a)}$\quad A\cup \varnothing = A $\\\\
+This is a consequence of remark 3.3 page 7: the empty set $\varnothing$ is a subset of every set. So, $\varnothing\subset A$ giving the asked identity. \\\\
 $$\lozenge$$
-\textbf{b)}$\quad A\cap \emptyset = \emptyset$\\\\
-If $x\in A\cap \emptyset$ then $x\in \, A$ and $x$ must also be in $\emptyset$ which is impossible by definition. So there is no element $x \in \emptyset$ which can satisfy $x\in A\cap \emptyset$ giving the proposed identity. \\\\
+\textbf{b)}$\quad A\cap \varnothing = \varnothing$\\\\
+If $x\in A\cap \varnothing$ then $x\in \, A$ and $x$ must also be in $\varnothing$ which is impossible by definition. So there is no element $x \in \varnothing$ which can satisfy $x\in A\cap \varnothing$ giving the proposed identity. \\\\
 $$\lozenge$$
 \textbf{c)}$\quad A \cap A =A$\\\\
  Suppose $x \in A\cap A$, then $x \in A$ and $x\in A$ and thus $x\in A$, giving  $ A \cap A \subset A$. Suppose $x \in A$, then obviously  $x \in A$ and $x \in A$, giving $A\subset A\cap A$. Hence $A \cap A =A$
@@ -403,8 +403,8 @@ $$\lozenge$$
  Suppose $x\in X-(A\cup B)$, then $x \not\in A$ and $x \not\in B$ which implies $x \in X-A$ and $x \in X-B$ and thus $x \in X-A\cap X-B$ giving $X-(A\cup B) \subset (X-A)\cap (X-B)$.\\
  The other way around. Suppose $x\in(X-A)\cap (X-B)$. Then $x\in(X-A)$ and $x\in(X-B)$ which implies  $x\not \in A$ and $x\not \in B$ giving $x\not \in A \cup B$ which in turn implies $x\in X-(A\cup B)$ giving $(X-A)\cap (X-B)\subset  X-(A\cup B)$.\\Conclusion: $ X-(A\cup B) = (X-A)\cap (X-B)$
 $$\lozenge$$
-\textbf{i)}$\quad A\, \cap \, \sim A = \emptyset$\\\\
- Suppose $x\in A\, \cap \, \sim A$, then $x \in A$ and $x \not\in A$ which is a contradiction, so the only element which is always an element of any set is the empty set, so $ A\, \cap \, \sim A \subset \emptyset$. Suppose on the contrary that $x\in\emptyset$. This implies that $x$ correspond to the empty set and as the empty set is an element of any set, we have  $\emptyset \subset A\, \cap \, \sim A  $
+\textbf{i)}$\quad A\, \cap \, \sim A = \varnothing$\\\\
+ Suppose $x\in A\, \cap \, \sim A$, then $x \in A$ and $x \not\in A$ which is a contradiction, so the only element which is always an element of any set is the empty set, so $ A\, \cap \, \sim A \subset \varnothing$. Suppose on the contrary that $x\in\varnothing$. This implies that $x$ correspond to the empty set and as the empty set is an element of any set, we have  $\varnothing \subset A\, \cap \, \sim A  $
 $$\lozenge$$
 \textbf{j)}$\quad A\, \cup \, \sim A = U$\\\\
  Suppose $x\in A\, \cup \, \sim A$, then $x \in A$ or $x \not\in A$. So, in any case $x\in U$ and thus $A\, \cup \, \sim A \subset U$.\\
@@ -438,7 +438,7 @@ If $A\cup C=B\cup C$, then $A=B$
 \caption{$A\cup C=B\cup C\not\Rightarrow A=B$}
 \label{fig:fig_p8b}
 \end{figure}
-Be $A\subset C$ and $B\subset C$, then we have $A\cup C=B\cup C\equiv C=C$ even if $A\cap B=\emptyset$.
+Be $A\subset C$ and $B\subset C$, then we have $A\cup C=B\cup C\equiv C=C$ even if $A\cap B=\varnothing$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -452,7 +452,7 @@ $(A\cup B)-B=A$
 \caption{$(A\cup B)-B\ne A$ }
 \label{fig:fig_p8b}
 \end{figure}
-Be $A\cap B\neq \emptyset$ , take  $x\in A$ and $x\in B$, then $x$ can't be $x\in (A\cup B)-B$ although it is an element of $A$.
+Be $A\cap B\neq \varnothing$ , take  $x\in A$ and $x\in B$, then $x$ can't be $x\in (A\cup B)-B$ although it is an element of $A$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -476,9 +476,9 @@ $\sim(A-B)=\, \sim(A\, \cap \sim B)$
 \end{tcolorbox}
 \textbf{ TRUE.}\\
 
-Suppose first that $A$ and $B$ are disjoint, i.e. $A\cap B =\emptyset$, then $A-B=A$ and $\sim (A-B)=\sim A$. On the other hand $A\subset\, \sim B$, so $A\, \cap \sim B=A$, giving $\sim(A\, \cap \sim B)= \sim A$, giving indeed $\sim(A-B)=\sim(A\, \cap \sim B)$.
+Suppose first that $A$ and $B$ are disjoint, i.e. $A\cap B =\varnothing$, then $A-B=A$ and $\sim (A-B)=\sim A$. On the other hand $A\subset\, \sim B$, so $A\, \cap \sim B=A$, giving $\sim(A\, \cap \sim B)= \sim A$, giving indeed $\sim(A-B)=\sim(A\, \cap \sim B)$.
 
-Suppose now that $A$ and $B$ are not disjoint, i.e. $A\cap B \ne \emptyset$. Be $x\in A-B\subset A$. This is equivalent with the statement $x\in A \wedge x\not\in B$. Negating this statement: $\lnot(x\in A \wedge x\not\in B)\Leftrightarrow x\not\in A \vee x\in B$. This give $\sim(A-B) \equiv  x\not\in A \vee x\in B$.\\
+Suppose now that $A$ and $B$ are not disjoint, i.e. $A\cap B \ne \varnothing$. Be $x\in A-B\subset A$. This is equivalent with the statement $x\in A \wedge x\not\in B$. Negating this statement: $\lnot(x\in A \wedge x\not\in B)\Leftrightarrow x\not\in A \vee x\in B$. This give $\sim(A-B) \equiv  x\not\in A \vee x\in B$.\\
  Be now $x\in A\, \cap \sim B$. This is equivalent with the statement $x\in A \wedge x\not\in B$. Negating this statement: $\lnot(x\in A\, \cap \sim B)\Leftrightarrow x\not\in A \vee x\in B$. This give $\sim(A\, \cap \sim B )\equiv  x\not\in A \vee x\in B$, resulting in $\sim(A-B)=\, \sim(A\, \cap \sim B)$.  
 $$\blacklozenge$$
 
@@ -498,7 +498,7 @@ $$\blacklozenge$$
 $A\cup(B-C)= (A\cup B)-C$
 \end{tcolorbox}
 \textbf{Not  TRUE.}\\
-Be $x\in \,  A\cup(B-C)$. This is equivalent to $x \in  A \vee x \in (B-C) $. Suppose $x\in A$, then $x\in A\cup B$. Let's consider the  set $C$ so that  $(A\cup B) \subset C$, then $(A\cup B) - C=\emptyset$. We get a contradiction and the proposed statement is not true.
+Be $x\in \,  A\cup(B-C)$. This is equivalent to $x \in  A \vee x \in (B-C) $. Suppose $x\in A$, then $x\in A\cup B$. Let's consider the  set $C$ so that  $(A\cup B) \subset C$, then $(A\cup B) - C=\varnothing$. We get a contradiction and the proposed statement is not true.
 $$\blacklozenge$$
 
 \subsection{}
@@ -521,7 +521,7 @@ If $A-B=C-B$, then $A=C$.
 \caption{If $A-B=C-B\not\Rightarrow A=C$}
 \label{fig:fig_p8b}
 \end{figure}
-Suppose $A\subset B$, then $A-B=\emptyset$. Choose a $C$ such that $C\subset B$ and also $A\cap C=\emptyset$, then also $C-B=\emptyset$ and get $A-B=C-B$ although $A\ne C$.
+Suppose $A\subset B$, then $A-B=\varnothing$. Choose a $C$ such that $C\subset B$ and also $A\cap C=\varnothing$, then also $C-B=\varnothing$ and get $A-B=C-B$ although $A\ne C$.
 $$\blacklozenge$$
 
 \subsection{}
@@ -588,7 +588,7 @@ Recall that $\mathbb{P}$ is the symbol for the set of positive integers. Suppose
 $$S=[1,+\infty)$$
 $$\lozenge$$
 \textbf{   $\quad S=\bigcap\{A_n:n\in\mathbb{P}\}$} \\
-$$S=\emptyset$$
+$$S=\varnothing$$
 This can be understood by the fact that for every $x\in\mathbb{R}$, you can find a $n\in\mathbb{P}$ so that $x\not\in A_n$. So, no $x$ can be an element of $S$.
 $$\blacklozenge$$
 
@@ -600,7 +600,7 @@ In each of the following, if the statement is necessarily true, say so and justi
 \begin{array}{ll}
 (a)&\bigcup \mathscr{K}=K_1\\
 (b)&\bigcap \{K_i:i=1,2,\dots,n\}= K_n\\
-(c)&\bigcap \mathscr{K}\ne \emptyset\\
+(c)&\bigcap \mathscr{K}\ne \varnothing\\
 \end{array}
 \end{align*}
 \end{tcolorbox}
@@ -614,9 +614,9 @@ Suppose first that for all $n$ we have $K_n$ is a \textit{proper} subset of $K_{
 In the case that for some or all $n$ we have $K_n=K_{n-1}$ we could also state that  $\bigcap \{K_i:i=1,2,\dots,n\}= K_{n-1}$ but as $K_n=K_{n-1}$ we can write  $\bigcap \{K_i:i=1,2,\dots,n\}= K_{n-1}=K_n$.\\
 The same is true in the case that a sequence of the subsets are proper subset of each other i.e. $K_{n+p}=K_{n+p-1}=\dots K_{n+1}=K_{n} = K_{n-1}=\dots =  K_{n-t}$. then one could write $\bigcap \{K_i:i=1,2,\dots,n\}= K_{n+p}$ but as $K_{n+p}=K_n$, the original statement holds.
 $$\lozenge$$
-(c) $\bigcap \mathscr{K}\ne \emptyset$.\\
+(c) $\bigcap \mathscr{K}\ne \varnothing$.\\
 \textbf{TRUE.\\}
-As no $K_n$ is an empty set, $K_n$ will always contain at least one element and due to $(b)$ we get indeed $\bigcap \mathscr{K}\ne \emptyset$: suppose that for a given $n$, $K_n$ contains only one element $x$, then all subsequent $K_{n+p}$ must also have only one element i.e. $x$ and we will get $\bigcap \mathscr{K}=\{x\}$ 
+As no $K_n$ is an empty set, $K_n$ will always contain at least one element and due to $(b)$ we get indeed $\bigcap \mathscr{K}\ne \varnothing$: suppose that for a given $n$, $K_n$ contains only one element $x$, then all subsequent $K_{n+p}$ must also have only one element i.e. $x$ and we will get $\bigcap \mathscr{K}=\{x\}$ 
 $$\blacklozenge$$
 
 \subsection{}
@@ -630,9 +630,9 @@ For each real number $r>0$, let $L_r=\{x:x\ge r\}$. Sketch the set $\bigcup \{L_
 \label{fig:fig_p8b}
 \end{figure}
 $$\lozenge$$
-$\bigcap\{L_r:r>0\}=\emptyset$.\\
+$\bigcap\{L_r:r>0\}=\varnothing$.\\
 
-Indeed, take an arbitrary $r$ and  be $\epsilon > 0$ then $\exists x\in L_r: x\not \in L_{r+\epsilon}$. Then, $L_r\cap L_{r+\epsilon} =\emptyset$. So, whatever $L_r$ we choose in the collection $\mathscr{L}=\{L_r: r\in\mathbb{R}^+\}$ there always be a $L_{r^{'}}$ for which $L_r\cap L_{r^{'}}=\emptyset$ and hence $\bigcap\{L_r:r>0\}=\emptyset$.
+Indeed, take an arbitrary $r$ and  be $\epsilon > 0$ then $\exists\, x\in L_r: x\not \in L_{r+\epsilon}$. Then, $L_r\cap L_{r+\epsilon} =\varnothing$. So, whatever $L_r$ we choose in the collection $\mathscr{L}=\{L_r: r\in\mathbb{R}^+\}$ there always be a $L_{r^{'}}$ for which $L_r\cap L_{r^{'}}=\varnothing$ and hence $\bigcap\{L_r:r>0\}=\varnothing$.
 $$\blacklozenge$$
 \newpage
 
@@ -652,7 +652,7 @@ Suppose now that $x\in \bigcap\{\sim K:K\in \mathscr{K}\}$. This means that $x$ 
 Conclusion $\sim(\bigcup \{K:K\in \mathscr{K}\}) = \bigcap\{\sim K:K\in \mathscr{K}\}$.
 $$\lozenge$$
 (b) $\sim(\bigcap \{K:K\in \mathscr{K}\}) = \bigcup\{\sim K:K\in \mathscr{K}\}$\\
-Suppose $x\in\,  \sim(\bigcap \{K:K\in \mathscr{K}\})$, then $x\not\in \bigcap \{K:K\in \mathscr{K}\}$. This means that there exists at least one $K\in \mathscr{K}$ so that $x$ is not an element of this  $K$ i.e. $\exists K\in \mathscr{K}: x\not\in K$. This can also be expressed as  $\exists K\in \mathscr{K}: x\in\, \sim K$. This means that $x$ is an element of  $\bigcup\{\sim K:K\in \mathscr{K}\}$ and thus $\sim(\bigcap \{K:K\in \mathscr{K}\}) \subset \bigcup\{\sim K:K\in \mathscr{K}\}$. \\
+Suppose $x\in\,  \sim(\bigcap \{K:K\in \mathscr{K}\})$, then $x\not\in \bigcap \{K:K\in \mathscr{K}\}$. This means that there exists at least one $K\in \mathscr{K}$ so that $x$ is not an element of this  $K$ i.e. $\exists\, K\in \mathscr{K}: x\not\in K$. This can also be expressed as  $\exists\, K\in \mathscr{K}: x\in\, \sim K$. This means that $x$ is an element of  $\bigcup\{\sim K:K\in \mathscr{K}\}$ and thus $\sim(\bigcap \{K:K\in \mathscr{K}\}) \subset \bigcup\{\sim K:K\in \mathscr{K}\}$. \\
 Suppose now that $x\in \bigcup\{\sim K:K\in \mathscr{K}\}$. This means that $x$ is an element of  at least one $\sim K: K\in   \mathscr{K}$. Stated differently, there exist at least one $ K: K\in   \mathscr{K}$ for which $x\not \in K$. This means that $x$ can not be an element of $\bigcap \{K:K\in \mathscr{K}\}$ and thus $x\in \, \sim \bigcap \{K:K\in \mathscr{K}\}$ which means $\bigcup\{\sim K:K\in \mathscr{K}\}\subset \, \sim(\bigcup \{K:K\in \mathscr{K}\})$\\
 Conclusion $\sim(\bigcap \{K:K\in \mathscr{K}\}) = \bigcup\{\sim K:K\in \mathscr{K}\}$.
 $$\blacklozenge$$
@@ -704,7 +704,7 @@ We order them according to the number of elements in the subsets. We check the n
 \{4\}\\
 \{5\}\\
 0\text{ elements}\quad \binom{5}{0}= 1\\
-\emptyset\\
+\varnothing\\
 \end{align*}
 Note that the total number of subsets in $\mathscr{P}(S)$ is $1+5+10+10+5+1 = 32$ which corresponds to $2^5$.
 $$\blacklozenge$$
@@ -823,7 +823,7 @@ $$\lozenge$$
 (d) $\text{Let } \mathscr{F}\text{ be the collection of all real-valued differentiable functions }\\ 
 \text{ defined on the open interval } (a,b). 
 \text{Let }\Gamma=\{(f,f^{'}):f\in\mathscr{F} \Et f^{'} \text{ is the derivative of } f\}.$ \\\\
-$\Gamma$ is a function as $f$ is a real-valued differentiable function, meaning that $\forall f\in \mathscr{F}, \exists f^{'}$.\\
+$\Gamma$ is a function as $f$ is a real-valued differentiable function, meaning that $\forall f\in \mathscr{F}, \exists\, f^{'}$.\\
 Yet, it is not one-to-one. E.g. take $f_1 = x+1$ and $f_2= x+2$, both function give $f^{'}= 1$ meaning that $\Gamma$ is not one-to-one.
 $$\lozenge$$
 (e) $\text{Let } X \text{ be the collection of all continuous real-valued functions }\\ 
@@ -870,8 +870,8 @@ $$\blacklozenge$$
 Consider the function $f:X\rightarrow Y$. Suppose that $A$ and $B$ are subsets of $X$. Decide which of the following statements are necessarily true. Justify your answers.
 \begin{align*}
 \begin{array}{ll}
-(a)&\text{If } A\cap B =\emptyset, \text{ then } f[A]\cap f[B]=\emptyset . \\
-(b)&\text{If } f[A]\cap f[B]=\emptyset, \text{ then }  A\cap B =\emptyset .  \\
+(a)&\text{If } A\cap B =\varnothing, \text{ then } f[A]\cap f[B]=\varnothing . \\
+(b)&\text{If } f[A]\cap f[B]=\varnothing, \text{ then }  A\cap B =\varnothing .  \\
 (c)& \text{If } A\subset B , \text{ then } f[A]\subset f[B].  \\
 (d)&f[A-B] = f[A]-f[B].  \\
 (e)&f[A\cup B]= f[A]\cup f[B].  \\
@@ -880,12 +880,12 @@ Consider the function $f:X\rightarrow Y$. Suppose that $A$ and $B$ are subsets o
 \end{array}
 \end{align*}
 \end{tcolorbox}
-(a) If $A\cap B =\emptyset, \text{ then } f[A]\cap f[B]=\emptyset $. \\
+(a) If $A\cap B =\varnothing, \text{ then } f[A]\cap f[B]=\varnothing $. \\
 This is not necessarily true. Take for example a non injective function like $f(x)=\sin(x)$  then $f[[0,\frac{\pi}{4}]]\cap f[\frac{3\pi}{4}, \pi]= [0,\frac{\sqrt{2}}{2}]$. 
 $$\lozenge$$
 
-(b) If $f[A]\cap f[B]=\emptyset, \text{ then }  A\cap B =\emptyset$ \\
-This is  necessarily true as for $f$ being a function we have $\left( x_2,f(x_2)\right)\in f$ and $\left( x_1,f(x_1)\right)\in f \Rightarrow f(x_1)=f(x_2)$ and $ A\cap B \ne\emptyset$ would mean that $\exists x\in A\cap B$ for which $x$ has two different images.
+(b) If $f[A]\cap f[B]=\varnothing, \text{ then }  A\cap B =\varnothing$ \\
+This is  necessarily true as for $f$ being a function we have $\left( x_2,f(x_2)\right)\in f$ and $\left( x_1,f(x_1)\right)\in f \Rightarrow f(x_1)=f(x_2)$ and $ A\cap B \ne\varnothing$ would mean that $\exists\, x\in A\cap B$ for which $x$ has two different images.
 $$\lozenge$$
 
 (c) If $A\subset B , \text{ then } f[A]\subset f[B].$ \\
@@ -898,7 +898,7 @@ $$\lozenge$$
 
 (e)  $f[A\cup B]= f[A]\cup f[B]$ \\
 This is  true. \\
-Suppose first that $A\cap B=\emptyset$ and take $x\in A$, then $f(x) \in f[A]$ and $x\not \in f[B]$ giving $f(x)\in f[A]\cup f[B]$. On the other hand it is obvious that if $A\cap B\ne\emptyset$ then $f(x) \in f[A]$ and-or $f(x) in f[B]$ giving $f(x) \in f[A]\cup f[B]$. Hence, $f[A\cup B]\subset f[A]\cup f[B]$.\\
+Suppose first that $A\cap B=\varnothing$ and take $x\in A$, then $f(x) \in f[A]$ and $x\not \in f[B]$ giving $f(x)\in f[A]\cup f[B]$. On the other hand it is obvious that if $A\cap B\ne\varnothing$ then $f(x) \in f[A]$ and-or $f(x) in f[B]$ giving $f(x) \in f[A]\cup f[B]$. Hence, $f[A\cup B]\subset f[A]\cup f[B]$.\\
 Suppose now that $f(x) \in f[A]$ this means that $x\in A$ regardless of $x\in B$ or not. So, $f[A]\cup f[B]\subset f[A\cup B]$ and with the previous we get $f[A\cup B]= f[A]\cup f[B]$.
 $$\lozenge$$
 
@@ -908,7 +908,7 @@ $$\lozenge$$
 
 (g)  $f[A\cap B] = f[A]\cap f[B]$ \\
 Not true.
-Suppose $f(x) \in f[A]\cap f[B]$. But if $f$ is not injective the possibility exists that for a given $x_a\in A$ and another $x_b \in B$ we have $f[x_a]= f[x_b]$ even if $A$ and $B$ are disjoint sets which would give $f[A\cap B]=f[\emptyset]=\emptyset$.
+Suppose $f(x) \in f[A]\cap f[B]$. But if $f$ is not injective the possibility exists that for a given $x_a\in A$ and another $x_b \in B$ we have $f[x_a]= f[x_b]$ even if $A$ and $B$ are disjoint sets which would give $f[A\cap B]=f[\varnothing]=\varnothing$.
 $$\blacklozenge$$
 \newpage
 
@@ -1037,7 +1037,7 @@ $$\blacklozenge$$
 \end{align*}
 \end{tcolorbox}
 (a) $R[A\cap B] =R[A]\cap R[B]$\\
-This is not necessarily true. Take for example a non injective function as the relation $R$ with $A\cap B=\emptyset$. This means that  $R[A\cap B] = \emptyset$ but the relation being a non injective function it also possible that $R[A]\cap R[B]\ne \emptyset$. So, $R[A\cap B]\not \supset R[A]\cap R[B]$ and we can't have $R[A\cap B] =R[A]\cap R[B]$.
+This is not necessarily true. Take for example a non injective function as the relation $R$ with $A\cap B=\varnothing$. This means that  $R[A\cap B] = \varnothing$ but the relation being a non injective function it also possible that $R[A]\cap R[B]\ne \varnothing$. So, $R[A\cap B]\not \supset R[A]\cap R[B]$ and we can't have $R[A\cap B] =R[A]\cap R[B]$.
 $$\lozenge$$
 
 (b) $R[A\cap B] \subset R[A]\cap R[B]$\\
@@ -1098,8 +1098,8 @@ $\mathbf{12.5(b)}\quad R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\su
 We prove first that  $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$\\
  Take  $y\in R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]$. Then there must be an $x\in A_{\alpha},\, \forall \alpha \in \Lambda$ and thus $y\in R[A_{\alpha}],\, \forall \alpha \in \Lambda$ giving $y\in  \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$ and thus $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\subset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$\\\\
 We prove now that $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\not\supset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$\\
-Be a non injective function as the relation $R$ with $\bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}\ne\emptyset$. As $R$ is a non injective function, we can have a $x\in \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$ but with $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}=\emptyset$, which means that $x$ can't be an element of $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}$ and thus $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\not\supset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$.\\
-(\textit{Take for example the relation defined by $R=\{(n,1):n\in \mathbb{N}\}$ and the subsets of $\mathbb{N}$, $A_{\alpha}=\{\alpha \}: \alpha \in \mathbb{N}\}$. We have $\bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}=\{1\}$ with $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}=\emptyset$ }.)
+Be a non injective function as the relation $R$ with $\bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}\ne\varnothing$. As $R$ is a non injective function, we can have a $x\in \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$ but with $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}=\varnothing$, which means that $x$ can't be an element of $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}$ and thus $R\left[\bigcap\{A_{\alpha}:\alpha \in \Lambda\}\right]\not\supset \bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}$.\\
+(\textit{Take for example the relation defined by $R=\{(n,1):n\in \mathbb{N}\}$ and the subsets of $\mathbb{N}$, $A_{\alpha}=\{\alpha \}: \alpha \in \mathbb{N}\}$. We have $\bigcap\{R[A_{\alpha}]:\alpha \in \Lambda\}=\{1\}$ with $\bigcap\{A_{\alpha}:\alpha \in \Lambda\}=\varnothing$ }.)
 $$\blacklozenge$$
 
 \subsection{}
@@ -1146,7 +1146,7 @@ $\mathbf{12.7(a)}\quad \forall x\in X,\, x\in f^{-1}[f[x]]$. \\
 Be $y=f(x)$, then obviously there is at least one $x$  (there could be more if $f$ is not injective), so that $x=  f^{-1}[y]$. Hence, $\forall x\in X,\, x\in f^{-1}[f[x]]$.
 $$\lozenge$$
 $\mathbf{12.7(b)}\quad A\subset X,\, A\subset f^{-1}[f[A]]$.\\
-This is a consequence of the previous statement but with the remark that we could have (for a non injective function) a  $x\in B$ with $A\cap B=\emptyset$ for which we have $f(x) \in f[A]$. So $A$ is not always equal to $ f^{-1}[f[A]]$ and get $A\subset X,\, A\subset f^{-1}[f[A]]$.
+This is a consequence of the previous statement but with the remark that we could have (for a non injective function) a  $x\in B$ with $A\cap B=\varnothing$ for which we have $f(x) \in f[A]$. So $A$ is not always equal to $ f^{-1}[f[A]]$ and get $A\subset X,\, A\subset f^{-1}[f[A]]$.
 $$\lozenge$$
 $\mathbf{12.7(c)}\quad \forall y\in \text{Range} f,\,  f[f^{-1}[y]]=\{y\}$. \\
 This a direct consequence of $f$ being a function. Indeed suppose for a given $y$ we have the set $A=f^{-1}[\{y\}]$, so this set will contain all $x$ as element which $f$ maps (uniquely, $f$ being a function) to $y$. So $f[A]= f[f^{-1}(y)]=\{y\}$.
@@ -1173,7 +1173,7 @@ $\mathbf{(b)}\quad f^{-1}[D-C] = f^{-1}[D]-f^{-1}[C]$.\\
 This is True if $f$ is a surjection (or by extension a bijection).\\
 Suppose, $x\in f^{-1}[D-C]$, so there is a $y \in D-C$ for which $x=f^{-1}(y)$. Also, $y\in D$ but not in $C$. Can there be $y^{'}\in C, \not \in D $ for which $y^{'}=f(x)$ ? Obviously not, as $f$ is a function meaning that $y^{'}=f(x)$ and  $y^{}=f(x)\Rightarrow y^{'}=y^{}$. This means that $x$ can't be an element of $f^{-1}[C]$ and thus that $x\in  f^{-1}[D]-f^{-1}[C]$. Hence, $f^{-1}[D-C] \subset f^{-1}[D]-f^{-1}[C]$.\\
 Suppose now that $x\in f^{-1}[D]-f^{-1}[C]$, so there is no $x \in f^{-1}[C]$ for which $y=f(x),\, y\in C$. This means that $y\not \in C$ but  $y$ must be in $D$. i.e. $y\in D-C$ and thus $x\in f^{-1}[D-C]$ or $f^{-1}[D]-f^{-1}[C]\subset f^{-1}[D-C]$, leading to the identity.\\
- Remark that the reasoning deployed implies that $f$ is a surjection as if $y\in D-C$ has no inverse image in $X$, this would mean that  $f^{-1}[D-C]=\emptyset$ and thus no $x$ would exist for the given identity.
+ Remark that the reasoning deployed implies that $f$ is a surjection as if $y\in D-C$ has no inverse image in $X$, this would mean that  $f^{-1}[D-C]=\varnothing$ and thus no $x$ would exist for the given identity.
 $$\lozenge$$
 $\mathbf{c)}\quad f^{-1}[f[A]] = A$. \\
 This is not necessarily True.\\
@@ -1275,7 +1275,7 @@ g(x)&=\sqrt{x}&\text{for } x\ge 0\\
 \label{fig:fig_p3}
 \end{figure}
 (c) Find $\left( f\circ g\right)^{-1}[x]$ for each $x\in \Breal$\\\\
-$\left( f\circ g\right)^{-1}[x]=\emptyset, \forall x< 0$\\\\
+$\left( f\circ g\right)^{-1}[x]=\varnothing, \forall x< 0$\\\\
 $\left( f\circ g\right)^{-1}[x]=\{x\}, \forall x\ge 0$\\\\
 $\left( f\circ g\right)^{-1}[x]=(-\infty,0)\cup \{{2}\} \text{ for } x= {2}$
 $$\blacklozenge$$
@@ -1736,7 +1736,7 @@ $$\blacklozenge$$
 Suppose that $h$ is a subsequence of a sequence $k$ and $f$ is a subsequence of $h$. Is $f$ a subsequence of $k$? 
 \end{tcolorbox}
 $$ $$
-For  $h$ we have $\exists N:\mathbb{P}\rightarrow \mathbb{P} $, such that $h=k\circ N$. Analogously, for  $f$ we have $\exists M:\mathbb{P}\rightarrow \mathbb{P} $, such that $f=h\circ M$. Using the composition of functions, we have $f=k\circ N\circ M$. Be $Q= N\circ M$. Is $Q$ a strictly increasing sequence? The  answer is yes (see Exercise $1.16.4(d)$).
+For  $h$ we have $\exists\, N:\mathbb{P}\rightarrow \mathbb{P} $, such that $h=k\circ N$. Analogously, for  $f$ we have $\exists\, M:\mathbb{P}\rightarrow \mathbb{P} $, such that $f=h\circ M$. Using the composition of functions, we have $f=k\circ N\circ M$. Be $Q= N\circ M$. Is $Q$ a strictly increasing sequence? The  answer is yes (see Exercise $1.16.4(d)$).
 As $Q$ is strictly increasing, $f$ will be a subsequence of $k$.
 $$\blacklozenge$$
 
@@ -1878,7 +1878,7 @@ Try to discover a formula for the number of subsets (including the empty set) of
 \end{tcolorbox}
 $$ $$
 Be $S$ the considered set with $n$ objects, then the number of elements in the powerset $\mathscr{P}$ is,  $\#\mathscr{P}=2^n$.
-Be $n=0$ ($S=\emptyset$), then $\#\mathscr{P}=1$ which is correct as $\mathscr{P}=\{\emptyset\}$, containing only one subset.\\
+Be $n=0$ ($S=\varnothing$), then $\#\mathscr{P}=1$ which is correct as $\mathscr{P}=\{\varnothing\}$, containing only one subset.\\
 Suppose that for a $n$ we have $\#\mathscr{P}_n=2^n$. Adding one object $x\not\in S $ to the set $S$ we get a new set $S^{'} = S\cup \{x\}$. Be $\mathscr{P}_n=\{P_1, P_2,\dots P_{2^n}\}$, so the new powerset $\mathscr{P}_{n+1}$ can be expressed as 
 $\mathscr{P}_{n+1}=\{P_1, P_2,\dots P_{2^n},P_1\cup \{x\}, P_2\cup \{x\},\dots P_{2_n}\cup \{x\}\}=\{P_1, P_2,\dots P_{2_n}\}\cup \{P_1\cup \{x\}, P_2\cup \{x\},\dots P_{2^n}\cup \{x\}\} $
 meaning that $\mathscr{P}_{n+1}$ will contain $2(2^{n})=2^{n+1} $ subsets. 
@@ -1899,7 +1899,7 @@ $$\blacklozenge$$
 $$ $$
 We prove  by induction that $\forall n\in \mathbb{P}: n(n + 1)(n + 2)(n + 3)=24m,\, m\in \mathbb{P}$\\
 For $n=1$, we have $ n(n + 1)(n + 2)(n + 3) =24$.\\
-Suppose $\exists n\in \mathbb{P}:\, n(n+1)(n+2)(n+3)=24k,\, k\in \mathbb{P}$. The for $n+1$  have 
+Suppose $\exists\, n\in \mathbb{P}:\, n(n+1)(n+2)(n+3)=24k,\, k\in \mathbb{P}$. The for $n+1$  have 
 \begin{align}
 (n+1)(n+2)(n+3)(n+4)&= \underbrace{n(n+1)(n+2)(n+3)}_{=24k}+4(n+1)(n+2)(n+3)
 \end{align}
@@ -1908,7 +1908,7 @@ From $\mathbf{1.17.11}$ we know that  $(n+1)(n+2)(n+3)$ is divisible by $3$ for 
 (n+1)(n+2)(n+3)(n+4)&= 24k+4\times 3\times m
 \end{align} 
 We claim that $m$ is even. Indeed, for $n=1$ , $n(n+1)(n+2)=2\times 3$ \\
-Suppose $\exists n\in \mathbb{P}:\, n(n+1)(n+2)=3\times 2\times q,\, q\in \mathbb{P}$. Then, for $n+1$  have 
+Suppose $\exists\, n\in \mathbb{P}:\, n(n+1)(n+2)=3\times 2\times q,\, q\in \mathbb{P}$. Then, for $n+1$  have 
 \begin{align}
 (n+1)(n+2)(n+3)&= \underbrace{n(n+1)(n+2)}_{=3\times 2\times q}+3(n+1)(n+2)
 \end{align}
@@ -2254,7 +2254,7 @@ $$\blacklozenge$$
 For each real number $r$, let $F_r=\{(r,y):y\in \Breal\}$. Is $\{F_r:r\in \Breal\}$ a partition of $\Breal\times \Breal$? 
 \end{tcolorbox}
 $$ $$
-First note that $F_r\cap F_{r^{'}}=\emptyset$ if $r\neq r^{'}$.\\
+First note that $F_r\cap F_{r^{'}}=\varnothing$ if $r\neq r^{'}$.\\
 Also $\bigcup\{(r,y):y\in \Breal\}$ will cover, for a given $r$, the whole $\Breal$-axis. Also, as $F_r$ is defined for each real number, for each of this number will be associated the whole  real number axis, and hence $\{F_r:r\in \Breal\}$ a partition of $\Breal\times \Breal$.
 $$\blacklozenge$$
 
@@ -2265,8 +2265,8 @@ $$\mathscr{K}= \{A_x:x = 0 \text{ or } |x| > 1\} $$
 \end{tcolorbox}
 $$ $$
 $\bullet\quad \bigcup\{A_x:x = 0 \text{ or } |x| > 1\} =\Breal$. This can be seen as $A_0$ is the closed interval $[-1,1]$ and for  all other $x\in \Breal-A_0$ i.e. $x\in (-\infty,-1)\cup (1,+\infty)$, each  $A_x,\, x\geq 1$ is $\{x\}$ itself. So,  $\bigcup\{A_x:x = 0 \text{ or } |x| > 1\} =(-\infty,1) \cup [-1,1]\cup (1,+\infty)=\Breal$\\
-$\bullet\quad A_0\cap A_x=\emptyset,\, \forall\, |x|>1$.\\
-$\bullet\quad A_x\cap A_{x^{'}}=\{x\}\cap \{x^{'}\}=\emptyset,\, \forall\, |x|,|x^{'}|>1$.\\
+$\bullet\quad A_0\cap A_x=\varnothing,\, \forall\, |x|>1$.\\
+$\bullet\quad A_x\cap A_{x^{'}}=\{x\}\cap \{x^{'}\}=\varnothing,\, \forall\, |x|,|x^{'}|>1$.\\
 Conclusion: $\mathscr{K}$ a decomposition of the real line $\Breal $
 $$\blacklozenge$$
 
@@ -2275,7 +2275,7 @@ $$\blacklozenge$$
 Suppose $X$ is a nonempty set and $f:X\rightarrow Y$ is a surjection. Is $\{f^{-1}[y]: y\in Y\}$ a decomposition of $X$? 
 \end{tcolorbox}
 $$ $$
-$f$ is a surjection, so every $y\in Y$ has at least one element of $x\in X$ such that $f(x) = y$. But for two different $y_1,\, y_2\in Y$, as $f$ is a function, we must have $f^{-1}[y_1]\cap f^{-1}[y_2]= \emptyset$ as otherwise we would have a $x^*$, such that $f(x^*)=y_1$ and $f(x^*)=y_2$, which is excluded as $f$ is a function. So, one condition for $\{f^{-1}[y]: y\in Y\}$ a being a decomposition of $X$ is fulfilled\\
+$f$ is a surjection, so every $y\in Y$ has at least one element of $x\in X$ such that $f(x) = y$. But for two different $y_1,\, y_2\in Y$, as $f$ is a function, we must have $f^{-1}[y_1]\cap f^{-1}[y_2]= \varnothing$ as otherwise we would have a $x^*$, such that $f(x^*)=y_1$ and $f(x^*)=y_2$, which is excluded as $f$ is a function. So, one condition for $\{f^{-1}[y]: y\in Y\}$ a being a decomposition of $X$ is fulfilled\\
 What about $\bigcup\{f^{-1}[y]: y\in Y\}$? We notice that $\{f^{-1}[y]: y\in Y\}$ corresponds to  $dom\, f$ which is not necessarily equal to $X$ ($dom\, f\subset X$, see definition $\mathbf{10.3}$ page $16$). So, $\{f^{-1}[y]: y\in Y\}$ a not always a decomposition of $X$.
 $$\blacklozenge$$
 
@@ -2459,11 +2459,11 @@ $$ $$
 \caption{The collection   $\mathscr{K} =  \{[0, e^{-p^2}]:p\in \mathbb{Z}_{+}\}\cup  \{[0, -e^{-p^2}]:p\in \mathbb{Z}_{-}\}$}
 \label{fig:fig_p8b}
 \end{figure}
-We see that $\mathscr{K}_{+}\cap \mathscr{K}_{-}=\emptyset$. Hence for any arbitrary element $K_n$ of $\mathscr{K}_{+}$ and any arbitrary element $K_m$ of $\mathscr{K}_{-}$we can't have $K_n\subset K_m$ or $K_n\supset K_m$. Hence, $\mathscr{K}$ is not linearly ordered.
+We see that $\mathscr{K}_{+}\cap \mathscr{K}_{-}=\varnothing$. Hence for any arbitrary element $K_n$ of $\mathscr{K}_{+}$ and any arbitrary element $K_m$ of $\mathscr{K}_{-}$we can't have $K_n\subset K_m$ or $K_n\supset K_m$. Hence, $\mathscr{K}$ is not linearly ordered.
 $$\lozenge$$
 (b)For $\mathscr{K}_{-}$ we have $[-e,0]$ as upper bound and for  $\mathscr{K}_{+}$ we have $[0,e]$ as upper bound. \\
 Does $\mathscr{K}$ has a maximal element? For $\mathscr{K}$  having a maximal element we need 
-$$\exists M\in \mathscr{K},\,\forall K\in \mathscr{K}: M\subset K\Rightarrow M=K$$ 
+$$\exists\, M\in \mathscr{K},\,\forall K\in \mathscr{K}: M\subset K\Rightarrow M=K$$ 
 It is clear that $\mathscr{K}$ does not have a maximal element as  any candidate $M$ will be either an element of $\mathscr{K}_{+}$ or an element of $\mathscr{K}_{-}$. Suppose $M\in \mathscr{K}_{+}$ than for any element $K\in \mathscr{K}_{-}$ which is also an element of $\mathscr{K}_{}$ we statement $M\subset K$ is always false, giving that the necessary condition for a maximal element is never true, hence no maximal element can be defined.
 $$\blacklozenge$$
 
@@ -2587,10 +2587,10 @@ $$ $$
 Let's remind some definitions:\\\\
 $a)$ A well ordered set means: 
 If $(S,\leq )$ is a partially ordered set such that every nonempty subset of $S$ has a first element, then $\leq$ is said to be a well ordering for $S$ and $(S,\leq )$ is said to be a well-ordered set.\\
-$b)$ A first element $m$ of a partially ordered set $(T,\leq )$ implies that $\exists m\in T, \forall s\in T: m\leq s$.\\
+$b)$ A first element $m$ of a partially ordered set $(T,\leq )$ implies that $\exists\, m\in T, \forall s\in T: m\leq s$.\\
 $c)$ A linearly ordered set means that $\forall x,y\in S: x\leq y\text{ or } y\leq x$. \\\\
 Now, suppose that $(S,\leq)$ is not linearly ordered, then:
-\begin{align}\exists x\in S, \forall y\in S: x\not \leq y \Et y\not \leq x\end{align}
+\begin{align}\exists\, x\in S, \forall y\in S: x\not \leq y \Et y\not \leq x\end{align}
 Take a subset $S_x\subset S$ such that $x\in S_x$. As $(S,\leq)$ is a well ordered set, $S_x$ has a first element $m_x$. This means that for the element $x\in S_x$ we have $m_x\leq x$.\\
 But we get a contradiction as $m_x\leq x$ is defined but we  supposed that $x\not \leq m_x\text{ and } m_x\not \leq x$ (substitute $y$ with $m_x$ in $(1)$). Hence our supposition that $(S,\leq)$ is not linearly ordered is wrong and conclude $(S,\leq)$ is linearly ordered. 
 $$\blacklozenge$$
@@ -2662,7 +2662,7 @@ $$ $$
  Recall that $\sim$ means that there exists a bijection $f$ between the two involved sets.\\\\
  i) Suppose $A\sim A$, obviously we can take the identity map as trivial bijection which can be expressed as $(a,a),\,\forall a\in A $.// So, the first prerequisite for an equivalence relation is fulfilled.\\\\
  ii) Suppose $A\sim B$. This means that for every element $a$ in $A$ there exists an element $b$ in  $B$  such that $(a,b)$ exists but as $f$ is a bijection, the map $f^{-1}$ exists which maps $b$ again to $a$. Hence, $(b,a)$ is a valid set and exists.\\ So, the second prerequisite for an equivalence relation is fulfilled.\\\\
- iii) Suppose $A\sim B,\, B\sim C$ this means that there exist bijection $f$ and $g$ such that $\forall a\in A,\, \exists ! b\in B: b=f(a)$ and $\forall b\in B,\, \exists ! c\in C: c=g(b)$, hence, $(g\circ f )(a)=c$. \\ So, the third prerequisite for an equivalence relation is fulfilled.\\\\
+ iii) Suppose $A\sim B,\, B\sim C$ this means that there exist bijection $f$ and $g$ such that $\forall a\in A,\, \exists\, ! b\in B: b=f(a)$ and $\forall b\in B,\, \exists\, ! c\in C: c=g(b)$, hence, $(g\circ f )(a)=c$. \\ So, the third prerequisite for an equivalence relation is fulfilled.\\\\
  As all prerequisites are fulfilled we are able to define a equivalence relation between some sets in $\mathscr{K}$.
 $$\blacklozenge$$
 
@@ -2793,7 +2793,7 @@ $$\blacklozenge$$
 
 \subsection{}
 \begin{tcolorbox}
-Suppose that $A,\, B,\, C,$ and $D$ are sets such that $A \cap C = B\cap D=\emptyset$. Suppose further that $A\sim  B$ and $C\sim  D$. Is $(A \cup C) \sim (B\cup  D)$? 
+Suppose that $A,\, B,\, C,$ and $D$ are sets such that $A \cap C = B\cap D=\varnothing$. Suppose further that $A\sim  B$ and $C\sim  D$. Is $(A \cup C) \sim (B\cup  D)$? 
 \end{tcolorbox}
 $$ $$
 As $A\sim  B$ and $C\sim  D$ there exist two bijection $f: A\rightarrow B$ and $g: C\rightarrow D$.\\ 
@@ -2804,7 +2804,7 @@ f(x)&\text{for } x\in A\\
 g(x)&\text{for } x\in C\\
 \end{array}\right.
 \end{align*}
-As $A\cap C=\emptyset$ we will have $h(x)=f(x)$ or $h(x)=g(x)$ for a certain $x\in A\cup C$ and as $f$ and $g$ have different images $B$ and $D$ with $B\cap D=\emptyset$ we will have $h(x)\in B$ or $h(x)\in D$. Hence the function $h: (A \cup C) \rightarrow (B\cup  D)$ is a bijection as $f$ and $g$ are bijections. \\
+As $A\cap C=\varnothing$ we will have $h(x)=f(x)$ or $h(x)=g(x)$ for a certain $x\in A\cup C$ and as $f$ and $g$ have different images $B$ and $D$ with $B\cap D=\varnothing$ we will have $h(x)\in B$ or $h(x)\in D$. Hence the function $h: (A \cup C) \rightarrow (B\cup  D)$ is a bijection as $f$ and $g$ are bijections. \\
 Conclusion: $(A \cup C) \sim (B\cup  D)$
 $$\blacklozenge$$
 
@@ -2838,12 +2838,12 @@ Let's denote $C$ and $C^{'}$ these sets for $S$ and $S-\{x\}$ respectively. This
 Notice that nor $S^{"}$ nor $C^{'}$ can contain $x$. On the other hand or $S^{'}$ or $C$ will contain $x$. We know that $C$ is countably infinite. If $x\in S^{'}$ we can 'extract' $x$ out of $S^{'}$ and make it an element of $C$. $C$ will still be infinite and countable. Hence, $S^{'}$ will be $S^{"}$. Doing so, we get the following expressions
 \begin{align*}
 \left\{\begin{array}{lll}
-S= S^{"}\cup C&\text{ with }& S^{"}\cap C=\emptyset\\
-S-\{x\}= S^{"}\cup C^{'}&\text{ with }& S^{"}\cap C^{'}=\emptyset\\
+S= S^{"}\cup C&\text{ with }& S^{"}\cap C=\varnothing\\
+S-\{x\}= S^{"}\cup C^{'}&\text{ with }& S^{"}\cap C^{'}=\varnothing\\
 \end{array}\right.
 \end{align*} 
 Obviously, $S^{"}\sim S^{"}$ (the identity map is a bijection).\\
-By exercise $3$ of this section we know that if $A \cap C = B\cap D=\emptyset$ and further that $A\sim  B$ and $C\sim  D$, that we have  $(A \cup C) \sim (B\cup  D)$.\\
+By exercise $3$ of this section we know that if $A \cap C = B\cap D=\varnothing$ and further that $A\sim  B$ and $C\sim  D$, that we have  $(A \cup C) \sim (B\cup  D)$.\\
 So, provided that $C\sim C^{'}$ we can apply this last theorem and would indeed get that $S-\{x\}\sim S$.\\
 Question is $C\sim C^{'}$?\\
 The answer is yes by applying again theorem $\mathbf{26.8}$ noting that we can write $C=\bigcup\{\{x\}, C^{'}\}$. As both $\{x\}$ and $C^{'}$ are countable and the collection $\{\{x\}, C^{'}\}$ is countable, $C$ will also be countable and thus we can find a bijection between $C$ and $C^{'}$.\\
@@ -2869,8 +2869,8 @@ Be $\hat{S}= S-C-C^{*}$. We can express $S$ as $S=\hat{S}\cup C^{'}\cup C^{*}$, 
 \label{fig:fig_p3}
 \end{figure}
 We use the result of exercise $3$ of this section:\\
-\textit{If $A \cap E = B\cap D=\emptyset$ and further that $A\sim  B$ and $E\sim  D$, then we have  $(A \cup E) \sim (B\cup  D)$.\\}\\
-Put, $A= B=\hat{S}$, $ E= C^{*}$ and $D=  (C^{'}\cup C^*)$. We have indeed $\hat{S}\cap C^*= \hat{S}\cap (C^{'}\cup C^*)=\emptyset$.\\
+\textit{If $A \cap E = B\cap D=\varnothing$ and further that $A\sim  B$ and $E\sim  D$, then we have  $(A \cup E) \sim (B\cup  D)$.\\}\\
+Put, $A= B=\hat{S}$, $ E= C^{*}$ and $D=  (C^{'}\cup C^*)$. We have indeed $\hat{S}\cap C^*= \hat{S}\cap (C^{'}\cup C^*)=\varnothing$.\\
 Obviously $A\sim B$ and also we have $E\sim D$ (see figure 1.26. (b)) as we have bijections $f$ and $g$ between $C^*,\,  C^{'}\cup C^*$ (countable sets) and $\mathbb{P}$ and always can define a bijection $h:\mathbb{P}\rightarrow \mathbb{P}$.
 
 Hence, we get $(A \cup E) \sim (B\cup  D)$ or
@@ -2919,7 +2919,7 @@ $$\blacklozenge$$
 Let $A$ and $B$ and $C$ be nonempty sets. Either prove the following statement or give a counterexample. $$(A\times  B) \cap (C\times D) = (A\cap C) \times (B \cap D)$$.
 \end{tcolorbox}
 $$ $$
-Be $(a,b)\in A\times B$ and $(c,d)\in C\times D$. Then $(A\times  B) \cap (C\times D)\neq \emptyset$ implies that there exist $(a,b)$ and $(c,d)$ such that $a=c$ and $b=d$. As in that case $a$ and $c\in A\cap C$ and  $b$ and $d\in B\cap D$ implies that $(a,c)$ and $(b,d) \in (A\cap C) \times (B \cap D)$ and thus 
+Be $(a,b)\in A\times B$ and $(c,d)\in C\times D$. Then $(A\times  B) \cap (C\times D)\neq \varnothing$ implies that there exist $(a,b)$ and $(c,d)$ such that $a=c$ and $b=d$. As in that case $a$ and $c\in A\cap C$ and  $b$ and $d\in B\cap D$ implies that $(a,c)$ and $(b,d) \in (A\cap C) \times (B \cap D)$ and thus 
 $$(A\times  B) \cap (C\times D) = (A\cap C) \times (B \cap D)$$
 $$\blacklozenge$$
 
@@ -2956,20 +2956,20 @@ Suppose that $R$  is an equivalence relation defined in a set $A$. Which of the 
 (a) $R=A\times A$\\
 (b) $R\subset  A \times A$ \\
 (c) $\{(x, x):x \in  A\}\subset R$\\
-(d) If $a$ and $b$ are distinct elements in $A$, then $R[a]\cap R[b] =\emptyset $\\
-(e) If $R[a] \cap  R[b] \neq \emptyset$, , then $R[a]=R[b]$\\
+(d) If $a$ and $b$ are distinct elements in $A$, then $R[a]\cap R[b] =\varnothing $\\
+(e) If $R[a] \cap  R[b] \neq \varnothing$, , then $R[a]=R[b]$\\
 (f) $R= R^{-1}$
 \end{tcolorbox}
 $$ $$
 $(a)$ is necessarily true as by definition of an equivalence relation (see page $39$), $xRx$ is defined for all $x\in A$.\\\\
 $(b)$ is true by the definition of a relation.\\\\
 $(c)$ is true as an equivalence relation must be reflexive.\\\\
-$(d)$ Suppose $R[a]\cap R[b]\neq \emptyset$ with an element $y\in R[a]\cap R[b]$. This means that we have $(a,y)\in R$ and $(b,y)\in R$ for $a\neq b$. We know that $R$ is symmetric, hence $(y,b)\in R$ and by the transitivity we have $aRb$. Hence, $b\in R[a]$. Also, by the symmetry we have $a\in R[b]$. By the reflexivity of $R$ we have also $a\in R[a]$ and $b\in R[b]$. Thus, $\{a,\, b\}\in R[a]$ and $\{a,\, b\}\in R[b]$ and finally $R[a]\cap R[b]\neq \emptyset$. This reasoning suggest the following counterexample to show that (d) is not necessarily true:\\\\
+$(d)$ Suppose $R[a]\cap R[b]\neq \varnothing$ with an element $y\in R[a]\cap R[b]$. This means that we have $(a,y)\in R$ and $(b,y)\in R$ for $a\neq b$. We know that $R$ is symmetric, hence $(y,b)\in R$ and by the transitivity we have $aRb$. Hence, $b\in R[a]$. Also, by the symmetry we have $a\in R[b]$. By the reflexivity of $R$ we have also $a\in R[a]$ and $b\in R[b]$. Thus, $\{a,\, b\}\in R[a]$ and $\{a,\, b\}\in R[b]$ and finally $R[a]\cap R[b]\neq \varnothing$. This reasoning suggest the following counterexample to show that (d) is not necessarily true:\\\\
 Be $A= \{a,\,b,\, c\}$ and $R = \{(a,a),\, (b,b) ,\, (c,c),\,(a,b),\, (b,a) ,\, (a,c),\,(c,a),\, (b,c) ,\, (c,b)\}$.We have \\
-$R[a]=\{a,\ b,\, c\}$ and $R[b]=\{a,\ b,\, c\}$ giving $R[a]\cap R[b]=\{a,\ b,\, c\}\neq \emptyset$.\\\\
+$R[a]=\{a,\ b,\, c\}$ and $R[b]=\{a,\ b,\, c\}$ giving $R[a]\cap R[b]=\{a,\ b,\, c\}\neq \varnothing$.\\\\
 $(e)$ 
-We know by assumption $\exists y\in R[a]\cap R[b]$. So, $(a,y)\in R$ and $(b,y)\in R$. By symmetry and transitivity we have $(a,b)\in R$. Suppose $\exists y^{'}\in R[a]\Et y^{'}\not\in R[b]$. This means that $(a,y^{'})\in R$ and by symmetry $(y^{'},a)\in R$. \\
-This combined with   $(a,b)\in R$ gives by transitivity $(y^{'},b)\in R$ and by symmetry $(b, y^{'})\in R$. Hence $y^{'}\in R[b]$. We get a contradiction and conclude $\not \exists y^{'}\in R[a]\Et y^{'}\not\in R[b]$ and get 
+We know by assumption $\exists\, y\in R[a]\cap R[b]$. So, $(a,y)\in R$ and $(b,y)\in R$. By symmetry and transitivity we have $(a,b)\in R$. Suppose $\exists\, y^{'}\in R[a]\Et y^{'}\not\in R[b]$. This means that $(a,y^{'})\in R$ and by symmetry $(y^{'},a)\in R$. \\
+This combined with   $(a,b)\in R$ gives by transitivity $(y^{'},b)\in R$ and by symmetry $(b, y^{'})\in R$. Hence $y^{'}\in R[b]$. We get a contradiction and conclude $\nexists\, y^{'}\in R[a]\Et y^{'}\not\in R[b]$ and get 
 $$R[a]=R[b]$$\\\\
 (f) By symmetry of an equivalence relation we have $(a,b) \in R$ and $(b,a)\in R$ which is the definition of the inverse of a relation. 
 $$\blacklozenge$$
@@ -3021,7 +3021,7 @@ Let $f: X\rightarrow Y$ be a bijection. Let $A$ and $B$ be subsets of $X$.
 \begin{tcolorbox}
 Prove that $f[A \cap B] = f[A] \cap  f[B]$.
 \end{tcolorbox}
-Be $x\in A\cap B$. Then, as $f$ is a bijection, hence "onto", so there $\exists y\in Y: y=f(x)$. Hence $y=f(x)\in f[A] \cap  f[B]$. Hence we have $f[A \cap B] \subset f[A] \cap  f[B]$\\\\
+Be $x\in A\cap B$. Then, as $f$ is a bijection, hence "onto", so there $\exists\, y\in Y: y=f(x)$. Hence $y=f(x)\in f[A] \cap  f[B]$. Hence we have $f[A \cap B] \subset f[A] \cap  f[B]$\\\\
 Suppose now we have $y\in f[A]\Et f[B]$. This means that we must have an $x^{'}\in A$ and a $x^{"}\in B$, for which we have $y=f(x^{'})=f(x^{"})$. Could it be possible that $ x^{'}\neq x^{"}$? The answer is no, as $f$ is surjective, so once an element of $A$ is mapped to a certain element of $Y$ no other element of $X\supset A,\, B$ will be mapped to that element (the same reasoning yields  for an element in $B$). So,$ x^{'}= x^{"}$, which means $x^{'}\in f[A\cap B]$ and thus $f[A \cap B] \supset f[A] \cap  f[B]$\\\\
 
 Ans conclude $f[A \cap B] = f[A] \cap  f[B]$.
@@ -3135,7 +3135,7 @@ $$\blacklozenge$$
 \begin{tcolorbox}
 Define what is meant by a decomposition of a set.
 \end{tcolorbox}
-If $S$ is a set, form the collection $\mathscr{K}$ with subsets of $S$ as elements but in such a way that all elements in $\mathscr{K}$ are disjoint (i.e. $\forall A\in \mathscr{K},\, B \in \mathscr{K},\, A\neq B: A\cap B=\emptyset$. Moreover if we have that $\bigcup \mathscr{K}= S$ then  $\mathscr{K}$ is a decomposition of $S$. 
+If $S$ is a set, form the collection $\mathscr{K}$ with subsets of $S$ as elements but in such a way that all elements in $\mathscr{K}$ are disjoint (i.e. $\forall A\in \mathscr{K},\, B \in \mathscr{K},\, A\neq B: A\cap B=\varnothing$. Moreover if we have that $\bigcup \mathscr{K}= S$ then  $\mathscr{K}$ is a decomposition of $S$. 
 
 $$\blacklozenge$$
 
@@ -3273,17 +3273,17 @@ $$\blacklozenge$$
 Let $\mathscr{F}$ be the set of all functions that map the closed interval $[0, 1]$ into $[0, 1]$. Prove that $[0,1] < \mathscr{F}$ (Hint: Imitate somewhat the proof of $\mathbf{27.1}$.) 
 \end{tcolorbox}
 As preliminary, we first note that $\mathscr{F}$ "is onto " $\RZO$ (e.g. the identity function is an element of $\mathscr{F}$).\\\\
-\textbf{We first prove that $\exists \mathscr{K}\subset \mathscr{F}:\RZO\sim\mathscr{F}$}.\\\\
+\textbf{We first prove that $\exists\, \mathscr{K}\subset \mathscr{F}:\RZO\sim\mathscr{F}$}.\\\\
 
 
 $\RZO\sim\mathscr{K}$ means that there exists a bijection between these two sets. \\
 \begin{figure}[H]%
     \centering
     \input{./images/fig_1.29.XII.a.tex}
-\caption{relations from $\mathscr{F}\rightarrow\RZO $.}
+\caption{Relations from $\mathscr{F}\rightarrow\RZO $.}
 \label{fig:fig_p8b}
 \end{figure}
-For each $x\in \RZO$ we can associate (see figure above) the subset $\mathscr{F}_x\subset \mathscr{F}$ such that $$\mathscr{F}_x=\{f\in \mathscr{F}: \exists a \in \RZO, x= f(a)\in\RZO\}$$
+For each $x\in \RZO$ we can associate (see figure above) the subset $\mathscr{F}_x\subset \mathscr{F}$ such that $$\mathscr{F}_x=\{f\in \mathscr{F}: \exists\, a \in \RZO, x= f(a)\in\RZO\}$$
 Obviously, with every $x\in \RZO$ there is only one $\mathscr{F}_x$ associated and conclude that there is a bijection between $\RZO$ and the collection of sets $\{\mathscr{F}_x: x\in\RZO\}$.\\
 Suppose that indeed, $\RZO\sim\mathscr{K}$, then for every $x\in\RZO$ there must exist a unique $f^*_x\in\mathscr{F}_x $ which is not an element of any element in $\{\mathscr{F}_y: y\in\RZO-\{x\}\}$ (recall that an element $f_x\in\mathscr{F}_x $ could also be in another set $\mathscr{F}_y $ as we could have $x= f_x(a)= f_y(b)$.\\
 Consider the associated (to $\mathscr{F}_x$) set , $\mathscr{F}^x=\bigcup \{\mathscr{F}_y: y\in\RZO-\{x\}\}$. Then we have 

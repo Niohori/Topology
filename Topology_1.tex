@@ -25,6 +25,8 @@
 \usepackage{boondox-cal}
 \usepackage[]{mdframed}
  \usepackage{relsize}
+ \usepackage{tabularray}
+ %\usepackage{amsthm}
 %**************************** Bibliography management *******************************
 \usepackage{biblatex} %Imports biblatex package
 \addbibresource{sample.bib} %Import the bibliography file
@@ -47,6 +49,7 @@
 \usetikzlibrary{decorations.pathmorphing,decorations.markings}
 \usetikzlibrary{decorations.pathreplacing} % for curly braces
 \usetikzlibrary {decorations.markings,shapes.arrows}
+\usetikzlibrary{calligraphy}
 \usetikzlibrary{patterns}
 \usepackage{tkz-euclide}
 \usepackage{tikz-3dplot}
@@ -100,7 +103,8 @@
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 %\newcommand{\myabsdv}[3]{{\frac{\delta^2 \ensuremath{{#1}}}{{\delta %%\ensuremath{{#2}}}{\delta\ensuremath{{#3}}}}}}
 \newcommand\myabsdv[3][1]{{\frac{{\delta^{2}}{#1}}{\delta {#2} \delta {#3}}}}
-
+\newcommand\bl{{\begin{align}}}
+\newcommand\el{{\end{align} }}
 %**************************** layout setings *******************************
 \counterwithin*{equation}{chapter}
 \counterwithin*{equation}{section}
@@ -147,6 +151,7 @@ You're welcome to use these notes, but they may contain errors, so proceed with 
 \listoffigures
 \include{chapter1}
 \include{chapter2}
+\include{chapter3}
 
 \printbibliography %Prints bibliography
 \end{document}

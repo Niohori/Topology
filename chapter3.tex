@@ -147,7 +147,8 @@ d(x, y)\geq 1 \Et d(y, z)\leq 1&: &d^*(x, y)+d^*(y, z)=1+d(y, z)\geq 1\geq d^*(x
 d(x, y)\Et d(y, z)\leq 1&: &d^*(x, y)+d^*(y, z)=d(x, y)+d(y, z)\geq d^*(x, z)
 \end{array}
 \end{align*}
-and can conclude $$d^*(x, z)\leq d^*(x, z)+d^*(x, z)$$
+and can conclude:
+$$d^*(x, z)\leq d^*(x, z)+d^*(x, z)$$
 ii) $d(x, z)\geq 1$. Then we have $d^*(x, z)=1$. By the triangle inequality we have $d(x, z)\leq d(x, y)+d(y, z)$ and as $d(x, z)\geq 1$, we are sure that $d(x, y)+d(y, z)\geq 1$.\\
 Let's examine the following possibilities:
 \begin{align*}
@@ -171,8 +172,46 @@ Let $d^*:X \times X \rightarrow \Breal$ be a function that satisfies the followi
 &d(x,y)=0 \text{ if and only if } x=y\\
 &d(z,x)+d(z,y)\geq d(x,y)
 \end{align*}
-Show that for ll $x$ and $y$ in $X$, $d(z,y)\geq 0$ and $d(x,y)=d(y,x)$. (Hence, a function satisfying the two given properties is a metric for $X$.)
+Show that for all $x$ and $y$ in $X$, $d(x,y)\geq 0$ and $d(x,y)=d(y,x)$. (Hence, a function satisfying the two given properties is a metric for $X$.)
 \end{tcolorbox}
+i) $d(x,y)\geq 0 \text{ for all  } x,\,y $:\\
+From the second requirement we have
+\begin{align*}
+&d(y,y)\leq d(x,y)+d(x,y)\\
+\implies\quad &0\leq 2d(x,y)\\
+\implies\quad &d(x,y)\geq 0
+\end{align*}
+ii) $d(x,y)=d(y,x)\text{ for all  } x,\,y $:\\
+We want to find two related expressions like $d(x,y)\leq d(y,x)$ and $d(y,x)\leq d(x,y)$.\\
+From the second requirement we have
+\begin{align*}
+&\left\{\begin{array}{ll}
+d(x,y)\leq d(z,x)+d(z,y)&(1)\\
+d(y,x)\leq d(z,x)+d(z,y)&(2)
+\end{array}\right.\\
+&\left\{\begin{array}{ll}
+d(x,z)\leq d(y,x)+d(y,z)&(3)\\
+d(z,x)\leq d(y,x)+d(y,z)&(4)
+\end{array}\right.\\&\left\{\begin{array}{ll}
+d(y,z)\leq d(x,y)+d(x,z)&(5)\\
+d(z,y)\leq d(x,y)+d(x,z)&(6)
+\end{array}\right.\\
+\end{align*}
+from which we can get:
+\begin{align*}
+&\left\{\begin{array}{llc}
+(4)\rightarrow (1): &d(x,y)\leq d(y,x)+ [d(y,z)+d(z,y)]&(7)\\
+(6)\rightarrow (1):&d(y,x)\leq d(x,y)+ [d(x,z)+d(z,x)]&(8)
+\end{array}\right.
+\end{align*}
+In $(7)$, put $z=y$ and in $(8)$ put $z=x$. We get, as $d(a,b)=0\text{ if } a=b$:
+\begin{align*}
+&\left\{\begin{array}{l}
+d(x,y)\leq d(y,x)\\
+d(y,x)\leq d(x,y)
+\end{array}\right.
+\end{align*}
+from which we conclude that $d(x,y)=d(y,x)$.
 
 $$\blacklozenge$$
 \newpage
@@ -183,10 +222,175 @@ $$\blacklozenge$$
 \setcounter{subsection}{0}
 \subsection{}
 \begin{tcolorbox}
-
+In this exercise, let $d$ be the Euclidean metric for $\Breal^2$. Further, let $g$, $m$, $p$, and $h$ be the metrics given in Examples $45.3$ through $45.6$. Let $\theta=(0,\, 0)$. Draw each of the following sets (some will simply be verifications of the pictures given in the text).
 \end{tcolorbox}
-
+\textbf{(a)}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$N_d(\theta;1)$ ]{\input{./images/fig_3.46.1_a1.tex}}
+    \subfloat[$B_d(\theta;1)$]{\input{./images/fig_3.46.1_a2.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+\textbf{(b)}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$N_g(\theta;1)$ ]{\input{./images/fig_3.46.1_b1.tex}}
+    \subfloat[$B_g(\theta;1)$]{\input{./images/fig_3.46.1_b2.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+\textbf{(c)}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$N_m(\theta;\half)$ ]{\input{./images/fig_3.46.1_c1.tex}}
+    \subfloat[$N_m(\theta;1)$]{\input{./images/fig_3.46.1_c2.tex}}
+        \subfloat[$B_m(\theta;1)$]{\input{./images/fig_3.46.1_c3.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+\textbf{(d)}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$N_p(\theta;1)$ ]{\input{./images/fig_3.46.1_d1.tex}}
+    \subfloat[$B_p(\theta;1)$]{\input{./images/fig_3.46.1_d2.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
+\textbf{(e)}
+\begin{figure}[H]%
+    \centering
+    \subfloat[$N_h(\theta;1)$ ]{\input{./images/fig_3.46.1_e1.tex}}
+    \subfloat[$B_h(\theta;1)$]{\input{./images/fig_3.46.1_e2.tex}}
+%\caption{}
+\label{fig:fig_p8b}
+\end{figure}
 $$\blacklozenge$$
 
 \newpage
+\subsection{}
+\begin{tcolorbox}
+Using Exercise $1$ or other examples, show that for some metrics
+it need not be so that $cl (N(p;\epsilon)) = B(p;\epsilon)$. Further, show that $N(p;\epsilon)$ need not be a proper subset of $B(p;\epsilon)$.
+\end{tcolorbox}
+Consider the space $\left(\Breal^2,m\right)$ as depicted in $\mathbf{(c)}$ above. $N_m(\theta; 1) =\{\theta\}$ has no limit point. Hence $cl\left(N_m(\theta; 1)\right) =\{\theta\}$, yet $B_m(\theta;1)=\Breal^2$ and thus $N_m(\theta; 1) \neq B_m(\theta; 1) $.\\
+$N(p;\epsilon)$ need not be a proper subset of $B(p;\epsilon)$ as can be seen in case $\mathbf{(e)}$. There, $N_h(p;\epsilon)=B_h(p;\epsilon)=\Breal^2$, so $N_h(p;\epsilon)$ is not a proper subset of $B_h(p;\epsilon)$.
+$$\blacklozenge$$
 
+
+\subsection{}
+\begin{tcolorbox}
+Prove that if $\left(X,d\right)$ is a metric space, $p \in  X, \Et \epsilon > 0$ , then $N(p;\epsilon)$ is an open set. Is it possible in some cases that $N(p;\epsilon)$ is also a closed set
+\end{tcolorbox}
+We have to prove that
+$$\foral q\in N(p;\epsilon),\,\exist \delta>0: N(q;\delta)\subset N(p;\epsilon)$$
+Be $q\in N(p;\epsilon)$ and $d(p,q)=\tilde{\epsilon}$. As $q\in N(p;\epsilon)$ we have $\tilde{\epsilon}<\epsilon$.\\
+Be $q^*\in N(q;\delta)$ with $d(q,q^*)< \delta$ as a consequence. We have by definition of the metric:
+\begin{align*}
+d(p,q^*)&\leq d(p,q)+d(q,q^*)\\
+&= \tilde{\epsilon}+d(q,q^*)\\
+&< \tilde{\epsilon}+\delta
+\end{align*}
+So choosing $\delta \leq \frac{\epsilon -\tilde{\epsilon}}{2}$ gives 
+\begin{align*}
+d(p,q^*)&< \tilde{\epsilon}+\frac{\epsilon -\tilde{\epsilon}}{2}\\
+&= \frac{\epsilon +\tilde{\epsilon}}{2}\\
+&< \frac{\epsilon +{\epsilon}}{2}\quad (\text{ as }\tilde{\epsilon}<\epsilon)\\
+&= \epsilon
+\end{align*}
+So every element $q^*\in N(q;\delta)$ will also be an element of $N(p;\epsilon)$ and we can conclude
+$$\foral q\in N(p;\epsilon),\,\exist \delta>0: N(q;\delta)\subset N(p;\epsilon)$$
+$$\blacklozenge$$
+
+
+
+\subsection{}
+\begin{tcolorbox}
+Are closed balls $B(p;\epsilon)$  necessarily closed sets?
+\end{tcolorbox}
+No, consider in Exercise $1$ the case $(c)$ with the closed ball $B_m(\theta; \half)$. We have $B_m(\theta; \half)=\{\theta\}$ which is not a closed set.
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Show that if $\left(X,d\right)$ is a metric space, then $X$ can be expressed as the union of a countable collection of neighborhoods with a common center.
+\end{tcolorbox}
+Choose any point $p_0\in X$ and define a function $f:\Pee\rightarrow \Breal_+$ such that the set $f(i)$ is a not bounded, strict increasing function  (i.e. $f(i+n)>f(i):\foral i,n\in\Pee$ and  $f$ is a bijection between $\Pee \Et \Breal_+$).\\
+Consider the collection of neighbourhoods $\mathscr{N}=\{ N\left(p_0;f(i)\right):i\in\Pee\}$.\\
+Obviously, $\mathscr{N}$ is countable and $\bigcup \mathscr{N}= X$. Indeed, be $p\in X$ and $\delta = d(p_0,p)$.\\
+As $f:\Pee\rightarrow \Breal_+$  is not bounded, we can find a $i\in\Pee$ such that  $f(i)> \delta$ and thus $p$ will be an element in the set $N\left(p_0;f(i)\right)$ and can conclude $X\subset\bigcup \mathscr{N}$. On the other hand every neighbourhood $N\left(p_0;f(i)\right) \in \mathscr{N}$ contains only elements of $X$ and thus $\bigcup \mathscr{N}\subset X$ and get 
+$$X=\bigcup \mathscr{N}$$
+
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+Let$\left(X,d\right)$  be a metric space. Prove that if $A \subset B \subset X$, then $cl(A) \subset cl(B)$.
+\end{tcolorbox}
+If $p$ is a limit point of $A$, then there are elements of any $\epsilon$-ball around $p$ which are elements of $A$ and thus also elements of $B$ (as $A\subset B$). Thus, $p$ is also a limit point of $A$. So $p$ is both an element of $cl(A)$ and $cl(B)$ and thus  
+$$cl(A)\subset cl(B)$$
+$$\blacklozenge$$
+
+\subsection{}
+\begin{tcolorbox}
+In each of the following either prove the statement or give a
+counterexample:
+\begin{align*}
+\begin{array}{l l}
+(a)&cl (A\cap B) \subset cl(A)\cap cl (B)\\
+(b)&cl (A\cap B) = cl(A)\cap cl (B)\\
+(c)&cl (A\cup B) \subset cl(A)\cup cl (B)\\
+(d)&cl (A\cup B) = cl(A)\cup cl (B)
+\end{array}
+\end{align*}
+\end{tcolorbox}
+\textbf{(a)$cl (A\cap B) \subset cl(A)\cap cl (B)$\\}
+Be $p$ a limit point of $A\cap B$. This implies $\foral\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap(A\cap B)\neq \varnothing$. We have $C\cap\left(A\cap B\right)= \left(C\cap A\right)\cap B$ and $C\cap\left(A\cap B\right)= \left(C\cap B\right)\cap A$ and can write
+\begin{align*}
+&\begin{cases}
+\foral\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap(A\cap B)\neq \varnothing\\
+\foral\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap(A\cap B)\neq \varnothing
+\end{cases}\\
+\iff\quad &\begin{cases}
+\foral\epsilon >0: \left(\left(N(p;\epsilon)-\{p\}\right)\cap A\right)\cap B\neq \varnothing\\
+\foral\epsilon >0: \left(\left(N(p;\epsilon)-\{p\}\right)\cap B\right)\cap A\neq \varnothing
+\end{cases}\\
+\end{align*}
+This implies that any $\epsilon$-ball around $p$ has common elements of both $A$ and $B$ and thus $p$ is also a limit pint of $A$ and $B$ and thus an element of $cl(A)\Et cl(B)$. From this we conclude
+$$cl (A\cap B) \subset cl(A)\cap cl (B)$$
+$$\lozenge$$
+\textbf{(b)$cl (A\cap B) = cl(A)\cap cl (B)$\\}
+Considering $(a)$ it remains to prove or disprove
+$$cl(A)\cap cl (B)\subset cl (A\cap B)$$
+Consider this counterexample in $\Breal$:\\
+Be $A=(0,1)$ and $B=(1,2)$ giving $cl(A\cap B)=cl(\varnothing)=\varnothing$. Then, $cl(A)=[0,1]$ and $cl(B)=[1,2]$ with $cl(A)\cap cl(B)=\{1\}$, disproving the proposed expression.
+$$\lozenge$$
+\textbf{(c)$cl (A\cup B) \subset cl(A)\cup cl (B)$\\}
+Be $p$ a limit point of $A\cup B$. This implies $\foral\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap(A\cup B)\neq \varnothing$. We have $C\cap\left(A\cup B\right)= \left(C\cap A\right)\cup \left(C\cap B\right)$ and can write
+\begin{align*}
+&\foral\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap(A\cup B)\neq \varnothing\\
+\iff\quad & \foral\epsilon >0: \left(\left(N(p;\epsilon)-\{p\}\right)\cap A\right)\cup \left(\left(N(p;\epsilon)-\{p\}\right)\cap B \right)\neq\varnothing
+\end{align*}
+meaning that $p$ must be a limit point of $A$ or $B$ and thus an element of $cl(A)\cup(B)$ and we can conclude 
+$$cl (A\cup B) \subset cl(A)\cup cl (B)$$
+$$\lozenge$$
+\textbf{(d)$cl (A\cup B) = cl(A)\cup cl (B)$}
+Considering $(c)$ it remains to prove or disprove
+$$cl(A)\cup cl (B)\subset cl (A\cup B)$$
+If $q$ is an element of $cl(A)\Ou cl (B)$, but not a limit point of any of them, then $q$ must be an element of $A\Ou B$ and thus an element of $A\cup B$, hence also of $cl(A\cup B)$.\\
+If $p$ is a limit point of $cl(A)\Ou cl (B)$, then $p$ must be an element of $cl(A)\Ou cl(B)$. Suppose $p$ is a limit point of $A$, then:  
+\begin{align*}
+& \foral\epsilon >0: \left(\left(N(p;\epsilon)-\{p\}\right)\cap A\right)\cup \left(\left(N(p;\epsilon)-\{p\}\right)\cap B \right)\neq\varnothing\\
+\iff\quad &\foral\epsilon >0: \left(N(p;\epsilon)-\{p\}\right)\cap(A\cup B)\neq \varnothing\quad \scriptstyle \text{as }\left(C\cap A\right)\cup \left(C\cap B\right)=C\cap\left(A\cup B\right)\textstyle
+\end{align*} 
+thus $p$ is a limit point of $A\cup B$ and thus of $cl(A\cup B)$ and can conclude, together with $(c)$
+$$cl (A\cup B) = cl(A)\cup cl (B)$$
+
+$$\blacklozenge$$
+\newpage
+
+\mysection{47}{Some basic theorems concerning open and
+closed sets}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{subsection}{0}
